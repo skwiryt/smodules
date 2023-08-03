@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+<html lang=pl class="no-js">
+<head>
+    <meta name="ahrefs-site-verification" content="c2d3c04b9f125c5b8c98d89f738d343f69d841f035150344a932150235c5639a">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="csrf-token" content="FGlA4RkObUo18UXAEnOqvfNMqmQValvEVBDjQsbF" />
+
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="https://kodilla.com/static/img/icons/apple-touch-icon-60x60.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://kodilla.com/static/img/icons/apple-touch-icon-76x76.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://kodilla.com/static/img/icons/apple-touch-icon-120x120.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://kodilla.com/static/img/icons/apple-touch-icon-152x152.png?00000">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kodilla.com/static/img/icons/favicon-32x32.png?00000">
+<link rel="icon" type="image/png" sizes="96x96" href="https://kodilla.com/static/img/icons/favicon-96x96.png?00000">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kodilla.com/static/img/icons/favicon-16x16.png?00000">
+
+    <link rel="canonical" href="https://kodilla.com/pl/bootcamp-module/407/254/5935" />
+
+    <meta name="robots" content="noindex, follow" />
+    <title>    Moduł: 5. Wprowadzenie do JavaScriptu
+</title>
+        <script>document.documentElement.classList.remove("no-js")</script>
+<script src="https://kodilla.com/static/js/libs/yall.min.js?00000"></script>
+<link href="https://kodilla.com/static/css/libs/bootstrap.min.css?00000" rel="stylesheet">
+<link href="https://kodilla.com/static/css/libs/font-awesome.min.css?00000" rel="stylesheet">
+<link href="https://kodilla.com/build/minified/css/main-b3cf79332c.css" rel="stylesheet" type="text/css">
+            
+    <link href="https://kodilla.com/static/css/libs/prism.min.css?00000" rel="stylesheet">
+
+    <link href="https://kodilla.com/build/minified/css/bootcamp-6d0888d826.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://kodilla.com/static/css/libs/perfect-scrollbar.css?00000" />
+    <link rel="stylesheet" href="https://kodilla.com/static/css/libs/fancybox/jquery.fancybox.min.css?00000" type="text/css" media="screen" />
+    <link href="https://kodilla.com/static/css/libs/bootstrap-datetimepicker.min.css?00000">
+    <link rel="stylesheet" href="https://uploads.kodilla.com/bootcamp/styles/content.css">
+    <script>
+    document.addEventListener("DOMContentLoaded", yall);
+    window.environment = 'production';
+    window.loggedIn = true;
+    window.domain = 'https://kodilla.com';
+            window.fbAppId = 1449248938627896;
+    window.chatService = 'LiveAgent';
+    window.useMessenger = window.chatService === 'Messenger';
+    window.locale = 'pl';
+    window.lang = 'pl';
+
+    window.serverUTC       = 1625589829000;
+    window.serverOffset    = 120;
+    window.userDate        = new Date();
+    window.userUTC         = userDate.getTime();
+    window.userOffset      = userDate.getTimezoneOffset() * (-1);
+    window.userClockDiff   = userUTC - serverUTC;
+    window.diffRounded     = Math.round( userClockDiff / ( 1000 * 60 * 15 ) );
+    window.isDifferentZone = ( userOffset - serverOffset !== 0 ) ? 1 : 0;
+    window.hasWrongTime    = ( diffRounded !== 0 ) ? 1 : 0;
+    window.dateTooltipText = 'Data i godzina są podane dla Twojej strefy czasowej GMT. <br>W razie wątpliwości napisz: <u>support@kodilla.com</u>.';
+    window.wrongHourNotice = 'Godzina na Twoim urządzeniu r&oacute;żni się od godziny obowiązującej w strefie czasowej wybranej w ustawieniach Twojego urządzenia.';
+
+    window.PAYU_HASH_ALGORITHM = 'SHA-256';
+    window.PAYU_POS_ID = 1429452;
+    window.PAYU_MD5_SECOND_KEY = 'f3627be5fab5a4238c8474936f057908';
+
+    var moment = undefined,
+        momentReady = function( method, method2, count ){
+            var c = ( count ) ? count : 0;
+
+            if      ( isDifferentZone && moment !== undefined ){
+                if      ( method ) { method(); }
+                else    { return false; }
+            }
+            else if ( isDifferentZone && moment === undefined ) {
+                if ( c < 20 ) {
+                    c++;
+                    setTimeout( function() { momentReady( method, method2, c ); }
+                        , 300 );
+                } else {
+                    if      ( method2 === true && method )  { method(); }
+                    else if ( method2 !== true && method2 ) { method2(); }
+                }
+            }
+            else {
+                if      ( method2 === true && method )  { method(); }
+                else if ( method2 !== true && method2 ) { method2(); }
+                else    { return false; }
+            }
+        };
+
+    if ( window.isDifferentZone && moment === undefined ) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = '/static/js/libs/moment.timezone.locales.min.js?v=2.22.2';
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+</script>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+        OneSignal.init({
+            appId: "92552bb5-b477-4ea2-8260-dba65be198d9",
+        });
+    });
+</script>
+<script data-ad-client="ca-pub-9483216428129091" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2404285,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 389137334769464 );
+        fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KN2WWBH');</script>
+    <!-- End Google Tag Manager -->
+    
+    </head>
+<body class="no-js student ">
+<!-- Facebook Pixel Code -->
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=389137334769464&ev=PageView&noscript=1"/></noscript>
+<!-- End Facebook Pixel Code -->
+<script>
+    document.getElementsByTagName('body')[0].classList.remove('no-js');
+    if ( window.isDifferentZone ) {
+        document.querySelector('body').classList.add('time-conversion-applied');
+    }
+    if ( window.hasWrongTime ) {
+        document.querySelector('body').classList.add('wrong-hour');
+    }
+</script>
+
+    <nav class="navbar-main hidden-sm-down dark navbar">
+    <div class="nav-container">
+        <div class="navbar-header clearfix">
+            <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbarUpper"><i class="fa fa-bars"></i></button>
+        </div>
+        <div class="collapse navbar-toggleable-sm container" id="collapsingNavbarUpper">
+            <ul class="nav navbar-nav navbar-nav-left">
+                                    <li class="nav-item nav-contact">
+    <span>Skontaktuj się z nami:</span>
+    <a href="mailto:support@kodilla.com">
+        <i class="fa fa-envelope-o"></i>
+        support@kodilla.com
+    </a>
+    <span>lub</span>
+    <a href="javascript:openChat();">
+        <i class="fa fa-comments"></i>
+        porozmawiaj na czacie
+    </a>
+</li>
+                                </ul>
+            <ul class="nav navbar-nav pull-right">
+                                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/informator" class="nav-link" target="_blank">
+        Informator
+    </a>
+                </li>
+                <li class="nav-item hidden-sm-down">
+    <a href="https://kodilla.com/pl/account" class="nav-link">Konto</a>
+</li>
+        <li class="nav-item">
+    <a class="analytics-track nav-link nav-link-accent" data-event="account_logout" href="https://kodilla.com/pl/sign-out">Wyloguj</a>
+</li>
+                            </ul>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-main light navbar">
+    <div class="container clearfix">
+        <a class="navbar-brand"  href="https://kodilla.com/pl">
+            <img src="https://kodilla.com/static/img/kodilla-nav-logo.svg?00000" alt="Kodilla - szkoła programowania">
+        </a>
+        <span class="contact-us-button-container"></span>
+        <button class="navbar-toggler pull-right collapsed" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <i class="fa fa-bars navbar-ico-open"></i>
+            <i class="fa fa-times navbar-ico-close"></i>
+        </button>
+        <ul id="navbar-main" class="nav navbar-nav pull-right collapse">
+            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        Szkolenia Bootcamp
+    </a>
+    <ul class="bootcamp-list">
+                    <li class="list-sub list-sub-fe">
+                <img src="https://kodilla.com/static/img/svg/menu_fer.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_fer_logo">
+                <a href="https://kodilla.com/pl/bootcamp/front-end">
+                    <h4 class="bootcamp-name">Front-end: React</h4>
+                    <p>Naucz się tworzyć front-end aplikacji w 4 miesiące</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_wd.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_wd_logo">
+                <a href="https://kodilla.com/pl/bootcamp/webdeveloper?type=wdp">
+                    <h4 class="bootcamp-name">Web Developer</h4>
+                    <p>Naucz&nbsp;się tworzyć aplikacje internetowe od&nbsp;podstaw</p>
+                    <span class="bootcamp-label">FRONT-END i BACK-END</span>
+                </a>
+            </li>
+
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_java.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_java_logo">
+                <a href="https://kodilla.com/pl/bootcamp/java?type=jdp">
+                    <h4 class="bootcamp-name">Java Developer</h4>
+                    <p>Poznaj najpopularniejszy na&nbsp;świecie język programowania od&nbsp;zera</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_python.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_python_logo">
+                <a href="https://kodilla.com/pl/bootcamp/python">
+                    <h4 class="bootcamp-name">Python Developer</h4>
+                    <p>Zdobądź kompetencje do tworzenia rozwiązań webowych</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_tester.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_tester_logo">
+                <a href="https://kodilla.com/pl/bootcamp/tester-automatyzujacy">
+                    <h4 class="bootcamp-name">Tester Automatyzujący</h4>
+                    <p>Poznaj podstawy testowania automatycznego w Javie</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_game.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_mage_logo">
+                <a href="https://kodilla.com/pl/bootcamp/game-dev">
+                    <h4 class="bootcamp-name">Mobile Game Developer</h4>
+                    <p>Zdobądź kompetencje do tworzenia gier</p>
+                    <span class="bootcamp-label">nowość</span>
+                </a>
+            </li>
+            </ul>
+</li>
+
+                        <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        Szkolenia Pro
+    </a>
+    <ul>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/mikroserwisy" class="nav-link">Mikroserwisy w Javie</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/spring-hibernate" class="nav-link">Spring i Hibernate</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/wielowatkowosc" class="nav-link">Wielowątkowość w Javie</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/django" class="nav-link">Aplikacje webowe z Django</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/wizualizacja-danych" class="nav-link">Analiza danych w Pythonie</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/machine-learning" class="nav-link">Podstawy Machine Learning</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/bigdata-pyspark" class="nav-link">Big Data z PySpark</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/automatyzacja-testow" class="nav-link">Automatyzacja test&oacute;w</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/vanilla-js" class="nav-link">Advanced Vanilla JS</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/typescript" class="nav-link">TypeScript - kurs praktyczny</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/vue3" class="nav-link">Vue3 - kompletny przewodnik</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/zaawansowany-backend" class="nav-link">Backend zaawansowany</a></li>
+    </ul>
+</li>
+            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        Strefa kursanta
+    </a>
+    <ul>
+                    <li><a href="https://kodilla.com/pl/bootcamp-dashboard/407" class="nav-link">Bootcamp WD PLUS 2020-12</a></li>
+                    <li><a class="nav-link" href="https://kodilla.com/pl/kursy">Samodzielne kursy</a></li>
+                    <li><a class="nav-link" href="https://chat.kodilla.com" target="_blank">Komunikator</a></li>
+                    <li><a class="nav-link" href="https://kodilla.com/pl/projects">Moje projekty</a></li>
+    </ul>
+</li>
+                            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        O nas
+    </a>
+    <ul class="about-us">
+        <li><a href="https://kodilla.com/pl/mentorzy" class="nav-link">Mentorzy</a></li>
+        <li><a href="https://kodilla.com/pl/zespol" class="nav-link">Zesp&oacute;ł Kodilli</a></li>
+        <li><a href="https://kodilla.com/pl/o-nas" class="nav-link">O firmie</a></li>
+    </ul>
+</li>
+                                                                    <li class="nav-item hidden-md-up nav-group">
+    <span class="mobile-menu-separator">Szkolenia Bootcamp</span>
+    <ul>
+                    <li class="nav-item list-sub-fe">
+                <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/front-end">Bootcamp Front-end: React
+                </a>
+            </li>
+                <li class="nav-item">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/webdeveloper">Bootcamp Web Developer
+                <span class="bootcamp-label">FRONT-END i BACK-END</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://kodilla.com/pl/bootcamp/java">Bootcamp Java</a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/tester-automatyzuj%C4%85cy">Bootcamp Tester Automatyzujący
+            </a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/python">Python Developer
+            </a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/game-dev">Mobile Game Developer
+                <span class="bootcamp-label">nowość</span>
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="nav-item hidden-md-up nav-group">
+    <a class="nav-link-bold" href="https://kodilla.com/pl/szkolenia-pro">Szkolenia Pro</a>
+</li>
+            <li class="nav-item hidden-md-up nav-group">
+            <span class="mobile-menu-separator">Strefa kursanta</span>
+            <ul>
+                <li class="nav-item ">
+                                            <a class="nav-link" href="https://kodilla.com/pl/bootcamp-dashboard/407">
+                            Bootcamp   WD PLUS 2020-12
+                        </a>
+                                    </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://kodilla.com/pl/kursy">Samodzielne kursy</a>
+                </li>
+                                    <li class="nav-item ">
+                        <a class="nav-link" href="https://chat.kodilla.com" target="_blank">Komunikator</a>
+                    </li>
+                                <li class="nav-item">
+                    <a class="nav-link" href="https://kodilla.com/pl/projects">Moje projekty</a>
+                </li>
+            </ul>
+        </li>
+    
+        
+            <li class="nav-item hidden-md-up nav-group">
+            <span class="mobile-menu-separator">O nas</span>
+            <ul>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/mentorzy" class="nav-link">Mentorzy</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/zespol" class="nav-link">Zesp&oacute;ł Kodilli</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/o-nas" class="nav-link">O firmie</a>
+                </li>
+            </ul>
+        </li>
+    
+<li class="nav-item hidden-md-up nav-group">
+    <span class="mobile-menu-separator">Pozostałe</span>
+    <ul>
+                                        
+        <li class="nav-item">
+            <a href="https://kodilla.com/pl/informator" class="nav-link" target="_blank">
+        Informator
+    </a>
+        </li>
+    </ul>
+
+</li>
+
+    <li class="nav-item hidden-md-up">
+        <a class="nav-link" href="https://kodilla.com/pl/account">Konto</a>
+    </li>
+    <li class="nav-item hidden-md-up">
+        <a class="nav-link analytics-track" data-event="account_logout" href="https://kodilla.com/pl/sign-out">Wyloguj</a>
+    </li>
+
+        
+    <li class="nav-item hidden-md-up nav-group">
+        <span class="mobile-menu-separator">Skontaktuj się z nami</span>
+        <ul>
+            <li class="nav-item">
+                <a href="mailto:support@kodilla.com" class="nav-link">
+                    <i class="fa fa-envelope-o"></i>
+                    support@kodilla.com
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:openChat();" class="nav-link">
+                    <i class="fa fa-comments"></i>
+                    <span>Porozmawiaj na czacie</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+        </ul>
+    </div>
+</nav>
+<main class="bootcamp module page-height-fix" id="bootcamp-module">
+    <div class="aside-toggle hidden-md-up">
+        <button class="navbar-toggler pull-left collapsed" type="button" data-toggle="collapse" data-target="#aside-sticky" aria-expanded="false">
+            <i class="fa fa-bars navbar-ico-open"></i>
+            <i class="fa fa-times navbar-ico-close"></i>
+        </button>
+    </div>
+    <div class="table-of-contents aside-sticky collapsed collapse" id="aside-sticky">
+        <section class="container">
+            <div class="row">
+                <aside class="module-nav col-md-4 col-md-offset-8">
+                    <section class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Spis treści modułu</h4>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-951" class="clearfix">
+                                    <p>5.1. Czym jest JavaScript?</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-952" class="clearfix">
+                                    <p>5.2. Piszemy grę!</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-953" class="clearfix">
+                                    <p>5.3. Wyświetlanie tekstu</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-954" class="clearfix">
+                                    <p>5.4. Wybieranie ruch&oacute;w</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-955" class="clearfix">
+                                    <p>5.5. Poprawa kodu projektu</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-956" class="clearfix">
+                                    <p>5.6. Interfejs gry</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-957" class="clearfix">
+                                    <p>5.7. Podsumowanie</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-959" class="clearfix">
+                                    <p>5.8. Quiz powt&oacute;rkowy</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                    </ul>
+                        <div class="card-block text-center">
+                                                                                                <a href="https://kodilla.com/pl/bootcamp-dashboard/407">Powr&oacute;t do dashboardu</a>
+                                                                                    </div>
+                    </section>
+                </aside>
+            </div>
+        </section>
+    </div>
+    <section class="container module-content">
+        <div class="row">
+            <main class="col-md-8">
+                <section class="card">
+                    <div class="card-block module-header clearfix  completed ">
+                        <h1 class="card-title">5. Wprowadzenie do JavaScriptu</h1>
+                                                <i class="fa fa-bookmark fa-3x" aria-hidden="true"></i>
+                    </div>
+                                        <div class="card-block challenge">
+                        <h3>Wyzwania:</h3>
+                        <ul>
+<li>dowiesz się, czym jest algorytm,</li>
+<li>poznasz podstawowe pojęcia z zakresu JavaScriptu,</li>
+<li>nauczysz się, jak stworzyć prostą grę.</li>
+</ul>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+                    </div>
+                                    </section>
+                                    
+                <section id="submodule-951" class="card submodule completed" data-bootcamp-user-submodule-id="594668" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">5.1. <span>Czym jest JavaScript?</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Zaczynamy naszą przygodę z JavaScriptem! Twoje projekty, do tej pory statyczne i reagujące co najwyżej na ruch kursorem, będą mogły nabrać życia i zaoferować użytkownikom nowe funkcjonalności!</p>
+<h3>Wprowadzenie</h3>
+<p>Profesor uniwersytetu z pewnością mógłby udzielić Ci bardzo głębokiej odpowiedzi na pytanie "czym jest JavaScript?", ale my nie będziemy Cię zanudzać genezą JS-a i zawiłą terminologią. Szczególnie że zapewne nie możesz się już doczekać, kiedy zaczniesz pisać własne skrypty! ;)</p>
+<p>Musimy jednak odpowiedzieć sobie na pytanie: czym <em>dla nas</em> jest JavaScript?</p>
+<p>Metaforycznie, jest to taki "robot" żyjący w przeglądarce. Za pomocą JavaScriptu możesz mu wytłumaczyć, co ma robić. Może wykonywać skomplikowane operacje na liczbach, "na żywo" zmieniać HTML na stronie, czy łączyć się z serwerem w internecie, aby pobrać z niego jakieś informacje i wyświetlić użytkownikowi.</p>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/duck.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/duck-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/duck.png 2x" class="img-inline img-left">
+<p>Podobnie jak <a href="https://pl.wikipedia.org/wiki/Metoda_gumowej_kaczuszki" target="_blank">metoda gumowej kaczuszki</a>, ta metafora może wydawać się dziecinna, ale jest bardzo przydatna. Pozwala lepiej zrozumieć, że nasz kod JS to nic innego, jak "rozkazy" dla tego "robota".</p>
+<p>Możesz spodziewać się kolejnych metafor w tym module. Wszystkie będą tworzyć większą całość, czyli pozwolą nam na stopniowe rozszerzanie tej analogii o kolejne elementy. Dzięki temu łatwiej będzie Ci poszerzać wiedzę o nowe zagadnienia.</p>
+<p>Dla ułatwienia i zwiększenia czytelności, kolejne porównania będą zawarte w ramkach z nagłówkiem "Metafora".</p>
+<h3>Myślenie algorytmiczne</h3>
+<p>Zanim dotkniemy pierwszej linijki kodu JS, musimy wyjaśnić kwestię <strong>myślenia algorytmicznego</strong>. Skrypty JavaScript to nic innego, jak zapis algorytmu w pewnym konkretnym języku. O ile łatwo możesz znaleźć mnóstwo informacji na temat samego języka, o tyle trudniej jest nauczyć się myślenia algorytmicznego. Najpierw jednak musimy zrozumieć, czym jest algorytm.</p>
+<div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Definicja algorytmu</h4>
+<p><strong>Algorytm</strong> – skończony ciąg jasno zdefiniowanych czynności, koniecznych do wykonania pewnego rodzaju zadań. Sposób postępowania prowadzący do rozwiązania problemu.</p>
+<p>Źródło: <a href="https://pl.wikipedia.org/wiki/Algorytm" target="_blank">Wikipedia</a></p>
+</div>
+<p>Z tej definicji wynika, że:</p>
+<ul>
+<li>algorytm musi mieć pewną (skończoną) liczbę kroków,</li>
+<li>kroki muszą być jasno zdefiniowane,</li>
+<li>cel algorytmu to wykonanie jakiegoś zadania.</li>
+</ul>
+<p>Od razu możemy zwrócić uwagę, że jest to bardzo ogólna definicja. Np. nie wyklucza ona, że algorytm może się składać z algorytmów... Jednak do tego tematu jeszcze wrócimy! ;)</p>
+<p>Słowo "algorytm" może początkowo Cię trochę przytłaczać, ponieważ może Ci się wydawać, że to coś skomplikowanego. W takich chwilach wystarczy, że przypomnisz sobie: przepis z książki kucharskiej jest świetnym przykładem algorytmu – jest to algorytm pieczenia ciasta!</p>
+<p>W przeciwieństwie do książki kucharskiej nie będziemy opisywać algorytmów słownie, tylko za pomocą <a href="https://pl.wikipedia.org/wiki/Schemat_blokowy" target="_blank">schematów blokowych</a>. Nie musisz jednak uczyć się, jak je odczytywać – będziemy tworzyć je krok po kroku, więc bez problemu domyślisz się, co oznaczają.</p>
+<p>Przykłady i ćwiczenia w tym rozdziale mogą wydawać Ci się śmieszne. Pozwalają one jednak na wytrenowanie u siebie umiejętności, które znacznie ułatwią pisanie skryptów. Gorąco zachęcamy do podjęcia próby zmierzenia się z tym wyzwaniem!</p>
+<p>Zacznijmy od pokazania algorytmu na przykładzie zadania "zrobić herbatę". Możesz pomyśleć, że przecież każdy to wie, i powiedzieć "idź do kuchni, zagotuj wodę i zalej herbatę".</p>
+<a href="https://uploads.kodilla.com/bootcamp/kodilla-bootcamp-19-04-2018-1524139606-6505.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/kodilla-bootcamp-19-04-2018-1524139606-6505.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Jeśli jednak wyobrazisz sobie, że tłumaczysz to samo zadanie dziecku, które nigdy wcześniej nie robiło herbaty, schemat ten może być bardziej szczegółowy.</p>
+<a href="https://uploads.kodilla.com/bootcamp/kodilla-bootcamp-19-04-2018-1524139606-3929.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/kodilla-bootcamp-19-04-2018-1524139606-3929.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Teraz już mamy przedstawione wszystkie kroki, ale czasem w algorytmie występują też momenty (<strong>decyzje</strong>), w których ścieżka algorytmu się rozdwaja. Dodajmy w takim razie sprawdzenie, czy w czajniku jest woda.</p>
+<a href="https://uploads.kodilla.com/bootcamp/kodilla-bootcamp-19-04-2018-1524139536-641.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/kodilla-bootcamp-19-04-2018-1524139536-641.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>A co się stanie, kiedy spróbujemy to samo podejście zastosować dla sprawdzania, czy herbata już się zaparzyła? Wtedy również zastosujemy decyzję, ale jedna z odpowiedzi będzie nas kierowała do wcześniejszego kroku. W ten sposób otrzymamy <strong>pętlę</strong>, w której będziemy krążyć tak długo, aż zostanie spełniony warunek.</p>
+<a href="https://uploads.kodilla.com/bootcamp/kodilla-bootcamp-19-04-2018-1524139474-6522.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/kodilla-bootcamp-19-04-2018-1524139474-6522.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Teraz nasz algorytm zrobił się już nieco skomplikowany. Dlatego dobrze by było wydzielić z niego <strong>procedury</strong>, które będą osobno zdefiniowane. Dzięki temu możemy bardziej skomplikowane elementy zapisać w uproszczonej formie, a szczegóły takiej procedury opisać osobno. Zobaczmy to na przykładzie:</p>
+<a href="https://uploads.kodilla.com/bootcamp/kodilla-bootcamp-19-04-2018-1524139407-4513.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/kodilla-bootcamp-19-04-2018-1524139407-4513.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<a href="https://uploads.kodilla.com/bootcamp/kodilla-bootcamp-23-04-2018-1524486179-7883.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/kodilla-bootcamp-23-04-2018-1524486179-7883.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<a href="https://uploads.kodilla.com/bootcamp/kodilla-bootcamp-23-04-2018-1524486289-2759.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/kodilla-bootcamp-23-04-2018-1524486289-2759.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Teraz widzisz, że nasz główny algorytm nie różni się bardzo od pierwotnego, prostego przykładu. Dzięki temu łatwo jest zrozumieć cały algorytm na poziomie ogólnym, a dopiero potem zagłębić się w szczegóły procedur.</p>
+<h4>Po co nam algorytmy?</h4>
+<p>Jak wspomnieliśmy na początku rozdziału, skrypt jest algorytmem zapisanym w języku JavaScript. Dlatego warto trenować u siebie myślenie algorytmiczne.</p>
+<p>Spróbuj raz dziennie znaleźć jakiś przykład algorytmu w codziennym życiu i rozbić go na kolejne kroki, zauważyć w nim decyzje, pętle i procedury. Możesz rozpisać je za pomocą schematów blokowych albo po prostu przemyśleć algorytm pod tym kątem. Warto jednak przez kilka tygodni wykonywać takie ćwiczenie, np. w drodze do pracy.</p>
+<p>Jak już pewnie się domyślasz, w JavaScripcie będziemy bardzo często wykorzystywać to, co w algorytmach nazwaliśmy decyzjami, pętlami i procedurami. Jednak ich wykorzystanie będzie wymagało myślenia algorytmicznego, w tym rozumienia problemu na różnych poziomach – od ogólnego, który można naraz "ogarnąć" umysłem i zaplanować potrzebne procedury, aż po szczegółowe, które pozwolą na wypełnienie procedur kodem realizującym ich zadania.</p>
+<h3>Pierwszy skrypt — hello world!</h3>
+<p>Podobnie jak wcześniej, w treści modułu będziemy wykorzystywać zagnieżdżone edytory CodePen. Pozwolą nam pokazywać na przykładach omawiane zagadnienia. Dzięki nim będziesz mieć również możliwość łatwego eksperymentowania – zmiany w kodzie zagnieżdżonych edytorów nie są nigdzie zapisywane, więc możesz dowolnie je zmieniać, bez obawy, że coś <em>zepsujesz</em>.</p>
+<p>Jak zwykle w nauce programowania, zaczynamy od skryptu "Hello world".</p>
+<p style="min-height:300px; border: 1px solid #d0e9c6; border-radius: 4px; padding: 20px; text-align: center;" data-height="300" data-theme-id="33276" data-slug-hash="634d36cf84d32d3bb82dd7caf238c81a" data-default-tab="js,result" data-user="kodilla" data-embed-version="2" data-editable="true" class="codepen">See <a href="https://codepen.io/kodilla/pen/634d36cf84d32d3bb82dd7caf238c81a/">the Pen</a> on <a href="https://codepen.io">CodePen</a>.</p><br>
+<p>Ten fragment kodu nie jest bardzo skomplikowany, ale już na jego podstawie możemy dowiedzieć się kilku podstawowych rzeczy:</p>
+<ul>
+<li>kod JS jest wykonywany od góry do dołu,</li>
+<li><code>document.write</code> wstawia tekst (lub kod HTML) na stronę,</li>
+<li>w nawiasach musimy podać tekst, który ma być wstawiony,</li>
+<li>teksty zamykamy w cudzysłowach 'pojedynczych' lub "podwójnych" (zależnie od preferencji – my wolimy pojedyncze),</li>
+<li>na końcu każdej linii kodu znajduje się średnik (potem dowiesz się, że są wyjątki od tej zasady).</li>
+</ul>
+<div class="bc-note alert-info">
+<h4 class="alert-heading text-center">Ćwiczenie</h4>
+<p>W powyższym edytorze dopisz jeszcze dwie linie kodu JS, które wstawią kod HTML na stronę. Sprawdź, czy w ten sposób możemy dodawać np. obrazki (już wiesz jak) lub wideo z YouTube (wystarczy, że pod video na YouTube klikniesz "Udostępnij", a następnie "Umieść", aby zobaczyć kod HTML do wstawienia na stronie).</p>
+</div>
+<h3>Nie bój się JS-a!</h3>
+<p>W podejściu akademickim zwykle zaczyna się od wyjaśniania pojęć, a dopiero później ich wykorzystanie w praktyce. Nasze doświadczenie pokazuje, że taka droga jest o wiele dłuższa i z tego względu możliwie szybko zaczynamy praktykę, a potem uzupełniamy wiedzę teoretyczną.</p>
+<p>Oznacza to, że początkowo nie będziesz rozumieć wszystkiego, co się dzieje w kodzie. Pamiętaj, że na tym etapie to absolutnie normalne! Warto jednak przyzwyczaić się do tego, że niektórych rzeczy trzeba się po prostu domyślać.</p>
+<p>W powyższym przykładzie skryptu nie wytłumaczyliśmy, jak działa <code>document.write</code> i dlaczego po nim wstawiamy tekst w nawiasach. Nie jest to jednak dla Ciebie przeszkodą w tym, żeby już teraz rozumieć, co robi ten kod, a nawet go zmodyfikować, prawda?</p>
+<p>Jako web developer będziesz często spotykać się z sytuacjami, kiedy nie rozumiesz każdego elementu kodu. Ważne, żeby domyślać się, co ten kod robi, i jak można znaleźć i zmienić kluczowy fragment kodu.</p>
+<p>Dlatego nie przejmuj się brakami wiedzy – z czasem wyjaśnimy większość z tych <em>niedopowiedzeń</em>. Na razie zależy nam na tym, aby jak najszybciej zaznajomić Cię z JS-em i pozwolić Ci na pisanie kodu.</p>
+<p>Samodzielne eksperymenty to świetny sposób na naukę. Oprócz wykonywania ćwiczeń i zadań możesz dowolnie eksperymentować z przykładami zawartymi w tym module. Pamiętaj, aby zmieniać coś w każdym przykładzie, żeby lepiej zrozumieć, jak działa.</p>
+<p>Dlatego śmiało eksperymentuj i nie bój się zmieniać kod JS, nawet jeśli nie wszystko jest dla Ciebie jasne!</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-952" class="card submodule completed" data-bootcamp-user-submodule-id="594669" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">5.2. <span>Piszemy grę!</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>W ramach tego modułu stworzymy prostą grę – papier, kamień, nożyce. Brzmi ambitnie, jak na początek nauki JavaScriptu? Nie przejmuj się, napisanie tej gry będzie bardzo proste, a na tym przykładzie będzie Ci łatwiej zrozumieć nowe zagadnienia.</p>
+<p>Pierwszym krokiem do napisania jakiegokolwiek kodu jest opisanie jego funkcjonalności. Zacznijmy więc od przypomnienia zasad gry.</p>
+<h3>Zasady gry</h3>
+<p>Zapewne znasz zasady tej gry, ale nawet w takiej sytuacji dobrze jest jasno sprecyzować oczekiwany efekt.</p>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/game.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/game-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/game.png 2x" class="img-inline img-left">
+<p>Pojedyncza runda gry polega na jednoczesnym (w naszym wypadku – pozornie jednoczesnym) zagraniu dwóch graczy.</p>
+<p>Każdy gracz może wybrać jeden z ruchów: papier, kamień, lub nożyce.</p>
+<p>W naszym wypadku będzie jeden gracz, a rolę drugiego gracza będzie pełnił skrypt. Potocznie mówi się, że gramy z komputerem, więc tak też będziemy się odnosić do tego wyimaginowanego przeciwnika.</p>
+<p>Wynik rundy może być następujący:</p>
+<ul>
+<li>remis – jeśli obaj gracze wybrali ten sam ruch,</li>
+<li>wygrana gracza, który zagrał papier, jeśli drugi gracz zagrał kamień,</li>
+<li>wygrana gracza, który zagrał kamień, jeśli drugi gracz zagrał nożyce,</li>
+<li>wygrana gracza, który zagrał nożyce, jeśli drugi gracz zagrał papier.</li>
+</ul>
+<p>Gra toczy się do osiągnięcia przez jednego z graczy wcześniej ustalonej liczby wygranych rund.</p>
+<h3>Specyfikacja projektu</h3>
+<p>Docelowo chcielibyśmy, aby całość działała w następujący sposób:</p>
+<ul>
+<li>na ekranie znajdują się trzy guziki: "papier", "kamień", "nożyce", umożliwiające graczowi wybór zagrania,</li>
+<li>po kliknięciu któregoś z tych trzech guzików, skrypt losuje swoje zagranie,</li>
+<li>na końcu podawany jest wynik gry.</li>
+</ul>
+<p>Będziemy rozwijać naszą grę etapami – zaczniemy od bardzo prostej wersji, której nawet nie można nazwać grą, i stopniowo będziemy dodawać kolejne funkcjonalności.</p>
+<p>W pierwszym etapie nasza gra będzie:</p>
+<ul>
+<li>uruchamiać się od razu po wyświetleniu strony,</li>
+<li>wyświetlać na ekranie tekst "Zagrałem kamień! Jeśli Twój ruch to papier, to wygrywasz!"</li>
+</ul>
+<p>Jak wspomnieliśmy, tego nawet nie można nazwać grą, ale będzie to świetny punkt wyjścia!</p>
+<h3>Przygotowanie nowego projektu</h3>
+<p>Korzystając z wiedzy zdobytej w poprzednim module, przygotuj środowisko nowego projektu o nazwie <code>javascript-prework</code>.</p>
+<ol>
+<li>Stwórz na GitHubie nowe repozytorium pod nazwą <code>javascript-prework</code>.</li>
+<li>Sklonuj stworzone repozytorium.</li>
+<li>Skopiuj plik <code>package.json</code> stworzony w poprzednim module do katalogu projektu.</li>
+<li>Zainicjuj projekt za pomocą komendy <code>npm run init-project</code> uruchomionej w katalogu projektu.</li>
+<li>Zapisz commit i wyślij go (wykonaj <em>push</em>) do zdalnego repozytorium.</li>
+<li>Sprawdź w panelu GitHub czy pliki są widoczne w repozytorium.</li>
+</ol>
+<p>W czasie realizacji tego modułu będziesz aktualizować pliki projektu. Efektem będzie projekt z działającą grą.</p>
+<p>Nie martw się tym, że to jest Twoje pierwsze spotkanie z JavaScriptem. Niniejszy moduł pomoże Ci poznać podstawy. Aby było to możliwe, przygotowaliśmy dla Ciebie początkową zawartość paru plików, które ułatwią Ci uruchomienie projektu.</p>
+<ul>
+<li><code>index.html</code> – zastąp zawartość swojego pliku <code>index.html</code> kodem przygotowanym przez nas (poniżej); umieściliśmy w nim odwołania do plików CSS oraz JS, a także podstawową strukturę HTML, z której będziemy korzystać w tym module;</li>
+<li><code>functions.js</code> – umieść ten plik w katalogu <em>js</em> swojego projektu i wklej do niego zawartość podaną poniżej; znajduje się w nim kod JS niezbędny do uruchomienia przykładów z tego modułu;</li>
+</ul>
+<p>Kod JS tworzony w ramach projektu będziesz umieszczać w pliku <code>js/script.js</code>, który został już stworzony w Twoim projekcie za pomocą komendy <code>npm run init-project</code>.</p>
+<p>To wszystko, co będzie Ci potrzebne do realizacji tego modułu. Po przygotowaniu projektu zapisz nowy commit i przejdź do nauki JS-a w następnym submodule!</p>
+<p><strong>index.html:</strong></p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;UTF-8&quot;&gt;
+	&lt;title&gt;Kamień, papier, nożyce&lt;/title&gt;
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div class=&quot;container&quot;&gt;
+		&lt;div id=&quot;buttons&quot;&gt;&lt;/div&gt;
+		&lt;div id=&quot;messages&quot;&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;script src=&quot;js/functions.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>js/functions.js</strong></p>
+<pre><code class="language-js">function printMessage(msg){
+	let div = document.createElement('div');
+	div.innerHTML = msg;
+	document.getElementById('messages').appendChild(div);
+}
+
+function clearMessages(){
+	document.getElementById('messages').innerHTML = '';
+}
+</code></pre>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-953" class="card submodule completed" data-bootcamp-user-submodule-id="594670" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">5.3. <span>Wyświetlanie tekstu</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Wiemy już, jaki będzie pierwszy etap tworzenia naszej gry, więc nie pozostaje nam nic innego, jak wziąć się do pracy!</p>
+<h3>Wywołanie funkcji</h3>
+<p>W naszym kodzie HTML przygotowaliśmy pusty kontener na wyświetlane komunikaty: <code>&lt;div id=&quot;message&quot;&gt;&lt;/div&gt;</code>. Aby wyświetlić w nim tekst za pomocą JavaScriptu, musimy odnaleźć ten element oraz zmienić jego zawartość.</p>
+<p style="min-height:300px; border: 1px solid #d0e9c6; border-radius: 4px; padding: 20px; text-align: center;" data-height="300" data-theme-id="33276" data-slug-hash="e24e24caae68373f4186c12dade06c56" data-default-tab="js,result" data-user="kodilla" data-embed-version="2" data-editable="true" class="codepen">See <a href="https://codepen.io/kodilla/pen/e24e24caae68373f4186c12dade06c56/">the Pen</a> on <a href="https://codepen.io">CodePen</a>.</p><br>
+<p>Przypomnij sobie rozdział dotyczący algorytmów – pokazaliśmy w nim decyzje, pętle i procedury. Zaczniemy od tych ostatnich, czyli procedur. Jak wspomnieliśmy wcześniej, są to fragmenty algorytmu, które zostały wydzielone, aby algorytm był bardziej czytelny. Wydzielenie procedury pozwala też na jej wielokrotne wykorzystanie.</p>
+<p>W JavaScripcie "procedury" nazywamy <strong>funkcjami</strong>. Na potrzeby tego projektu stworzyliśmy dla Ciebie funkcję <code>printMessage</code>, którą dodaliśmy przed chwilą do pliku <code>js/functions.js</code>. Na razie nie musisz rozumieć kodu tej funkcji – omówimy to później. Ważne, że wywołanie tej funkcji będzie wyświetlać komunikat na stronie, a konkretniej w elemencie o <code>id</code> równym <code>messages</code>.</p>
+<div class="bc-note alert-warning">
+<h4 class="alert-heading text-center">Dlaczego nie używamy <code>document.write</code>?</h4>
+<p>W pierwszym skrypcie "Hello World!" użyliśmy funkcji <code>document.write</code> do wyświetlenia napisu na stronie. Ta funkcja dodaje podany jej tekst (lub kod HTML) na końcu <code>body</code>.</p>
+<p>W naszej grze to nie będzie odpowiednie rozwiązanie. Będzie nam zależało, aby tekst był dodawany w konkretnym divie, którego zawartość w razie potrzeby będziemy mogli wyczyścić, usuwając wszystkie dodane komunikaty.</p>
+<p>Właśnie dlatego będziemy korzystać z funkcji <code>printMessage</code>.</p>
+</div>
+<p>Spójrz teraz na linię kodu, której użyliśmy powyżej:</p>
+<pre><code class="language-js">printMessage('Zagrałem kamień! Jeśli Tw&oacute;j ruch to papier, to wygrywasz!');
+</code></pre>
+<p>Taką linię kodu nazywamy <strong>wywołaniem funkcji</strong> i <em>robi</em> ona dwie rzeczy:</p>
+<ul>
+<li>uruchamia funkcję <code>printMessage</code>,</li>
+<li>przekazuje tej funkcji tekst, który ma zostać wyświetlony.</li>
+</ul>
+<p>To, co przekazujemy funkcji, nazywamy jej <strong>argumentem</strong>. Wywołanie funkcji może mieć więcej argumentów, lub nie mieć żadnych.</p>
+<pre><code class="language-js">// wywołanie funkcji bez argument&oacute;w
+nazwaFunkcji();
+
+// wywołanie funkcji z jednym argumentem
+nazwaFunkcji(argument);
+
+// wywołanie funkcji z kilkoma argumentami
+nazwaFunkcji(argument1, argument2, argument3);
+</code></pre>
+<p>Przy okazji w powyższym kodzie pokazaliśmy, w jaki sposób w JS-ie można dodawać komentarze. Wszystko od <code>//</code> do końca linii jest ignorowane przez JS, więc możemy tam wpisać, co chcemy.</p>
+<h3>Łączenie tekstów</h3>
+<p>Wyświetlamy już tekst na stronie, ale na razie wpisaliśmy ten tekst "na sztywno" w kodzie. Już za chwilę skrypt będzie musiał wyświetlać różne teksty, w zależności od:</p>
+<ul>
+<li>zagrania gracza,</li>
+<li>wylosowanego zagrania komputera,</li>
+<li>wyniku rundy (czyli porównania ruchów gracza i komputera).</li>
+</ul>
+<p>Pierwszym krokiem do tego celu jest łączenie tekstów ze sobą. Zacznijmy od powtórzenia poprzedniego przykładu, ale tym razem wydzielając nazwę zagrania komputera:</p>
+<p style="min-height:300px; border: 1px solid #d0e9c6; border-radius: 4px; padding: 20px; text-align: center;" data-height="300" data-theme-id="33276" data-slug-hash="c317cd63f05df0f178104eba680115a4" data-default-tab="js,result" data-user="kodilla" data-embed-version="2" data-editable="true" class="codepen">See <a href="https://codepen.io/kodilla/pen/c317cd63f05df0f178104eba680115a4/">the Pen</a> on <a href="https://codepen.io">CodePen</a>.</p><br>
+<p>Jak widzisz w powyższym kodzie JS, możemy połączyć ze sobą dwa teksty za pomocą znaku plusa, ale każdy tekst musi być zamknięty w cudzysłowach.</p>
+<p>Ta zmiana jeszcze nie wniosła zbyt wiele, ale za chwilę będziemy łączyć ze sobą teksty zapamiętane w <em>zmiennych</em>, a to już będzie znaczny postęp!</p>
+<h3>Zmienne</h3>
+<p>Pisząc skrypty JS, bardzo często będziemy chcieli zapamiętać jakąś wartość (np. tekst lub liczbę), aby móc wykorzystać ją wielokrotnie. Właśnie do tego służą zmienne! Być może pamiętasz ten termin z poprzednich modułów: używając składni Sass, mogliśmy zdefiniować np. kolory jako zmienne i używać ich później w naszym kodzie. Zmienne w JS działają na bardzo podobnej zasadzie.</p>
+<div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Metafora – zmienna</h4>
+<p>Zmienną możesz wyobrazić sobie jako <em>pudełko z etykietą</em>. Na etykiecie jest napisana nazwa tego pudełka.</p>
+<p>Pamiętasz, że JS porównaliśmy do robota, któremu wydajemy polecenia? Nie chcemy, żeby się pogubił, i dlatego każde pudełko będzie miało inną etykietę.</p>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/boxes.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/boxes-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/boxes.png 2x" class="img-inline img-left">
+<p>Później dowiesz się, że pudełka w różnych pokojach mogą mieć takie same etykiety, ale na razie się tym nie przejmuj.</p>
+<p>Pudełko może być na początku puste, ale zwykle będziemy w nim chcieli coś przechowywać. Dla pudełka nie ma różnicy, co w nim będzie, tzn. nie mamy np. innych pudełek na liczby niż na teksty. Możemy też dowolnie zmieniać to, co jest w pudełku.</p>
+<p>Pamiętaj, że na samym początku musisz złożyć pudełko (zdefiniować zmienną) i napisać coś na etykiecie (nadać nazwę zmiennej).</p>
+</div>
+<p>W naszej grze będziemy potrzebowali zmiennych m.in. do przechowywania zagrania komputera. Już za chwilę będą wybierane w oparciu o algorytm skryptu – najpierw jednak przypiszemy do zmiennej jedną wartość, wpisaną na stałe.</p>
+<p style="min-height:300px; border: 1px solid #d0e9c6; border-radius: 4px; padding: 20px; text-align: center;" data-height="300" data-theme-id="33276" data-slug-hash="cd17260cbf267703d73c6dac77a20699" data-default-tab="js,result" data-user="kodilla" data-embed-version="2" data-editable="true" class="codepen">See <a href="https://codepen.io/kodilla/pen/cd17260cbf267703d73c6dac77a20699/">the Pen</a> on <a href="https://codepen.io">CodePen</a>.</p><br>
+<p>W kodzie JS powyższego przykładu najpierw deklarujemy zmienną za pomocą słowa <code>let</code>. <em>Deklarujemy</em>, czyli mówimy "będę używać zmiennej o nazwie <code>computerMove</code>". Następnie przypisujemy jej wartość <code>'kamień'</code>. W ostatniej linii wykorzystujemy zmienną zamiast słowa <code>'kamień'</code>.</p>
+<p>Zauważ, że przy wykorzystaniu zmiennej nie zamykamy jej w cudzysłowach, czyli zamiast <code>'kamień'</code> wstawiamy <code>computerMove</code>.</p>
+<h3>Dlaczego tak dziwnie nazywamy zmienne i funkcje?</h3>
+<p>Dlaczego <code>computerMove</code>, a nie <code>computer move</code>? Nazwa zmiennej musi być jednym "wyrazem", czyli nie może zawierać spacji. Może składać się tylko ze znaków alfanumerycznych (cyfr i liter, ale bez polskich znaków). Wyjątkiem jest znak podkreślenia, czyli <code>_</code>, który jest traktowany jak litera. W takim razie moglibyśmy nazwać tę zmienną <code>computer_move</code>. Dlaczego nie użyjemy tej nazwy?</p>
+<p>Tego typu decyzje często wynikają z ogólnie przyjętej konwencji. Np. w języku PHP stosuje się właśnie nazwy zmiennych z podkreśleniem. W JavaScripcie największą popularność ma tzn. zapis "camelCase", w którym słowa są zlepione ze sobą, i każde kolejne zaczyna się od wielkiej litery.</p>
+<p>Kolejnym standardem stosowanym przez większość programistów JS jest używanie wyłącznie języka angielskiego do wszystkiego, poza tekstami, które mają być wyświetlone użytkownikowi. Właśnie dlatego <code>computerMove</code>, a nie <code>ruchKomputera</code>.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block task-card" >
+                        <h3>Zadanie: <span class="task-title">Wykorzystanie zmiennej</span></h3>
+                        <div class="task-content">
+                            <p>W ostatnim przykładzie zapisaliśmy słowo <code>'kamień'</code> w zmiennej <code>computerMove</code>. Następnie, wykorzystaliśmy tę zmienną w tekście wyświetlanym na stronie.</p>
+<p>Twoim zadaniem jest wykonanie takiej samej zmiany dla słowa <code>'papier'</code>, które zapiszesz w innej zmiennej – <code>playerMove</code>.</p>
+<p>Po wykonaniu zadania umieść kod JS w pliku <code>js/script.js</code>, zapisz commit i wykonaj push. Następnie na stronie GitHuba znajdź w swoim projekcie najnowszy commit i wyślij mentorowi link do tego commita.</p>
+<div class="bc-note alert-info">
+<h4 class="alert-heading text-center">Po czym poznać link do commita?</h4>
+<p>Poprawny link będzie miał składnię:</p>
+<pre><code class="language-markup">https://github.com/USER/REPO/commit/COMMIT_IDENTIFICATOR
+</code></pre>
+<p>Np. zobacz link do jednego z commitów w repozytorium <code>bootstrap</code> użytkownika <code>twbs</code>:</p>
+<p>https://github.com/twbs/bootstrap/commit/8437be2f335ff4e9228c08ce85bf858e0e29324d</p>
+</div>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <div class="clearfix">
+                                                                                <a href="https://kodilla.com/pl/bootcamp-task/407/594670" target="_blank" class="btn btn-info-outline">Podgląd zadania</a>
+                            <form target="_blank" class="form-inline project-link-form">
+                                <div class="form-group">
+                                    <input type="text" name="link" class="form-control" value="https://github.com/skwiryt/javascript-prework/commit/884838205f716811b6095c487efa21b86dec7927">
+                                </div>
+                                <button type="submit" class="btn  btn-primary " >Wyślij link <i class="fa fa-check"></i></button>
+                            </form>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-954" class="card submodule completed" data-bootcamp-user-submodule-id="594671" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">5.4. <span>Wybieranie ruch&oacute;w</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Do tej pory komputer zawsze wybierał "kamień", więc kolejne rundy były – <em>delikatnie mówiąc</em> – łatwe do przewidzenia. W tym submodule zajmiemy się losowaniem ruchu komputera oraz umożliwieniem graczowi wyboru własnego ruchu.</p>
+<h3>Losowanie liczby</h3>
+<p>Czas na odrobinę matematyki. Będziemy losować ruch komputera, aby nie był to za każdym razem <em>kamień</em>. W JS istnieje wbudowana funkcja pozwalająca na losowanie liczb – jest to <code>Math.random</code>. Ta funkcja losuje liczbę z zakresu od <code>0</code> do <code>0.999...</code> ("prawie <code>1</code>"). Ten zakres może wydawać się dziwny, ale za chwilę zobaczysz, jak bardzo jest przydatny.</p>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/dice.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/dice-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/dice.png 2x" class="img-inline img-right">
+<p>No dobra, ale co zrobić z jakimś wylosowanym ułamkiem, żeby dostać jedno z trzech możliwych zagrań? Zacznijmy od wylosowania liczby <code>1</code>, <code>2</code> lub <code>3</code>. Skoro <code>Math.random</code> losuje liczbę od <code>0</code> do <code>0.999...</code>, to wystarczy:</p>
+<ul>
+<li>pomnożyć wylosowaną liczbę przez <code>3</code>, co da nam liczbę z przedziału od <code>0</code> do <code>2.999...</code> ("prawie <code>3</code>"),</li>
+<li>do tej liczby dodać <code>1</code>, co da nam liczbę z przedziału od <code>1</code> do <code>3.999...</code> ("prawie <code>4</code>"),</li>
+<li>zaokrąglić wylosowaną liczbę w dół za pomocą <code>Math.floor</code>, co da nam liczbę od <code>1</code> do <code>3</code>.</li>
+</ul>
+<p>Ten "dziwny przedział" losowej liczby sprawia, że otrzymamy losowy wybór jednej z 3 liczb.</p>
+<div class="bc-note alert-warning">
+<h4 class="alert-heading text-center">Dla zainteresowanych matematyką</h4>
+<p>Dzięki temu, że <code>Math.random</code> losuje liczbę z zakresu od <code>0</code> do <code>0.999...</code> ("prawie <code>1</code>"), możemy wylosowany zakres zaokrąglić w dół, otrzymując zawsze <code>0</code>. Jeśli dołożymy mnożenie i dodawanie, wedle powyższego schematu, będzie równa szansa na wylosowanie liczb <code>1</code>, <code>2</code> i <code>3</code>.</p>
+<p>Gdyby <code>Math.random</code> losował liczbę z zakresu od <code>0</code> do <code>1</code>, to w zależności od podejścia, albo mielibyśmy bardzo rzadki przypadek wylosowania liczby <code>4</code>, albo liczba <code>2</code> wypadałaby dwukrotnie częściej od pozostałych.</p>
+</div>
+<p>Mamy już algorytm losowania, czas zamienić go na kod!</p>
+<p style="min-height:400px; border: 1px solid #d0e9c6; border-radius: 4px; padding: 20px; text-align: center;" data-height="400" data-theme-id="33276" data-slug-hash="95da1173901835f6e73d8f7ee254a54e" data-default-tab="js,result" data-user="kodilla" data-embed-version="2" data-editable="true" class="codepen">See <a href="https://codepen.io/kodilla/pen/95da1173901835f6e73d8f7ee254a54e/">the Pen</a> on <a href="https://codepen.io">CodePen</a>.</p><br>
+<p>Przy każdym wykonaniu skryptu zostanie wylosowana nowa liczba. Oczywiście, nasza finalna liczba czasami będzie taka sama liczba kilka razy z rzędu – szybko to zauważysz, ponieważ są tylko trzy możliwe liczby.</p>
+<p>Jak już się zapewne domyślasz, w powyższym kodzie znak <code>*</code> oznacza mnożenie, a znak <code>+</code> oznacza dodawanie. Warto zauważyć, że znak <code>+</code> służy w JS zarówno do dodawania, jak i łączenia tekstów. Może to czasem prowadzić do błędów, z którymi spotkasz się w kolejnym module. Pokażemy Ci wtedy jak ich unikać.</p>
+<p>W powyższym przykładzie zapisaliśmy osobno losowanie liczby, operacje matematyczne, oraz zaokrąglenie. Zrobiliśmy to, aby łatwiej było Ci zrozumieć kolejne kroki, jednak moglibyśmy zapisać całość jako:</p>
+<pre><code class="language-js">let randomNumber = Math.floor(Math.random() * 3 + 1);
+</code></pre>
+<div class="bc-note alert-info">
+<h4 class="alert-heading text-center">Ćwiczenie</h4>
+<p>Zmień powyższy kod tak, aby dodatkowo losował liczbę całkowitą od <code>11</code> do <code>19</code>.</p>
+<p>Przetestuj swój kod, aby upewnić się, że możliwe jest wylosowanie liczb <code>11</code> i <code>19</code>, ale nigdy nie zostanie wylosowana liczba spoza tego zakresu (np. <code>7</code> lub <code>23</code>).</p>
+<p>Jeśli okaże się, że Twój kod działa nieprawidłowo, zastanów się, czy w naszym przykładzie liczba <code>3</code> oznacza maksymalną wartość, czy może raczej liczbę możliwych rezultatów.</p>
+<p>Nie musisz zapisywać swojego rozwiązania – możesz wykonać to ćwiczenie w zagnieżdżonym edytorze powyżej.</p>
+</div>
+<h3>Logika warunkowa <code>if...else</code></h3>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/sign.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/sign-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/sign.png 2x" class="img-inline img-left">
+<p>Dość matematyki – czas na trochę logiki. Mamy już wylosowaną liczbę <code>1</code>, <code>2</code> lub <code>3</code> i teraz chcemy na tej podstawie wybrać jeden z ruchów: "kamień", "papier", lub "nożyce".</p>
+<p>Wykorzystamy do tego wyrażenie <code>if...else</code>, które – <em>w wielkim skrócie</em> – działa na zasadzie "jeśli warunek jest spełniony, zrób to, a w przeciwnym wypadku, zrób tamto".</p>
+<p>Już za chwilę nie będziesz sobie wyobrażać świata bez <code>if...else</code>. Jest to podstawa programowania, ponieważ pozwala na to, aby Twój skrypt rozpoznawał okoliczności, w których ma (lub nie ma) wykonać pewne operacje.</p>
+<p>W naszej grze <code>if...else</code> pozwoli nam nie tylko na to, aby np. na podstawie wylosowanej liczby <code>1</code> otrzymać słowo "kamień". Użyjemy go też do sprawdzania, kto wygrał daną partię. Zacznijmy jednak od podstaw...</p>
+<div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Metafora - <code>if...else</code></h4>
+<p>Strukturę <code>if...else</code> możemy wyobrazić sobie jako sortownię poczty, która w zależności np. od rozmiaru czy wagi przesyłek kieruje je do różnych ciężarówek. W tej sortowni jest jednak zasada, że można zadawać tylko pytania, na które odpowiedź to "tak" lub "nie". Na przykład:</p>
+<ul>
+<li>Czy paczka ma naklejkę "ostrożnie – szkło"? Jeśli tak, musi jechać ciężarówką A.</li>
+<li>Czy paczka jest standardowych rozmiarów? Jeśli tak, musi jechać ciężarówką B.</li>
+<li>Czy paczka waży ponad 10 kg? Jeśli tak, musi jechać ciężarówką C.</li>
+<li>W przeciwnym wypadku musi jechać ciężarówką D.</li>
+</ul>
+</div>
+<p>Zobaczmy działanie <code>if...else</code> na przykładzie!</p>
+<pre><code class="language-js">if(1 &gt; 2){
+	printMessage('Niesamowite! Jeden jest większe niż dwa!!!');
+} else {
+	printMessage('Wszystko po staremu, jeden jest mniejsze niż dwa.');
+}
+</code></pre>
+<p>Oczywiście, w tym przykładzie sprawdzamy, czy <code>1</code> jest większe niż <code>2</code>, tylko po to, aby zaprezentować, jak działa wyrażenie <code>if...else</code>. Ci z Was, którzy uwielbiają matematykę, zapewne już zdążyli zauważyć nasz błąd – przecież jeśli nie jest prawdą <code>1 &gt; 2</code>, to wcale nie znaczy, że "jeden jest mniejsze niż dwa". A co, jeśli by były równe? Tu z pomocą przyjdzie nam <code>else if</code>.</p>
+<pre><code class="language-js">if(1 &gt; 2){
+	printMessage('Niesamowite! Jeden jest większe niż dwa!!!');
+} else if (1 == 2) {
+	printMessage('Dziwne &ndash; jeden jest r&oacute;wne dwa?!');
+} else {
+	printMessage('Wszystko po staremu, jeden jest mniejsze niż dwa.');
+}
+</code></pre>
+<p>Można stosować wiele bloków <code>else if</code>, a dopiero na końcu można (ale nie trzeba) użyć bloku <code>else</code>. Pamiętaj, że jeśli spełniony zostanie pierwszy warunek (<code>1 &gt; 2</code>), to drugi w ogóle nie zostanie sprawdzony. Tylko kiedy pierwszy warunek będzie fałszywy, sprawdzony zostanie drugi (<code>1 == 2</code>). Jeśli on też będzie fałszywy, zostanie wykonany kod w bloku <code>else</code>.</p>
+<p>Zauważ, że do sprawdzenia, czy dwie liczby są sobie równe, użyliśmy wyrażenia <code>==</code>, czyli dwóch znaków równości. W ten sam sposób możemy sprawdzać, czy dwa teksty są identyczne!</p>
+<p>To, że użyliśmy dwóch znaków równości, a nie jednego, jest bardzo ważne (i jest źródłem niezliczonej liczby siwych włosów u początkujących programistów). Bardzo łatwo jest, zamiast <code>==</code> niechcący napisać <code>=</code>, co jest wyrażeniem przypisania wartości do zmiennej. Właśnie za pomocą <code>=</code> ustawialiśmy wartość <code>'kamień'</code> dla zmiennej <code>computerMove</code>.</p>
+<pre><code class="language-js">let computerMove = 'kamień';
+</code></pre>
+<p>Podsumowując, <code>=</code> i <code>==</code> są zupełnie różnymi wyrażeniami, które niestety wyglądają bardzo podobnie. W kolejnym module przypomnimy o tym i pokażemy, jakie problemy mogą wynikać z tego błędu.</p>
+<h3>Łączymy losowanie i logikę warunkową</h3>
+<p>Umiesz już wylosować liczbę, ale w naszej grze potrzebujemy wyświetlić nazwę ruchu, który został wylosowany. Będzie to możliwe dzięki połączeniu wylosowanej liczby z logiką warunkową.</p>
+<p style="min-height:400px; border: 1px solid #d0e9c6; border-radius: 4px; padding: 20px; text-align: center;" data-height="400" data-theme-id="33276" data-slug-hash="e6b939a99b8ca23e67d92f04824f630b" data-default-tab="js,result" data-user="kodilla" data-embed-version="2" data-editable="true" class="codepen">See <a href="https://codepen.io/kodilla/pen/e6b939a99b8ca23e67d92f04824f630b/">the Pen</a> on <a href="https://codepen.io">CodePen</a>.</p><br>
+<p>Powyżej wykorzystaliśmy ten sam jednolinijkowy kod losowania liczby, który pokazywaliśmy wcześniej w tym module. Pod nim zapisaliśmy początkową wartość <code>computerMove</code> równą <code>'nieznany ruch'</code>, a następnie dodaliśmy warunek, który sprawdza, czy wylosowano liczbę <code>1</code> – jeśli tak, to zmienna <code>computerMove</code> będzie miała nową wartość: <code>'kamień'</code>.</p>
+<p>A co jeśli wylosowana liczba będzie inna? Dlaczego wtedy wyświetla się "nieznany ruch"? Rozwiązanie tego problemu już za chwilę będzie Twoim zadaniem!</p>
+<div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Konsola i <code>console.log</code></h4>
+<p>Bardzo często w trakcie pisania kodu będziemy korzystać z funkcji <code>console.log</code>, aby debugować nasz kod i lepiej rozumieć jak działa.</p>
+<p>Jak widzisz, <code>console.log</code> nie wyświetla niczego na stronie. Zamiast tego, komunikaty wyświetlane za pomocą tej funkcji znajdziesz w konsoli znajdującej się wśród narzędzi developerskich.</p>
+<p>Otwórz narzędzia developerskie – możesz to zrobić za pomocą klawisza F12 lub kliknąć prawym przyciskiem na dowolny element na stronie i wybrać "Zbadaj element". Następnie, w panelu narzędzi developerskich, przełącz się z zakładki <em>Elements</em> na <em>Console</em>.</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/04.jsprework/dev-tools-console.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/04.jsprework/dev-tools-console.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Dzięki zastosowaniu <code>console.log</code> nie będziemy <em>zaśmiecać</em> sobie widoku gry. Wszelkie informacje, które pomogą nam w rozumieniu kodu lub rozwiązywaniu problemu będziemy od teraz wyświetlać w konsoli.</p>
+</div>
+<h3>Zapisywanie odpowiedzi gracza</h3>
+<p>Mamy już wylosowane zagranie komputera, teraz czas na interakcję z graczem. Dzięki temu będzie mógł wybrać swój ruch.</p>
+<p>Wykorzystamy do tego funkcję <code>prompt</code>, która wyświetli okienko z polem na wpisanie wartości. Dla uproszczenia poprosimy gracza o wpisanie liczby <code>1</code>, <code>2</code> lub <code>3</code>.</p>
+<p>Poniższy przykład wyświetli to okienko bezpośrednio po uruchomieniu kodu. Dlatego jego kod będzie widoczny dopiero po kliknięciu "Run Pen".</p>
+<p style="min-height:400px; border: 1px solid #d0e9c6; border-radius: 4px; padding: 20px; text-align: center;" data-height="400" data-theme-id="33276" data-slug-hash="b76ae7c4c373ba25a4f693fe515db9f8" data-default-tab="js,result" data-user="kodilla" data-embed-version="2" data-editable="true" data-preview="true" class="codepen">See <a href="https://codepen.io/kodilla/pen/b76ae7c4c373ba25a4f693fe515db9f8/">the Pen</a> on <a href="https://codepen.io">CodePen</a>.</p><br>
+<p>Ten kod wygląda bardzo podobnie do wcześniejszego, w którym losowaliśmy ruch komputera. Różni się jedynie nazwami zmiennych oraz sposobem ustalenia liczby <code>1-3</code>. W przypadku komputera losowaliśmy tę liczbę, a w tym przypadku liczbę podaje gracz.</p>
+<p>Podobnie jak wcześniej, skrypt rozpoznaje tylko wybór kamienia – pozostałe ruchy pozostają jako "nieznany ruch". Za chwilę jednak rozwiążesz również ten problem!</p>
+<p>Zaczynamy zbliżać się do pierwszej wersji, którą będzie już można nazwać grą. Na razie losujemy ruch komputera i pytamy gracza o jego ruch. W następnym submodule zajmiemy się ustaleniem, kto wygrał rozgrywkę!</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block task-card" >
+                        <h3>Zadanie: <span class="task-title">Dokończenie logiki gry</span></h3>
+                        <div class="task-content">
+                            <p>Twoim zadaniem jest dokończenie gry tak, aby poprawnie rozpoznawała ruch komputera i człowieka, a także wyświetlała wynik rundy!</p>
+<p>Zacznij od usunięcia całej zawartości pliku <code>js/script.js</code>.</p>
+<h3>Odczytanie ruchu komputera</h3>
+<p>Powyżej w jednym z zagnieżdżonych edytorów pokazaliśmy kod, który losuje liczbę od <code>1</code> do <code>3</code>, i jeśli ta liczba to <code>1</code>, rozpoznaje ruch jako "kamień".</p>
+<p>Skopiuj cały kod z tego edytora do pliku <code>js/script.js</code>, a następnie uzupełnij go o dwa bloki <code>else if</code>. Powinny one obsłużyć przypadki wylosowania liczby <code>2</code> i <code>3</code>. W tych sytuacjach zmienna <code>computerMove</code> ma otrzymać odpowiednią wartość – <code>'papier'</code> lub <code>'nożyce'</code>.</p>
+<p>Po wykonaniu tej części zadania zapisz commit i wyślij go do zdalnego repozytorium.</p>
+<h3>Odczytanie ruchu gracza</h3>
+<p>Znajdź teraz edytor, w którym użyliśmy funkcji <code>prompt</code> do <em>zapytania</em> gracza o jego ruch. Skopiuj cały kod JS z tego przykładu i umieść go na końcu pliku <code>js/script.js</code>.</p>
+<p>Podobnie jak wcześniej, dodaj bloki <code>else if</code> dla ruchów "papier" i "nożyce".</p>
+<p>Po wykonaniu tej części zadania ponownie zapisz commit i wyślij go do zdalnego repozytorium.</p>
+<h3>Wynik gry</h3>
+<p>Na końcu pliku <code>js/script.js</code> dodaj teraz nowy blok <code>if...else if...else</code>, który wyświetli komunikat o wyniku gry.</p>
+<p>Dla przykładu, jeśli <code>computerMove</code> to <code>'kamień'</code>, a <code>playerMove</code> to <code>'papier'</code>, powinien zostać wyświetlony komunikat "Ty wygrywasz!".</p>
+<p>W rozwiązaniu tego zadania będzie Ci potrzebny sposób na sprawdzenie, czy spełnione są oba warunki. Najwygodniej będzie to zrobić za pomocą operatora <code>&amp;&amp;</code>, który oznacza <strong>"oraz"</strong>.</p>
+<pre><code class="language-js">if( computerMove == 'kamień' &amp;&amp; playerMove == 'papier'){
+  printMessage('Ty wygrywasz!');
+}
+</code></pre>
+<p>Pamiętaj, żeby obsłużyć również sytuację, gdy występuje remis, a także, kiedy <code>playerMove</code> jest równe <code>nieznany ruch</code> – taka sytuacja może mieć miejsce, jeśli gracz nie posłuchał polecenia i wpisał coś innego niż <code>1</code>, <code>2</code> lub <code>3</code>.</p>
+<p>Po zakończeniu pracy znów zapisz commit i wyślij go do zdalnego repozytorium. Następnie, link do najnowszego commita wyślij do sprawdzenia.</p>
+<p>Powodzenia!</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <div class="clearfix">
+                                                                                <a href="https://kodilla.com/pl/bootcamp-task/407/594671" target="_blank" class="btn btn-info-outline">Podgląd zadania</a>
+                            <form target="_blank" class="form-inline project-link-form">
+                                <div class="form-group">
+                                    <input type="text" name="link" class="form-control" value="https://github.com/skwiryt/javascript-prework/commit/3cc4f41ecfe45b4f6d5357058a36c9e6dda112d5">
+                                </div>
+                                <button type="submit" class="btn  btn-primary " >Wyślij link <i class="fa fa-check"></i></button>
+                            </form>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-955" class="card submodule completed" data-bootcamp-user-submodule-id="594672" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">5.5. <span>Poprawa kodu projektu</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Udało nam się już zrobić pierwszą wersję gry! Jednak czy nasz skrypt jest dobrze napisany? Jak już zapewne się domyślasz (a na pewno pamiętasz z poprzednich modułów!) powtarzanie prawie identycznego kodu nie jest dobrą praktyką. Zasada DRY (<em>Don't Repeat Yourself</em>) działa również w JS. Dlatego chcielibyśmy uniknąć wykorzystania tej samej logiki if/else dwa razy (dla zagrania komputera oraz gracza). Tu z pomocą przyjdą nam funkcje!</p>
+<h3>Czym jest funkcja?</h3>
+<p>Jak wspomnieliśmy na samym początku pisania gry, funkcje to pewne "procedury". Na razie nauczyliśmy się tylko wywoływać funkcje, np. w ten sposób:</p>
+<pre><code class="language-js">printMessage('Hello world!');
+</code></pre>
+<p>Zanim przejdziemy do tworzenia własnych funkcji, musimy dokładniej wytłumaczyć, czym jest funkcja i do czego może nam się przydać.</p>
+<p>Funkcja może:</p>
+<ul>
+<li>coś przyjmować – funkcja często potrzebuje jakichś informacji, w oparciu o które będzie działać, np. funkcja <code>printMessage</code> musi dostać tekst, który ma zostać wyświetlony,</li>
+<li>coś robić – funkcja wykonuje pewne operacje, które mogą (ale nie muszą) mieć wpływ na cokolwiek poza funkcją, np. funkcja <code>printMessage</code> powoduje wyświetlenie tekstu na stronie,</li>
+<li>coś zwracać – funkcja może wstawiać jakąś "odpowiedź" w miejsce jej wywołania (np. funkcja <code>prompt</code> zwraca odpowiedź wpisaną przez użytkownika), dzięki czemu zwróconą wartość możemy np. zapisać do zmiennej lub wykorzystać w innym wyrażeniu.</li>
+</ul>
+<p>Zwróć uwagę, że różne funkcje będą posiadać różne kombinacje powyższych punktów, czyli np. jakaś funkcja może coś przyjmować i coś wykonywać, ale niczego nie zwracać. Dokładnie tak się dzieje w przypadku funkcji <code>printMessage</code>.</p>
+<div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Metafora – funkcja</h4>
+<p>Możesz sobie wyobrazić funkcję, jako maszynę. Są różne maszyny – np. pralki, windy, czy nawet samoloty. W wielu przypadkach nie wiesz, jak taka maszyna działa, i nie musisz tego wiedzieć, aby z niej korzystać. W przypadku naszej metafory będzie tak samo w niektórych przypadkach, natomiast w innych będziemy sami budować naszą maszynę.</p>
+<p>Weźmy na przykład pralkę. Musisz coś do niej włożyć (brudne ubrania, proszek), bo bez tego jej działanie nie ma sensu. Pralka potem coś robi przez jakiś czas, a na końcu dostajemy z powrotem czyste ubrania.</p>
+<p>W przypadku funkcji będziemy dostarczać informacje (liczby, teksty, etc.), które nazywamy argumentami, a w rezultacie funkcja zwróci nam coś innego (inne liczby, inne teksty).</p>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/machine.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/machine-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/machine.png 2x" class="img-inline img-right">
+<p>Innym rodzajem maszyny jest winda. Tu nie musimy niczego dostarczyć ani niczego nie dostaniemy w zamian. Za to winda wykona dla nas jakąś pracę.</p>
+<p>Istnieją także funkcje, którym nie podajemy argumentów i które niczego nie zwracają. Będą one jednak wykonywać jakąś operację (np. zmieniać kolor tła na stronie).</p>
+<p>Najważniejsze jest jednak, że tej maszyny możemy używać wielokrotnie. Niektóre maszyny zachowają się za każdym razem tak samo, inne – w zależności od tego, co im dostarczymy. Tak czy inaczej, nie musimy budować nowej pralki do każdego prania.</p>
+<p>Pamiętaj też, że samo kupienie pralki nie sprawi, że Twoje ubrania będą czyste! Podobnie i funkcja musi być stworzona (zadeklarowana), ale zrobi coś, dopiero kiedy ją uruchomimy (wywołamy).</p>
+</div>
+<p>Opiszmy sobie kilka znanych już nam funkcji wedle powyższego podziału na przyjmowanie argumentów, wykonywanie operacji poza funkcją, oraz zwracanie wartości. Pozwoli nam to lepiej zrozumieć, do czego możemy wykorzystywać funkcje:</p>
+<ul>
+<li><code>printMessage</code> przyjmuje argument tekstowy, wykonuje dodanie tego tekstu na stronie, i nie zwraca żadnej wartości,</li>
+<li><code>prompt</code> przyjmuje opcjonalny argument tekstowy do wyświetlenia w oknie prompta, wykonuje wyświetlenie okna z polem tekstowym, oraz zwraca tekst wpisany w to pole (lub <code>null</code> po wciśnięciu guzika "Anuluj"),</li>
+<li><code>Math.random</code> nie przyjmuje żadnych argumentów, niczego nie wykonuje, ale zwraca losową liczbę z przedziału od <code>0</code> do <code>0.999...</code>,</li>
+<li><code>Math.floor</code> przyjmuje argument w postaci liczby, nie wykonuje żadnych operacji, i zwraca liczbę podaną w argumencie po zaokrągleniu w dół.</li>
+</ul>
+<p>Niektóre funkcje, z których będziemy korzystać, są wbudowane w przeglądarkę – np. <code>prompt</code> czy <code>Math.random</code>. Oznacza to, że zostały już zadeklarowane gdzieś w kodzie Twojej przeglądarki i nie trzeba ich deklarować ponownie. Często jednak będziemy pisać własne funkcje, aby nie wklejać wielokrotnie tego samego kodu.</p>
+<p>Przykładem takiej funkcji może być <code>printMessage</code> – została ona zadeklarowana w pliku <code>js/functions.js</code>. Wykorzystujemy w niej jednak operacje, które omówimy dopiero za chwilę. Dlatego zaczniemy od napisania własnej funkcji!</p>
+<p>Pamiętaj, że będziemy mieli do czynienia z dwoma operacjami: deklarowaniem i wykonywaniem funkcji. Samo zadeklarowanie funkcji jest tylko zapisaniem algorytmu, który ma być przez nią wykonany. Dopiero po wywołaniu tej funkcji algorytm zostanie wykonany.</p>
+<p>Aby ułatwić Ci zrozumienie kodu, nazwy wszystkich argumentów będziemy na razie zaczynać od prefiksu <code>arg</code>. Nie jest to wymogiem, ani nawet standardem, ale przy pierwszych krokach w JavaScripcie bywa to bardzo pomocne.</p>
+<h3>Tworzenie funkcji</h3>
+<p>Dość teorii, wracamy do kodu! Dla ćwiczenia zaczniemy od prostej funkcji, która będzie obliczać resztę, którą kasjer w sklepie musi wydać klientowi.</p>
+<p style="min-height:400px; border: 1px solid #d0e9c6; border-radius: 4px; padding: 20px; text-align: center;" data-height="400" data-theme-id="33276" data-slug-hash="94c7b75d4fb5285149e5b9e97113ca26" data-default-tab="js,result" data-user="kodilla" data-embed-version="2" data-editable="true" class="codepen">See <a href="https://codepen.io/kodilla/pen/94c7b75d4fb5285149e5b9e97113ca26/">the Pen</a> on <a href="https://codepen.io">CodePen</a>.</p><br>
+<p>Spójrz na powyższy kod JS i znajdź w nim deklarację funkcji <code>calculateChange</code>, która zaczyna się od słowa <code>function</code>. Zanim przejdziesz dalej, spróbuj odpowiedzieć sobie na pytania:</p>
+<ul>
+<li>Ile argumentów przyjmuje ta funkcja?</li>
+<li>Jaką wartość zwróci (ang. <em>return</em>) ta funkcja?</li>
+</ul>
+<p>Znajdź również miejsca, w których funkcja <code>calculateChange</code> zostaje wykonana. Pierwsze dwa przykłady są bardzo podobne – zapisujemy zwracaną wartość do zmiennych. Za to w trzecim wykonujemy funkcję od razu w miejscu, w którym jej wynik ma być wstawiony do tekstu wyświetlanego na stronie. Oba podejścia są poprawne, przy czym pierwsze (zapisanie wyniku do zmiennej) jest lepsze, jeśli będziemy wykorzystywać tę wartość więcej niż raz. Np. gdybyśmy chcieli zsumować obliczone kwoty ze wszystkich przykładów, lepiej byłoby zapisać do zmiennych wyniki zwracane przez funkcję, aby nie wykonywać tych samych obliczeń ponownie.</p>
+<p>Wróćmy jednak do deklaracji funkcji. Jak już zapewne się domyślasz, deklaracja funkcji ma składnię:</p>
+<pre><code class="language-js">function nazwaFunkcji(argument){
+  return zwracanaWartosc;
+}
+</code></pre>
+<p>Przyjrzyj się poniższym przykładom i odpowiedz sobie na pytania:</p>
+<ul>
+<li>Ile argumentów ma ta funkcja? Może nie mieć żadnego, mieć jeden, lub więcej.</li>
+<li>Jakie operacje wykona ta funkcja? Czy będzie miała wpływ na cokolwiek poza zwracaną wartością?</li>
+<li>Czy funkcja coś zwraca? Jeśli tak, od czego zależy zwracana wartość?</li>
+<li>Jak możesz wykorzystać te funkcje w swoim projekcie?</li>
+</ul>
+<pre><code class="language-js">function getMoveName(argMoveId){
+  if(argMoveId == 1){
+    return 'kamień';
+  } else {
+    printMessage('Nie znam ruchu o id ' + argMoveId + '.');
+    return 'nieznany ruch';
+  }
+}
+
+function displayResult(argComputerMove, argPlayerMove){
+  printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+
+  if( argComputerMove == 'kamień' &amp;&amp; argPlayerMove == 'papier'){
+    printMessage('Ty wygrywasz!');
+  } else {
+    printMessage('Tym razem przegrywasz :(');
+  }
+}
+</code></pre>
+<p>Pamiętaj, że powyższy kod niczego nie wykona, ponieważ zawiera tylko deklaracje funkcji. Te funkcje nie zostały jeszcze wykonane!</p>
+<p>Zwróć uwagę, że wewnątrz tych funkcji wykorzystaliśmy wyrażenia, które są nam już dobrze znane. Jedyną nowością jest <code>return</code> – wyrażenie, które sprawi, że funkcja zwróci wartość podaną bezpośrednio po nim.</p>
+<p>Warto wiedzieć, że <code>return</code> kończy wykonanie funkcji. Dlatego w powyższej funkcji <code>getMoveName</code>, w bloku <code>else</code> musieliśmy najpierw wykonać funkcję <code>printMessage</code>, a dopiero potem zwrócić wartość za pomocą <code>return</code>. Oznacza to też, że moglibyśmy zapisać tę funkcję w ten sposób:</p>
+<pre><code class="language-js">function getMoveName(argMoveId){
+  if(argMoveId == 1){
+    return 'kamień';
+  }
+
+  printMessage('Nie znam ruchu o id ' + argMoveId + '.');
+  return 'nieznany ruch';
+}
+</code></pre>
+<p>Jeśli argument <code>argMoveId</code> będzie równy <code>1</code>, to zostanie zwrócona wartość <code>'kamień'</code> i zakończy się wykonanie funkcji, więc nie zostanie wykonana funkcja <code>printMessage</code>.</p>
+<p>Zastanówmy się teraz, do czego będą nam potrzebne funkcje <code>getMoveName</code> oraz <code>displayResult</code>.</p>
+<ul>
+<li>Funkcja <code>getMoveName</code> będzie wykorzystywana zarówno w przypadku ruchu gracza, jak i ruchu komputera. Dzięki zastosowaniu funkcji nie będziemy powtarzać dwukrotnie tego samego kodu.</li>
+<li>Funkcję <code>displayResult</code> wykorzystamy tylko raz, ale służy nam do uporządkowania naszego kodu. Dzięki temu cała logika decydująca o wyniku gry jest zawarta w jednym miejscu i oddzielona od reszty kodu.</li>
+</ul>
+
+                        </div>
+                    </div>
+                                        <div class="card-block task-card" >
+                        <h3>Zadanie: <span class="task-title">Wykorzystanie funkcji</span></h3>
+                        <div class="task-content">
+                            <p>Twoim zadaniem jest uzupełnienie i wykorzystanie funkcji <code>getMoveName</code> oraz <code>displayResult</code> w taki sposób, aby gra działała poprawnie.</p>
+<p>W uzupełnieniu deklaracji tych funkcji pomoże Ci rozwiązanie poprzedniego zadania, ponieważ <em>przenosimy</em> do tych funkcji logikę, którą już napisaliśmy.</p>
+<h4>Wykorzystanie funkcji <code>getMoveName</code></h4>
+<p>Zacznij od wstawienia tej funkcji na początku pliku <code>js/script.js</code>. Teraz zajmiemy się jej wykorzystaniem w dotychczasowym kodzie projektu. Pamiętaj, że kod tej funkcji będzie wymagał uzupełnienia, co zrobimy za chwilę.</p>
+<p>Znajdź fragment kodu, w którym deklarujesz zmienną <code>computerMove</code>:</p>
+<pre><code class="language-js">let computerMove = 'nieznany ruch';
+</code></pre>
+<p>Po tej linii znajdziesz wyrażenie <code>if...else if...</code>, które zmienia wartość zmiennej <code>computerMove</code> w zależności od wartości zmiennej <code>randomNumber</code>.</p>
+<p>Zacznij od zamknięcia całego wyrażenia <code>if...else if...</code> w komentarz blokowy, czyli taki który może obejmować wiele linii. Zrobisz to, wpisując <code>/*</code> w miejscu rozpoczęcia komentarza oraz <code>*/</code> w miejscu jego zakończenia. Dzięki temu ten fragment kodu nie będzie działał, ale pozostanie w pliku – będzie nam za chwilę potrzebny do uzupełnienia funkcji <code>getMoveName</code>.</p>
+<p>Teraz zmień deklarację zmiennej <code>computerMove</code> tak, aby zapisać w niej wartość zwracaną przez funkcję <code>getMoveName</code>:</p>
+<pre><code class="language-js">let computerMove = getMoveName(randomNumber);
+</code></pre>
+<p>Możesz teraz przetestować czy wszystko działa poprawnie. Pamiętaj tylko, że jeszcze nie uzupełniliśmy deklaracji funkcji <code>getMoveName</code>, więc będzie ona zwracać jedynie <code>'kamień'</code> lub <code>'nieznany ruch'</code>.</p>
+<p>Następnie w analogiczny sposób zmień deklarację zmiennej <code>playerMove</code> oraz zakomentuj (czyli zamknij w komentarzu) wyrażenie <code>if...else if...</code>, które modyfikuje wartość tej zmiennej.</p>
+<p>Ostatnim krokiem będzie uzupełnienie deklaracji funkcji <code>getMoveName</code>. Wzorując się na zakomentowanym fragmencie kodu, spraw by funkcja zwracała <code>'papier'</code> lub <code>'nożyce'</code>, kiedy argument będzie miał wartość <code>2</code> lub <code>3</code>.</p>
+<p>W rezultacie gra powinna działać tak samo, jak przed wykonaniem tego zadania, ale zamiast osobnych wyrażeń <code>if...else if...</code> dla ruchów komputera i gracza, teraz mamy tylko jedno – w deklaracji funkcji <code>getMoveName</code>.</p>
+<h4>Wykorzystanie funkcji <code>displayResult</code></h4>
+<p>Tym razem nie będziemy kopiować funkcji z przykładu pokazanego wcześniej w tym submodule. Zamiast tego napisz samodzielnie deklarację funkcji <code>displayResult</code>. Ma ona przyjmować dwa argumenty, które nazwiemy <code>argComputerMove</code> i <code>argPlayerMove</code>.</p>
+<p>Następnie do deklaracji tej funkcji przenieś fragment kodu odpowiedzialny za wyświetlenie wyniku gry. Musisz go zmodyfikować w taki sposób, aby zamiast zmiennych <code>computerMove</code> i <code>playerMove</code> wykorzystywał argumenty <code>argComputerMove</code> i <code>argPlayerMove</code>.</p>
+<p>Pamiętaj, aby w miejscu usuniętego kodu wstawić wywołanie funkcji <code>displayResult</code>!</p>
+<h4>Rozwiązywanie problemów</h4>
+<p>W trakcie wykonywania zadania możesz napotkać problemy. Aby sobie z nimi poradzić, używaj <code>console.log</code> do sprawdzenia co dzieje się w kodzie. Możesz np.:</p>
+<ul>
+<li>na początku deklaracji którejś funkcji wstawić <code>console.log</code> wyświetlający jakiś tekst, aby sprawdzić, czy ta funkcja w ogóle się wykonuje,</li>
+<li>użyć <code>console.log</code> do wyświetlenia argumentów funkcji,</li>
+<li>wstawić <code>console.log</code> do bloków <code>if</code>, <code>else if</code> i/lub <code>else</code>, aby sprawdzić, który z nich zostanie wykonany,</li>
+<li>sprawdzić co zwraca funkcja, kiedy podamy jej konkretne argumenty, wpisując np. na końcu pliku <code>console.log(getMoveName('2'));</code>,</li>
+<li>użyć <code>console.log</code> po linii ustawiającej wartość jakiejś zmiennej, aby wiedzieć jaka wartość została w niej zapisana.</li>
+</ul>
+<p>Dzięki temu, w konsoli możesz zobaczyć każdy krok działania skryptu. Szczególnie w początkowych etapach nauki, bardzo dobrym podejściem jest dodawanie <code>console.log</code>, nawet jeśli skrypt działa poprawnie, aby lepiej zrozumieć jego funkcjonowanie.</p>
+<p>Możesz nam wierzyć, że zwyczaj używania <code>console.log</code> często jest kluczową różnicą pomiędzy developerem, który sprawnie rozwiązuje problemy, a tym, który godzinami rwie włosy z głowy. Dlatego od teraz, na pytanie "dlaczego to nie działa" niech zawsze Twoją odpowiedzią będzie "użyję console.log!" ;)</p>
+<p>W sprawnym korzystaniu z <code>console.log</code> może Ci pomóc informacja, że możesz tej funkcji przekazywać wiele argumentów, co jest wygodniejsze niż używanie <code>+</code> do łączenia tekstów. Wszystkie argumenty zostaną wyświetlone w konsoli. Możesz np. dodać taką linię na początku funkcji <code>displayResult</code>:</p>
+<pre><code class="language-js">console.log('moves:', argComputerMove, argPlayerMove);
+</code></pre>
+<p>Po wykonaniu zadania zapisz commit i wyślij jego link do sprawdzenia.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <div class="clearfix">
+                                                                                <a href="https://kodilla.com/pl/bootcamp-task/407/594672" target="_blank" class="btn btn-info-outline">Podgląd zadania</a>
+                            <form target="_blank" class="form-inline project-link-form">
+                                <div class="form-group">
+                                    <input type="text" name="link" class="form-control" value="https://github.com/skwiryt/javascript-prework/commit/550c5e4cf7b7c5942dc93693eecb205d850a8dfd">
+                                </div>
+                                <button type="submit" class="btn  btn-primary " >Wyślij link <i class="fa fa-check"></i></button>
+                            </form>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-956" class="card submodule completed" data-bootcamp-user-submodule-id="594673" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">5.6. <span>Interfejs gry</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Nasza gra już działa, ale pozostaje problem interfejsu – nie jest zbyt przyjazny użytkownikowi. Gra uruchamia się przy każdym odświeżeniu strony i wymaga, żeby gracz od razu wpisywał swój ruch za pomocą klawiatury. Dlatego teraz zajmiemy się interfejsem gry, aby grało się w nią znacznie przyjemniej!</p>
+<p>W początkowej specyfikacji projektu założyliśmy, że na stronie mają znajdować się trzy guziki: "kamień", "papier" i "nożyce". Kliknięcie któregokolwiek z nich ma uruchamiać grę, czyli losować zagranie komputera oraz wyświetlać wynik.</p>
+<h3>Obsługa kliknięcia guzika</h3>
+<p>Zacznijmy jednak od prostego przykładu powiązania jakiejś akcji z kliknięciem guzika. Poniższy kod wyświetla komunikat na stronie po kliknięciu guzika. Spróbuj samodzielnie przeczytać kod tego skryptu i zrozumieć jak działa.</p>
+<p style="min-height:400px; border: 1px solid #d0e9c6; border-radius: 4px; padding: 20px; text-align: center;" data-height="400" data-theme-id="33276" data-slug-hash="b9ee8a524c2aa8183ccea4c2cb9385f1" data-default-tab="js,result" data-user="kodilla" data-embed-version="2" data-editable="true" class="codepen">See <a href="https://codepen.io/kodilla/pen/b9ee8a524c2aa8183ccea4c2cb9385f1/">the Pen</a> on <a href="https://codepen.io">CodePen</a>.</p><br>
+<p>Pojawiło się kilka nowości! Po pierwsze, funkcja <code>document.getElementById</code> służy do znalezienia na stronie elementu o <code>id</code> podanym jako argument tej funkcji. Zwróci nam ona odwołanie do tego elementu, które zapisaliśmy w zmiennej <code>testButton</code>.</p>
+<p>Jeśli wartością zmiennej jest odwołanie do elementu na stronie, czyli <strong>elementu DOM</strong>, możemy na niej wykonać jedną z wielu funkcji dostępnych dla elementów DOM. Robimy to, dodając kropkę po nazwie zmiennej, a po niej podajemy nazwę funkcji. W tym przypadku jest to funkcja <code>addEventListener</code>, ale z czasem poznasz dużo więcej funkcji elementów DOM.</p>
+<p>Funkcja <code>addEventListener</code> tworzy <em>listener</em>, który będzie nasłuchiwał jakiegoś zdarzenia na tym elemencie. Jako pierwszy argument podajemy jej rodzaj zdarzenia – kliknięcie, czyli <code>'click'</code>. Drugim argumentem jest funkcja, która ma zostać wykonana, kiedy to zdarzenie się wydarzy.</p>
+<p>Spróbujmy przeczytać tę linię kodu:</p>
+<pre><code class="language-js">testButton.addEventListener('click', buttonClicked);
+</code></pre>
+<p>Mówi ona: "za każdym razem, kiedy wykryjesz kliknięcie na elemencie zapisanym w zmiennej <code>testButton</code>, wykonaj funkcję <code>buttonClicked</code>".</p>
+<p>Zwróć uwagę, że w naszym skrypcie nie ma ani słowa o tym, że klikany element jest guzikiem! W ten sam sposób moglibyśmy obsłużyć również kliknięcie w obrazek, nagłówek, div, czy jakikolwiek inny element DOM.</p>
+<p>Moglibyśmy też zapisać ten sam skrypt w inny sposób, bez nadawania nazwy funkcji i bez zapisywania odwołania do guzika w zmiennej. Wtedy skrypt wyglądałby tak:</p>
+<pre><code class="language-js">document.getElementById('test-button').addEventListener('click', function(){
+  printMessage('Guzik został kliknięty');
+});
+</code></pre>
+<p>Na początku ten zapis może być dla Ciebie znacznie mniej czytelny, ale szybko się do niego przyzwyczaisz. Bardzo często właśnie w ten sposób zapisuje się listener zdarzenia.</p>
+<p>Wykorzystujemy tutaj funkcję anonimową, czyli taką, której nie nadaliśmy nazwy. Zapis <code>function(){}</code> stosujemy m.in. wtedy, kiedy jest nam potrzebna funkcja, której nie będziemy potrzebowali ponownie wykonywać.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block task-card" >
+                        <h3>Zadanie: <span class="task-title">Implementacja guzików</span></h3>
+                        <div class="task-content">
+                            <p>Jak już zapewne się domyślasz, celem tego zadania jest dokończenie naszej gry. Na stronie umieścisz trzy guziki i napiszesz kod, który sprawi, że po kliknięciu któregoś z guzika zostanie rozegrana partia gry. Oczywiście, wybór guzika będzie jednocześnie wyborem ruchu gracza, dzięki czemu nie będzie już potrzeby wpisywania <code>1</code>, <code>2</code> lub <code>3</code> w oknie prompt.</p>
+<h4>Przygotowanie gry do wdrożenia guzików</h4>
+<p>Pierwszym krokiem będzie stworzenie funkcji <code>playGame</code>, w której ma znaleźć się cały kod, który dotychczas znajdował się w pliku <code>js/script.js</code>. Innymi słowy, na początku pliku dodaj <code>function playGame(){</code>, a na końcu pliku <code>}</code>. Następnie popraw wcięcia kodu wewnątrz funkcji.</p>
+<p>Teraz po odświeżeniu strony gra nie powinna już się uruchamiać – za to za chwilę będzie się uruchamiać po kliknięciu guzika!</p>
+<p>Funkcja <code>playGame</code> powinna przyjmować jeden argument – liczbę <code>1</code>, <code>2</code> lub <code>3</code>, która będzie odpowiadała ruchowi gracza. W pierwszej linii deklaracji tej funkcji dodaj deklarację argumentu o nazwie <code>playerInput</code>. Następnie wewnątrz funkcji znajdź linię, w której deklarowaliśmy zmienną <code>playerInput</code> i usuń (lub zakomentuj) tę linię. Zamiast niej będziemy teraz wykorzystywać argument funkcji.</p>
+<p>Na końcu pliku, czyli poza funkcją, dodaj jej wykonanie:</p>
+<pre><code class="language-js">playGame(3);
+</code></pre>
+<p>Jeśli wszystko poszło dobrze, po odświeżeniu strony powinny wyświetlić się komunikaty z rozegrania gry, przy czym ruchem gracza będą za każdym razem nożyce (odpowiadające liczbie <code>3</code> w powyższym kodzie).</p>
+<p>Po sprawdzeniu działania funkcji <code>playGame</code> usuń jej wywołanie, aby gra nie uruchamiała się po odświeżeniu strony.</p>
+<p>Ostatnim krokiem jest dodanie wywołania funkcji <code>clearMessages</code> (bez argumentów) na samym początku deklaracji funkcji <code>playGame</code>. Ta funkcja, której definicja znajduje się w <code>js/functions.js</code>, usuwa wszystkie wyświetlone do tej pory komunikaty. Dzięki temu będziemy mogli uruchamiać grę wielokrotnie.</p>
+<h4>Dodanie guzików</h4>
+<p>W kodzie HTML dodaj teraz trzy guziki do diva o parametrze <code>id=&quot;buttons&quot;</code>. Każdy z tych guzików ma być elementem <code>&lt;button&gt;</code> i musi mieć jakieś <code>id</code> – mogą to być np. <code>play-rock</code>, <code>play-paper</code> i <code>play-scissors</code>. W treści guzików wpisz nazwy ruchów odpowiadające wartościom <code>id</code> – <code>Kamień</code>, <code>Papier</code> i <code>Nożyce</code>.</p>
+<h4>Implementacja listenerów</h4>
+<p>Opierając się na przykładzie z tego submodułu, dodaj na samym końcu pliku <code>js/script.js</code> trzy listenery – po jednym dla każdego z dodanych przed chwilą guzików. Pamiętaj, aby wstawić ich <code>id</code> zamiast <code>test-button</code>!</p>
+<p>Następnie wewnątrz anonimowej funkcji każdego z listenerów zmień treść komunikatu wyświetlanego za pomocą funkcji <code>printMessage</code>. Przetestuj teraz czy każdy z guzików wyświetla odpowiedni komunikat na stronie.</p>
+<p>W ostatnim kroku, w każdym z listenerów zamień wywołanie funkcji <code>printMessage</code> na wywołanie funkcji <code>playGame</code> z odpowiednim argumentem.</p>
+<p>Jeśli wszystko poszło dobrze, po kliknięciu któregoś z guzika, wyświetli się komunikat z rezultatem gry. Zagranie gracza będzie zależało od tego, w który guzik kliknął, podczas gdy ruch komputera będzie losowy.</p>
+<p>Gratulacje! W ten sposób udało nam się dokończyć Twoją pierwszą grę!</p>
+<p>Nie zapomnij zapisać commita i wysłać go do zdalnego repozytorium.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <div class="clearfix">
+                                                                                <a href="https://kodilla.com/pl/bootcamp-task/407/594673" target="_blank" class="btn btn-info-outline">Podgląd zadania</a>
+                            <form target="_blank" class="form-inline project-link-form">
+                                <div class="form-group">
+                                    <input type="text" name="link" class="form-control" value="https://github.com/skwiryt/javascript-prework/commit/0cbc8a42435f7b0218729468c8c11103702da96c">
+                                </div>
+                                <button type="submit" class="btn  btn-primary " >Wyślij link <i class="fa fa-check"></i></button>
+                            </form>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-957" class="card submodule completed" data-bootcamp-user-submodule-id="594674" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">5.7. <span>Podsumowanie</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Gdybyśmy zaczęli ten moduł od pokazania Ci tej gry, pewnie trudno byłoby Ci uwierzyć, że w tak krótkim czasie nauczysz się samodzielnie napisać taki skrypt w JS-ie.</p>
+<p>Zamiast tego, zaczęliśmy ten moduł od wytłumaczenia Ci myślenia algorytmicznego. Ćwiczysz tę umiejętność codziennie, prawda? ;)</p>
+<p>Myślenie algorytmiczne jest niezbędne do tego, aby zadanie "napisz grę w papier-kamień-nożyce" rozpisać na poszczególne etapy i kroki realizacji, tak jak zrobiliśmy to w tym module. Jest też niezbędne do tego, aby powyższą instrukcję zamienić w działający kod.</p>
+<div class="bc-note alert-info">
+<h4 class="alert-heading text-center">Programistyczny suchar ;)</h4>
+<p>Przy okazji, mamy też nadzieję, że dzięki informacjom z tego modułu doskonale zrozumiesz poniższy (stary) dowcip :)</p>
+<p><em>Żona wysyła męża-programistę do sklepu i mówi:<br>
+– Kup chleb, a jak będą mieli jajka, to kup dziesięć.<br>
+Facet wchodzi do sklepu i pyta:<br>
+– Czy są jajka?<br>
+– Tak, są.<br>
+– To poproszę dziesięć chlebów.</em></p>
+</div>
+<h3>Ostatnia lekcja w tym module</h3>
+<p>Ostatnią rzeczą, którą chcemy Cię nauczyć, jest dodawanie i usuwanie treści z elementu na stronie. Tych zagadnień nie musimy jednak omawiać – wystarczy, że zajrzysz do pliku <code>js/functions.js</code>, którego zawartość podaliśmy Ci na samym początku tego modułu.</p>
+<p>Wtedy kod zawarty w tym pliku pewnie był dla Ciebie czarną magią. A teraz? Czy potrafisz zrozumieć, co robią zawarte w nim funkcje? Czy poradzisz sobie – w razie potrzeby – ze zmianą ich kodu, aby działały dla innych elementów na stronie?</p>
+<p>Mamy nadzieję, że tak. Celem tego modułu było właśnie nauczenie Ciebie podstaw JS-a na tyle, żeby zrozumienie tych funkcji było dla Ciebie możliwe – a może wręcz proste!</p>
+<p>Jeśli masz jeszcze siły i czas, poniżej przedstawiamy kilka sugestii dot. dalszego rozwoju tego projektu.</p>
+<h3>Dla chętnych</h3>
+<p>Twoja gra już działa w swojej podstawowej formie, ale zostało jeszcze wiele miejsca na ulepszenia. Poniżej prezentujemy kilka pomysłów – niektóre pozwolą Ci przećwiczyć zdobyte umiejętności, a inne skłonią do samodzielnych poszukiwań odpowiedzi i pogłębiania wiedzy.</p>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/puzzle.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/puzzle-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/puzzle.png 2x" class="img-inline img-right">
+<h4>Ostylowanie gry</h4>
+<p>Wiesz już tyle o HTML i CSS, że to będzie sama przyjemność! Spraw, aby Twoja gra prezentowała się elegancko i zachęcająco: dodaj na stronie nagłówek, tekst powitalny, krótką instrukcję obsługi... Ostyluj całość, aby nadać jej indywidualnego charakteru.</p>
+<h4>Liczenie wygranych rund</h4>
+<p>Gra w papier-kamień-nożyce zwykle nie kończy się po jednej rundzie. Dodaj w takim razie licznik rund wygranych przez każdą ze stron.</p>
+<p>Dodaj osobny div o <code>id=&quot;result&quot;</code>, w którym będzie wyświetlany wynik w formacie "X - Y", gdzie X to wygrane gracza, a Y to wygrane komputera. Remis nie zmienia wyniku.</p>
+<p>Ważna informacja – jak dowiesz się w następnym module, zmienne <code>let</code> "istnieją" w zakresie nawiasów klamrowych <code>{ }</code>, w których zostały zdefiniowane. Dlatego te zmienne musisz zadeklarować poza funkcją <code>playGame</code>, aby ich wartość nie była kasowana przy każdym uruchomieniu tej funkcji. Zmieniaj wartość tych zmiennych przy każdym wywołaniu funkcji <code>playGame</code>, w zależności od tego, kto wygrał.</p>
+<h4>Czy musi być fair?</h4>
+<p>A może chcesz zmienić grę tak, aby przy losowaniu ruchu komputera nie każdy wynik był równie prawdopodobny? Czy uda Ci się stworzyć taki wariant gry, w której komputer przegrywa w 75% rozegranych rund?</p>
+<p>Jeśli tak, to czy masz pomysł, jak można <a href="https://poradnik-js.kodilla.com/loops" target="_blank">uruchomić</a> dużą liczbę gier, aby przetestować prawdopodobieństwo przegranej komputera?</p>
+<h4>Dalszy rozwój projektu</h4>
+<p>W tym module przedstawiamy tylko niezbędne podstawy i tłumaczymy je na przykładach. Wiemy jednak, że w trakcie samodzielnego eksperymentowania może Ci się przydać ściąga z tematów, których jeszcze nie wyjaśniliśmy — dlatego już teraz udostępniamy Ci <a href="https://poradnik-js.kodilla.com" target="_blank">poradnik JS</a>, który przygotowaliśmy dla naszych Kursantów. Dzięki niemu będziesz mieć pod ręką najważniejsze informacje o JS w skondensowanej formie.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-959" class="card submodule completed" data-bootcamp-user-submodule-id="594675" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">5.8. <span>Quiz powt&oacute;rkowy</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Na koniec tego modułu przygotowaliśmy dla Ciebie quiz powtórkowy. Pomoże Ci on powtórzyć wiedzę z poprzednich modułów.</p>
+<p>Odpowiedzi tego quizu nie są nigdzie zapisywane, więc są tylko do Twojej wiadomości. Ten quiz ma Ci posłużyć jako pomoc w nauce – dlatego pod każdym pytaniem znajdziesz guzik, który sprawdzi poprawność Twoich odpowiedzi oraz poda Ci wyjaśnienie zagadnienia poruszanego w tym pytaniu.</p>
+
+        <div class='kodilla-quiz'>
+      
+        <article class='question' data-type='multiple-choice'>
+      
+        <header>
+          <p><em>1.</em> Zaznacz prawdziwe zdania dotyczące Gita:</p>
+
+        </header>
+        <ol type='a' class='answers' data-correct='0,2,4'>
+          <li><label><input type='checkbox'> Git jest systemem kontroli wersji</label></li>
+<li><label><input type='checkbox'> każdy commit zawiera wszystkie pliki projektu</label></li>
+<li><label><input type='checkbox'> plik <code>.gitignore</code> pozwala nam na zdefiniowanie, które pliki nie powinny być zapisywane w repozytorium</label></li>
+<li><label><input type='checkbox'> po usunięciu pliku nie da się go przywrócić, nawet jeśli był zapisany we wcześniejszym commicie</label></li>
+<li><label><input type='checkbox'> klucze SSH pozwalają nam na korzystanie ze zdalnego repozytorium bez logowania</label></li>
+<li><label><input type='checkbox'> używanie zdalnego repozytorium (np. GitHub) oznacza, że brak internetu całkowicie uniemożliwia nam pracę nad projektem</label></li>
+        </ol>
+        <div class="buttons text-center">
+          <button class="button-ok btn btn-primary">Sprawdź odpowiedź</button>
+        </div>
+      
+      
+        <div class='explanation'>
+          <div class="bc-note alert-success">
+            <h4 class="alert-heading text-center">Wyjaśnienie</h4>
+      <p>Git jest systemem wersji. Pozwala on na zapisywanie kolejnych wersji projektu – czyli <em>commitów</em>. Każdy commit zawiera tylko te pliki, które do niego dodamy (np. <code>git add index.html</code>). Nawet jeśli spróbujemy dodać wszystkie pliki za pomocą komendy <code>git add .</code>, zostaną dodane tylko pliki, których zawartość zmieniła się względem poprzedniego commita – z pominięciem plików pasujących do filtrów zapisanych w <code>.gitignore</code>.</p>
+<p>Wchodząc w techniczne szczegóły, w commitach nie są zapisywane całe pliki, a tylko informacje o tym, co zmieniło się w danym pliku. Oznacza to, że aktualna wersja projektu jest sumą wszystkich zmian zapisanych w commitach (na tym samym branchu).</p>
+<p>Dzięki temu usunięcie pliki jest tylko informacją w commicie o tym, że ten plik został usunięty. Nie zostaną skasowane informacje o tym pliku z poprzednich commitów, więc zawsze można go przywrócić – o ile został zapisany we wcześniejszym commicie.</p>
+<p>Zdalne repozytorium – w wielkim skrócie – jest zdalną kopią naszego repozytorium lokalnego. Komendy <code>git push</code> i <code>git pull</code> pozwalają na zsynchronizowanie lokalnego i zdalnego repozytorium. Do tego oczywiście jest wymagane połączenie z internetem.</p>
+<p>Do wykonania pusha (a w przypadku repozytorium prywatnego, również pulla) musimy <em>udowodnić</em>, że mamy prawo do zapisu (i ew. odczytu) w tym repozytorium. Moglibyśmy za każdym razem podawać login i hasło, jednak znacznie wygodniej jest korzystać z kluczy SSH, które pozwolą nam na łączenie się z repozytorium zdalnym bez logowania.</p>
+<p>Kiedy jesteśmy offline, możemy nadal korzystać z lokalnego repozytorium do zapisywania commitów, tworzenia i przełączania się pomiędzy branchami, porównywania commitów, etc. – czyli brak internetu uniemożliwia nam tylko synchronizację ze zdalnym repozytorium, ale nie blokuje nam pracy nad projektem.</p>
+
+          </div>
+        </div>
+      
+        </article>
+      
+        <article class='question' data-type='multiple-choice'>
+      
+        <header>
+          <p><em>2.</em> W pracy z Gitem, szczególnie w zespole projektowym, bardzo ważne jest przestrzeganie dobrych praktyk nazewnictwa commitów. Zaznacz te commity, które spełniają dobre praktyki.</p>
+
+        </header>
+        <ol type='a' class='answers' data-correct='2,5'>
+          <li><label><input type='checkbox'> wrzucam poprawkę</label></li>
+<li><label><input type='checkbox'> Adding some new code, because one of the features wasn't working, so I needed to fix it, and now I think it works fine</label></li>
+<li><label><input type='checkbox'> Change global styles (mainly fonts and bg colors)</label></li>
+<li><label><input type='checkbox'> Dodany kod HTML strony Pricing</label></li>
+<li><label><input type='checkbox'> Remove plugin</label></li>
+<li><label><input type='checkbox'> Add js for image gallery</label></li>
+<li><label><input type='checkbox'> qwerty</label></li>
+        </ol>
+        <div class="buttons text-center">
+          <button class="button-ok btn btn-primary">Sprawdź odpowiedź</button>
+        </div>
+      
+      
+        <div class='explanation'>
+          <div class="bc-note alert-success">
+            <h4 class="alert-heading text-center">Wyjaśnienie</h4>
+      <p>Na tym etapie może się to wydawać abstrakcyjne, ale warto dbać o nazwy commitów i częste zapisywanie commitów. Dzięki temu nie tylko lepiej przygotujesz się do pracy nad projektem zespołowym, ale też oszczędzisz sobie sporo nerwów, mogąc wrócić do konkretnej wersji projektu.</p>
+<p>Dlatego przypominamy zasady dotyczące tytułów commitów:</p>
+<ul>
+<li>piszemy po angielsku i zwięźle (do ok. 50 znaków),</li>
+<li>w miarę konkretnie opisujemy, co zostało zmienione, unikamy ogólnikowych opisów w stylu "Add styles",</li>
+<li>pierwsze słowo tytułu to czasownik w czasie teraźniejszym prostym, np. "Add", "Fix", "Remove" czy "Change".</li>
+</ul>
+<p>Jeśli commit wymaga szerszego wyjaśnienia, możemy je dodać jako opis commita. Wtedy nie używamy komendy <code>git commit -m &quot;Add multiple changes&quot;</code>, tylko <code>git commit</code>. W edytorze opisu w 1. linii wpisujemy tytuł commita, 2. linię pozostawiamy pustą, a w kolejnych liniach wpisujemy dowolny opis.</p>
+
+          </div>
+        </div>
+      
+        </article>
+      
+        <article class='question' data-type='multiple-choice'>
+      
+        <header>
+          <p><em>3.</em> Zaznacz zdania poprawnie wyjaśniające komendy gita:</p>
+
+        </header>
+        <ol type='a' class='answers' data-correct='0,3,4'>
+          <li><label><input type='checkbox'> <code>git add</code> dodaje pliki, które mają być zapisane w commicie</label></li>
+<li><label><input type='checkbox'> <code>git save</code> zapisuje commit</label></li>
+<li><label><input type='checkbox'> <code>git send</code> wysyła pliki na zdalne repozytorium</label></li>
+<li><label><input type='checkbox'> <code>git clone</code> klonuje zdalne repozytorium</label></li>
+<li><label><input type='checkbox'> <code>git pull</code> pobiera zmiany ze zdalnego repozytorium</label></li>
+        </ol>
+        <div class="buttons text-center">
+          <button class="button-ok btn btn-primary">Sprawdź odpowiedź</button>
+        </div>
+      
+      
+        <div class='explanation'>
+          <div class="bc-note alert-success">
+            <h4 class="alert-heading text-center">Wyjaśnienie</h4>
+      <p>Commit zapisujemy za pomocą <code>git commit</code>, a wysłanie plików na zdalne repozytorium to <code>git push</code>. Pozostałe komendy opisane powyżej są poprawne.</p>
+
+          </div>
+        </div>
+      
+        </article>
+      
+        <article class='question' data-type='multiple-choice'>
+      
+        <header>
+          <p><em>4.</em> NPM pozwala nam na:</p>
+
+        </header>
+        <ol type='a' class='answers' data-correct='0,1,2,3'>
+          <li><label><input type='checkbox'> instalację narzędzi przydatnych przy pracy nad projektem</label></li>
+<li><label><input type='checkbox'> instalację pakietów niezbędnych do uruchomienia projektu</label></li>
+<li><label><input type='checkbox'> zapisanie w projekcie listy zależności, czyli pakietów potrzebnych do uruchomienia projektu i/lub pracy nad nim</label></li>
+<li><label><input type='checkbox'> uruchamianie skomplikowanych komend za pomocą skryptów (np. <code>npm run build</code>)</label></li>
+<li><label><input type='checkbox'> ignorowanie katalogu <code>node_modules</code>, aby nie został dodany do repozytorium</label></li>
+        </ol>
+        <div class="buttons text-center">
+          <button class="button-ok btn btn-primary">Sprawdź odpowiedź</button>
+        </div>
+      
+      
+        <div class='explanation'>
+          <div class="bc-note alert-success">
+            <h4 class="alert-heading text-center">Wyjaśnienie</h4>
+      <p>NPM to menedżer pakietów Node.js, który pozwala na instalację wielu różnych pakietów. Niektóre z nich to narzędzia przydatne developerom, inne mogą być kluczowym elementem projektu, bez którego nie da się go uruchomić.</p>
+<p>Wszystkie instalowane pakiety mogą być automatycznie zapisywane w pliku <code>package.json</code>, który powinien znaleźć się w repozytorium. Dzięki niemu inni developerzy (a również Ty na innym komputerze) będą mogli jedną komendą zainstalować wszystkie zależności.</p>
+<p>Co więcej, skrypty NPM pozwalają nam na zapisanie (najczęściej) skomplikowanej komendy pod prostą nazwą. Dzięki temu możemy wykonać szereg operacji np. za pomocą komendy <code>npm run build</code>.</p>
+<p>Pamiętaj jednak, że pakiety zainstalowane przez NPM nie powinny znaleźć się w repozytorium. Są one instalowane w katalogu <code>node_modules</code>, który należy dodać do <code>.gitignore</code>.</p>
+
+          </div>
+        </div>
+      
+        </article>
+      
+        <article class='question' data-type='multiple-choice'>
+      
+        <header>
+          <p><em>5.</em> Zaznacz prawidłowe zdania dotyczące task runnera:</p>
+
+        </header>
+        <ol type='a' class='answers' data-correct='0,2,4,5'>
+          <li><label><input type='checkbox'> task runner można zbudować samodzielnie w oparciu o skrypty NPM</label></li>
+<li><label><input type='checkbox'> mało kto używa task runnera</label></li>
+<li><label><input type='checkbox'> dzięki task runnerowi możemy ujednolicić sposób uruchamiania projektów, nawet jeśli każdy z nich korzysta z innych zależności</label></li>
+<li><label><input type='checkbox'> task <code>build</code> najczęściej służy do zainicjowania projektu</label></li>
+<li><label><input type='checkbox'> task <code>watch</code> najczęściej służy do bieżącej pracy nad projektem</label></li>
+<li><label><input type='checkbox'> task runner może działać w tle, np. czekając na zmiany w plikach projektu</label></li>
+        </ol>
+        <div class="buttons text-center">
+          <button class="button-ok btn btn-primary">Sprawdź odpowiedź</button>
+        </div>
+      
+      
+        <div class='explanation'>
+          <div class="bc-note alert-success">
+            <h4 class="alert-heading text-center">Wyjaśnienie</h4>
+      <p>Task runner to ogólne pojęcie na narzędzie, które uruchamia inne narzędzia w określonych scenariuszach (taskach). Używanie task runnera jest bardzo popularne i ciężko dzisiaj znaleźć projekt, który nie korzystałby z żadnego task runnera.</p>
+<p>Nawet jeśli w różnych projektach używasz różnych narzędzi, możesz ujednolicić sposób ich uruchamiania. Bardzo częstymi nazwami tasków są:</p>
+<ul>
+<li><code>init</code> – zainicjowanie projektu,</li>
+<li><code>watch</code> – działa w tle, pozwalając na pracę nad projektem,</li>
+<li><code>build</code> – buduje wersję projektu, która jest zoptymalizowana do opublikowania,</li>
+<li><code>test</code> – uruchomienie testów sprawdzających poprawność kodu.</li>
+</ul>
+<p>Warto zauważyć, że task <code>watch</code> zwykle działa w tle, czyli pozostaje uruchomiony i czeka na zmiany w plikach projektu. W reakcji na nie może np. na nowo skompilować pliki lub odświeżyć podgląd projektu.</p>
+
+          </div>
+        </div>
+      
+        </article>
+      
+        </div>
+        
+<style>
+  .kodilla-quiz .question {
+    margin-bottom: 1.5em;
+  }
+  .kodilla-quiz .explanation {
+    display: none;
+  }
+  .kodilla-quiz li>label {
+    display: inline-block;
+    padding-top: 1px;
+    vertical-align: top;
+  }
+</style>
+<script>
+  if(typeof initQuizzes == 'undefined'){
+    function initQuizzes(){
+      var types = {
+        'multiple-choice': initMultipleChoice,
+      };
+
+      var questions = document.querySelectorAll('.kodilla-quiz .question');
+
+      for(var i=0; i<questions.length; i++){
+        var question = questions[i];
+        var initFunc = types[question.dataset.type];
+
+        if(typeof(initFunc) != 'undefined' && !question.classList.contains('initiated')){
+          question.classList.add('initiated');
+          initFunc(question);
+        }
+      }
+    }
+
+    function initMultipleChoice(question){
+      var answers = question.querySelector('.answers');
+      var inputs = answers.querySelectorAll('input');
+      var buttons = question.querySelector('.buttons');
+      var buttonOK = buttons.querySelector('.button-ok');
+      var explanation = question.querySelector('.explanation');
+      var correct = question.querySelector('[data-correct]').dataset.correct.split(',');
+
+      buttonOK.addEventListener('click', function(e){
+        e.preventDefault();
+
+        var inputsChecked = answers.querySelectorAll('input:checked');
+        if(inputsChecked.length == 0){
+          alert('Wybierz co najmniej jedna odpowiedź');
+          return;
+        }
+
+        correct.forEach(function(index){
+          inputs[index].parentNode.parentNode.classList.add('text-success', 'text-bold');
+        });
+
+        for (var i = 0; i < inputs.length; i++) {
+          var input = inputs[i];
+          var li = input.parentNode.parentNode;
+          input.setAttribute('disabled', true);
+          
+          if(input.checked){
+            li.classList.add('text-bold');
+            
+            if(!li.classList.contains('text-success')){
+              li.classList.add('text-danger');
+            }
+          }
+
+        }
+        
+        if(explanation) explanation.style.display = 'block';
+        buttons.setAttribute('hidden', true);
+      });
+    }
+  }
+  initQuizzes();
+</script>
+
+      
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                            </main>
+        </div>
+    </section>
+</main>
+;
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<script type="text/x-translation" data-translation-name="SentBootcampLinkReviewFormMessage">Wysłano link do zatwierdzenia</script>
+    <div id="alerts">
+    <div class="alert alert-danger" role="alert">
+        <i class="fa fa-exclamation" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                        </ul>
+    </div>
+    <div class="alert alert-success" role="alert">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-warning" role="alert">
+        <i class="fa fa-warning" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-info" role="alert">
+        <i class="fa fa-info" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                    </ul>
+    </div>
+    <div class="container">
+        <div class="alert alert-notify" role="alert">
+            <i class="fa fa-info" aria-hidden="true"></i>
+            <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Zamknij</span>
+            </button>
+            <ul>
+                            </ul>
+        </div>
+    </div>
+</div>
+    <div class="modal fade informator-modal" id="informator" tabindex="-1" role="dialog" aria-labelledby="informatorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="https://kodilla.com/static/img/logo-menu.png?00000" alt="Logo Kodilla" class="brand-logo">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body content-container">
+                <h3>Zam&oacute;w szczeg&oacute;łowy informator</h3>
+                <form class="row js-ajax-form" data-view-class="InformatorForm" action="https://kodilla.com/pl/download-informator" method="post">
+                    <input type="hidden" name="ga-pobieranie-informatora-z-modala" value="wypelnienie">
+                    <input type="hidden" name="tags[0]" value="informator">
+                                        <div class="user-data-container">
+                        <input type="text" class="form-control" name="firstname" placeholder="Imię">
+                        <input type="text" class="form-control" name="surname" placeholder="Nazwisko">
+                    </div>
+                    <div class="user-data-container">
+                        <input type="email" class="form-control" name="email" placeholder="Email" required/>
+                        <input type="tel" class="form-control" name="phone" placeholder="Numer telefonu" pattern="^([\+][0-9]{1,3}([ \.\-])?)?([\(]{1}[0-9]{3}[\)])?([0-9 \.\-]{1,15})$" title="Wpisz poprawny numer telefonu, np. 453 674 897" minlength="9" maxlength="15" data-custom-message="Wpisz poprawny numer telefonu, np. 453 674 897">
+                    </div>
+                    <div class="terms-box">
+                        <label>
+                            <input name="accept_terms" value="true" data-custom-message="Prosimy o zaakceptowanie regulaminu" type="checkbox" class="form-control input-checkbox" required>
+                            <span>Akceptuję <a target="_blank" href="https://kodilla.com/pl/regulamin">regulamin</a>  i nie wnoszę zastrzeżeń</span>
+                        </label>
+                    </div>
+                    <div class="personal-terms-box">
+                        <label>
+                            <input name="accept_marketing" value="true" data-custom-message="Jeśli chcesz otrzymać dostęp do materiał&oacute;w, konieczna jest akceptacja obydwu zg&oacute;d" type="checkbox" class="form-control input-checkbox" required>
+                            <span>Chcę otrzymywać newsletter, informacje o promocjach i produktach dostępnych w Kodilla.
+                                <span class="details-button" data-action="show-details" data-identifier="personal-terms-details-informator">Czytaj więcej</span>
+                                <span class="display-none" data-identifier="personal-terms-details-informator">Wyrażam zgodę na otrzymywanie informacji handlowych od Kodilla na podany przeze mnie adres e-mail. Zgoda jest dobrowolna, jednakże niezbędna do otrzymywania informacji o produktach, promocjach i o tym, co u nas słychać. Administratorem danych jest Codemy S.A. z siedzibą we Wrocławiu, Plac Powstańc&oacute;w Śląskich 13/4. Mam prawo cofnąć zgodę w każdym czasie, jednak wtedy nie będę otrzymywać informacji. Dane mogą być przetwarzane pomimo cofnięcia zgody wyłącznie w takim zakresie i celu, w jakim ich przetwarzanie jest niezbędne do ustalenia, dochodzenia lub obrony roszczeń Administratora w związku z udzieloną zgodą. Mam prawo dostępu do danych, sprostowania, usunięcia, ograniczenia przetwarzania, prawo wniesienia sprzeciwu, skargi do organu nadzorczego i przeniesienia danych. Szczeg&oacute;łowe informacje znajdują się na stronie kodilla.com, zakładka &quot;Polityka Prywatności&quot;.</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="display-none">
+                        <input type="text" name="myName" value="">
+                    </div>
+                    <div class="">
+                        <button type="submit" class="btn btn-primary">
+                            Pobierz Informator
+                            <i data-role="loading-icon" class="fa fa-spinner fa-spin fa-1x fa-fw display-none"></i>
+                        </button>
+                    </div>
+                </form>
+                <a href="https://kodilla.com/pl/informator" id="informator-link" target="_blank" class="display-none"></a>
+            </div>
+            <div class="modal-footer">
+                <p>Pobranie informatora do niczego nie zobowiązuje</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="site-footer">
+                <section class="footer-lower">
+            <nav class="container">
+                <a class="navbar-img" href="https://kodilla.com/pl">
+                    <svg id="kodilla-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 29.553" width="168" height="30">
+                        <defs>
+                            <style>
+                                .footer-logo-fill {
+                                    fill: #fff;
+                                }
+                            </style>
+                        </defs>
+                        <g id="Group_1" data-name="Group 1" transform="translate(23.59)">
+                            <path id="KODILLA_copy_5_1_" class="footer-logo-fill" d="M78.058,0a14.758,14.758,0,1,0,.075,0Zm0,23.739a8.939,8.939,0,0,1-8.944-8.907V14.8c0-4.957,4.584-.708,8.907-.708,4.919,0,9.019-4.211,9.019.708a8.978,8.978,0,0,1-8.981,8.944Z" transform="translate(-63.3)"/>
+                            <ellipse id="eye_copy_4_1_" class="footer-logo-fill" cx="3.876" cy="3.876" rx="3.876" ry="3.876" transform="translate(9.462 13.2) rotate(-28.436)"/>
+                        </g>
+                        <path id="Path_1" data-name="Path 1" class="footer-logo-fill" d="M0,29.819V.9H6.671V13.347L17.255.9h7.491L13.938,13.794,25.491,29.819h-7.6l-8.2-11.665-3.019,3.13v8.5H0Z" transform="translate(0 -0.565)"/>
+                        <path id="Path_2" data-name="Path 2" class="footer-logo-fill" d="M151.4,29.819V.9h10.807a15.515,15.515,0,0,1,6.261,1.155,12.966,12.966,0,0,1,4.509,3.093A12.918,12.918,0,0,1,175.7,9.732a17.245,17.245,0,0,1,.932,5.59,16.821,16.821,0,0,1-1.006,5.963,12.227,12.227,0,0,1-2.907,4.547,13.484,13.484,0,0,1-4.547,2.944,15.964,15.964,0,0,1-5.925,1.043Zm18.41-14.5a11.274,11.274,0,0,0-.522-3.466,7.723,7.723,0,0,0-1.491-2.72,6.616,6.616,0,0,0-2.385-1.752,8.055,8.055,0,0,0-3.205-.6h-4.1v17.18h4.1a7.985,7.985,0,0,0,3.242-.634,6.8,6.8,0,0,0,2.385-1.826,8.286,8.286,0,0,0,1.453-2.72A11.634,11.634,0,0,0,169.81,15.322Z" transform="translate(-94.978 -0.565)"/>
+                        <path id="Path_3" data-name="Path 3" class="footer-logo-fill" d="M228.3,29.819V.9h6.671V29.819Z" transform="translate(-143.219 -0.565)"/>
+                        <path id="Path_4" data-name="Path 4" class="footer-logo-fill" d="M259.9,29.819V.9h6.671V23.968h14.012v5.851Z" transform="translate(-163.043 -0.565)"/>
+                        <path id="Path_5" data-name="Path 5" class="footer-logo-fill" d="M327.371,23.931V.9H320.7V29.819h18.522l2.124-5.851H327.371Z" transform="translate(-201.185 -0.565)"/>
+                        <path id="Path_6" data-name="Path 6" class="footer-logo-fill" d="M388.547.9h6.037L405.13,29.819h-6.857l-2.236-6.484h-9.019l-2.2,6.484H378Zm6.373,17.851L391.528,8.54l-3.466,10.211Z" transform="translate(-237.13 -0.565)"/>
+                    </svg>
+                </a>
+                <ul class="nav">
+                    <li>
+                        <a href="https://kodilla.com/pl/regulamin" rel="nofollow">Regulamin</a>
+                    </li>
+                    <li>
+                        <a href="https://kodilla.com/pl/polityka-prywatnosci" rel="nofollow">Polityka prywatności</a>
+                    </li>
+                    <li class="nav-item">&copy; 2021 Kodilla</li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
+
+<!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN2WWBH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <script src="https://kodilla.com/static/js/libs/jquery-2.1.4.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/js.cookie-2.1.0.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/jquery-dateFormat.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/bootstrap.min.js?00000"></script>
+<script>
+    (function () {
+        $(document).ready(function () {
+            if (window.location.hash === '#informator-modal') {
+                showInformator();
+            }
+        });
+
+        $('[data-action="show-modal"]').click(function() {
+            showInformator();
+        });
+
+        function showInformator() {
+            $('#informator').modal('show');
+        }
+    })();
+</script>
+<script src="https://kodilla.com/build/minified/js/fb-0370c8f03e.js" async></script>
+<script src="https://kodilla.com/build/minified/js/call-us-d1ed4dfa39.js"></script>
+<script>
+    if (document.querySelector('main.editor')) {
+        document.querySelector('body').classList.add('editor');
+    }
+</script>
+
+<script type="text/javascript">
+    (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+    vgo('setAccount', '649095895');
+    vgo('setTrackByDefault', true);
+
+    vgo('process');
+</script>
+
+        <script src="https://kodilla.com/static/js/libs/underscore-min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-relational.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-super.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/handlebars-v4.0.5.min.js?00000"></script>
+<script src="https://kodilla.com/build/minified/js/extends/handlebars-ifCond-139a2339f7.js"></script>
+<script src="https://kodilla.com/build/minified/js/application-0dcfdc1306.js"></script>
+<script src="https://kodilla.com/build/minified/js/main-cf3b73d734.js"></script>
+<script src="https://kodilla.com/build/minified/js/views/settings-5fc44a761b.js"></script>
+<script src="https://kodilla.com/build/minified/js/views/delete-account-da2b3de486.js"></script>
+<script type="text/x-translation" data-translation-name="checkAccountDeleteCalculationMessage">Wynik jest nieprawidłowy</script>
+<script src="https://kodilla.com/build/minified/js/helpers/forms-222ea01b08.js"></script>
+<script src="https://kodilla.com/build/minified/js/helpers/alerts-66650c3acb.js"></script>
+<script>
+    App.Views.InpageAlertManager = Backbone.View.extend({
+        events: {
+            'click [data-alert-type][data-alert-text]': 'showAlert'
+        },
+        showAlert: function(e) {
+            var $el = $(e.currentTarget);
+            App.alertsView['show'+$el.data('alertType')]([App.Translations($el.data('alertText'))]);
+        }
+    });
+</script>
+<script src="https://kodilla.com/build/minified/js/collections-c07e1162e2.js"></script>
+<script src="https://kodilla.com/build/minified/js/models-4e0e4fcffb.js"></script>
+<script src="https://kodilla.com/build/minified/js/views/knowledge-base-61f71273c9.js"></script>
+<script>
+    App.Views.LearningProgram = Backbone.View.extend({
+        events: {
+            'click [data-technology-desc-expander]' : 'expandTechnologyDesc'
+        },
+
+        initialize: function() {
+            this.$allTechnologyDesc = this.$el.find('[data-technology-desc]');
+            this.$allTechnologyExpanderIcons = this.$el.find('[data-technology-expander-icon]');
+        },
+
+        expandTechnologyDesc: function() {
+            this.$allTechnologyDesc.each(function(){
+                var $desc = $(this);
+                $desc.slideToggle('fast');
+            });
+            this.$allTechnologyExpanderIcons.each(function(){
+                var $icon = $(this);
+                $icon.toggleClass("fa-minus");
+            });
+        },
+    });
+</script>
+
+    <script src="https://kodilla.com/static/js/libs/tether.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/prism.min.js?00000"></script>
+
+    <script src="https://kodilla.com/build/minified/js/views/bootcamp-1522c7c010.js"></script>
+    <script src="https://kodilla.com/static/js/libs/jquery.seourl.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/perfect-scrollbar.jquery.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/fancybox/jquery.fancybox.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/moment.timezone.locales.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/bootstrap-datetimepicker.min.js?00000"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("a.img-modal-group").fancybox();
+        });
+    </script>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="call-us-modal">
+    <div class="modal-dialog modal-dialog-callus" role="document">
+        <div class="modal-content call-modal">
+            <div id="call-us-step1">
+                <h2>Um&oacute;w się na rozmowę z doradcą Kodilli</h2>
+                <p>Krok <span>1/2:</span> Podaj numer telefonu</p>
+                <form action="https://kodilla.com/pl/call-center/dates/phone_calls" method="post" id="call-us-form1">
+                    <input type="tel" name="phone" id="call-us-input-phone" class="call-center-input" placeholder="731771787">
+                    <p class="error-message display-none" id="validation-message-phone">Pole Numer Telefonu jest wymagane. Nieprawidłowy format.</p>
+                    <button class="btn btn-success" id="call-us-submit-phone">Zarezerwuj rozmowę</button>
+                </form>
+                <p id="call-us-counter-holder" style="display: none;">Dzisiaj już  <span id="call-us-counter" class="call-counter" data-url="https://kodilla.com/pl/call-center/counter/phone_calls">-</span> <span id="call-us-counter-text" data-one=" osoba zam&oacute;wiła rozmowę z nami." data-few=" osoby zam&oacute;wiły rozmowę z nami." data-more=" os&oacute;b zam&oacute;wiło rozmowę z nami."></span></p>
+                <div class="data-protection">
+                    <p>Twój numer telefonu nie będzie wykorzystywany w celach marketingowych ani przekazany dalej. Tylko oddzwonimy. Dane są przetwarzane zgodnie z <a href="/pl/polityka-prywatnosci">Polityką Prywatności</a>.</p>
+                </div>
+            </div>
+
+            <div id="call-us-step2" style="display: none;">
+                <h2>Wybierz dogodny termin i godzinę na rozmowę z doradcą</h2>
+                <p>Krok <span>2/2:</span>
+                <form action="https://kodilla.com/pl/call-center/step2/phone_calls" method="post" id="call-us-form2">
+                    <div class="select-date">
+                        <select name="date" id="call-us-input-date">
+                        </select>
+                        <select name="time" id="call-us-input-time">
+                        </select>
+                    </div>
+                    <button class="btn btn-success" id="call-us-submit-call">Oddzwońcie do mnie!</button>
+                </form>
+            </div>
+
+            <div id="call-us-step3" style="display: none;">
+                <div  class="thanks">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    <h2>Dziękujemy za zamowienie rozmowy! Do usłyszenia w wybranym terminie!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+                <style type="text/css">
+    .embeddedServiceHelpButton .helpButton .uiButton {
+        background-color: #1EA71C;
+        font-family: "Arial", sans-serif;
+    }
+    .embeddedServiceHelpButton .helpButton .uiButton:focus {
+        outline: 1px solid #1EA71C;
+    }
+</style>
+<script>
+    function openChat(){
+        $('.helpButtonEnabled').trigger('click');
+    }
+</script>
+<script type="text/javascript" src="https://service.force.com/embeddedservice/5.0/esw.min.js"></script>
+
+<script type="text/javascript">
+    var initESW = function(gslbBaseURL) {
+        let firstName = 'Marek Baberowski'.split(" ")[0];
+        let lastName = 'Marek Baberowski'.split(" ")[1];
+        console.log(name);
+        embedded_svc.settings.displayHelpButton = true;
+        embedded_svc.settings.language = '';
+
+        embedded_svc.settings.defaultMinimizedText =  'Skontaktuj się z nami';
+        embedded_svc.settings.disabledMinimizedText = ' ';
+
+        embedded_svc.settings.loadingText = 'Ładowanie';
+        embedded_svc.settings.storageDomain = 'kodilla.com';
+
+        embedded_svc.settings.prepopulatedPrechatFields = {
+            'FirstName': firstName,
+            'LastName': lastName,
+            'Email': 'm.z.baberowski@gmail.com'
+        };
+        embedded_svc.settings.offlineSupportMinimizedText = 'Napisz do nas';
+
+        embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+        embedded_svc.settings.entryFeature = 'LiveAgent';
+
+        embedded_svc.init(
+            'https://kodilla.my.salesforce.com',
+            'https://kodillacommunity.force.com',
+            gslbBaseURL,
+            '00D1i000000VBFH',
+            'Support_Kodilla',
+            {
+                baseLiveAgentContentURL: 'https://c.la1-c2-fra.salesforceliveagent.com/content',
+                deploymentId: '5721i00000009s9',
+                buttonId: '5731i0000000AJN',
+                baseLiveAgentURL: 'https://d.la1-c2-fra.salesforceliveagent.com/chat',
+                eswLiveAgentDevName: 'Support_Kodilla',
+                isOfflineSupportEnabled: true
+            }
+        );
+    };
+
+    if (!window.embedded_svc) {
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://kodilla.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+        s.onload = function() {
+            initESW(null);
+        };
+        document.body.appendChild(s);
+    } else {
+        initESW('https://service.force.com');
+    }
+</script>
+        <div data-role="notifications-wrapper" class="notifications-wrapper"></div>
+</body>
+</html>

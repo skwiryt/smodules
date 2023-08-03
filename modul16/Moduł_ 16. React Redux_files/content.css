@@ -1,0 +1,146 @@
+.bootcamp.module .module-content .card-block .nav-tabs {margin: 1.5em 0; padding-left: 0; font-weight: bold;}
+.bootcamp.module .module-content .card-block .nav-tabs > li {margin-bottom: -1px;}
+.bootcamp.module .module-content .card-block .tab-content.padded {border: 1px solid #ddd; border-top: none;}
+.bootcamp.module .module-content .card-block .tab-content > .tab-pane > .card-block {padding: 1.5em 0 0;}
+.bootcamp.module .module-content .card-block .tab-content > .tab-pane.padded > .card-block {padding: 40px;}
+.bootcamp.module .module-content .card-block .tab-content > .tab-pane {display: none; margin-bottom: 0; border-radius: 0;}
+.bootcamp.module .module-content .card-block .tab-content > .tab-pane.active {display: block;}
+.bootcamp.module .module-content .card-block .tab-content > .tab-pane.show {opacity: 1;}
+.bootcamp.module .module-content .card-block .collapse-toggles [data-toggle="collapse"]:last-of-type.collapsed {display: none;}
+.bootcamp.module .module-content .card-block .collapse-toggles [data-toggle="collapse"]:first-of-type:not(.collapsed) {display: none;}
+.bootcamp.module .module-content .card-block .collapse-toggles:hover [data-toggle="collapse"].btn-primary {color: #02ac46; background-color: #fff;}
+
+.bootcamp.module .module-content img.img-inline {
+  width: 200px;
+  height: auto;
+}
+
+@media (min-width: 992px) {
+  .bootcamp.module .module-content img.img-left {
+    float: left;
+    margin-right: 30px;
+  }
+  .bootcamp.module .module-content img.img-right {
+    float: right;
+    margin-left: 30px;
+  }
+}
+
+.bc-note.alert-success.alert-success-solid {
+    padding: 10px!important;
+    background-color: #d0e9c6;
+}
+
+.bc-note.alert-success.alert-success-solid ul {
+  margin-top: 0!important;
+  list-style-type: none;
+}
+
+.submodule-content table {
+  margin-bottom: 1.5em;
+}
+
+.submodule-content table tr {
+  border-top: 1px solid #ccc;
+}
+
+.submodule-content table td, .submodule-content table th {
+  border: 1px solid #ddd;
+  padding: 6px 13px;
+}
+
+.bootcamp.module .module-content p+ol,
+.bootcamp.module .module-content p+ul {
+  margin-top: -0.5em;
+  padding-left: 20px;
+}
+
+.bootcamp.module .module-content .card-block h4 {
+  margin-bottom: 1em;
+}
+
+.collapse.in {
+    padding: 24px;
+    display: block;
+    background: rgba(241, 241, 241, 0.4);
+    margin-bottom: 36px;
+}
+
+.bc-note {
+	overflow: hidden;
+}
+
+.bc-note :not(a) {
+	font-size: 14px;
+	font-weight: 300;	
+}
+	
+.bc-note h4 {
+	font-size: 16px !important;
+	font-weight: 700;
+}
+
+.bc-note strong {
+	font-weight: 700;
+}
+
+.embed-container { 
+	position: relative; 
+	padding-bottom: 56.25%; 
+	height: 0; 
+	overflow: hidden; 
+	max-width: 100%; 
+	margin-bottom: 1.5em;
+}
+
+.embed-container iframe, 
+.embed-container object, 
+.embed-container embed { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+}
+
+#form-iframe {
+    margin: 50px auto;
+    display: block;
+    max-width: 100%;
+    height: 550px;
+}
+
+@media (max-width: 767px) {
+    body:not(.editor) {padding-top: 55px;}
+
+    #form-iframe {
+        margin: 25px auto;
+        height: 700px;
+    }
+}
+
+@media (max-width: 420px) {
+    #form-iframe {
+        height: 900px;
+    }
+}
+
+.dev-todo, .dev-comment {
+    display: block !important;
+    padding: 10px;
+}
+
+.dev-todo hr, .dev-comment hr {
+	height: 1px;
+    border-top: 3px solid rgba(0,0,0,0.3);
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.dev-todo .bc-note, .dev-comment .bc-note {
+    background-color: transparent;
+}
+
+.footer-logo-fill {
+	fill: #fff;
+}

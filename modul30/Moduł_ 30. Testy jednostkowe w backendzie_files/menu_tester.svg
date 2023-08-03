@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 27.6 27.4" style="enable-background:new 0 0 27.6 27.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#02AC46;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;}
+	.st1{fill:none;stroke:#02AC46;stroke-miterlimit:10;}
+</style>
+    <title>Front i Web Developer</title>
+    <line class="st0" x1="19.1" y1="3.1" x2="20.6" y2="4.6"/>
+    <line class="st0" x1="19.1" y1="4.6" x2="20.6" y2="3.1"/>
+    <line class="st0" x1="1.2" y1="6.9" x2="22.9" y2="6.9"/>
+    <rect x="15.2" y="3.1" class="st0" width="1.5" height="1.5"/>
+    <line class="st0" x1="13" y1="4.6" x2="11.4" y2="4.6"/>
+    <polyline class="st1" points="7,14.9 10.4,18.3 18.7,10.1 "/>
+    <g>
+	<circle class="st0" cx="21.4" cy="21.3" r="2.7"/>
+        <path class="st0" d="M25.5,22.3l1.5-0.2c0.1-0.5,0.1-1,0-1.6l-1.5-0.2c-0.1-0.4-0.3-0.8-0.5-1.2l1-1.2c-0.3-0.4-0.7-0.8-1.1-1.1
+		l-1.2,1c-0.4-0.2-0.8-0.4-1.2-0.5l-0.2-1.5c-0.5-0.1-1-0.1-1.6,0l-0.2,1.5c-0.4,0.1-0.8,0.3-1.2,0.5l-1.2-1
+		c-0.4,0.3-0.8,0.7-1.1,1.1l0.9,1.2c-0.2,0.4-0.4,0.8-0.5,1.2l-1.5,0.2c-0.1,0.5-0.1,1,0,1.6l1.5,0.2c0.1,0.4,0.3,0.8,0.5,1.2
+		l-0.9,1.2c0.3,0.4,0.7,0.8,1.1,1.1l1.2-1c0.4,0.2,0.8,0.4,1.2,0.5l0.2,1.5c0.5,0.1,1,0.1,1.6,0l0.2-1.5c0.4-0.1,0.8-0.3,1.2-0.5
+		l1.2,1c0.4-0.3,0.8-0.7,1.1-1.1l-1-1.2C25.2,23.1,25.4,22.7,25.5,22.3z"/>
+</g>
+    <path class="st0" d="M31.5-4.1"/>
+    <polyline class="st0" points="15.5,23.4 1.2,23.4 1.2,1.2 23.5,1.2 23.5,15.6 "/>
+</svg>

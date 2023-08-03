@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://kodilla.com/pl/szkolenia-pro/typescript -->
+<html lang="pl" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="ahrefs-site-verification" content="c2d3c04b9f125c5b8c98d89f738d343f69d841f035150344a932150235c5639a">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="csrf-token" content="qgsTnu0gYFlT6XEGXcV01OqWUMZDRs6wB5Hjizda">
+
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="https://kodilla.com/static/img/icons/apple-touch-icon-60x60.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://kodilla.com/static/img/icons/apple-touch-icon-76x76.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://kodilla.com/static/img/icons/apple-touch-icon-120x120.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://kodilla.com/static/img/icons/apple-touch-icon-152x152.png?00000">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kodilla.com/static/img/icons/favicon-32x32.png?00000">
+<link rel="icon" type="image/png" sizes="96x96" href="https://kodilla.com/static/img/icons/favicon-96x96.png?00000">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kodilla.com/static/img/icons/favicon-16x16.png?00000">
+
+    <link rel="canonical" href="https://kodilla.com/pl/szkolenia-pro/typescript">
+
+    <title>    Kurs TypeScript | Kodilla.com
+</title>
+        <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <meta property="og:image" content="https://kodilla.com/static/img/og-image-kodilla.png?00000">
+    <meta property="og:title" content="Kurs TypeScript | Kodilla.com">
+    <meta property="og:description" content="">
+    <script type="text/javascript" async="" src="./Kurs TypeScript _ Kodilla.com_files/js"></script><script type="text/javascript" async="" id="inspsync" src="./Kurs TypeScript _ Kodilla.com_files/inspectlet.js"></script><script type="text/javascript" async="" src="./Kurs TypeScript _ Kodilla.com_files/saved_resource"></script><script async="" src="./Kurs TypeScript _ Kodilla.com_files/tfa.js" id="tb_tfa_script"></script><script type="text/javascript" async="" src="./Kurs TypeScript _ Kodilla.com_files/insight.min.js"></script><script type="text/javascript" async="" src="./Kurs TypeScript _ Kodilla.com_files/analytics.js"></script><script type="text/javascript" async="" src="./Kurs TypeScript _ Kodilla.com_files/analytics.js"></script><script type="text/javascript" async="" src="./Kurs TypeScript _ Kodilla.com_files/js(1)"></script><script src="./Kurs TypeScript _ Kodilla.com_files/sdk.js" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="./Kurs TypeScript _ Kodilla.com_files/sdk(1).js"></script><script async="" src="./Kurs TypeScript _ Kodilla.com_files/gtm.js"></script><script async="" src="./Kurs TypeScript _ Kodilla.com_files/fbevents.js"></script><script src="./Kurs TypeScript _ Kodilla.com_files/diffuser.js" async=""></script><script>document.documentElement.classList.remove("no-js")</script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/yall.min.js"></script>
+<link rel="stylesheet" href="./Kurs TypeScript _ Kodilla.com_files/bootstrap.min.css" as="style" onload="this.rel=&#39;stylesheet&#39;">
+<link href="./Kurs TypeScript _ Kodilla.com_files/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./Kurs TypeScript _ Kodilla.com_files/main-1ecb0c3ad2.css" as="style" onload="this.rel=&#39;stylesheet&#39;">
+            
+    <link href="./Kurs TypeScript _ Kodilla.com_files/prism.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" as="style" onload="this.rel=&#39;stylesheet&#39;" href="./Kurs TypeScript _ Kodilla.com_files/static-63a3efa672.css">
+    <link href="./Kurs TypeScript _ Kodilla.com_files/jquery.fancybox.min.css" rel="stylesheet" as="style" onload="this.rel=&#39;stylesheet&#39;">
+    <link href="./Kurs TypeScript _ Kodilla.com_files/bootcamp-static-b2a5852a76.css" rel="stylesheet" type="text/css">
+<link href="./Kurs TypeScript _ Kodilla.com_files/bootcamp-landing-a3a7745ce2.css" rel="stylesheet" type="text/css">
+
+
+<style>
+    .hero{
+        padding: 80px 0 80px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .w-80{
+        max-width: 80%;
+    }
+    .pb-3{
+        padding-bottom: 3rem;
+    }
+    .course-label{
+        font-weight: bold;
+        background-color: #54D4FF;
+        color: white;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .text-kodilla{
+        color: #45AC46;
+    }
+    
+    .hero .button-section p:first-of-type{
+        margin-bottom: 0px;
+    }
+    .hero .button-section p:first-of-type a{
+        background-color: red;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        margin-bottom: 0;
+    }
+    .hero .button-section p:last-of-type a{
+        color: white !important;
+        font-size: 1rem;
+    }
+    #timer-section {
+        background-color: #F1F1F1 !important;
+        padding: 3rem 0;
+    }
+    .desc-list{
+        list-style: none;
+    }
+    .desc-list li{
+        font-size: 1.4rem;
+        display: inline-flex;
+        padding: 5px 0;
+    }
+    .desc-list li:before{
+        line-height: normal;
+        margin-left: 10px;
+        font-size: 2.3rem;
+        content: '✓';
+        color: #02ac46;
+    }
+    
+    .box{
+        margin: 5rem 0;
+        padding: 4rem;
+        box-shadow: 0px 0px 10px 1px #a2a2a2;
+    }
+    .bluish-text{
+        color: #54D4FF;
+        font-weight: bold;
+    }
+    
+    #course-program { margin-bottom: 0; }
+    #course-program{
+    list-style: none;
+    padding: 30px 0 0 0;
+}
+
+
+
+.benefits h2{
+    padding-bottom: 30px;
+}
+.benefits figure{
+    padding: 0;
+}
+.benefits img{
+    height: 175px;
+}
+.benefits figure div{
+    padding: 30px 30px;
+    background-color: #f1f1f1;
+}
+
+.benefits .active h5{
+    color: white;
+}
+
+.benefits .active div{
+    box-shadow: 0px 0px 5px black;
+    font-weight: bold;
+    color: white;
+    padding: 30px 30px;
+    background-color: #02ac46;
+}
+    .hero-list{
+        color: white;
+    }
+.offer-download label{display: inherit}
+.list-row{
+    display: flex;
+    align-items: center;
+}
+@media only screen and (min-width: 992px) { 
+    .button-section{ width: fit-content;}
+    
+}
+@media only screen and (max-width: 767px) { 
+    .description-section .list-row{ display: inherit}
+    
+}
+@media only screen and (min-width: 768px) {
+    .course-program { border-left: 4px solid #eee; padding-left:30px; margin: 0 auto; max-width: 540px;}
+    .course-program ol {padding-left:0;padding-right:0;}
+    .course-program h3 { display: inline-block; }
+    .course-program:before {content: ""; background: #02ac46; border-radius: 50%; width: 24px; height: 24px; display: block; border: 4px solid #fff; position: relative; top: 22px; left: -44px;} 
+    .course-program span {margin-left: 10px;}
+}
+    .payments .bootcamp-offer{
+        padding-top: 30px;
+    }
+    .payments .headers{
+        padding: 3rem 3rem 1rem 3rem;
+    }
+    .payments .headers h1{
+        margin: 3px 0 10px 0;
+    }
+    
+    
+.offer-download{
+    color: white;
+    background-position: center;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-color: #009b3e;
+}
+
+.offer-download .row, .section-projects .row {margin-left:0; margin-right:0; }
+.offer-download form {margin:30px auto; max-width: 590px; padding-left:6px;padding-right:6px;}
+.offer-download .link{
+    color: white;
+    font-weight: bold;
+}
+</style>
+
+<script async="" src="./Kurs TypeScript _ Kodilla.com_files/hotjar-2404285.js"></script><style type="text/css">.fancybox-margin{margin-right:15px;}</style><script src="./Kurs TypeScript _ Kodilla.com_files/f.txt"></script><script src="./Kurs TypeScript _ Kodilla.com_files/OneSignalPageSDKES6.js" async=""></script><script type="text/javascript" src="./Kurs TypeScript _ Kodilla.com_files/jquery.min.js" async="true"></script><link rel="preconnect" href="https://fonts.googleapis.com/"><link rel="preconnect" href="https://cdnjs.cloudflare.com/"><link rel="preconnect" href="https://display.popt.in/"><script async="" src="./Kurs TypeScript _ Kodilla.com_files/modules.a781ddf321f3456bdb6f.js" charset="utf-8"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><link href="./Kurs TypeScript _ Kodilla.com_files/esw.min.css" type="text/css" rel="stylesheet"><style id="inert-style">
+[inert] {
+	pointer-events: none;
+	cursor: default;
+}
+
+[inert], [inert] * {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+</style><script type="text/javascript" charset="utf-8" src="./Kurs TypeScript _ Kodilla.com_files/saved_resource(1)" async=""></script><script type="text/javascript" charset="utf-8" src="./Kurs TypeScript _ Kodilla.com_files/t_prism_sitemessages.php" async=""></script><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style></head>
+<body class="student callus-enabled" cz-shortcut-listen="true">
+<!-- Facebook Pixel Code -->
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=389137334769464&ev=PageView&noscript=1"/></noscript>
+<!-- End Facebook Pixel Code -->
+<script>
+    document.getElementsByTagName('body')[0].classList.remove('no-js');
+    if ( window.isDifferentZone ) {
+        document.querySelector('body').classList.add('time-conversion-applied');
+    }
+    if ( window.hasWrongTime ) {
+        document.querySelector('body').classList.add('wrong-hour');
+    }
+</script>
+
+    
+    <nav class="navbar-main hidden-sm-down dark navbar">
+    <div class="nav-container">
+        <div class="navbar-header clearfix">
+            <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbarUpper"><i class="fa fa-bars"></i></button>
+        </div>
+        <div class="collapse navbar-toggleable-sm container" id="collapsingNavbarUpper">
+            <ul class="nav navbar-nav navbar-nav-left">
+                                    <li class="nav-item nav-contact">
+    <span>Skontaktuj się z nami:</span>
+    <a href="mailto:support@kodilla.com">
+        <i class="fa fa-envelope-o"></i>
+        support@kodilla.com
+    </a>
+    <span>lub</span>
+    <a href="javascript:openChat();">
+        <i class="fa fa-comments"></i>
+        porozmawiaj na czacie
+    </a>
+</li>
+                                </ul>
+            <ul class="nav navbar-nav pull-right">
+                                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/informator" class="nav-link" target="_blank">
+        Informator
+    </a>
+                </li>
+                <li class="nav-item hidden-sm-down">
+    <a href="https://kodilla.com/pl/account" class="nav-link">Konto</a>
+</li>
+        <li class="nav-item">
+    <a class="analytics-track nav-link nav-link-accent" data-event="account_logout" href="https://kodilla.com/pl/sign-out">Wyloguj</a>
+</li>
+                            </ul>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-main light navbar">
+    <div class="container clearfix">
+        <a class="navbar-brand" href="https://kodilla.com/pl">
+            <img src="./Kurs TypeScript _ Kodilla.com_files/kodilla-nav-logo.svg" alt="Kodilla - szkoła programowania">
+        </a>
+        <span class="contact-us-button-container"></span>
+        <button class="navbar-toggler pull-right collapsed" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <i class="fa fa-bars navbar-ico-open"></i>
+            <i class="fa fa-times navbar-ico-close"></i>
+        </button>
+        <ul id="navbar-main" class="nav navbar-nav pull-right collapse">
+            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link" id="bootcamps-nav-link" href="https://kodilla.com/pl/poznaj-nasze-bootcampy">
+        Szkolenia Bootcamp
+    </a>
+    <ul class="bootcamp-list">
+                    <li class="list-sub list-sub-fe">
+                <a href="https://kodilla.com/pl/bootcamp/front-end">
+                    <h4 class="bootcamp-name">Front-end: React</h4>
+                </a>
+            </li>
+            <li class="list-sub">
+                <a href="https://kodilla.com/pl/bootcamp/webdeveloper?type=wdp">
+                    <h4 class="bootcamp-name">Web Developer</h4>
+                    <span class="bootcamp-label">FRONT-END i BACK-END</span>
+                </a>
+            </li>
+
+            <li class="list-sub">
+                <a href="https://kodilla.com/pl/bootcamp/java?type=jdp">
+                    <h4 class="bootcamp-name">Java Developer</h4>
+                </a>
+            </li>
+            <li class="list-sub">
+                <a href="https://kodilla.com/pl/bootcamp/python">
+                    <h4 class="bootcamp-name">Python Developer</h4>
+                </a>
+            </li>
+            <li class="list-sub">
+                <a href="https://kodilla.com/pl/bootcamp/tester-automatyzujacy">
+                    <h4 class="bootcamp-name">Tester Automatyzujący</h4>
+                </a>
+            </li>
+            <li class="list-sub">
+                <a href="https://kodilla.com/pl/bootcamp/game-dev">
+                    <h4 class="bootcamp-name">Unity Developer</h4>
+                    <span class="bootcamp-label">nowość</span>
+                </a>
+            </li>
+            <li class="list-sub">
+                <a href="https://kodilla.com/pl/bootcamp/data-science">
+                    <h4 class="bootcamp-name">Data Science</h4>
+                    <span class="bootcamp-label">nowość</span>
+                </a>
+            </li>
+            </ul>
+</li>
+
+                        <li class="nav-item hidden-sm-down">
+    <a id="pro-bootcamps-nav-link" class="dropdown-toggle nav-link" href="https://kodilla.com/pl/szkolenia-pro">
+        Szkolenia Pro
+    </a>
+    <ul>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/mikroserwisy" class="nav-link">Mikroserwisy w Javie</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/spring-hibernate" class="nav-link">Spring i Hibernate</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/wielowatkowosc" class="nav-link">Wielowątkowość w Javie</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/django" class="nav-link">Aplikacje webowe z Django</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/wizualizacja-danych" class="nav-link">Analiza danych w Pythonie</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/machine-learning" class="nav-link">Podstawy Machine Learning</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/automatyzacja-testow" class="nav-link">Automatyzacja testów</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/vanilla-js" class="nav-link">Advanced Vanilla JS</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/typescript" class="nav-link">TypeScript - kurs praktyczny</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/vue3" class="nav-link">Vue3 - kompletny przewodnik</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/zaawansowany-backend" class="nav-link">Backend zaawansowany</a></li>
+    </ul>
+</li>
+            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        Strefa kursanta
+    </a>
+    <ul>
+                    <li><a href="https://kodilla.com/pl/bootcamp-dashboard/407" class="nav-link">Bootcamp WD PLUS 2020-12</a></li>
+                    <li><a class="nav-link" href="https://kodilla.com/pl/kursy">Samodzielne kursy</a></li>
+                    <li><a class="nav-link" href="https://chat.kodilla.com/" target="_blank">Komunikator</a></li>
+                    <li><a class="nav-link" href="https://kodilla.com/pl/projects">Moje projekty</a></li>
+    </ul>
+</li>
+                            <li class="nav-item hidden-sm-down nav-item-last">
+    <a class="dropdown-toggle nav-link">
+        O nas
+    </a>
+    <ul class="about-us">
+        <li><a href="https://kodilla.com/pl/mentorzy" class="nav-link">Mentorzy</a></li>
+        <li><a href="https://kodilla.com/pl/zespol" class="nav-link">Zespół Kodilli</a></li>
+        <li><a href="https://kodilla.com/pl/o-nas" class="nav-link">O firmie</a></li>
+    </ul>
+</li>
+                                                                    <li class="nav-item hidden-md-up nav-group">
+    <span class="mobile-menu-separator">Szkolenia Bootcamp</span>
+    <ul>
+                    <li class="nav-item list-sub-fe">
+                <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/front-end">Bootcamp Front-end: React
+                </a>
+            </li>
+                <li class="nav-item">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/webdeveloper">Bootcamp Web Developer
+                <span class="bootcamp-label">FRONT-END i BACK-END</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://kodilla.com/pl/bootcamp/java">Bootcamp Java</a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/tester-automatyzuj%C4%85cy">Bootcamp Tester Automatyzujący
+            </a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/python">Python Developer
+            </a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/game-dev">Unity Developer
+                <span class="bootcamp-label">nowość</span>
+            </a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/data-science">Data Science
+                <span class="bootcamp-label">nowość</span>
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="nav-item hidden-md-up nav-group">
+    <a class="nav-link-bold" href="https://kodilla.com/pl/szkolenia-pro">Szkolenia Pro</a>
+</li>
+            <li class="nav-item hidden-md-up nav-group">
+            <span class="mobile-menu-separator">Strefa kursanta</span>
+            <ul>
+                <li class="nav-item ">
+                                            <a class="nav-link" href="https://kodilla.com/pl/bootcamp-dashboard/407">
+                            Bootcamp   WD PLUS 2020-12
+                        </a>
+                                    </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://kodilla.com/pl/kursy">Samodzielne kursy</a>
+                </li>
+                                    <li class="nav-item ">
+                        <a class="nav-link" href="https://chat.kodilla.com/" target="_blank">Komunikator</a>
+                    </li>
+                                <li class="nav-item">
+                    <a class="nav-link" href="https://kodilla.com/pl/projects">Moje projekty</a>
+                </li>
+            </ul>
+        </li>
+    
+        
+            <li class="nav-item hidden-md-up nav-group">
+            <span class="mobile-menu-separator">O nas</span>
+            <ul>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/mentorzy" class="nav-link">Mentorzy</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/zespol" class="nav-link">Zespół Kodilli</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/o-nas" class="nav-link">O firmie</a>
+                </li>
+            </ul>
+        </li>
+    
+<li class="nav-item hidden-md-up nav-group">
+    <span class="mobile-menu-separator">Pozostałe</span>
+    <ul>
+                                        
+        <li class="nav-item">
+            <a href="https://kodilla.com/pl/informator" class="nav-link" target="_blank">
+        Informator
+    </a>
+        </li>
+    </ul>
+
+</li>
+
+    <li class="nav-item hidden-md-up">
+        <a class="nav-link" href="https://kodilla.com/pl/account">Konto</a>
+    </li>
+    <li class="nav-item hidden-md-up">
+        <a class="nav-link analytics-track" data-event="account_logout" href="https://kodilla.com/pl/sign-out">Wyloguj</a>
+    </li>
+
+        
+    <li class="nav-item hidden-md-up nav-group">
+        <span class="mobile-menu-separator">Skontaktuj się z nami</span>
+        <ul>
+            <li class="nav-item">
+                <a href="mailto:support@kodilla.com" class="nav-link">
+                    <i class="fa fa-envelope-o"></i>
+                    support@kodilla.com
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:openChat();" class="nav-link">
+                    <i class="fa fa-comments"></i>
+                    <span>Porozmawiaj na czacie</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+        </ul>
+    </div>
+</nav>
+    <section class="hero hero-alt"> <div class="container"> <span class="course-label">Szkolenie PRO (dla doświadczonych)</span> <div class="row"> <div class="col-lg-6"> <h1 class="hero-title" data-bootcamp-type-section="micro">TypeScript – kurs praktyczny</h1> <ul class="hero-list"> <li>Kurs dla osób, które chcą poszerzyć swoje kompetencje z programowania w JavaScripcie</li> <li>Idealne dla osób, które chcą osiągnąć kolejny poziom swoich umiejętności programistycznych i poznać TypeScripta</li> <li>Kurs przeznaczony dla osób, które posiadają podstawową znajomość JS-a i Reacta</li> </ul> <div class=" text-md-center"> <div class="text-center button-section"> <div> <p><a href="https://kodilla.com/pl/szkolenia-pro/typescript#pro-payments" class="btn btn-reverse">Zacznij naukę już teraz!</a></p> <p><a href="https://kodilla.com/doradztwo" class="second-cta">lub skontaktuj się z naszym Konsultantem</a></p> </div> </div> </div> </div> <div class="col-lg-6"> <section class="video-embed" data-youtube="&lt;iframe src=&quot;https://www.youtube.com/embed/BA5DJ64Mckw?rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=1&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen class=&quot;video&quot;&gt;&lt;/iframe&gt;"> <div class="youtube-image" id="youtube-image"> <img class="yt-image" src="./Kurs TypeScript _ Kodilla.com_files/kodilla-global-12-05-2021-1620810918-8764.jpeg" alt="czas-na-upgrade"> <img class="play" src="./Kurs TypeScript _ Kodilla.com_files/kodilla-staticPages-08-02-2018-1518075549-3258.png" alt="Play"> <div class="movie-description"> <p class="graduate-name">Czas na upgrade!</p> <p class="graduate-course">Podnieś swoje kompetencje!</p> </div> </div> <div class="ytplayer" id="ytplayer" style="display:none;"></div> </section> </div> </div> </div> </section> <section id="timer-section"> <div class="container"> <div class="row text-left"> <h5>Kolejna edycja TypeScript – kurs praktyczny rozpocznie się za:</h5> <h1><span id="next-edition-counter">14 dni 11 godzin 50 minut 8 sekundy</span></h1> <h4><a href="https://kodilla.com/pl/szkolenia-pro/typescript#pro-payments">-&gt; Zapisz się!</a></h4> </div> </div> </section> <section class="description-section section-white"> <div class="container"> <h3 class="pb-3">Czego się nauczysz</h3> <div class="row list-row"> <div class="col-md-6"> <img class="w-80" src="./Kurs TypeScript _ Kodilla.com_files/kodilla-staticPages-10-05-2021-1620638668-6870.jpeg"> </div> <div class="col-md-6"> <ul class="text-left desc-list"> <li>Czym jest TypeScript i do czego służy</li> <li>Dodatkowe mechanizmy współpracujące z JS-em</li> <li>Praktycznego wykorzystania TypeScripta w codziennej pracy</li> </ul> </div> </div> <div class="row"> <div class="box"> <h3>Co daje szkolenie?</h3> <p><img src="./Kurs TypeScript _ Kodilla.com_files/building.png" width="100px"></p> <p>JavaScript nie wymusza statycznego typowania danych, często konwertując wartości za naszymi plecami, tak aby dana operacja mogła zostać poprawnie wykonana, nawet jeśli nie dostarczyliśmy odpowiedniej informacji. Często daje nam to mylne wrażenie, że aplikacja działa bezbłędnie, mimo że wcale tak nie jest. </p> <p>TypeScript obudowuje JavaScript w zaawansowany wrapper, który dodaje funkcjonalność typowania znaną z innych, lepszych pod tym względem, języków. Pozwala nam to na pisanie aplikacji szybciej i bezpieczniej. TypeScript to w tej chwili jeden ze standardów, który na pewno będziesz wykorzystywać w swojej codziennej pracy. </p> </div> </div> </div> <div class="container"> <h2>Zakres kursu TypeScript 1-na-1 z Mentorem</h2> <p><span class="bluish-text">Próg wejścia:</span> Znajomość JS-a i Reacta na poziomie podstawowym.</p> <div class="row"> <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3"> <ol id="course-program"> <li class="course-program text-left clearfix"> <h3 class="head-s">TypeScript - podstawy</h3> <p>Statyczne typowanie, Union, Literal Types, funkcje, konfiguracja, moduły i tryb watch</p> </li> <li class="course-program text-left clearfix"> <h3 class="head-s">TypeScript – kolejne możliwości</h3> <p>Aliasy, rzutowanie typów, type guards, interfejsy, interfejsy wbudowane i rozszerzone, OOP w TS.</p> </li> <li class="course-program text-left clearfix"> <h3 class="head-s">TypeScript i React"</h3> <p>Wprowadzenie, komponenty BooksList i BookItem, AddBookForm, React, TS i Redux, selektory, funkcja connect, komponenty klasowe</p> </li> <li class="course-program text-left clearfix"> <h3 class="head-s">TypeScript w backendzie, dodatkowe możliwości</h3> <p>TypeScript po stronie serwera, serwer API i Mongoose, dekoratory metod, klasy, właściwości, Typegoose</p> </li> </ol> </div> </div> </div> </section> <section class="benefits section-white clearfix "> <div class="container"> <h2>Zalety nauki z Kodillą</h2> <div class="row"> <figure class="col-lg-4"> <div> <img class="" src="./Kurs TypeScript _ Kodilla.com_files/kodilla-staticPages-16-11-2020-1605517254-2019.png"> <h5 class="text-kodilla">Doświadczenie</h5> <p>W Kodilli mamy doświadczenie w prowadzeniu szkoleń w formie zdalnej, a Mentorami są doświadczeni programiści.</p> </div> </figure> <figure class="col-lg-4 active"> <div> <img class="" src="./Kurs TypeScript _ Kodilla.com_files/kodilla-staticPages-16-11-2020-1605518072-4463.png"> <h5>Mentor 1-1</h5> <p>Na szkoleniu uczysz się pod okiem dedykowanego Mentora, który sprawuje nadzór nad Twoimi postępami.</p> </div> </figure> <figure class="col-lg-4"> <div> <img class="" src="./Kurs TypeScript _ Kodilla.com_files/kodilla-staticPages-16-11-2020-1605517254-8951.png"> <h5 class="text-kodilla">Praktyka</h5> <p>W trakcie kursu otrzymasz zadania do wykonania oraz będziesz rozwijać projekt. Dzięki temu lepiej przyswoisz wiedzę.</p> </div> </figure> </div> </div> </section> <section class="payments" id="pro-payments" data-bootcamp-sub-type="typescript"> <h2>Zamów miejsce na wybranym Bootcampie</h2> <div class="container"> <i class="kodilla-loading-icon"></i> <div class="text-left headers"> <h4>Najbliższa edycja TypeScript – kurs praktyczny rozpocznie się:</h4> <h1><span data-start="" id="start-date">03.11.2021 (środa)</span></h1> <h4><a href="https://kodilla.com/pl/szkolenia-pro/typescript#pro-payments">-&gt;Zapisz się!</a><!--45--> </h4></div> <div class="bootcamp-offer"> <h3 data-pricing-title="">Sposób płatności</h3> <div class="bootcamp-payment"> <div class="payment-choice-container"> <div class="payment-choice" data-pricing="single"> <header class="payment-header"> <h3>Płatność jednorazowa</h3> </header> <div class="payment-amounts"> <h5> <span data-total-gross="">2.500 PLN</span> z góry </h5> <h6> <span data-total-net="">2.032,52 PLN</span> netto <span data-tax-info=""> / </span> <span data-total-gross="">2.500 PLN</span> <span data-tax-info=""> z VAT</span> </h6> <a href="https://kodilla.com/pl/checkout?pricingId=7677&amp;hr=0&amp;provider=single" data-checkout="" class="btn btn-success payments-order-button">Zamów teraz</a> </div> </div> </div> <div class="payment-choice-container"> <div class="payment-choice" data-pricing="santander" data-payment-provider="santander"> <header class="payment-header"> <h3>10/20 Rat 0%</h3> <h4>✓ Wymaga rozpatrzenia wniosku online</h4> <h4>✓ Płatność obsługiwana przez Santander Consumer Bank</h4> </header> <div class="payment-amounts"> <h5>od <span data-single="">125 PLN</span> / mies.</h5> <h6> Cena całkowita: <span data-total-gross="">2.500 PLN</span> <span data-tax-info=""> z VAT</span> </h6> <span style="display: inline-block;text-align: center;"> <a href="https://kodilla.com/pl/checkout?pricingId=7677&amp;hr=0&amp;loan=1&amp;provider=santander" data-checkout="" class="btn btn-invert payments-order-button">Złóż wniosek</a> </span> </div> </div> </div> <div class="payment-choice-container"> <div class="payment-choice" data-pricing="bnp" data-intrest-rate="0.005"> <header class="payment-header"> <h3>10-60 Rat 0,5% BNP</h3> <h4>✓ Wymaga rozpatrzenia wniosku online</h4> <h4>✓ Płatność obsługiwana przez BNP</h4> <h4>✓ Oprocentowanie 0,5% miesięcznie</h4> <h4>✓ 100% gwarancji zwrotu w ciągu 14 dni od zakupu</h4> </header> <div class="payment-amounts"> <h5>od <span data-single="">54,17 PLN</span> / mies.</h5> <h6> Cena całkowita: <span data-total-gross="">2.500 PLN</span> <span data-tax-info=""> z VAT</span> </h6> <span style="display: inline-block;text-align: center;"> <a href="https://kodilla.com/pl/checkout?pricingId=7677&amp;hr=0&amp;loan=1&amp;provider=bnp" data-checkout="" class="btn btn-invert payments-order-button">Złóż wniosek</a> </span> </div> </div> </div> </div></div></div></section> 
+    
+    <div id="alerts">
+    <div class="alert alert-danger" role="alert" style="display: none;">
+        <i class="fa fa-exclamation" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">×</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                        </ul>
+    </div>
+    <div class="alert alert-success" role="alert" style="display: none;">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">×</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-warning" role="alert" style="display: none;">
+        <i class="fa fa-warning" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">×</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-info" role="alert" style="display: none;">
+        <i class="fa fa-info" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">×</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                    </ul>
+    </div>
+    <div class="container">
+        <div class="alert alert-notify" role="alert" style="display: none;">
+            <i class="fa fa-info" aria-hidden="true"></i>
+            <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+                <span aria-hidden="true">×</span>
+                <span class="sr-only">Zamknij</span>
+            </button>
+            <ul>
+                            </ul>
+        </div>
+    </div>
+</div>
+    <div class="modal fade informator-modal" id="informator" tabindex="-1" role="dialog" aria-labelledby="informatorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="./Kurs TypeScript _ Kodilla.com_files/logo-menu.png" alt="Logo Kodilla" class="brand-logo">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body content-container">
+                <h3>Zamów szczegółowy informator</h3>
+                <form class="row js-ajax-form" data-view-class="InformatorForm" action="https://kodilla.com/pl/download-informator" method="post">
+                    <input type="hidden" name="ga-pobieranie-informatora-z-modala" value="wypelnienie">
+                    <input type="hidden" name="tags[0]" value="informator">
+                                        <div class="user-data-container">
+                        <input type="text" class="form-control" name="firstname" placeholder="Imię">
+                        <input type="text" class="form-control" name="surname" placeholder="Nazwisko">
+                    </div>
+                    <div class="user-data-container">
+                        <input type="email" class="form-control" name="email" placeholder="Email" required="">
+                        <input type="tel" class="form-control" name="phone" placeholder="Numer telefonu" pattern="^([\+][0-9]{1,3}([ \.\-])?)?([\(]{1}[0-9]{3}[\)])?([0-9 \.\-]{1,15})$" title="Wpisz poprawny numer telefonu, np. 453 674 897" minlength="9" maxlength="15" data-custom-message="Wpisz poprawny numer telefonu, np. 453 674 897">
+                    </div>
+                    <div class="terms-box">
+                        <label>
+                            <input name="accept_terms" value="true" data-custom-message="Prosimy o zaakceptowanie regulaminu" type="checkbox" class="form-control input-checkbox" required="">
+                            <span>Akceptuję <a target="_blank" href="https://kodilla.com/pl/regulamin">regulamin</a>  i nie wnoszę zastrzeżeń</span>
+                        </label>
+                    </div>
+                    <div class="personal-terms-box">
+                        <label>
+                            <input name="accept_marketing" value="true" data-custom-message="Jeśli chcesz otrzymać dostęp do materiałów, konieczna jest akceptacja obydwu zgód" type="checkbox" class="form-control input-checkbox" required="">
+                            <span>Chcę otrzymywać newsletter, informacje o promocjach i produktach dostępnych w Kodilla.
+                                <span class="details-button" data-action="show-details" data-identifier="personal-terms-details-informator">Czytaj więcej</span>
+                                <span class="display-none" data-identifier="personal-terms-details-informator">Wyrażam zgodę na otrzymywanie informacji handlowych od Kodilla na podany przeze mnie adres e-mail. Zgoda jest dobrowolna, jednakże niezbędna do otrzymywania informacji o produktach, promocjach i o tym, co u nas słychać. Administratorem danych jest Codemy S.A. z siedzibą we Wrocławiu, Plac Powstańców Śląskich 13/4. Mam prawo cofnąć zgodę w każdym czasie, jednak wtedy nie będę otrzymywać informacji. Dane mogą być przetwarzane pomimo cofnięcia zgody wyłącznie w takim zakresie i celu, w jakim ich przetwarzanie jest niezbędne do ustalenia, dochodzenia lub obrony roszczeń Administratora w związku z udzieloną zgodą. Mam prawo dostępu do danych, sprostowania, usunięcia, ograniczenia przetwarzania, prawo wniesienia sprzeciwu, skargi do organu nadzorczego i przeniesienia danych. Szczegółowe informacje znajdują się na stronie kodilla.com, zakładka "Polityka Prywatności".</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="display-none">
+                        <input type="text" name="myName" value="">
+                    </div>
+                    <div class="">
+                        <button type="submit" class="btn btn-primary">
+                            Pobierz Informator
+                            <i data-role="loading-icon" class="fa fa-spinner fa-spin fa-1x fa-fw display-none"></i>
+                        </button>
+                    </div>
+                </form>
+                <a href="https://kodilla.com/pl/informator" id="informator-link" target="_blank" class="display-none"></a>
+            </div>
+            <div class="modal-footer">
+                <p>Pobranie informatora do niczego nie zobowiązuje</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="site-footer">
+            <div class="container">
+            <div class="footer-row-1">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <a class="navbar-img" href="https://kodilla.com/pl">
+                            <svg id="kodilla-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 29.553" width="168" height="30">
+                                <defs>
+                                    <style>
+                                        .footer-logo-fill {
+                                            fill: #fff;
+                                        }
+                                    </style>
+                                </defs>
+                                <g id="Group_1" data-name="Group 1" transform="translate(23.59)">
+                                    <path id="KODILLA_copy_5_1_" class="footer-logo-fill" d="M78.058,0a14.758,14.758,0,1,0,.075,0Zm0,23.739a8.939,8.939,0,0,1-8.944-8.907V14.8c0-4.957,4.584-.708,8.907-.708,4.919,0,9.019-4.211,9.019.708a8.978,8.978,0,0,1-8.981,8.944Z" transform="translate(-63.3)"></path>
+                                    <ellipse id="eye_copy_4_1_" class="footer-logo-fill" cx="3.876" cy="3.876" rx="3.876" ry="3.876" transform="translate(9.462 13.2) rotate(-28.436)"></ellipse>
+                                </g>
+                                <path id="Path_1" data-name="Path 1" class="footer-logo-fill" d="M0,29.819V.9H6.671V13.347L17.255.9h7.491L13.938,13.794,25.491,29.819h-7.6l-8.2-11.665-3.019,3.13v8.5H0Z" transform="translate(0 -0.565)"></path>
+                                <path id="Path_2" data-name="Path 2" class="footer-logo-fill" d="M151.4,29.819V.9h10.807a15.515,15.515,0,0,1,6.261,1.155,12.966,12.966,0,0,1,4.509,3.093A12.918,12.918,0,0,1,175.7,9.732a17.245,17.245,0,0,1,.932,5.59,16.821,16.821,0,0,1-1.006,5.963,12.227,12.227,0,0,1-2.907,4.547,13.484,13.484,0,0,1-4.547,2.944,15.964,15.964,0,0,1-5.925,1.043Zm18.41-14.5a11.274,11.274,0,0,0-.522-3.466,7.723,7.723,0,0,0-1.491-2.72,6.616,6.616,0,0,0-2.385-1.752,8.055,8.055,0,0,0-3.205-.6h-4.1v17.18h4.1a7.985,7.985,0,0,0,3.242-.634,6.8,6.8,0,0,0,2.385-1.826,8.286,8.286,0,0,0,1.453-2.72A11.634,11.634,0,0,0,169.81,15.322Z" transform="translate(-94.978 -0.565)"></path>
+                                <path id="Path_3" data-name="Path 3" class="footer-logo-fill" d="M228.3,29.819V.9h6.671V29.819Z" transform="translate(-143.219 -0.565)"></path>
+                                <path id="Path_4" data-name="Path 4" class="footer-logo-fill" d="M259.9,29.819V.9h6.671V23.968h14.012v5.851Z" transform="translate(-163.043 -0.565)"></path>
+                                <path id="Path_5" data-name="Path 5" class="footer-logo-fill" d="M327.371,23.931V.9H320.7V29.819h18.522l2.124-5.851H327.371Z" transform="translate(-201.185 -0.565)"></path>
+                                <path id="Path_6" data-name="Path 6" class="footer-logo-fill" d="M388.547.9h6.037L405.13,29.819h-6.857l-2.236-6.484h-9.019l-2.2,6.484H378Zm6.373,17.851L391.528,8.54l-3.466,10.211Z" transform="translate(-237.13 -0.565)"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="https://www.youtube.com/channel/UCN8Op4dvQWgdqsUPN81UsQw">
+                            <i class="fa fa-youtube-play"></i> Oglądaj nas na YouTube
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="https://web.facebook.com/kodillaCom/">
+                            <i class="fa fa-facebook-square"></i> Znajdź nas na Facebooku
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-row-2">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 footer-nav-col">
+                        <h4>Kodilla</h4>
+                        <ul>
+                            <li><a href="https://kodilla.com/pl/o-nas">O firmie</a></li>
+                            <li><a href="https://kodilla.com/pl/przebieg-bootcampa">Jak uczymy</a></li>
+                                                            <li><a href="https://kodilla.com/pl/dla-firm">Dla firm</a></li>
+                                                        <li><a href="https://kodilla.com/pl/opinie-kursantow">Opinie absolwentów</a></li>
+                            <li><a href="https://kodilla.com/pl/cennik">Cennik</a></li>
+                                                            <li><a href="https://kodilla.com/pl/praca">Praca</a></li>
+                                                    </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 footer-nav-col">
+                        <h4>Bootcampy</h4>
+                        <ul>
+                                                            <li><a href="https://kodilla.com/pl/bootcamp/front-end">Front-end: React</a></li>
+                                                        <li><a href="https://kodilla.com/pl/bootcamp/webdeveloper">Web Developer</a></li>
+                            <li><a href="https://kodilla.com/pl/bootcamp/webdeveloper?type=wdp">Web Developer Plus</a></li>
+                            <li><a href="https://kodilla.com/pl/bootcamp/java">Java Developer</a></li>
+                            <li><a href="https://kodilla.com/pl/bootcamp/java?type=jdp">Java Developer Plus</a></li>
+                            <li><a href="https://kodilla.com/pl/bootcamp/tester-automatyzujacy">Tester Automatyzujący</a></li>
+                            <li><a href="https://kodilla.com/pl/bootcamp/python">Python Developer</a></li>
+                            <li><a href="https://kodilla.com/pl/bootcamp/game-dev">Unity Developer</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 footer-nav-col">
+                        <h4>Darmowe materiały</h4>
+                        <ul>
+                            <li class="footer-courses"><a href="https://kodilla.com/pl/kursy">Samodzielne kursy</a></li>
+                                                            <li><a href="https://kodilla.com/pl/webinar">Webinar</a></li>
+                                                        <li><a href="https://kodilla.com/pl/test">Test predyspozycji</a></li>
+                            <li><a href="https://kodilla.com/pl/blog">Blog</a></li>
+                            <li><a href="https://kodilla.com/pl/knowledge-base">Baza wiedzy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 footer-nav-col">
+                        <h4>Kontakt dla kandydatów</h4>
+                        <ul>
+                            <li>
+                                <a href="tel:+48731771787" class="nowrap">
+                                    <i class="fa fa-phone"></i>
+                                                                            731 771 787
+                                                                    </a>
+                            </li>
+                                                                                                                    <li>
+                                <a href="mailto:bootcamp@kodilla.com" class="nowrap">
+                                    <i class="fa fa-envelope-o"></i>
+                                    bootcamp@kodilla.com
+                                </a>
+                            </li>
+                        </ul>
+                        <h4>Wsparcie dla kursantów</h4>
+                        <ul>
+                                                            <li>
+        <a href="javascript:openChat();" class="nowrap">
+            <i class="fa fa-comments"></i>
+            Porozmawiaj na czacie
+        </a>
+    </li>
+                                                        <li>
+                                <a href="mailto:support@kodilla.com" class="nowrap">
+                                    <i class="fa fa-envelope-o"></i>
+                                    support@kodilla.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                        <div class="footer-row-2 row">
+                <div class="col-sm-12 col-md-6 footer-nav-col">
+                    <h4>Technologie</h4>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 footer-nav-col">
+                            <ul>
+                                <li><a href="https://kodilla.com/pl/kursy/wprowadzenie-do-html">HTML</a></li>
+                                <li><a href="https://kodilla.com/pl/kursy/podstawy-css">CSS</a></li>
+                                <li><a href="https://kodilla.com/pl/kurs-javascript">JavaScript</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-6 footer-nav-col">
+                            <ul>
+                                <li><a href="https://kodilla.com/pl/kurs-react">React</a></li>
+                                <li><a href="https://kodilla.com/pl/kurs-java">Java</a></li>
+                                <li><a href="https://kodilla.com/pl/kurs-node-js">Node.js</a></li>
+                                <li><a href="https://kodilla.com/pl/kurs-python">Python</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 footer-nav-col">
+                    <h4>Warto przeczytać</h4>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 footer-nav-col">
+                            <ul>
+                                <li><a href="https://kodilla.com/pl/blog/jak-zostac-programista-w-6-krokach">Jak zostać programistą?</a></li>
+                                <li><a href="https://kodilla.com/pl/blog/jak-zostac-testerem-oprogramowania">Jak zostać testerem?</a></li>
+                                <li><a href="https://kodilla.com/pl/blog/nauka-programowania-od-zera">Nauka programowania od zera</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-6 footer-nav-col">
+                            <ul>
+                                <li><a href="https://kodilla.com/pl/blog/ile-zarabia-programista">Ile zarabia programista?</a></li>
+                                <li><a href="https://kodilla.com/pl/blog/ile-zarabia-tester-oprogramowania">Ile zarabia tester oprogramowania?</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="footer-row-3">
+                <div class="row">
+                    <div class="col-md-3 footer-nav-col">
+                        © 2021 Kodilla
+                    </div>
+                    <div class="col-md-3 footer-nav-col">
+                        <nav>
+                            <ul class="nav">
+                                <li>
+                                    <a href="https://kodilla.com/pl/regulamin" rel="nofollow">Regulamin</a>
+                                </li>
+                                <li>
+                                    <a href="https://kodilla.com/pl/polityka-prywatnosci" rel="nofollow">Polityka prywatności</a>
+                                </li>
+                                <li>
+                                    <a href="https://kodilla.com/pl/akcjonariat" rel="nofollow">Akcjonariat</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-md-6 footer-nav-col">
+                        <div class="footer-address">
+                            <span class="text-upper">Codemy S.A.</span>
+                            <span>Plac Powstańców Śląskich 13/4, 53-329 Wrocław, Polska<br>NIP: 8992780056 REGON: 363252447<br>KRS: 0000612529</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </footer>
+
+<!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN2WWBH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+            <div style="position: fixed; left: -100%; top: -100%;">
+            <script type="text/javascript">
+                /* <![CDATA[ */
+                var google_conversion_id = 935284763;
+                var google_custom_params = window.google_tag_params;
+                var google_remarketing_only = true;
+                /* ]]> */
+            </script>
+            <script type="text/javascript" src="./Kurs TypeScript _ Kodilla.com_files/f(1).txt" async=""></script>
+            <noscript>
+                <div style="display:inline;">
+                    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/935284763/?value=0&amp;guid=ON&amp;script=0"/>
+                </div>
+            </noscript>
+        </div>
+    <script src="./Kurs TypeScript _ Kodilla.com_files/jquery-2.1.4.min.js"></script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/js.cookie-2.1.0.min.js"></script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/jquery-dateFormat.min.js"></script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/bootstrap.min.js"></script>
+<script>
+    (function () {
+        $(document).ready(function () {
+            if (window.location.hash === '#informator-modal') {
+                showInformator();
+            }
+        });
+
+        $('[data-action="show-modal"]').click(function() {
+            showInformator();
+        });
+
+        function showInformator() {
+            $('#informator').modal('show');
+        }
+    })();
+</script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/fb-412414a519.js" async=""></script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/call-us-261b222cf4.js"></script>
+<script>
+    if (document.querySelector('main.editor')) {
+        document.querySelector('body').classList.add('editor');
+    }
+</script>
+
+<script type="text/javascript" async="">
+  setTimeout(function (){
+      (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+      vgo('setAccount', '649095895');
+      vgo('setTrackByDefault', true);
+
+      vgo('process');
+  }, 3000);
+
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", yall);
+    window.environment = 'production';
+    window.loggedIn = true;
+    window.domain = 'https://kodilla.com';
+            window.fbAppId = 1449248938627896;
+    window.chatService = 'LiveAgent';
+    window.useMessenger = window.chatService === 'Messenger';
+    window.locale = 'pl';
+    window.lang = 'pl';
+
+    window.serverUTC       = 1634641622000;
+    window.serverOffset    = 120;
+    window.userDate        = new Date();
+    window.userUTC         = userDate.getTime();
+    window.userOffset      = userDate.getTimezoneOffset() * (-1);
+    window.userClockDiff   = userUTC - serverUTC;
+    window.diffRounded     = Math.round( userClockDiff / ( 1000 * 60 * 15 ) );
+    window.isDifferentZone = ( userOffset - serverOffset !== 0 ) ? 1 : 0;
+    window.hasWrongTime    = ( diffRounded !== 0 ) ? 1 : 0;
+    window.dateTooltipText = 'Data i godzina są podane dla Twojej strefy czasowej GMT. <br>W razie wątpliwości napisz: <u>support@kodilla.com</u>.';
+    window.wrongHourNotice = 'Godzina na Twoim urządzeniu r&oacute;żni się od godziny obowiązującej w strefie czasowej wybranej w ustawieniach Twojego urządzenia.';
+
+    window.PAYU_HASH_ALGORITHM = 'SHA-256';
+    window.PAYU_POS_ID = 1429452;
+    window.PAYU_MD5_SECOND_KEY = 'f3627be5fab5a4238c8474936f057908';
+
+    var moment = undefined,
+        momentReady = function( method, method2, count ){
+            var c = ( count ) ? count : 0;
+
+            if      ( isDifferentZone && moment !== undefined ){
+                if      ( method ) { method(); }
+                else    { return false; }
+            }
+            else if ( isDifferentZone && moment === undefined ) {
+                if ( c < 20 ) {
+                    c++;
+                    setTimeout( function() { momentReady( method, method2, c ); }
+                        , 300 );
+                } else {
+                    if      ( method2 === true && method )  { method(); }
+                    else if ( method2 !== true && method2 ) { method2(); }
+                }
+            }
+            else {
+                if      ( method2 === true && method )  { method(); }
+                else if ( method2 !== true && method2 ) { method2(); }
+                else    { return false; }
+            }
+        };
+
+    if ( window.isDifferentZone && moment === undefined ) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = '/static/js/libs/moment.timezone.locales.min.js?v=2.22.2';
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+</script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/OneSignalSDK.js" async=""></script>
+<script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+        OneSignal.init({
+            appId: "92552bb5-b477-4ea2-8260-dba65be198d9",
+        });
+    });
+</script>
+<script data-ad-client="ca-pub-9483216428129091" async="" src="./Kurs TypeScript _ Kodilla.com_files/f(2).txt"></script>
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2404285,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+            <script src="./Kurs TypeScript _ Kodilla.com_files/underscore-min.js"></script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/backbone-min.js"></script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/backbone-relational.min.js"></script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/backbone-super.min.js"></script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/handlebars-v4.0.5.min.js"></script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/handlebars-ifCond-139a2339f7.js"></script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/application-0dcfdc1306.js"></script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/main-799ae30bad.js"></script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/settings-5fc44a761b.js"></script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/delete-account-da2b3de486.js"></script>
+<script type="text/x-translation" data-translation-name="checkAccountDeleteCalculationMessage">Wynik jest nieprawidłowy</script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/forms-222ea01b08.js"></script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/alerts-66650c3acb.js"></script>
+<script>
+    App.Views.InpageAlertManager = Backbone.View.extend({
+        events: {
+            'click [data-alert-type][data-alert-text]': 'showAlert'
+        },
+        showAlert: function(e) {
+            var $el = $(e.currentTarget);
+            App.alertsView['show'+$el.data('alertType')]([App.Translations($el.data('alertText'))]);
+        }
+    });
+</script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/collections-c07e1162e2.js"></script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/models-4e0e4fcffb.js"></script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/knowledge-base-61f71273c9.js"></script>
+<script>
+    App.Views.LearningProgram = Backbone.View.extend({
+        events: {
+            'click [data-technology-desc-expander]' : 'expandTechnologyDesc'
+        },
+
+        initialize: function() {
+            this.$allTechnologyDesc = this.$el.find('[data-technology-desc]');
+            this.$allTechnologyExpanderIcons = this.$el.find('[data-technology-expander-icon]');
+        },
+
+        expandTechnologyDesc: function() {
+            this.$allTechnologyDesc.each(function(){
+                var $desc = $(this);
+                $desc.slideToggle('fast');
+            });
+            this.$allTechnologyExpanderIcons.each(function(){
+                var $icon = $(this);
+                $icon.toggleClass("fa-minus");
+            });
+        },
+    });
+</script>
+
+    <script src="./Kurs TypeScript _ Kodilla.com_files/tether.min.js"></script>
+    <script src="./Kurs TypeScript _ Kodilla.com_files/prism.min.js"></script>
+
+    <script src="./Kurs TypeScript _ Kodilla.com_files/pro-bootcamp-pricing-b604a4e08d.js"></script>
+<script src="./Kurs TypeScript _ Kodilla.com_files/image-before-youtube.js"></script>
+
+<!--AC FORM SCRIPT-->
+ <script type="text/javascript">
+            window.cfields = {"84":"zgody"};
+            window._show_thank_you = function(id, message, trackcmp_url) {
+                var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
+                form.querySelector('._form-content').style.display = 'none';
+                thank_you.innerHTML = message;
+                thank_you.style.display = 'block';
+                if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) {
+                    // Site tracking URL to use after inline form submission.
+                    _load_script(trackcmp_url);
+                }
+                if (typeof window._form_callback !== 'undefined') window._form_callback(id);
+            };
+            window._show_error = function(id, message, html) {
+                var form = document.getElementById('_form_' + id + '_'), err = document.createElement('div'), button = form.querySelector('button'), old_error = form.querySelector('._form_error');
+                if (old_error) old_error.parentNode.removeChild(old_error);
+                err.innerHTML = message;
+                err.className = '_error-inner _form_error _no_arrow';
+                var wrapper = document.createElement('div');
+                wrapper.className = '_form-inner';
+                wrapper.appendChild(err);
+                button.parentNode.insertBefore(wrapper, button);
+                document.querySelector('[id^="_form"][id$="_submit"]').disabled = false;
+                if (html) {
+                    var div = document.createElement('div');
+                    div.className = '_error-html';
+                    div.innerHTML = html;
+                    err.appendChild(div);
+                }
+            };
+            window._load_script = function(url, callback) {
+                var head = document.querySelector('head'), script = document.createElement('script'), r = false;
+                script.type = 'text/javascript';
+                script.charset = 'utf-8';
+                script.src = url;
+                if (callback) {
+                    script.onload = script.onreadystatechange = function() {
+                        if (!r && (!this.readyState || this.readyState == 'complete')) {
+                            r = true;
+                            callback();
+                        }
+                    };
+                }
+                head.appendChild(script);
+            };
+            (function() {
+                if (window.location.search.search("excludeform") !== -1) return false;
+                var getCookie = function(name) {
+                    var match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]+)'));
+                    return match ? match[2] : null;
+                }
+                var setCookie = function(name, value) {
+                    var now = new Date();
+                    var time = now.getTime();
+                    var expireTime = time + 1000 * 60 * 60 * 24 * 365;
+                    now.setTime(expireTime);
+                    document.cookie = name + '=' + value + '; expires=' + now + ';path=/';
+                }
+                var addEvent = function(element, event, func) {
+                    if (element.addEventListener) {
+                        element.addEventListener(event, func);
+                    } else {
+                        var oldFunc = element['on' + event];
+                        element['on' + event] = function() {
+                            oldFunc.apply(this, arguments);
+                            func.apply(this, arguments);
+                        };
+                    }
+                }
+                var _removed = false;
+                var form_to_submit = document.getElementById('_form_74_');
+                var allInputs = form_to_submit.querySelectorAll('input, select, textarea'), tooltips = [], submitted = false;
+
+                var getUrlParam = function(name) {
+                    var regexStr = '[\?&]' + name + '=([^&#]*)';
+                    var results = new RegExp(regexStr, 'i').exec(window.location.href);
+                    return results != undefined ? decodeURIComponent(results[1]) : false;
+                };
+
+                for (var i = 0; i < allInputs.length; i++) {
+                    var regexStr = "field\\[(\\d+)\\]";
+                    var results = new RegExp(regexStr).exec(allInputs[i].name);
+                    if (results != undefined) {
+                        allInputs[i].dataset.name = window.cfields[results[1]];
+                    } else {
+                        allInputs[i].dataset.name = allInputs[i].name;
+                    }
+                    var fieldVal = getUrlParam(allInputs[i].dataset.name);
+
+                    if (fieldVal) {
+                        if (allInputs[i].type == "radio" || allInputs[i].type == "checkbox") {
+                            if (allInputs[i].value == fieldVal) {
+                                allInputs[i].checked = true;
+                            }
+                        } else {
+                            allInputs[i].value = fieldVal;
+                        }
+                    }
+                }
+
+                var remove_tooltips = function() {
+                    for (var i = 0; i < tooltips.length; i++) {
+                        tooltips[i].tip.parentNode.removeChild(tooltips[i].tip);
+                    }
+                    tooltips = [];
+                };
+                var remove_tooltip = function(elem) {
+                    for (var i = 0; i < tooltips.length; i++) {
+                        if (tooltips[i].elem === elem) {
+                            tooltips[i].tip.parentNode.removeChild(tooltips[i].tip);
+                            tooltips.splice(i, 1);
+                            return;
+                        }
+                    }
+                };
+                var create_tooltip = function(elem, text) {
+                    var tooltip = document.createElement('div'), arrow = document.createElement('div'), inner = document.createElement('div'), new_tooltip = {};
+                    if (elem.type != 'radio' && elem.type != 'checkbox') {
+                        tooltip.className = '_error';
+                        arrow.className = '_error-arrow';
+                        inner.className = '_error-inner';
+                        inner.innerHTML = text;
+                        tooltip.appendChild(arrow);
+                        tooltip.appendChild(inner);
+                        elem.parentNode.appendChild(tooltip);
+                    } else {
+                        tooltip.className = '_error-inner _no_arrow';
+                        tooltip.innerHTML = text;
+                        elem.parentNode.insertBefore(tooltip, elem);
+                        new_tooltip.no_arrow = true;
+                    }
+                    new_tooltip.tip = tooltip;
+                    new_tooltip.elem = elem;
+                    tooltips.push(new_tooltip);
+                    return new_tooltip;
+                };
+                var resize_tooltip = function(tooltip) {
+                    var rect = tooltip.elem.getBoundingClientRect();
+                    var doc = document.documentElement, scrollPosition = rect.top - ((window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0));
+                    if (scrollPosition < 40) {
+                        tooltip.tip.className = tooltip.tip.className.replace(/ ?(_above|_below) ?/g, '') + ' _below';
+                    } else {
+                        tooltip.tip.className = tooltip.tip.className.replace(/ ?(_above|_below) ?/g, '') + ' _above';
+                    }
+                };
+                var resize_tooltips = function() {
+                    if (_removed) return;
+                    for (var i = 0; i < tooltips.length; i++) {
+                        if (!tooltips[i].no_arrow) resize_tooltip(tooltips[i]);
+                    }
+                };
+                var validate_field = function(elem, remove) {
+                    var tooltip = null, value = elem.value, no_error = true;
+                    remove ? remove_tooltip(elem) : false;
+                    if (elem.type != 'checkbox') elem.className = elem.className.replace(/ ?_has_error ?/g, '');
+                    if (elem.getAttribute('required') !== null) {
+                        if (elem.type == 'radio' || (elem.type == 'checkbox' && /any/.test(elem.className))) {
+                            var elems = form_to_submit.elements[elem.name];
+                            if (!(elems instanceof NodeList || elems instanceof HTMLCollection) || elems.length <= 1) {
+                                no_error = elem.checked;
+                            }
+                            else {
+                                no_error = false;
+                                for (var i = 0; i < elems.length; i++) {
+                                    if (elems[i].checked) no_error = true;
+                                }
+                            }
+                            if (!no_error) {
+                                tooltip = create_tooltip(elem, "Please select an option.");
+                            }
+                        } else if (elem.type =='checkbox') {
+                            var elems = form_to_submit.elements[elem.name], found = false, err = [];
+                            no_error = true;
+                            for (var i = 0; i < elems.length; i++) {
+                                if (elems[i].getAttribute('required') === null) continue;
+                                if (!found && elems[i] !== elem) return true;
+                                found = true;
+                                elems[i].className = elems[i].className.replace(/ ?_has_error ?/g, '');
+                                if (!elems[i].checked) {
+                                    no_error = false;
+                                    elems[i].className = elems[i].className + ' _has_error';
+                                    err.push("Checking %s is required".replace("%s", elems[i].value));
+                                }
+                            }
+                            if (!no_error) {
+                                tooltip = create_tooltip(elem, err.join('<br/>'));
+                            }
+                        } else if (elem.tagName == 'SELECT') {
+                            var selected = true;
+                            if (elem.multiple) {
+                                selected = false;
+                                for (var i = 0; i < elem.options.length; i++) {
+                                    if (elem.options[i].selected) {
+                                        selected = true;
+                                        break;
+                                    }
+                                }
+                            } else {
+                                for (var i = 0; i < elem.options.length; i++) {
+                                    if (elem.options[i].selected && !elem.options[i].value) {
+                                        selected = false;
+                                    }
+                                }
+                            }
+                            if (!selected) {
+                                elem.className = elem.className + ' _has_error';
+                                no_error = false;
+                                tooltip = create_tooltip(elem, "Please select an option.");
+                            }
+                        } else if (value === undefined || value === null || value === '') {
+                            elem.className = elem.className + ' _has_error';
+                            no_error = false;
+                            tooltip = create_tooltip(elem, "This field is required.");
+                        }
+                    }
+                    if (no_error && elem.name == 'email') {
+                        if (!value.match(/^[\+_a-z0-9-'&=]+(\.[\+_a-z0-9-']+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i)) {
+                            elem.className = elem.className + ' _has_error';
+                            no_error = false;
+                            tooltip = create_tooltip(elem, "Enter a valid email address.");
+                        }
+                    }
+                    if (no_error && /date_field/.test(elem.className)) {
+                        if (!value.match(/^\d\d\d\d-\d\d-\d\d$/)) {
+                            elem.className = elem.className + ' _has_error';
+                            no_error = false;
+                            tooltip = create_tooltip(elem, "Enter a valid date.");
+                        }
+                    }
+                    tooltip ? resize_tooltip(tooltip) : false;
+                    return no_error;
+                };
+                var needs_validate = function(el) {
+                    return el.name == 'email' || el.getAttribute('required') !== null;
+                };
+                var validate_form = function(e) {
+                    var err = form_to_submit.querySelector('._form_error'), no_error = true;
+                    if (!submitted) {
+                        submitted = true;
+                        for (var i = 0, len = allInputs.length; i < len; i++) {
+                            var input = allInputs[i];
+                            if (needs_validate(input)) {
+                                if (input.type == 'text') {
+                                    addEvent(input, 'blur', function() {
+                                        this.value = this.value.trim();
+                                        validate_field(this, true);
+                                    });
+                                    addEvent(input, 'input', function() {
+                                        validate_field(this, true);
+                                    });
+                                } else if (input.type == 'radio' || input.type == 'checkbox') {
+                                    (function(el) {
+                                        var radios = form_to_submit.elements[el.name];
+                                        for (var i = 0; i < radios.length; i++) {
+                                            addEvent(radios[i], 'click', function() {
+                                                validate_field(el, true);
+                                            });
+                                        }
+                                    })(input);
+                                } else if (input.tagName == 'SELECT') {
+                                    addEvent(input, 'change', function() {
+                                        validate_field(this, true);
+                                    });
+                                } else if (input.type == 'textarea'){
+                                    addEvent(input, 'input', function() {
+                                        validate_field(this, true);
+                                    });
+                                }
+                            }
+                        }
+                    }
+                    remove_tooltips();
+                    for (var i = 0, len = allInputs.length; i < len; i++) {
+                        var elem = allInputs[i];
+                        if (needs_validate(elem)) {
+                            if (elem.tagName.toLowerCase() !== "select") {
+                                elem.value = elem.value.trim();
+                            }
+                            validate_field(elem) ? true : no_error = false;
+                        }
+                    }
+                    if (!no_error && e) {
+                        e.preventDefault();
+                    }
+                    resize_tooltips();
+                    return no_error;
+                };
+                addEvent(window, 'resize', resize_tooltips);
+                addEvent(window, 'scroll', resize_tooltips);
+                window._old_serialize = null;
+                if (typeof serialize !== 'undefined') window._old_serialize = window.serialize;
+                _load_script("//d3rxaij56vjege.cloudfront.net/form-serialize/0.3/serialize.min.js", function() {
+                    window._form_serialize = window.serialize;
+                    if (window._old_serialize) window.serialize = window._old_serialize;
+                });
+                var form_submit = function(e) {
+                    e.preventDefault();
+                    if (validate_form()) {
+                        // use this trick to get the submit button & disable it using plain javascript
+                        document.querySelector('#_form_74_submit').disabled = true;
+                        var serialized = _form_serialize(document.getElementById('_form_74_'));
+                        var err = form_to_submit.querySelector('._form_error');
+                        err ? err.parentNode.removeChild(err) : false;
+                        _load_script('https://codemy.activehosted.com/proc.php?' + serialized + '&jsonp=true');
+                    }
+                    return false;
+                };
+                addEvent(form_to_submit, 'submit', form_submit);
+            })();
+
+		</script>
+    <script src="./Kurs TypeScript _ Kodilla.com_files/jquery.fancybox.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("a.img-modal-group").fancybox();
+        });
+    </script>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="call-us-modal">
+    <div class="modal-dialog modal-dialog-callus" role="document">
+        <div class="modal-content call-modal">
+            <div id="call-us-step1">
+                <h2>Umów się na rozmowę z doradcą Kodilli</h2>
+                <p>Krok <span>1/2:</span> Podaj numer telefonu</p>
+                <form action="https://kodilla.com/pl/call-center/dates/phone_calls" method="post" id="call-us-form1">
+                    <input type="tel" name="phone" id="call-us-input-phone" class="call-center-input" placeholder="731771787">
+                    <p class="error-message display-none" id="validation-message-phone">Pole Numer Telefonu jest wymagane. Nieprawidłowy format.</p>
+                    <button class="btn btn-success" id="call-us-submit-phone">Zarezerwuj rozmowę</button>
+                </form>
+                <p id="call-us-counter-holder" style="display: none;">Dzisiaj już  <span id="call-us-counter" class="call-counter" data-url="https://kodilla.com/pl/call-center/counter/phone_calls">-</span> <span id="call-us-counter-text" data-one=" osoba zamówiła rozmowę z nami." data-few=" osoby zamówiły rozmowę z nami." data-more=" osób zamówiło rozmowę z nami."></span></p>
+                <div class="data-protection">
+                    <p>Twój numer telefonu nie będzie wykorzystywany w celach marketingowych ani przekazany dalej. Tylko oddzwonimy. Dane są przetwarzane zgodnie z <a href="https://kodilla.com/pl/polityka-prywatnosci">Polityką Prywatności</a>.</p>
+                </div>
+            </div>
+
+            <div id="call-us-step2" style="display: none;">
+                <h2>Wybierz dogodny termin i godzinę na rozmowę z doradcą</h2>
+                <p>Krok <span>2/2:</span>
+                </p><form action="https://kodilla.com/pl/call-center/step2/phone_calls" method="post" id="call-us-form2">
+                    <div class="select-date">
+                        <select name="date" id="call-us-input-date">
+                        </select>
+                        <select name="time" id="call-us-input-time">
+                        </select>
+                    </div>
+                    <button class="btn btn-success" id="call-us-submit-call">Oddzwońcie do mnie!</button>
+                </form>
+            </div>
+
+            <div id="call-us-step3" style="display: none;">
+                <div class="thanks">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    <h2>Dziękujemy za zamowienie rozmowy! Do usłyszenia w wybranym terminie!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+                <style type="text/css">
+    .embeddedServiceHelpButton .helpButton .uiButton {
+        background-color: #1EA71C;
+        font-family: "Arial", sans-serif;
+    }
+    .embeddedServiceHelpButton .helpButton .uiButton:focus {
+        outline: 1px solid #1EA71C;
+    }
+</style>
+<script>
+    function openChat(){
+        $('.helpButtonEnabled').trigger('click');
+    }
+</script>
+<script type="text/javascript" src="./Kurs TypeScript _ Kodilla.com_files/esw.min.js"></script>
+
+<script type="text/javascript">
+    var initESW = function(gslbBaseURL) {
+        let firstName = 'Marek Baberowski'.split(" ")[0];
+        let lastName = 'Marek Baberowski'.split(" ")[1];
+        console.log(name);
+        embedded_svc.settings.displayHelpButton = true;
+        embedded_svc.settings.language = '';
+
+        embedded_svc.settings.defaultMinimizedText =  'Skontaktuj się z nami';
+        embedded_svc.settings.disabledMinimizedText = ' ';
+
+        embedded_svc.settings.loadingText = 'Ładowanie';
+        embedded_svc.settings.storageDomain = 'kodilla.com';
+
+        embedded_svc.settings.prepopulatedPrechatFields = {
+            'FirstName': firstName,
+            'LastName': lastName,
+            'Email': 'm.z.baberowski@gmail.com'
+        };
+        embedded_svc.settings.offlineSupportMinimizedText = 'Napisz do nas';
+
+        embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+        embedded_svc.settings.entryFeature = 'LiveAgent';
+
+        embedded_svc.init(
+            'https://kodilla.my.salesforce.com',
+            'https://kodillacommunity.force.com',
+            gslbBaseURL,
+            '00D1i000000VBFH',
+            'Support_Kodilla',
+            {
+                baseLiveAgentContentURL: 'https://c.la1-c2-fra.salesforceliveagent.com/content',
+                deploymentId: '5721i00000009s9',
+                buttonId: '5731i0000000AJN',
+                baseLiveAgentURL: 'https://d.la1-c2-fra.salesforceliveagent.com/chat',
+                eswLiveAgentDevName: 'Support_Kodilla',
+                isOfflineSupportEnabled: true
+            }
+        );
+    };
+
+    if (!window.embedded_svc) {
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://kodilla.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+        s.onload = function() {
+            initESW(null);
+        };
+        document.body.appendChild(s);
+    } else {
+        initESW('https://service.force.com');
+    }
+</script><script id="common-script" type="text/javascript" src="./Kurs TypeScript _ Kodilla.com_files/common.min.js"></script>
+        <div data-role="notifications-wrapper" class="notifications-wrapper"></div>
+<!-- Facebook Pixel Code -->
+    <script>
+        setTimeout(function(){
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s)}(window, document,'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', 389137334769464 );
+            fbq('track', 'PageView');
+        }, 3000);
+    </script>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Google Tag Manager -->
+    <script>
+        setTimeout(function () {
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KN2WWBH');
+        }, 3000);
+
+    </script>
+    <!-- End Google Tag Manager -->
+
+    
+            <script id="pixel-script-poptin" src="./Kurs TypeScript _ Kodilla.com_files/pixel.js" async="true"></script>
+    
+
+<iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./Kurs TypeScript _ Kodilla.com_files/box-3333a05ac05419926bfc064e06a742b1.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><script id="liveagent-esw-script" type="text/javascript" src="./Kurs TypeScript _ Kodilla.com_files/liveagent.esw.min.js"></script><form id="fileUploadForm" enctype="multipart/form-data" method="post" target="fileUploadIframe"><input type="file" id="fileSelector" name="file" style="display: none;"><input name="filename" type="hidden"></form><iframe id="fileUploadIframe" name="fileUploadIframe" title="FileUploadFrame" style="display: none;" src="./Kurs TypeScript _ Kodilla.com_files/saved_resource.html"></iframe><iframe id="esw_storage_iframe" src="./Kurs TypeScript _ Kodilla.com_files/esw.html" title="Live Chat Metadata" style="display: none;"></iframe><script type="text/javascript" src="./Kurs TypeScript _ Kodilla.com_files/EmbeddedServiceConfig.jsonp"></script><script id="invite-esw-script" type="text/javascript" src="./Kurs TypeScript _ Kodilla.com_files/invite.esw.min.js"></script><div class="embeddedServiceHelpButton"><div class="helpButton"><button class="helpButtonEnabled uiButton" href="javascript:void(0)"><span class="embeddedServiceIcon" aria-hidden="true" data-icon="" style="display: inline-block;"></span><span class="helpButtonLabel" id="helpButtonSpan" aria-live="polite" aria-atomic="true"><span class="assistiveText">Live chat:</span><span class="message">Napisz do nas</span></span></button></div></div><script id="inert-script" type="text/javascript" src="./Kurs TypeScript _ Kodilla.com_files/inert.min.js"></script><script type="text/javascript" src="./Kurs TypeScript _ Kodilla.com_files/EmbeddedServiceConfig(1).jsonp"></script>
+<script type="text/javascript" id="">window._tfa=window._tfa||[];window._tfa.push({notify:"event",name:"page_view",id:1209537});!function(a,b,d,c){document.getElementById(c)||(a.async=1,a.src=d,a.id=c,b.parentNode.insertBefore(a,b))}(document.createElement("script"),document.getElementsByTagName("script")[0],"//cdn.taboola.com/libtrc/unip/1209537/tfa.js","tb_tfa_script");</script>
+<noscript>
+  <img src="//trc.taboola.com/1209537/log/3/unip?en=page_view" width="0" height="0" style="display:none">
+</noscript>
+
+
+<script type="text/javascript" id="">window._adftrack=Array.isArray(window._adftrack)?window._adftrack:window._adftrack?[window._adftrack]:[];window._adftrack.push({pm:2049944});(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="https://track.adform.net/serving/scripts/trackpoint/async/";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+<noscript>
+    <p style="margin:0;padding:0;border:0;">
+        <img src="https://track.adform.net/Serving/TrackPoint/?pm=2049944" width="1" height="1" alt="">
+    </p>
+</noscript>
+
+<script type="text/javascript" id="">(function(){window.__insp=window.__insp||[];__insp.push(["wid",794470694]);var c=function(){if("undefined"==typeof window.__inspld){window.__inspld=1;var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.id="inspsync";a.src=("https:"==document.location.protocol?"https":"http")+"://cdn.inspectlet.com/inspectlet.js?wid\x3d794470694\x26r\x3d"+Math.floor((new Date).getTime()/36E5);var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}};setTimeout(c,0)})();</script>
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>

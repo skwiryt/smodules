@@ -1,0 +1,13 @@
+<svg class="bootcamp-svg JS-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="97px" height="85px" viewBox="0 0 34.118 31.111" enable-background="new 0 0 34.118 31.111" xml:space="preserve">
+                    <polyline fill="none" stroke="#02AC46" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+                        3.382,24.574 3.382,30.736 33.743,30.736 33.743,0.375 3.382,0.375 3.382,18.562 "></polyline>
+    <path fill="none" stroke="#02AC46" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" d="M25.611,15.95
+                        l-0.69-0.295c-1.233-0.542-1.823-0.838-1.823-1.775c0-0.689,0.541-1.232,1.429-1.232c0.838,0,1.331,0.345,1.872,1.232l2.269-1.479
+                        c-0.938-1.675-2.269-2.316-4.092-2.316c-2.612,0-4.288,1.675-4.288,3.794c0,2.366,1.43,3.5,3.5,4.436l0.689,0.296
+                        c1.282,0.542,2.12,0.937,2.12,1.972c0,0.838-0.739,1.479-1.972,1.479c-1.479,0-2.268-0.74-2.858-1.824L19.4,21.569
+                        c0.838,1.675,2.612,2.957,5.323,2.957c2.76,0,4.829-1.479,4.829-4.042C29.504,18.119,28.124,17.034,25.611,15.95L25.611,15.95z"></path>
+    <path fill="none" stroke="#02AC46" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" d="M17.823,20.238v-9.956
+                        h-2.957v9.907c0,1.479-0.592,1.823-1.577,1.823c-0.986,0-1.43-0.69-1.873-1.479l-2.415,1.479c0.69,1.479,2.069,2.662,4.387,2.662
+                        C16,24.575,17.823,23.244,17.823,20.238z"></path>
+    <circle fill="none" stroke="#02AC46" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="3.382" cy="21.568" r="3.006"></circle>
+                    </svg>

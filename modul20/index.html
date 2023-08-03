@@ -1,0 +1,2291 @@
+<!DOCTYPE html>
+<html lang=pl class="no-js">
+<head>
+    <meta name="ahrefs-site-verification" content="c2d3c04b9f125c5b8c98d89f738d343f69d841f035150344a932150235c5639a">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="csrf-token" content="ks6ZBnQT9GZ7vrBJFozdr6BpMp4OGBE8BnqJYL7I" />
+
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="https://kodilla.com/static/img/icons/apple-touch-icon-60x60.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://kodilla.com/static/img/icons/apple-touch-icon-76x76.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://kodilla.com/static/img/icons/apple-touch-icon-120x120.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://kodilla.com/static/img/icons/apple-touch-icon-152x152.png?00000">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kodilla.com/static/img/icons/favicon-32x32.png?00000">
+<link rel="icon" type="image/png" sizes="96x96" href="https://kodilla.com/static/img/icons/favicon-96x96.png?00000">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kodilla.com/static/img/icons/favicon-16x16.png?00000">
+
+    <link rel="canonical" href="https://kodilla.com/pl/bootcamp-module/407/521/5935" />
+
+    <meta name="robots" content="noindex, follow" />
+    <title>    Moduł: 20. Test-driven Development
+</title>
+        <script>document.documentElement.classList.remove("no-js")</script>
+<script src="https://kodilla.com/static/js/libs/yall.min.js?00000"></script>
+<link href="https://kodilla.com/static/css/libs/bootstrap.min.css?00000" rel="stylesheet">
+<link href="https://kodilla.com/static/css/libs/font-awesome.min.css?00000" rel="stylesheet">
+<link href="https://kodilla.com/build/minified/css/main-edf00f49da.css" rel="stylesheet" type="text/css">
+            
+    <link href="https://kodilla.com/static/css/libs/prism.min.css?00000" rel="stylesheet">
+
+    <link href="https://kodilla.com/build/minified/css/bootcamp-6d0888d826.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://kodilla.com/static/css/libs/perfect-scrollbar.css?00000" />
+    <link rel="stylesheet" href="https://kodilla.com/static/css/libs/fancybox/jquery.fancybox.min.css?00000" type="text/css" media="screen" />
+    <link href="https://kodilla.com/static/css/libs/bootstrap-datetimepicker.min.css?00000">
+    <link rel="stylesheet" href="https://uploads.kodilla.com/bootcamp/styles/content.css">
+    <script>
+    document.addEventListener("DOMContentLoaded", yall);
+    window.environment = 'production';
+    window.loggedIn = true;
+    window.domain = 'https://kodilla.com';
+            window.fbAppId = 1449248938627896;
+    window.chatService = 'LiveAgent';
+    window.useMessenger = window.chatService === 'Messenger';
+    window.locale = 'pl';
+    window.lang = 'pl';
+
+    window.serverUTC       = 1620204993000;
+    window.serverOffset    = 120;
+    window.userDate        = new Date();
+    window.userUTC         = userDate.getTime();
+    window.userOffset      = userDate.getTimezoneOffset() * (-1);
+    window.userClockDiff   = userUTC - serverUTC;
+    window.diffRounded     = Math.round( userClockDiff / ( 1000 * 60 * 15 ) );
+    window.isDifferentZone = ( userOffset - serverOffset !== 0 ) ? 1 : 0;
+    window.hasWrongTime    = ( diffRounded !== 0 ) ? 1 : 0;
+    window.dateTooltipText = 'Data i godzina są podane dla Twojej strefy czasowej GMT. <br>W razie wątpliwości napisz: <u>support@kodilla.com</u>.';
+    window.wrongHourNotice = 'Godzina na Twoim urządzeniu r&oacute;żni się od godziny obowiązującej w strefie czasowej wybranej w ustawieniach Twojego urządzenia.';
+
+    window.PAYU_HASH_ALGORITHM = 'SHA-256';
+    window.PAYU_POS_ID = 1429452;
+    window.PAYU_MD5_SECOND_KEY = 'f3627be5fab5a4238c8474936f057908';
+
+    var moment = undefined,
+        momentReady = function( method, method2, count ){
+            var c = ( count ) ? count : 0;
+
+            if      ( isDifferentZone && moment !== undefined ){
+                if      ( method ) { method(); }
+                else    { return false; }
+            }
+            else if ( isDifferentZone && moment === undefined ) {
+                if ( c < 20 ) {
+                    c++;
+                    setTimeout( function() { momentReady( method, method2, c ); }
+                        , 300 );
+                } else {
+                    if      ( method2 === true && method )  { method(); }
+                    else if ( method2 !== true && method2 ) { method2(); }
+                }
+            }
+            else {
+                if      ( method2 === true && method )  { method(); }
+                else if ( method2 !== true && method2 ) { method2(); }
+                else    { return false; }
+            }
+        };
+
+    if ( window.isDifferentZone && moment === undefined ) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = '/static/js/libs/moment.timezone.locales.min.js?v=2.22.2';
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+</script>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+        OneSignal.init({
+            appId: "92552bb5-b477-4ea2-8260-dba65be198d9",
+        });
+    });
+</script>
+<script data-ad-client="ca-pub-9483216428129091" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 389137334769464 );
+        fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KN2WWBH');</script>
+    <!-- End Google Tag Manager -->
+    
+    </head>
+<body class="no-js student ">
+<!-- Facebook Pixel Code -->
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=389137334769464&ev=PageView&noscript=1"/></noscript>
+<!-- End Facebook Pixel Code -->
+<script>
+    document.getElementsByTagName('body')[0].classList.remove('no-js');
+    if ( window.isDifferentZone ) {
+        document.querySelector('body').classList.add('time-conversion-applied');
+    }
+    if ( window.hasWrongTime ) {
+        document.querySelector('body').classList.add('wrong-hour');
+    }
+</script>
+
+    <nav class="navbar-main hidden-sm-down dark navbar">
+    <div class="nav-container">
+        <div class="navbar-header clearfix">
+            <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbarUpper"><i class="fa fa-bars"></i></button>
+        </div>
+        <div class="collapse navbar-toggleable-sm container" id="collapsingNavbarUpper">
+            <ul class="nav navbar-nav navbar-nav-left">
+                                    <li class="nav-item nav-contact">
+    <span>Skontaktuj się z nami:</span>
+    <a href="mailto:support@kodilla.com">
+        <i class="fa fa-envelope-o"></i>
+        support@kodilla.com
+    </a>
+    <span>lub</span>
+    <a href="javascript:openChat();">
+        <i class="fa fa-comments"></i>
+        porozmawiaj na czacie
+    </a>
+</li>
+                                </ul>
+            <ul class="nav navbar-nav pull-right">
+                                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/informator" class="nav-link" target="_blank">
+        Informator
+    </a>
+                </li>
+                <li class="nav-item hidden-sm-down">
+    <a href="https://kodilla.com/pl/account" class="nav-link">Konto</a>
+</li>
+        <li class="nav-item">
+    <a class="analytics-track nav-link nav-link-accent" data-event="account_logout" href="https://kodilla.com/pl/sign-out">Wyloguj</a>
+</li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-main light navbar">
+    <div class="container clearfix">
+        <a class="navbar-brand"  href="https://kodilla.com/pl">
+            <img src="https://kodilla.com/static/img/kodilla-nav-logo.svg?00000" alt="Kodilla - szkoła programowania">
+        </a>
+        <button class="navbar-toggler pull-right collapsed" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <i class="fa fa-bars navbar-ico-open"></i>
+            <i class="fa fa-times navbar-ico-close"></i>
+        </button>
+        <ul id="navbar-main" class="nav navbar-nav pull-right collapse">
+            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        Szkolenia Bootcamp
+    </a>
+    <ul class="bootcamp-list">
+                    <li class="list-sub list-sub-fe">
+                <img src="https://kodilla.com/static/img/svg/menu_fer.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_fer_logo">
+                <a href="https://kodilla.com/pl/bootcamp/front-end">
+                    <h4 class="bootcamp-name">Front-end: React</h4>
+                    <p>Naucz się tworzyć front-end aplikacji w 4 miesiące</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_wd.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_wd_logo">
+                <a href="https://kodilla.com/pl/bootcamp/webdeveloper?type=wdp">
+                    <h4 class="bootcamp-name">Web Developer</h4>
+                    <p>Naucz&nbsp;się tworzyć aplikacje internetowe od&nbsp;podstaw</p>
+                    <span class="bootcamp-label">FRONT-END i BACK-END</span>
+                </a>
+            </li>
+
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_java.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_java_logo">
+                <a href="https://kodilla.com/pl/bootcamp/java?type=jdp">
+                    <h4 class="bootcamp-name">Java Developer</h4>
+                    <p>Poznaj najpopularniejszy na&nbsp;świecie język programowania od&nbsp;zera</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_python.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_python_logo">
+                <a href="https://kodilla.com/pl/bootcamp/python">
+                    <h4 class="bootcamp-name">Python Developer</h4>
+                    <p>Zdobądź kompetencje do tworzenia rozwiązań webowych</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_tester.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_tester_logo">
+                <a href="https://kodilla.com/pl/bootcamp/tester-automatyzujacy">
+                    <h4 class="bootcamp-name">Tester Automatyzujący</h4>
+                    <p>Poznaj podstawy testowania automatycznego w Javie</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_game.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_mage_logo">
+                <a href="https://kodilla.com/pl/bootcamp/game-dev">
+                    <h4 class="bootcamp-name">Mobile Game Developer</h4>
+                    <p>Zdobądź kompetencje do tworzenia gier</p>
+                    <span class="bootcamp-label">nowość</span>
+                </a>
+            </li>
+            </ul>
+</li>
+
+                        <li class="nav-item hidden-sm-down">
+    <a class="nav-link-bold" href="https://kodilla.com/pl/szkolenia-pro" class="nav-link">Szkolenia Pro</a>
+</li>
+            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        Strefa kursanta
+    </a>
+    <ul>
+                    <li><a href="https://kodilla.com/pl/bootcamp-dashboard/407" class="nav-link">Bootcamp WD PLUS 2020-12</a></li>
+                    <li><a class="nav-link" href="https://kodilla.com/pl/kursy">Samodzielne kursy</a></li>
+                    <li><a class="nav-link" href="https://chat.kodilla.com" target="_blank">Komunikator</a></li>
+                    <li><a class="nav-link" href="https://kodilla.com/pl/projects">Moje projekty</a></li>
+    </ul>
+</li>
+                            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        O nas
+    </a>
+    <ul class="about-us">
+        <li><a href="https://kodilla.com/pl/mentorzy" class="nav-link">Mentorzy</a></li>
+        <li><a href="https://kodilla.com/pl/zespol" class="nav-link">Zesp&oacute;ł Kodilli</a></li>
+        <li><a href="https://kodilla.com/pl/o-nas" class="nav-link">O firmie</a></li>
+    </ul>
+</li>
+                                                                    <li class="nav-item hidden-md-up nav-group">
+    <span class="mobile-menu-separator">Szkolenia Bootcamp</span>
+    <ul>
+                    <li class="nav-item list-sub-fe">
+                <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/front-end">Bootcamp Front-end: React
+                </a>
+            </li>
+                <li class="nav-item">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/webdeveloper">Bootcamp Web Developer
+                <span class="bootcamp-label">FRONT-END i BACK-END</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://kodilla.com/pl/bootcamp/java">Bootcamp Java</a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/tester-automatyzuj%C4%85cy">Bootcamp Tester Automatyzujący
+            </a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/python">Python Developer
+            </a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/game-dev">Mobile Game Developer
+                <span class="bootcamp-label">nowość</span>
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="nav-item hidden-md-up nav-group">
+    <a class="nav-link-bold" href="https://kodilla.com/pl/szkolenia-pro">Szkolenia Pro</a>
+</li>
+            <li class="nav-item hidden-md-up nav-group">
+            <span class="mobile-menu-separator">Strefa kursanta</span>
+            <ul>
+                <li class="nav-item ">
+                                            <a class="nav-link" href="https://kodilla.com/pl/bootcamp-dashboard/407">
+                            Bootcamp   WD PLUS 2020-12
+                        </a>
+                                    </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://kodilla.com/pl/kursy">Samodzielne kursy</a>
+                </li>
+                                    <li class="nav-item ">
+                        <a class="nav-link" href="https://chat.kodilla.com" target="_blank">Komunikator</a>
+                    </li>
+                                <li class="nav-item">
+                    <a class="nav-link" href="https://kodilla.com/pl/projects">Moje projekty</a>
+                </li>
+            </ul>
+        </li>
+    
+        
+            <li class="nav-item hidden-md-up nav-group">
+            <span class="mobile-menu-separator">O nas</span>
+            <ul>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/mentorzy" class="nav-link">Mentorzy</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/zespol" class="nav-link">Zesp&oacute;ł Kodilli</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/o-nas" class="nav-link">O firmie</a>
+                </li>
+            </ul>
+        </li>
+    
+<li class="nav-item hidden-md-up nav-group">
+    <span class="mobile-menu-separator">Pozostałe</span>
+    <ul>
+                                        
+        <li class="nav-item">
+            <a href="https://kodilla.com/pl/informator" class="nav-link" target="_blank">
+        Informator
+    </a>
+        </li>
+    </ul>
+
+</li>
+
+    <li class="nav-item hidden-md-up">
+        <a class="nav-link" href="https://kodilla.com/pl/account">Konto</a>
+    </li>
+    <li class="nav-item hidden-md-up">
+        <a class="nav-link analytics-track" data-event="account_logout" href="https://kodilla.com/pl/sign-out">Wyloguj</a>
+    </li>
+
+        
+    <li class="nav-item hidden-md-up nav-group">
+        <span class="mobile-menu-separator">Skontaktuj się z nami</span>
+        <ul>
+            <li class="nav-item">
+                <a href="mailto:support@kodilla.com" class="nav-link">
+                    <i class="fa fa-envelope-o"></i>
+                    support@kodilla.com
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:openChat();" class="nav-link">
+                    <i class="fa fa-comments"></i>
+                    <span>Porozmawiaj na czacie</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+        </ul>
+    </div>
+</nav>
+<main class="bootcamp module page-height-fix" id="bootcamp-module">
+    <div class="aside-toggle hidden-md-up">
+        <button class="navbar-toggler pull-left collapsed" type="button" data-toggle="collapse" data-target="#aside-sticky" aria-expanded="false">
+            <i class="fa fa-bars navbar-ico-open"></i>
+            <i class="fa fa-times navbar-ico-close"></i>
+        </button>
+    </div>
+    <div class="table-of-contents aside-sticky collapsed collapse" id="aside-sticky">
+        <section class="container">
+            <div class="row">
+                <aside class="module-nav col-md-4 col-md-offset-8">
+                    <section class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Spis treści modułu</h4>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-1087" class="clearfix">
+                                    <p>20.1. TDD &ndash; na czym to polega?</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item current">
+                                <a href="#submodule-1088" class="clearfix">
+                                    <p>20.2. TDD w praktyce</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item ">
+                                <a href="#submodule-1089" class="clearfix">
+                                    <p>20.3. Testy integracyjne</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item ">
+                                <a href="#submodule-1090" class="clearfix">
+                                    <p>20.4. Testy w praktyce</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item ">
+                                <a href="#submodule-1091" class="clearfix">
+                                    <p>20.5. Quiz powt&oacute;rkowy</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item ">
+                                <a href="#submodule-1152" class="clearfix">
+                                    <p>20.6. Praca zespołowa w Gicie</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item ">
+                                <a href="#submodule-1165" class="clearfix">
+                                    <p>20.7. Zaawansowane techniki Gita</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                    </ul>
+                        <div class="card-block text-center">
+                                                                                                <a href="https://kodilla.com/pl/bootcamp-dashboard/407">Powr&oacute;t do dashboardu</a>
+                                                                                    </div>
+                    </section>
+                </aside>
+            </div>
+        </section>
+    </div>
+    <section class="container module-content">
+        <div class="row">
+            <main class="col-md-8">
+                <section class="card">
+                    <div class="card-block module-header clearfix ">
+                        <h1 class="card-title">20. Test-driven Development</h1>
+                                                <i class="fa fa-bookmark fa-3x" aria-hidden="true"></i>
+                    </div>
+                                        <div class="card-block challenge">
+                        <h3>Wyzwania:</h3>
+                        <ul>
+<li>poznasz koncept TDD (Test-Driven Development),</li>
+<li>dowiesz się, jak pisać dobre testy przed implementacją samej funkcjonalności,</li>
+<li>wykorzystasz nową wiedzę w praktyce.</li>
+</ul>
+
+                    </div>
+                                    </section>
+                                    
+                <section id="submodule-1087" class="card submodule completed" data-bootcamp-user-submodule-id="640240" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">20.1. <span>TDD &ndash; na czym to polega?</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Wiemy już, czym są testy i dlaczego warto z nich korzystać. Poznaliśmy również ich trzy rodzaje, przy czym skupiliśmy się głównie na testach jednostkowych i używaliśmy ich w praktyce. Stosowaliśmy jednak metodę, która nie zawsze jest idealna – wszystkie testy pisaliśmy dopiero <strong>po implementacji jednej lub kilku funkcjonalności</strong>. Możesz pomyśleć, że to logiczne, bo testy były naszym buforem bezpieczeństwie, który miał gwarantować, że nasz kod nie sprawi przykrych niespodzianek, gdy pokażemy go klientowi. To podejście ma jednak kilka wad.</p>
+<h3>Wady pisania testów po implementacji</h3>
+<p>Po pierwsze, <strong>pisanie testów do gotowego kodu nie jest łatwe</strong>. Gdy kod jest już kompletny, to często jego ilość i poziom skomplikowania są dość duże. Przez to ciężko napisać nam do niego poprawne testy: takie, które sprawdzą wszystkie scenariusze. Im bardziej skomplikowany kod, tym trudniejsze zadanie przed nami.</p>
+<p>Po drugie, <strong>im dłużej zwlekamy z testami, tym więcej pracy przed nami</strong>. Wyobraź sobie, że napisaliśmy np. pięć dużych komponentów i dopiero przed oddaniem aplikacji do klienta, chcemy dodać jeszcze testy. Bardzo możliwe, że nad niektórymi komponentami pracowaliśmy tydzień, dwa tygodnie temu. Przez to często musimy spędzić najpierw trochę czasu nad zrozumieniem kodu, aby w ogóle połapać się, co chcemy przetestować. Powoduje to też, że testy zabierają nam bardzo dużo czasu i robimy je bardzo niechętnie.</p>
+<p>Po trzecie, w przypadku gotowego kodu <strong>jesteśmy podatni na pisanie testów pod wynik</strong>. Wynika to też trochę z punktu drugiego. Nie chcemy tracić czasu, piszemy testy szybko, "na kolanie", byle móc pokazać projekt klientowi. Często, zamiast tworzyć obiektywne testy, sprawdzamy tylko najczęstsze przypadki. W ten sposób utwierdzamy się w tym, że nasz kod jest dobry, choć to przekonanie może być złudne.</p>
+<p>Po czwarte, <strong>o niektórych testach można zwyczajnie łatwo zapomnieć</strong>. Jeśli piszemy testy na końcu pracy, to mamy bardzo dużą szansę na pominięcie niektórych z nich. Mowa tu o komponentach, funkcjonalnościach, ale też pojedynczych przypadkach. Wyobraź sobie, że piszesz np. funkcję <code>cutText</code>, która w założeniu miała przycinać tekst do podanej liczby znaków. W przypadku podania liczby, zamiast tekstu funkcja ma zwrócić <code>null</code>. Jeśli przy pisaniu tej funkcji zapomnieliśmy o sprawdzeniu, czy podana wartość jest tekstem, to jest duża szansa, że zwyczajnie zapomnimy również o napisaniu potrzebnego testu.</p>
+<p>Po piąte, <strong>kod może być mniej <em>testowalny</em></strong>. Po poprzednim module wiesz już, że czasami kod testuje się łatwiej, a czasami trudniej. Jeśli nie piszemy go od początku z myślą, że ma być łatwy do testowania, to prawdopodobnie dodajemy sobie pracy na później. A mówiliśmy już, że przez czasochłonność testów pisanych po fakcie często nie chce nam się ich pisać, albo piszemy je "na kolanie", żeby tylko potwierdziły, że nasz kod już w aktualnej formie jest idealny.</p>
+<p>Im rzadziej piszemy testy, czym więcej kodu zostawiamy sobie do testowania na później, tym więcej z powyższych wad się ujawni. Tak czy inaczej jednak, widzisz pewnie, że podejście "najpierw funkcjonalności, potem testy", nie jest do końca idealne. W niniejszym module pokażemy Ci jednak trochę inny sposób, który rozwiąże wszystkie powyższe problemy.</p>
+<h3>Odpowiedzią jest TDD</h3>
+<p>W tym module poznamy często stosowane podejście <strong>TDD</strong> – <strong>T</strong>est-<strong>D</strong>riven <strong>D</strong>development. Za jego użyciem stoją dwie idee. Pierwsza mówi, że <strong>testy powinny być pisane przed samą funkcjonalnością</strong>. Oznacza to, że najpierw piszemy test, który określa, jakie zadania powinna spełnić nowa funkcjonalność, a dopiero potem ją implementujemy. Druga idea mówi, że <strong>powinniśmy testować kod na bieżąco, małymi fragmentami</strong>: nie robimy najpierw pięciu testów, by potem wszystko na raz zaimplementować. Idziemy krok po kroku: robimy test, a następnie implementujemy funkcjonalność. Później wykonujemy kolejny test, dodajemy kolejną funkcjonalność itd.</p>
+<p>Całą technikę możemy rozpisać jako następujący algorytm:</p>
+<ol>
+<li>Piszemy nowy test.</li>
+<li>Uruchamiamy go (w tym momencie powinien zwracać wynik negatywny).</li>
+<li>Następnie implementujemy funkcjonalność w taki sposób, aby przeszła test.</li>
+<li>Refaktorujemy (<em>przerabiamy</em>) kod, tak aby spełnił nasze oczekiwania.</li>
+</ol>
+<p>Dla każdej nowej funkcjonalności powtarzamy ten cykl od początku.</p>
+<h3>Zalety TDD</h3>
+<h4>Cały kod jest testowany</h4>
+<p>Jeśli przed każdą implementacją jakiejkolwiek funkcjonalności będziemy startować od napisania testu, to mamy pewność, że niczego nie pominiemy. Każdy kod, który pojawi się w aplikacji, na pewno będzie miał odpowiadający mu test. Nie ma takiej opcji, że z powodu nawału pracy o czymś zapomnimy i jakiś kod będzie niesprawdzany.</p>
+<h4>Bugi są znajdowane na bieżąco</h4>
+<p>Wyobraź sobie, że nie stosujesz podejścia TDD i piszesz testy, kiedy dużo pracy jest już za Tobą. Nagle może okazać się, że poprawnie napisane przez Ciebie testy wykryją mnóstwo bugów. Zmusiłoby to Cię do wielu napraw, a istnieje duża szansa, że naprawienie jednego błędu spowoduje problem w innym miejscu. W przypadku TDD o każdym błędzie będziemy wiedzieli na bieżąco, gdy tylko wystąpi.</p>
+<h4>Testowanie nie "męczy"</h4>
+<p>Dzięki temu, że piszemy małe testy na bieżąco, nie dochodzi do sytuacji, w której czujemy się przytłoczeni ich liczbą. Nie musimy rozdzielać czasu pracy na kodowanie, a potem żmudne pisanie testów. Traktujemy je bardziej jako część całego procesu.</p>
+<h4>Kod jest bardziej przemyślany</h4>
+<p>Testy pełnią funkcję zapisanych wymagań funkcjonalności, którą za chwilę będziemy tworzyć. Dzięki temu naturalnie będziemy głębiej zastanawiać się, jak dokładnie powinna ona wyglądać i działać. Dzięki temu, gdy przechodzimy już do kodowania, wiemy dobrze, do czego dążymy. Nie poruszamy się "na ślepo", tylko dokładnie wiemy, jak nasza funkcja powinna być zbudowana.</p>
+<h4>Refactoring bez strachu</h4>
+<p>Testowanie na bieżąco to też duża dawka pewności dla programistów. Nie musimy obawiać się refactoringu, czyli przerabiania kodu np. kiedy trzeba zmienić sposób działania jakiegoś komponentu. Nie musimy martwić się, że gdzieś w dotychczasowym kodzie znajduje się błąd – ewentualne błędy byłyby bowiem szybko wykryte na etapie bardzo małego fragmentu, poszczególnej funkcjonalności. Co więcej, jeśli np. rozszerzamy komponent o dodatkową funkcjonalność, nie musimy obawiać się, że zepsujemy coś, co do tej pory działało – jeśli tak się stanie, od razu dowiemy się o tym z testów.</p>
+<h3>Czy to podejście dla wszystkich?</h3>
+<p>Widzimy sporo zalet takiego rozwiązania, ale czy ma ono również jakieś wady?</p>
+<p>Na pewno jedną rzeczą, na którą musimy zwrócić uwagę, to problem z odpowiednim zaplanowaniem funkcjonalności na etapie pisania testów. W końcu musimy ustalić, co testujemy, zanim napiszemy jakikolwiek kod. Niektórym przychodzi to łatwo, niektórym trudniej. Początkujący mogą mieć czasami problem z odpowiednim przeanalizowaniem, jak docelowo powinna działać dana funkcjonalność i co dokładnie powinno być testowane. Przez to proces ten może na starcie zajmować trochę czasu. Potem jednak, po wdrożeniu się w to podejście, będzie Ci szło coraz łatwiej.</p>
+<p>Drugą sprawą jest odpowiedzialność. Jeśli chcemy, żeby TDD faktycznie przyniosło nam pozytywne efekty, to cały team musi zgodnie podążać za jego zasadami. Każdy musi się pilnować i rzetelnie podchodzić do pisania testów. Jeśli bowiem nawet jeden z developerów się wyłamie i kilka razy podąży inną drogą, to całą "pewność", którą daje nam TDD, będzie tylko iluzoryczna.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-1088" class="card submodule current" data-bootcamp-user-submodule-id="640241" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">20.2. <span>TDD w praktyce</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Aby lepiej zrozumieć TDD, przejdziemy do praktycznego przykładu. W tym celu rozwiniemy aplikację agencji turystycznej, nad którą pracowaliśmy w poprzednich modułach.</p>
+<p>Funkcjonalnością, którą będziemy starać się zaimplementować w tym module, będzie komponent odliczający czas do promocji "Happy Hour", która jest aktywna codziennie od 12:00 do 13:00.</p>
+<p>Będzie to wyglądało następująco:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/tdd3.gif" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/tdd3.gif" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Pokażemy Ci, jak zabrać się za przeanalizowanie tej funkcjonalności, a następnie opiszemy testy do każdego z wymagań. Na końcu tego submodułu Twoim zadaniem będzie implementacja tego komponentu w taki sposób, aby spełniła wymagania.</p>
+<p>Zanim zaczniemy, warto wspomnieć o okolicznościach tego zlecenia. Możemy założyć, że klient chciałby zobaczyć, jak taki komponent by działał i skonsultować to ze swoimi współpracownikami. Na tym etapie nie tworzymy docelowego rozwiązania, które będzie funkcjonowało na stronie, tylko tzw. <em>proof of concept</em>. Chcemy jednak od razu pisać kod w taki sposób, aby jak największą jego część można było później wykorzystać w docelowym rozwiązaniu.</p>
+<h3>Założenia</h3>
+<p>Aby napisać testy, nie wiedząc, jak będzie dokładnie wyglądała końcowa implementacja, musimy mieć przynajmniej ogólne pojęcie, jak dana funkcjonalność ma działać. Zaczniemy więc od spokojnego przeanalizowania założeń – dzięki temu będziemy mogli z grubsza określić wymagania. To z kolei pozwoli nam dobrze przygotować testy, które wezmą pod uwagę odpowiednie przypadki.</p>
+<p>Zadaniem komponentu <code>HappyHourAd</code> będzie wyświetlenie nagłówka "Happy Hour" oraz czasu do następnej promocji. Na razie będziemy wyświetlać czas w sekundach, ale może w przyszłości zmienimy sposób wyświetlania. ;)</p>
+<p>Jak już wspomnieliśmy, promocja odbywa się codziennie o 12:00 (w południe), więc musimy wyświetlać czas pozostały do tej godziny. Wyjątkiem będzie czas trwania promocji – w godzinach od 12:00 do 13:00 zamiast odliczania, komponent powinien pokazywać komunikat "It's your time! Take advantage of Happy Hour! All offers 20% off!". Warto pamiętać, że ten komunikat ma wyświetlać się zarówno kiedy strona zostanie otworzona między 12:00, a 13:00, jak i w sytuacji, gdy strona była otwarta wcześniej i odliczanie doszło do zera.</p>
+<p>Uwaga! "Happy Hour" ma się odbywać o 12:00 czasu UTC, a nie lokalnego. W końcu różni klienci mogą pochodzić z różnych stref czasowych. Lepiej więc bazować na czasie, który obowiązuje w siedzibie firmy klienta.</p>
+<p>Na razie to koniec wymagań – piszemy tylko <em>proof of concept</em>, więc nie musimy się przejmować niektórymi aspektami jego działania:</p>
+<ul>
+<li>jeśli strona jest otwarta w momencie, gdy wybije godzina 13:00, nie musimy ukrywać komunikatu o promocji i pokazywać licznika,</li>
+<li>ceny usług nie ulegną zmianie, ponieważ nasz komponent nie jest za nie odpowiedzialny,</li>
+<li>czas ma być wyświetlany w sekundach, mimo że będzie to mało czytelne,</li>
+<li>treść nagłówka i informacji o promocji będą przekazane komponentowi jako wartości propsów (wpisane <em>na sztywno</em> w komponencie nadrzędnym),</li>
+<li>godzina startu i zakończenia promocji może być na razie wpisana na sztywno w kodzie komponentu.</li>
+</ul>
+<p>Tworzyliśmy już bardziej skomplikowane funkcjonalności, więc powinniśmy sobie z tym poradzić!</p>
+<h3>Jak będzie wyglądał ten komponent?</h3>
+<p>Chcemy napisać precyzyjne testy, więc warto zastanowić się, jak ten komponent powinien być zbudowany. Nie chodzi tutaj o to, jak dokładnie zostanie zaimplementowany, ani jak będą działać poszczególne metody – chodzi o oczekiwane efekty. Pamiętaj bowiem, że zadaniem testów jest <strong>sprawdzanie, czy końcowy efekt jest zgodny z planem, a nie tylko samego sposobu implementacji</strong>.</p>
+<p>Analizując wcześniej zapisane założenia, możemy zaplanować taki komponent w miarę łatwo. Nazwiemy go <code>HappyHourAd</code>, a jego zadaniem będzie wyświetlanie nagłówka "Happy Hour" i komunikatu, który będzie wyświetlał odliczanie albo informację o tym, że aktualnie trwa promocja. Najlepiej będzie nie zakładać, że np. nagłówek to będzie <code>&lt;h3&gt;</code> – zamiast tego posłużymy się nazwami klas, co będzie bardziej elastycznym podejściem.</p>
+<h3>Co musimy przetestować?</h3>
+<p>Po przeanalizowaniu założeń oraz zaplanowaniu wyglądu komponentu możemy już dość szybko dojść do tego, co właściwie trzeba będzie przetestować i jakiego zachowania mamy oczekiwać.</p>
+<p>Zwróć uwagę, że nie napisaliśmy jeszcze ani jednej linii kodu, a mimo tego możemy już wyobrazić sobie, jakie testy będą nam potrzebne. Nie jest to dużo trudniejsze niż w podejściu "najpierw funkcjonalność, potem testy" – wtedy mieliśmy gotowy kod, na którym mogliśmy się oprzeć, ale tu mamy za to solidne wyobrażenie, jak będzie on wyglądać.</p>
+<p>Warto na tym etapie wypisać sobie, co dokładnie będziemy chcieli przetestować. Testy powinny sprawdzać:</p>
+<ol>
+<li>czy komponent w ogóle się renderuje i nie powoduje błędu,</li>
+<li>czy renderowane są oba elementy (nagłówek i komunikat),</li>
+<li>czy nagłówek ma treść przekazaną komponentowi w propsie <code>title</code>,</li>
+<li>czy w momencie wyświetlenia strony poza godzinami promocji, komunikat wyświetla odliczanie z odpowiednią liczbą sekund,</li>
+<li>czy odliczanie co sekundę zmniejsza wyświetlaną liczbę,</li>
+<li>czy w momencie wyświetlenia strony w godzinach promocji, komunikat wyświetla informację o promocji, którego treść znajduje się w propsie <code>promoDescription</code>,</li>
+<li>czy jeśli strona została otwarta przed startem promocji, a następnie odliczanie dotarło do zera, to czy zostanie wyświetlony informację o promocji.</li>
+</ol>
+<p>I to prawdopodobnie tyle. Czy to za mało? A może za dużo...?</p>
+<div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Ile testów jest potrzebne?</h4>
+<p>Przyjęło się mówić, że liczba testów jest wystarczająca, jeśli nie potrafisz wyobrazić sobie już więcej scenariuszy błędów. Jeśli boisz się, że liczba testów jest za mała, to postaraj zastanowić się, jak moglibyśmy popsuć ten komponent – np. przekazując mu jakieś <em>dziwne</em> wartości propsów.</p>
+<p>Na przykład, nasz komponent otrzyma propsy z godzinami startu i końca promocji. Zapewne w przyszłości redaktor strony będzie mógł w jakiś sposób (np. w CMS-ie) ustawić te godziny. Co będzie, jeśli wpisze, że promocja ma zaczynać się o godzinie 25:73 (<em>siedemdziesiąt trzy minuty po godzinie dwudziestej piątej</em>)?</p>
+<p>W tym konkretnym przypadku założymy, że godzina będzie zawsze podawana w poprawnym formacie 24-godzinnym, ponieważ komponent nadrzędny będzie docelowo dbał o poprawność wartości propsów. Spróbuj jednak pomyśleć, w jaki inny sposób moglibyśmy <em>zepsuć</em> ten komponent bez ingerowania w jego kod.</p>
+<p>Takie <em>dziwne</em> scenariusze nazywa się warunkami brzegowymi, czyli <em>edge cases</em>. Najczęściej opierają się one o nieprzewidziane akcje człowieka albo rzadko występujące sytuacje – przykładem może być <a href="https://pl.wikipedia.org/wiki/Sekunda_przest%C4%99pna" target="_blank">sekunda przestępna</a>, która w naszym przypadku nie ma znaczenia, ale w systemach kontroli lotów może spowodować spore problemy.</p>
+<p>Jeśli mimo starań nie potrafisz znaleźć takiego scenariusza, w którym komponent mógłby błędnie działać – możesz uznać, że masz wystarczająco dużo testów. :)</p>
+<p>Dużą zaletą TDD jest to, że piszemy testy do bardzo małych fragmentów kodu, więc naprawdę łatwo i szybko możemy ustalić wszystkie możliwe scenariusze. W przypadku podejścia <em>nie-TDD</em>, gdzie często mamy do przetestowania multum kodu, o wiele łatwiej o ominięcie jakiegoś przypadku.</p>
+</div>
+<h3>Piszemy testy</h3>
+<p>Przejdźmy do rzeczy. Jak już wiesz, testy jednostkowe możemy trzymać w osobnym folderze <code>__tests__</code>, lub zaraz przy samym testowanym komponencie/funkcji. Będziemy stosować to drugie podejście, tak samo, jak robiliśmy to już w poprzednim module.</p>
+<p>Otwórz projekt agencji turystycznej z poprzedniego modułu i w katalogu <code>features</code> stwórz folder na nasz nowy komponent. Nazwij go zgodnie z naszą konwencją, a więc - <code>HappyHourAd</code>. W tym katalogu utwórz trzy pliki: <code>HappyHourAd.js</code>, <code>HappyHourAd.scss</code> i <code>HappyHourAd.test.js</code>. Stosujemy TDD, czyli najpierw zajmiemy się ostatnim z tych plików.</p>
+<p>Czy napiszemy najpierw wszystkie testy, aby dopiero potem zabrać się za całą implementację? Zdecydowanie nie! To byłoby podejście "tests first", a nie TDD. Jak mówiliśmy już wcześniej, W TDD staramy się wykonywać testy na bieżąco.</p>
+<p>W związku z tym proces będzie następujący:</p>
+<ul>
+<li>piszemy pierwszy test, który z założenia <em>nie przechodzi</em>, bo dotyczy funkcjonalności, która jeszcze nie została zaimplementowana</li>
+<li>implementujemy funkcjonalność sprawdzaną przez pierwszy test, aby ten test przechodził pozytywnie,</li>
+<li>zastanawiamy się, czy kod jest dobrze napisany – czyli czy nie wymaga drobnego refactoringu, aby np. był bardziej logicznie zorganizowany i prostszy do zrozumienia dla innego developera,</li>
+<li>piszemy drugi test, który z założenia <em>nie przechodzi</em>...</li>
+<li>implementujemy funkcjonalność sprawdzaną przez drugi test...</li>
+<li>itd.</li>
+</ul>
+<p>Otwórz teraz plik <code>HappyHourAd.test.js</code> – zaczynamy pisanie testów!</p>
+<h3>Test 1: czy komponent się renderuje</h3>
+<p>Zaczniemy od najprostszego testu – renderowania komponentu. Ten test ma za zadanie sprawdzać, czy komponent w ogóle się renderuje i nie powoduje błędu. Następnie zaimplementujemy kod w pliku komponentu, który faktycznie się tym zajmie.</p>
+<p>Oczywiście trzymamy się podejścia – najpierw test, potem implementacja.</p>
+<p>Zacznij od napisania testu. Na razie nie ma tu nowości, więc spróbuj napisać ten test samodzielnie, wzorując się na przykładach z poprzedniego modułu. Następnie, klikając w poniższy guzik, możesz sprawdzić, czy Twój test jest napisany poprawnie.</p>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-GT2tYAPMh-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż kod testu</a>
+    <a href="#collapse-GT2tYAPMh-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj kod testu</a>
+  </span>
+</p>
+<div id="collapse-GT2tYAPMh-toggle" class="collapse">
+<pre><code class="language-js">import React from 'react';
+import { shallow } from 'enzyme';
+import HappyHourAd from './HappyHourAd';
+
+describe('Component HappyHourAd', () =&gt; {
+  it('should render without crashing', () =&gt; {
+    const component = shallow(&lt;HappyHourAd /&gt;);
+    expect(component).toBeTruthy();
+  });
+});
+</code></pre>
+</div>
+<div class="bc-note alert-info">
+<h4 class="alert-heading text-center">Uwaga!</h4>
+<p>W poprzednim module w przypadku testowania komponentu (np. <code>Hero</code>) czasami używaliśmy <code>shallow</code> pojedynczo dla każdego przypadku testowego (<code>it</code>). Miało to sens, bowiem testowaliśmy komponent z różnymi parametrami, więc to wywołanie za każdym razem było inne. Tutaj sytuacja wydaje się odmienna. Zawsze potrzebujemy tego samego komponentu, sprawdzamy tylko różne jego aspekty.</p>
+<p>Czy nie wystarczyłoby więc przygotować tego raz? Na samej górze? Albo użyć do tego funkcji <code>beforeEach</code>?</p>
+<pre><code class="language-js">const component = shallow(&lt;HappyHourAd /&gt;);
+</code></pre>
+<p>Bezpieczniej robić to jednak w każdym teście z osobna. Po pierwsze, nawet jeśli w tej chwili wywołujemy go tak samo, to może się to w przyszłości zmienić. Po drugie, możliwe, że w niektórych case'ach będziemy chcieli zmienić coś w otoczeniu, w którym ten komponent wywołamy. Będziemy to robić, np. przy testowaniu liczby sekund wyświetlanej w komunikacie. Wtedy przed wywołaniem komponentu będziemy chcieli zasymulować jakąś konkretną godzinę – np. że w momencie wyświetlenia strony jest godzina 11:00 czasu UTC.</p>
+</div>
+<p>Zgodnie z założeniami TDD, <strong>na ten moment nasz test nie może przejść</strong>. Ma to sens, skoro nie napisaliśmy jeszcze odpowiedniej implementacji komponentu.</p>
+<p>Uruchom więc teraz task <code>test:watch</code> i zobacz, czy konsola faktycznie poinformuje nas o teście, który nie przeszedł.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/tdd1.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/tdd1.png" alt="image" style="width: auto;"></a>
+<p>Liczba testów wymieniona w podsumowaniu może być u Ciebie inna niż na powyższym screenie. Ważne jest tylko to, że powinien być tylko jeden test ze statusem failed – test, który przed chwilą napisaliśmy. Jeśli tak jest, to dobrze!</p>
+<p>Teraz czas na odpowiednią modyfikację naszego komponentu, aby test został <em>zaliczony</em>. To Twoje zadanie, ale nie będzie to nic trudnego. Dodaj do pliku <code>HappyHourAd.js</code> nowy, pusty reactowy komponent klasowy. Metoda render może być praktycznie pusta. <strong>Napisz tylko tyle kodu, ile jest wymagane, aby test przeszedł.</strong></p>
+<p>Jeśli wszystko zostało wykonane przez Ciebie poprawnie, to <em>Jest</em> sam powinien zauważyć zmiany, ponieważ włączyliśmy go w trybie <code>--watchAll</code> (za pomocą <code>npm run test:watch</code>). W terminalu powinna pojawić się informacja, że wszystkie testy przechodzą pozytywnie.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/tdd2.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/tdd2.png" alt="image" style="width: auto;"></a>
+<p>Teraz pozostaje nam ewentualny refactoring napisanego kodu. Jeśli uważasz, że mimo przejścia testu, dobrze byłoby jakoś zmodyfikować Twój aktualny kod – najlepiej zrobić to właśnie teraz. Pamiętaj tylko, że <strong>musisz go zmieniać tak, aby test wciąż przechodził</strong>.</p>
+<p>Na razie, jednak wstawiliśmy tylko pusty kod komponentu, więc raczej nie mamy niczego do refactorowania. W takim razie zakończyliśmy pierwszy cykl pisania naszego nowego komponentu w podejściu TDD!</p>
+<div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Red, Green, Refactor</h4>
+<p>Cały proces TDD często określa się mianem <strong>Red, Green, Refactor</strong>. To trochę uproszczenie, ale dobrze oddaje istotę tej metody.</p>
+<ol>
+<li>Najpierw piszemy test, który nie przechodzi – faza nazywana <strong>Red</strong>, ponieważ <em>Jest</em> pokazuje <em>oblany</em> test na czerwono.</li>
+<li>Potem piszemy kod, który powinien spowodować, że test przejdzie – to faza <strong>Green</strong>, ponieważ test będzie w kolorze zielonym.</li>
+<li>Na końcu wprowadzamy ew. poprawki w kodzie – faza <strong>Refactor</strong>.</li>
+</ol>
+<p>Jeśli masz problem z zapamiętaniem cyklu TDD, to najłatwiej przyswoić go sobie właśnie jako ten skrót – <strong>Red, Green, Refactor</strong>.</p>
+</div>
+<h3>Test 2: czy renderowane są oba elementy</h3>
+<p>Kolejny case, w którym przygotowanie testu nie będzie dla Ciebie nowością. Również implementacja kodu w komponencie będzie bardzo prosta. Załóżmy, że nagłówek (np. <code>&lt;h3</code>>) będzie miał klasę <code>title</code>, a komentarz z sekundami może być np. divem z klasą <code>countdown</code>. Musimy sprawdzić, czy oba te elementy istnieją w komponencie. Pamiętaj, że <code>render</code> może zwracać tylko jeden element, więc umieścimy nagłówek i komentarz w divie. Oczywiście, wciąż trzymamy się cyklu <strong>Red, Green, Refactor</strong>.</p>
+<p>Zacznij od napisania testu. W poprzednim module pokazywaliśmy już, jak testować istnienie elementów w komponencie. Spróbuj więc napisać test bez naszej pomocy, a potem porównaj z rozwiązaniem dostępnym pod poniższym guzikiem.</p>
+<p>Zwróć uwagę, że będziemy wielokrotnie wykorzystywać selektory <code>'.title'</code> i <code>'.promoDescription'</code>. Aby uniknąć ewentualnych literówek, najlepiej będzie zapisać je na początku pliku w obiekcie <code>select</code>. W testach nie będziemy wpisywać tych selektorów, tylko używać wartości z obiektu <code>select</code>.</p>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-SacX_6vKVX-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż kod testu</a>
+    <a href="#collapse-SacX_6vKVX-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj kod testu</a>
+  </span>
+</p>
+<div id="collapse-SacX_6vKVX-toggle" class="collapse">
+<pre><code class="language-js">// na początku pliku:
+
+const select = {
+  title: '.title',
+  promoDescription: '.promoDescription',
+};
+
+// nowy test:
+
+it('should render heading and description', () =&gt; {
+  const component = shallow(&lt;HappyHourAd /&gt;);
+  expect(component.exists(select.title)).toEqual(true);
+  expect(component.exists(select.promoDescription)).toEqual(true);
+});
+</code></pre>
+</div>
+<p>W tej chwili test nie powinien jeszcze oczywiście przechodzić (faza <strong>Red</strong>). Następnie czas na implementację kodu w komponencie. To będzie bardzo proste zadanie: wystarczy dodać w funkcji <code>render</code> oba elementy. Gdy to zrobisz, <em>Jest</em> powinien wskazać, że test zaczyna przechodzić pozytywnie (faza <strong>Green</strong>).</p>
+<p>Na końcu możesz jeszcze poprawić swój kod (faza <strong>Refactor</strong>). Prawdopodobnie nie będzie to jednak w tym przypadku konieczne.</p>
+<h3>Test 3: czy nagłówek ma treść z propsa</h3>
+<p>Treść, której oczekujemy w nagłówku, to wartość propsa <code>title</code>. Twoim zadaniem jest napisanie odpowiedniego testu, a następnie taka modyfikacja komponentu, aby ten test spełniał.</p>
+<p>Sam test będzie stosunkowo prosty do napisania. Bardzo podobny znajdziesz również w jednym z przykładów z poprzedniego modułu. Spróbuj napisać go bez naszej pomocy.</p>
+<p>Podobnie jak zrobiliśmy to z selektorami w obiekcie <code>select</code>, warto na początku pliku zapisać w stałej <code>mockProps</code> obiekt zawierający testowe propsy naszego komponentu (czyli właściwości <code>title</code> i <code>promoDescription</code>). W tym i wszystkich kolejnych testach będziemy je przekazywać do renderowanego komponentu, czyli użyjemy:</p>
+<pre><code class="language-js">const component = shallow(&lt;HappyHourAd {...mockProps} /&gt;);
+</code></pre>
+<p>Pamiętaj, aby trzymać się zasady <strong>Red, Green, Refactor</strong> – zacznij od napisania testu, następnie zaimplementuj funkcjonalność, a na końcu zastanów się, czy chcesz jakoś poprawić napisany kod.</p>
+<h3>Test 4: czy komunikat wyświetla odpowiednią liczbą sekund</h3>
+<p>Ten przypadek będzie trochę trudniejszy. Pozwoli nam jednak nieco lepiej poznać obsługę dat w JavaScripcie.</p>
+<p>Musimy sprawdzić, czy komponent potrafi ustalić na samym początku, ile czasu pozostało do rozpoczęcia promocji. Jednak ten test może być przeprowadzony tylko wtedy, kiedy promocja nie jest aktywna. Inaczej test nie będzie miał sensu, ponieważ zamiast liczby sekund pokazywana byłaby informacja o promocji.</p>
+<p>Co więcej, nasz test musi <em>znać poprawną odpowiedź</em>, czyli poprawną liczbę, która powinna być wyświetlana! I co mamy teraz zrobić? Przecież test może być wykonywany o różnych godzinach i za każdym razem poprawna liczba byłaby inna!</p>
+<p>Na szczęście możemy dość łatwo poradzić sobie z tym problemem! Możemy <em>podmienić</em> funkcję, której nasz komponent użyje do sprawdzenia aktualnej godziny. Dzięki temu komponent będzie <em>myślał</em>, że jest zawsze ta sama godzina – nie zważając kompletnie na stan faktyczny!</p>
+<p>Zacznijmy od dodania na końcu pliku <code>HappyHourAd.test.js</code> nowej sekcji <code>describe</code>:</p>
+<pre><code class="language-js">describe('Component HappyHourAd with mocked Date', () =&gt; {
+
+});
+</code></pre>
+<p>Jak widzisz z opisu, ten zestaw testów będzie przeprowadzany dla godziny 11:57:58. Zanim przejdziemy do pisania samego testu, musimy zająć się zasymulowaniem aktualnej godziny. Aby to zrobić, musimy przewidzieć, jak zadziała komponent.</p>
+<p>W JavaScripcie najczęstsze sposoby poznania aktualnej godziny to:</p>
+<ul>
+<li><code>const currentTime = new Date();</code> – wywołanie konstruktora klasy <code>Date</code> bez żadnych argumentów zwróci instancję tej klasy dla bieżącego momentu,</li>
+<li><code>const currentTime = Date.now();</code> – jeśli nie potrzebujemy instancji klasy <code>Date</code>, tylko tzw. timestamp (wyjaśnienie poniżej), możemy użyć metody <code>Date.now()</code>,</li>
+<li><code>const currentTime = new Date(Date.now());</code> – niektórzy developerzy nie wiedzą o tym, że można wywołać konstruktor <code>Date</code> bez argumentu, więc podają jako argument aktualny timestamp pobrany z <code>Date.now()</code>.</li>
+</ul>
+<div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Timestamp</h4>
+<p>Formalnie, timestamp oznacza dowolny znacznik czasu, a w dosłownym tłumaczeniu oznacza pieczątkę z aktualną godziną. Wśród programistów często jednak używa się tego określenia dla bardzo konkretnego formatu zapisu czasu – Unix Timestamp, czyli liczby sekund, które minęły od północy w dniu 01.01.1970.</p>
+<p>Nie będziemy teraz wchodzić w szczegóły powodów, dla których wybrano akurat tę datę. Ważne dla nas jest to, że ta liczba jest często stosowana do zapisu daty i godziny.</p>
+<p>Timestamp w JS-ie jest jednak jeszcze innym formatem – liczbą milisekund, które minęły od północy w dniu 01.01.1970. Dlatego wykonując jakiekolwiek obliczenia na timestampie, często spotkasz się z dzieleniem przez <code>1000</code>.</p>
+<p>Innym często spotykanym zapisem daty i godziny jest format zgodny ze specyfikacją ISO 8601. Jest on znacznie bardziej czytelny dla nas, ponieważ wygląda tak: <code>2019-05-14T11:57:58.135Z</code>. Mamy w nim kolejno:</p>
+<ul>
+<li>rok, miesiąc, dzień,</li>
+<li>literę <code>T</code> oddzielającą datę od godziny,</li>
+<li>godziny, minuty, sekundy, milisekundy,</li>
+<li>oraz literę <code>Z</code> oznaczającą strefę czasową (<code>Zulu</code>, czyli <code>UTC</code>).</li>
+</ul>
+<p>O ile timestamp podaje zawsze czas UTC, to format ISO 8601 pozwala na podanie czasu w dowolnej strefie czasowej. Najbardziej przydatną dla nas będzie jednak strefa UTC, o czym powiemy więcej za chwilę.</p>
+</div>
+<h4>Stworzenie metody <code>mockDate</code></h4>
+<p>W takim razie już wiemy, że potrzebujemy zmienić działanie <code>new Date()</code> oraz <code>Date.now()</code> w taki sposób, aby zawsze zwracały tę samą wartość ustawioną przez nas. Stworzymy więc nową klasę, którą nazwiemy <code>mockDate</code>, dziedziczącą z klasy <code>Date</code>. Dodaj ją wewnątrz dodanego przed chwilą bloku <code>describe</code>.</p>
+<pre><code class="language-js">describe('Component HappyHourAd with mocked Date', () =&gt; {
+  const mockDate = class extends Date {
+    constructor(...args) {
+      super(...args);
+      return this;
+    }
+  };
+});
+</code></pre>
+<p>Na razie klasa <code>mockDate</code> jeszcze niczego nie <em>robi</em>, ale musieliśmy zacząć od podstaw. Ta klasa rozszerza klasę <code>Date</code>, a więc w tym momencie będzie działać dokładnie tak samo, jak <code>Date</code>. W konstruktorze użyliśmy wyrażenia <code>super</code>, które odwołuje się do konstruktora klasy-rodzica (w tym przypadku <code>Date</code>). Wywołaliśmy ten konstruktor z takimi samymi argumentami, jakie otrzymał nasz konstruktor klasy <code>mockDate</code>. Na końcu konstruktora zwróciliśmy obiekt <code>this</code>.</p>
+<p>Jednak chwila, czy zwykle nie używaliśmy składni <code>class nazwaKlasy extends...</code>? Tak jest, ale podobnie jak mogliśmy definiować anonimowe funkcje, tak samo można zdefiniować anonimową klasę i przypisać ją do zmiennej lub stałej. Dzięki temu dbamy o zakres zmiennych – nasza klasa <code>mockDate</code> ma istnieć tylko w tym bloku <code>describe</code>.</p>
+<p>Zmieńmy teraz jej sposób działania tak, aby podawała zawsze tę samą godzinę! Ma to się dziać tylko w sytuacji, kiedy nie podano żadnych argumentów. Możemy więc wykorzystać blok <code>if/else</code>:</p>
+<pre><code class="language-js">describe('Component HappyHourAd with mocked Date', () =&gt; {
+  const customDate = '2019-05-14T11:57:58.135Z';
+
+  const mockDate = class extends Date {
+    constructor(...args) {
+      if(args.length){
+        super(...args);
+      } else {
+        super(customDate);
+      }
+      return this;
+    }
+  };
+});
+</code></pre>
+<p>Dla lepszego uporządkowania kodu datę i godzinę zapisaliśmy w stałej <code>customDate</code>. Wykorzystaliśmy do tego celu format ISO 8601, aby łatwo było nam modyfikować godzinę w razie potrzeby.</p>
+<p>Działanie tego kodu jest bardzo proste – jeśli podano jakieś argumenty, to zostanie wywołany konstruktor <code>Date</code> (czyli <code>super</code>) z tymi argumentami. W przeciwnym wypadku wywołamy go z argumentem w postaci daty, którą chcemy zwracać.</p>
+<p>W bardzo podobny sposób możemy dodać metodę <code>now</code>. Będzie to metoda statyczna (<code>static</code>), co oznacza, że nie będziemy jej wywoływać na instancji klasy <code>mockDate</code>, ale na tej klasie samej w sobie. Innymi słowy, będzie wywoływana jako <code>mockDate.now()</code>.</p>
+<pre><code class="language-js">describe('Component HappyHourAd with mocked Date', () =&gt; {
+  const customDate = '2019-05-14T11:57:58.135Z';
+
+  const mockDate = class extends Date {
+    constructor(...args) {
+      /* ... */
+    }
+    static now(){
+      return (new Date(customDate)).getTime();
+    }
+  };
+});
+</code></pre>
+<h4>Podmiana klasy <code>Date</code></h4>
+<p>No dobrze, mamy już klasę <code>mockDate</code>, która działa dokładnie tak samo, jak <code>Date</code>, z tym że zawsze zwraca tę samą datę i godzinę. Jednak nasz komponent nie będzie używał <code>mockDate</code>, tylko <code>Date</code>, więc po co nam ta klasa? Wykorzystamy ją do <em>podmiany</em> klasy <code>Date</code>. Moglibyśmy to zrobić np. tak:</p>
+<pre><code class="language-js">describe('Component HappyHourAd with mocked Date', () =&gt; {
+  const customDate = '2019-05-14T11:57:58.135Z';
+
+  const mockDate = class extends Date {
+    /* ... */
+  };
+
+  global.Date = mockDate;
+});
+</code></pre>
+<div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Obiekt <code>global</code></h4>
+<p>Jak zapewne pamiętasz, w przeglądarce istnieje obiekt <code>window</code>. Znajdują się w nim wszystkie metody i klasy dostępne globalnie w JS-ie. Dla przykładu, kiedy piszemy <code>document.querySelector('.product-list')</code> lub <code>Math.round()</code>, w rzeczywistości wykorzystujemy obiekty <code>window.document</code> i <code>window.Math</code>.</p>
+<p>Nasze testy jednostkowe nie są uruchamiane w przeglądarce, tylko w NodeJS – silniku JS, który jest uruchamiany bez przeglądarki. W NodeJS nie ma obiektu <code>window</code>, ale zamiast niego wszystkie globalne metody i klasy znajdują się w obiekcie <code>global</code>.</p>
+<p>Dlatego chcąc <em>podmienić</em> klasę <code>Date</code>, korzystamy z <code>global.Date</code>.</p>
+</div>
+<p>Ten sposób ma jednak dla nas poważny problem – klasa <code>Date</code> zostanie zmieniona na stałe. Oznacza to, że nie będziemy mogli w kolejnych testach używać <em>prawdziwej</em> klasy <code>Date</code>, która zwraca aktualną datę i godzinę. Dlatego wewnątrz testu, który za moment napiszemy, będziemy najpierw podmieniać <code>Date</code> na <code>mockDate</code>, a potem przywracać oryginalną wartość <code>Date</code>, którą zapiszemy w stałej <code>trueDate</code>.</p>
+<pre><code class="language-js">describe('Component HappyHourAd with mocked Date', () =&gt; {
+  const customDate = '2019-05-14T11:57:58.135Z';
+  const trueDate = Date;
+
+  const mockDate = class extends Date {
+    /* ... */
+  };
+
+  it('should show correct at 11:57:58', () =&gt; {
+    global.Date = mockDate;
+
+    /* ... */
+
+    global.Date = trueDate;
+  });
+});
+</code></pre>
+<h4>Dodanie testu</h4>
+<p>Mamy już gotową <em>podmianę</em> klasy <code>Date</code> na naszą klasę <code>mockDate</code>, więc możemy napisać test. Nie przejmuj się – sam test będzie bardzo prosty! Na końcu tego <code>describe</code> (pod <code>afterAll</code>) dodaj test:</p>
+<pre><code class="language-js">  it('should show correct at 11:57:58', () =&gt; {
+    global.Date = mockDate;
+
+    const component = shallow(&lt;HappyHourAd {...mockProps} /&gt;);
+    const renderedTime = component.find(select.descr).text();
+    expect(renderedTime).toEqual('122');
+
+    global.Date = trueDate;
+  });
+</code></pre>
+<h4>Sprawdzanie wielu przypadków</h4>
+<p>Pojawia się jednak teraz pytanie: czy wystarczy przetestować tylko jedną godzinę? Może nasz komponent zadziałałby nieprawidłowo dla dłuższego czasu? A może warto byłoby przetestować też wartości brzegowe, czyli 11:59:59, albo 13:00:00?</p>
+<p>Moglibyśmy skopiować cały ten <code>describe</code> i podać inną godzinę. Tylko czy warto się tak powtarzać? Przecież te trzy przypadki są prawie takie same, a wiemy, że jedną z dobrych praktyk jest zasada <strong>DRY</strong> – <em>Don't Repeat Yourself</em>.</p>
+<p>Możemy jednak szybko rozwiązać ten problem! Potrzebujemy w tym celu wykonać kilka kroków – pamiętaj, że na niektórych etapach ten kod nie będzie działał poprawnie. Przetestuj go dopiero po wykonaniu wszystkich kroków.</p>
+<p>Zaczniemy od przeniesienia <code>trueDate</code> i <code>mockDate</code> poza <code>describe</code>:</p>
+<pre><code class="language-js">const trueDate = Date;
+const mockDate = class extends Date {
+  constructor(...args) {
+    if(args.length){
+      super(...args);
+    } else {
+      super(customDate);
+    }
+    return this;
+  }
+  static now(){
+    return (new Date(customDate)).getTime();
+  }
+};
+
+describe('Component HappyHourAd with mocked Date', () =&gt; {
+  const customDate = '2019-05-14T11:57:58.135Z';
+
+  it('should show correct at 11:57:58', () =&gt; {
+    global.Date = mockDate;
+    /* ... */
+    global.Date = trueDate;
+  });
+});
+</code></pre>
+<p>Następnie zmienimy <code>mockDate</code> tak, aby była funkcją, która zwraca klasę (tę samą, która teraz jest zapisana w <code>mockDate</code>).</p>
+<pre><code class="language-js">const trueDate = Date;
+const mockDate = () =&gt; class extends Date {
+  constructor(...args) {
+    if(args.length){
+      super(...args);
+    } else {
+      super(customDate);
+    }
+    return this;
+  }
+  static now(){
+    return (new Date(customDate)).getTime();
+  }
+};
+
+describe('Component HappyHourAd with mocked Date', () =&gt; {
+  const customDate = '2019-05-14T11:57:58.135Z';
+
+  it('should show correct at 11:57:58', () =&gt; {
+    global.Date = mockDate();
+    /* ... */
+    global.Date = trueDate;
+  });
+});
+</code></pre>
+<p>W <code>mockDate</code> znajduje się już funkcja, ale w niej wykorzystujemy nadal <code>customDate</code> – stałą, którą definiujemy dopiero wewnątrz <code>describe</code>. W takim razie musimy wewnątrz testu (<code>it</code>) przekazywać wartość daty do funkcji <code>mockDate</code>!</p>
+<pre><code class="language-js">const trueDate = Date;
+const mockDate = customDate =&gt; class extends Date {
+  constructor(...args) {
+    if(args.length){
+      super(...args);
+    } else {
+      super(customDate);
+    }
+    return this;
+  }
+  static now(){
+    return (new Date(customDate)).getTime();
+  }
+};
+
+describe('Component HappyHourAd with mocked Date', () =&gt; {
+  const customDate = '2019-05-14T11:57:58.135Z';
+
+  it('should show correct at 11:57:58', () =&gt; {
+    global.Date = mockDate(customDate);
+    /* ... */
+    global.Date = trueDate;
+  });
+});
+</code></pre>
+<p>Skoro teraz wewnątrz <code>describe</code> wykorzystujemy <code>customDate</code> już tylko raz, nie ma potrzeby deklarowania tej stałej – jej wartość możemy użyć bezpośrednio w argumencie <code>mockDate</code>.</p>
+<pre><code class="language-js">const trueDate = Date;
+const mockDate = customDate =&gt; class extends Date {
+  constructor(...args) {
+    if(args.length){
+      super(...args);
+    } else {
+      super(customDate);
+    }
+    return this;
+  }
+  static now(){
+    return (new Date(customDate)).getTime();
+  }
+};
+
+describe('Component HappyHourAd with mocked Date', () =&gt; {
+  it('should show correct at 11:57:58', () =&gt; {
+    global.Date = mockDate('2019-05-14T11:57:58.135Z');
+    /* ... */
+    global.Date = trueDate;
+  });
+});
+</code></pre>
+<p>Teraz nasz kod po zmianach powinien już działać – ale nie spoczywamy jeszcze na laurach! Nadal testowanie kilku przypadków wymagałoby od nas powtórzenia kilku linii kodu. Skoro nie chcemy się powtarzać, to możemy pójść krok dalej – cały test <code>it</code> możemy również zamknąć w funkcji! Będzie ona potrzebowała tylko dwóch argumentów – czasu i oczekiwanej wartości:</p>
+<pre><code class="language-js">const trueDate = Date;
+const mockDate = customDate =&gt; class extends Date {
+  /* ... */
+};
+
+const checkDescriptionAtTime = (time, expectedDescription) =&gt; {
+  it(`should show correct at ${time}`, () =&gt; {
+    global.Date = mockDate(`2019-05-14T${time}.135Z`);
+
+    const component = shallow(&lt;HappyHourAd {...mockProps} /&gt;);
+    const renderedTime = component.find(select.descr).text();
+    expect(renderedTime).toEqual(expectedDescription);
+
+    global.Date = trueDate;
+  });
+};
+
+describe('Component HappyHourAd with mocked Date', () =&gt; {
+  checkDescriptionAtTime('11:57:58', '122');
+  checkDescriptionAtTime('11:59:59', '1');
+  checkDescriptionAtTime('13:00:00', 23 * 60 * 60 + '');
+});
+</code></pre>
+<p>Teraz w <code>describe</code> potrzebujemy tylko wykonać kilkukrotnie funkcję <code>checkDescriptionAtTime</code>, która zawiera definicję testu, wykorzystującego funkcję <code>mockDate</code> do tymczasowej podmiany <code>Date</code> na klasę, która będzie zawsze zwracała tę samą wartość (dla pojedynczego testu).</p>
+<p>W ostatnim z testów – tym dla godziny 13:00 – pozwoliliśmy sobie na nieco lenistwa. Zamiast podawać tekst, który powinien wyświetlić się w naszym komponencie, wykonaliśmy działanie: liczbę godzin (23 godziny od 13:00 do 12:00) przemnożyliśmy przez <code>60</code> (liczba minut w godzinie) i ponownie przez <code>60</code> (liczba sekund w minucie). Na końcu dodaliśmy pusty ciąg znaków, aby skonwertować liczbę na tekst.</p>
+<p>Nazwaliśmy to lenistwem, ale taki zapis ma bardzo ważny sens – sprawi, że inny developer z zespołu (albo my sami za jakiś czas) będzie miał dużo mniej trudności ze zrozumieniem tego fragmentu kodu!</p>
+<h4>Rozwój komponentu <code>HappyHourAd</code></h4>
+<p>Po napisaniu testu jesteśmy w fazie <strong>Red</strong> i możemy przejść do implementacji tej funkcjonalności. Możesz spróbować zmierzyć się z tym samodzielnie, ale biorąc pod uwagę dość skomplikowany test, który musieliśmy napisać, zostawiamy poniżej gotowe rozwiązanie tej funkcjonalności.</p>
+<p>Najpierw jednak wyjaśnimy kilka zagadnień, które przydadzą Ci się niezależnie od tego, czy zdecydujesz się spróbować samodzielnie, czy tylko przeanalizować i zrozumieć poniższe rozwiązanie.</p>
+<p>Obliczenie ilości sekund do najbliższego południa może wydawać Ci się bardzo żmudnym zadaniem, ale wcale nie będzie takie trudne. Pewnym wyzwaniem może być jednak poradzenie sobie ze strefami czasowymi. Należy bardzo uważać na wykorzystywane metody klasy <code>Date</code>, aby nie pomylić czasu UTC z czasem w lokalnej strefie czasowej użytkownika.</p>
+<p>Całe szczęście, klasa <code>Date</code> ma wbudowane metody, takie jak <code>Date.UTC</code> czy <code>getUTCHours</code>, które pozwalają nam operować na czasie UTC. Obiekt <code>Date</code> zajmie się też konwersją czasu lokalnego na UTC. Dlatego najwygodniej będzie nam stworzyć dwie stałe zawierające instancje <code>Date</code>. Jedna z nich będzie wskazywała aktualny czas, a druga – najbliższą godzinę 12:00.</p>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-kXLKJA8Noe-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż rozwiązanie</a>
+    <a href="#collapse-kXLKJA8Noe-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj rozwiązanie</a>
+  </span>
+</p>
+<div id="collapse-kXLKJA8Noe-toggle" class="collapse">
+<p>W naszym komponencie <code>HappyHourAd</code> dodamy nową metodę – <code>getCountdownTime</code>:</p>
+<pre><code class="language-js">  getCountdownTime(){
+    const currentTime = new Date();
+    const nextNoon = new Date(Date.UTC(currentTime.getUTCFullYear(), currentTime.getUTCMonth(), currentTime.getUTCDate(), 12, 0, 0, 0));
+
+    if(currentTime.getUTCHours() &gt;= 12){
+      nextNoon.setUTCDate(currentTime.getUTCDate()+1);
+    }
+
+    return Math.round((nextNoon.getTime() - currentTime.getTime())/1000);
+  }
+</code></pre>
+<p>W metodzie <code>render</code> możesz wykorzystać wartość zwracaną przez tę funkcję, np. tak:</p>
+<pre><code class="language-js">  &lt;div className='promoDescription'&gt;{this.getCountdownTime()}&lt;/div&gt;
+</code></pre>
+<p>Do przeanalizowania metody <code>getCountdownTime</code> może Ci się przydać <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">dokumentacja obiektu <code>Date</code></a>.</p>
+</div>
+<p>Po zaimplementowaniu tej funkcjonalności sprawdź, czy testy zaczęły przechodzić. Jeśli tak, to wszystko poszło dobrze (faza <strong>Green</strong>). Na końcu możesz ew. zrefaktorować kod, jeśli uważasz, że da się go poprawić (faza <strong>Refactor</strong>).</p>
+<h3>Test 5: czy odliczanie co sekundę zmniejsza wyświetlaną liczbę</h3>
+<p>Czas na sprawdzenie kolejnego wymagania – licznik powinien co sekundę zmniejszać wyświetlaną wartość.</p>
+<p>Zwróć uwagę, że na tym etapie nie musimy już sprawdzać, czy początkowo wyświetlana jest poprawna wartość. To jest sprawdzane przez wcześniejsze testy, więc teraz możemy się skupić tylko na tym, czy wyświetlany czas poprawie się zmienia.</p>
+<p>Z napisaniem tego testu już sobie poradzisz samodzielnie, prawda? Przy poprzednim teście nauczyliśmy się, jak możemy zasymulować konkretną godzinę. Natomiast do poczekania, aż wyświetli się nowa wartość, moglibyśmy użyć <code>setTimeout</code>, aby kolejne sprawdzenie wyświetlanej wartości wykonało się np. po dwóch sekundach.</p>
+<p>Problem w tym, że taki test rzeczywiście będzie czekał dwie sekundy. Jeśli będziemy chcieli sprawdzić trzy przypadki – to będzie 6 sekund. Do tego będziemy za chwilę sprawdzać, czy po doliczeniu do zera wyświetli się informacja o promocji – to będzie kolejnych kilka sekund... Łatwo sobie wyobrazić, że niedługo nasz test wykonywałby się długimi minutami!</p>
+<p>Na szczęście <em>Jest</em> oferuje nam proste wyjście. Wystarczy użyć metody <code>jest.useFakeTimers()</code>. Pozwala ona symulować przebieg czasu, m.in. w <code>setTimeout</code> oraz <code>setInterval</code>. Komponentowi będzie się wydawało, że faktycznie minęły dwie sekundy, podczas gdy w rzeczywistości minie raptem kilka milisekund.</p>
+<p>Musimy też pamiętać, aby zmienić godzinę zwracaną przez naszą klasę <code>mockDate</code> – inaczej mimo wykonania funkcji zawartej w <code>setTimeout</code>, nasz komponent będzie <em>myślał</em>, że jest nadal ta sama godzina.</p>
+<h4>Tworzymy nowy test w oparciu o poprzedni</h4>
+<p>Zacznij od skopiowania funkcji <code>checkDescriptionAtTime</code> i wklejenia jej ponownie, tym razem pod nazwą <code>checkDescriptionAfterTime</code> (<code>After</code> zamiast <code>At</code>). Dodaj w nim drugi argument (tzn. pomiędzy pierwszym a drugim) o nazwie <code>delaySeconds</code>. Dla czytelności możesz też zmienić opis testu (pierwszy argument w <code>it</code>). Pierwsze dwie linie tej nowej funkcji powinny wyglądać teraz tak:</p>
+<pre><code class="language-js">const checkDescriptionAfterTime = (time, delaySeconds, expectedDescription) =&gt; {
+  it(`should show correct value ${delaySeconds} seconds after ${time}`, () =&gt; {
+</code></pre>
+<p>Pod tymi liniami (czyli pomiędzy liniami z <code>it</code> i z <code>global.Date</code>) dodaj linię <code>jest.useFakeTimers();</code>, a na samym końcu testu (pod ostatnią linią z <code>global.Date</code>) dodaj <code>jest.useRealTimers();</code>. Dzięki temu bieg czasu w JS-ie wykonywanym pomiędzy tymi liniami będzie kontrolowany przez <em>Jesta</em>.</p>
+<p>Następnie pomiędzy linią montującą komponent (<code>shallow</code>) a linią odczytującą tekst z komunikatu (<code>const renderedTime</code>) wstaw poniższy kod:</p>
+<pre><code class="language-js">    const newTime = new Date();
+    newTime.setSeconds(newTime.getSeconds() + delaySeconds);
+    global.Date = mockDate(newTime.getTime());
+
+    jest.advanceTimersByTime(delaySeconds * 1000);
+</code></pre>
+<p>Pierwsze trzy linie tego fragmentu są odpowiedzialne za ustawienie nowej metody <code>Date</code>. Najpierw pobieramy "aktualną" datę i godzinę – pamiętamy jednak, że wcześniej podmieniliśmy <code>Date</code> na klasę, która zawsze zwróci nam tę samą godzinę. W drugiej linii modyfikujemy tę godzinę, dodając do niej wartość argumentu <code>delaySeconds</code>, a następnie podmieniamy <code>Date</code> na nowy mock ze zmienioną godziną. Dzięki temu od teraz <code>Date</code> będzie zwracał czas późniejszy o tyle sekund, ile podaliśmy w argumencie <code>delaySeconds</code>.</p>
+<p>Ostatnia linia powyższego fragmentu odpowiedzialna jest za kontrolę biegu czasu w JS-ie. Nasz komponent co sekundę sprawdza aktualny czas (za pomocą <code>Date</code>) i na jego podstawie wyświetla odpowiednią wartość. Oznacza to, że co sekundę komponent na nowo się renderuje. Za pomocą metody <code>advanceTimersByTime</code> przyspieszamy bieg czasu właśnie po to, aby wykonało się kolejne odświeżenie komponentu.</p>
+<p>To może być nieco mylące, że kontrolujemy <em>dwa rodzaje czasu</em>, więc podsumujmy jeszcze raz:</p>
+<ul>
+<li>Klasa <code>Date</code> odpowiedzialna jest za sprawdzenie aktualnego czasu (lub zdefiniowanego przez nas, udającego aktualny czas).</li>
+<li>Timery, kontrolowane przez <code>useFakeTimers</code> i <code>advanceTimersByTime</code>, wpływają na to, kiedy zostanie wykonana funkcja przekazana do <code>setTimeout</code> lub <code>setInterval</code>.</li>
+</ul>
+<p>Te dwa rodzaje czasu działają niezależnie od siebie i dlatego potrzebujemy kontrolować je osobno. Możesz to sobie wyobrazić jako zegarek i stoper – dwa osobne urządzenia, z których pierwsze mówi nam, która jest godzina, a drugi przypomina o tym, żeby co sekundę spojrzeć na zegarek.</p>
+<p>Musimy pamiętać o posprzątaniu po sobie – dlatego na końcu testu użyliśmy metody <code>useRealTimers</code>, aby wyłączyć timery symulowane przez <em>Jesta</em> i przywrócić JS do normalnego trybu działania.</p>
+<p>Nasza nowa funkcja <code>checkDescriptionAfterTime</code> jest już gotowa, możemy ją teraz wykorzystać. Skopiuj poprzedni blok <code>describe</code> razem z zawartością. Zmień treść opisu, zamień nazwę wywoływanej funkcji z <code>checkDescriptionAtTime</code> na <code>checkDescriptionAfterTime</code>, i w każdym jej wywołaniu pomiędzy pierwszym a drugim argumentem wstaw opóźnienie. Pamiętaj, aby odpowiednio dostosować oczekiwane wartości!</p>
+<p>My wybraliśmy poniższe wartości, ale śmiało możesz użyć innych:</p>
+<pre><code class="language-js">describe('Component HappyHourAd with mocked Date and delay', () =&gt; {
+  checkDescriptionAfterTime('11:57:58', 2, '120');
+  checkDescriptionAfterTime('11:59:58', 1, '1');
+  checkDescriptionAfterTime('13:00:00', 60 * 60, 22 * 60 * 60 + '');
+});
+</code></pre>
+<h4>Implementacja testowanej funkcjonalności</h4>
+<p>Kod odpowiedzialny za wyświetlanie poprawnego czasu jest wykonywany w metodzie <code>render</code> (która wywołuje metodę <code>getCountdownTime</code>), więc do zaimplementowania tej funkcjonalności potrzebujemy tylko dodać odświeżanie widoku komponentu co sekundę. W tym celu musimy dodać fragment kodu wykonywany w momencie stworzenia instancji komponentu, który zainicjuje odświeżanie widoku. Najprościej będzie w komponencie <code>HappyHourAd</code> dodać konstruktor:</p>
+<pre><code class="language-js">  constructor(){
+    super();
+
+    /* run this.forceUpdate() every second */
+  }
+</code></pre>
+<p>W miejscu komentarza musisz wpisać kod, który co sekundę wykona <code>this.forceUpdate()</code>. Możesz do tego wykorzystać <code>setInterval</code>, ale pamiętaj, aby użyć w nim funkcji strzałkowej, ponieważ funkcja anonimowa (ze słowem <code>function</code>) zmieniłaby znaczenie <code>this</code> i nasz kod nie zadziałałby poprawnie.</p>
+<p>Po uzupełnieniu kodu sprawdź, czy testy przechodzą (<strong>Green</strong>), a następnie zastanów się, czy widzisz potrzebę poprawienia czytelności kodu (<strong>Refector</strong>).</p>
+<h3>Test 6: czy komunikat wyświetla informację o promocji przy otwarciu strony</h3>
+<p>Ten przypadek jest już znacznie prostszy. Pomiędzy godzinami 12:00:00 i 12:59:59 (włącznie z nimi), zamiast sekund w elemencie <code>.promoDescription</code> powinien pojawiać się tekst z propsa <code>promoDescription</code>. Twoim zadaniem jest – jak zawsze w TDD – najpierw napisanie testów, a potem poprawne zaimplementowanie tej funkcjonalności.</p>
+<p>Do tego celu możesz skopiować <code>describe</code> z testu 4, czyli ten, w którym wykorzystujemy <code>checkDescriptionAtTime</code> (<code>At</code>, nie <code>After</code>). Ta funkcja tworzy dla nas test sprawdzający, czy tekst w komunikacie jest poprawna o określonej godzinie. Dokładnie tego potrzebujemy! Pamiętaj, że oczekiwana wartość komunikatu jest zapisana w <code>mockProps.promoDescription</code>.</p>
+<p>Uwaga! Nie zapomnij o sprawdzeniu wartości brzegowych – 12:00:00 i 12:59:59.</p>
+<p>Przy implementacji tej funkcjonalności najlepiej będzie w metodzie <code>render</code> zapisać do stałej wartość zwracaną przez <code>this.getCountdownTime()</code>. Jeśli ta liczba jest większa niż równowartość 23 godzin, to ma zostać wyświetlona informacja o promocji (przekazywana w propsie). W przeciwnym wypadku powinna zostać wyświetlona wartość tej stałej, co da taki sam efekt, jak do tej pory.</p>
+<h3>Test 7: czy komunikat wyświetla informację o promocji, kiedy odliczanie dotarło do zera</h3>
+<p>Czas na ostatni przypadek, z którym również poradzisz sobie bez problemu. Tym razem skopiujemy <code>describe</code> z testu 5, w którym wykorzystywaliśmy funkcję <code>checkDescriptionAfterTime</code> (<code>After</code>, nie <code>At</code>). Dzięki niej sprawdzisz, czy komponent zachowa się poprawnie, kiedy test rozpocznie się przed godziną 12:00, a treść komunikatu sprawdzimy po godzinie 12:00. W takiej sytuacji komponent będzie początkowo wyświetlał liczbę sekund (to już testowaliśmy wcześniej), a kiedy minie 12:00, powinien zacząć wyświetlać informację o promocji.</p>
+<p>W związku ze sposobem, w jaki zaimplementowaliśmy nasz komponent, ten test powinien od razu być zaliczony (<strong>Green</strong>).</p>
+<h3>Podłączamy komponent do aplikacji</h3>
+<p>Udało nam się skończyć implementację tego komponentu w podejściu TDD! Czas na jego praktyczne wykorzystanie!</p>
+<p>Zanim jednak to zrobimy, dodamy jeszcze style tego komponentu. Do pliku <code>HappyHourAd.scss</code> wstaw następujący kod:</p>
+<pre><code class="language-scss">.component {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.title, .promoDescription {
+  position: absolute;
+  width: 100%;
+}
+
+.title {
+  bottom: 40px;
+}
+
+.promoDescription {
+  bottom: 10px;
+}
+</code></pre>
+<p>Przy importowaniu staraj się zachować spójność z resztą aplikacji, a więc załaduj style do obiektu <code>styles</code>:</p>
+<pre><code class="language-js">import styles from './HappyHourAd.scss';
+</code></pre>
+<p>I to właśnie z tego obiektu korzystaj w <code>render</code>. Dla przykładu wrapper (czyli div, w którym znajdują się tytuł i komentarz) powinien otrzymać props:</p>
+<pre><code class="language-jsx">className={styles.component}
+</code></pre>
+<p>Analogicznie zastosuj klasy <code>title</code> i <code>promoDescription</code>.</p>
+<p>Za chwilę zaimportujemy ten komponent do <code>Hero</code> (znajdziesz go w katalogu <code>components/layouts</code>), ale nadal trzymamy się TDD, więc najpierw dodamy test do <code>Hero.test.js</code>. Sprawdzimy tylko, czy komponent <code>HappyHourAd</code> w ogóle w nim istnieje. Wzorując się na innych testach z tego pliku, nowy test może wyglądać tak:</p>
+<pre><code class="language-js">it('should render HappyHourAd', () =&gt; {
+  const expectedTitle = 'Lorem ipsum';
+  const expectedImage = 'image.jpg';
+  const component = shallow(&lt;Hero titleText={expectedTitle} imageSrc={expectedImage} /&gt;);
+
+  expect(component.find('HappyHourAd').length).toEqual(1);
+});
+</code></pre>
+<p>Następnie w komponencie <code>Hero</code>, pod obrazkiem dodaj <code>div</code> z <code>className={styles.happyHour}</code>, a w nim umieść komponent <code>HappyHourAd</code>. Aby ten komponent był widoczny, w pliku <code>Hero.scss</code> dodaj style:</p>
+<pre><code class="language-scss">.happyHour {
+  z-index: 999;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+</code></pre>
+<p>Efektem powinien być taki widok na głównej stronie:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/tdd3.gif" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/tdd3.gif" alt="image" style="width: auto;"></a>
+<h3>Podsumowanie</h3>
+<p>Jak widzisz, TDD może być na początku trochę męczące. W końcu, żeby napisać cokolwiek w aplikacji, najpierw wszystko musimy opakować testami. Nie sposób jednak nie docenić, jak pomocny taki sposób staje się podczas implementacji.</p>
+<p>Wszystkie błędy pokazywane są na bieżąco, możemy dzięki temu bardzo szybko je wyłapać. W tym podejściu pisanie testów nie jest przykrym obowiązkiem na samym końcu projektu, ale elementem planowania nowych funkcjonalności.</p>
+<p>Dzięki testowaniu małych fragmentów łatwiej jest nam sobie z nimi poradzić i nie musimy zastanawiać się, co właściwie mieliśmy przetestować. A do tego, od samego początku mamy swego rodzaju <em>dokumentację</em>, która mówi nam, jak mniej więcej dana funkcjonalność powinna działać. Daje nam to wygodne ramy, których możemy się trzymać przy implementacji.</p>
+<p>Co więcej, możemy być spokojni, że gdyby jakiekolwiek przyszłe zmiany w kodzie miały zepsuć dotychczasową funkcjonalność, zostaniemy o tym od razu poinformowani.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block task-card" >
+                        <h3>Zadanie: <span class="task-title">Komponent HappyHourAd w TDD</span></h3>
+                        <div class="task-content">
+                            <p>Jak wspomnieliśmy na początku tego submodułu, Twoim zadaniem jest wykonanie wszystkich poleceń, które w nim się znajdują. Innymi słowy, efektem tego zadania powinien być komponent <code>HappyHourAd</code> wykonany w podejściu TDD. Zastosuj wszystkie testy wymienione w tym submodule i zaimplementuj sprawdzane przez nie funkcjonalności.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix ">
+                                                <div class="clearfix">
+                                                                                <a href="https://kodilla.com/pl/bootcamp-task/407/640241" target="_blank" class="btn btn-info-outline">Podgląd zadania</a>
+                            <form target="_blank" class="form-inline project-link-form">
+                                <div class="form-group">
+                                    <input type="text" name="link" class="form-control" value="">
+                                </div>
+                                <button type="submit" class="btn  btn-success-outline " >Wyślij link <i class="fa fa-check"></i></button>
+                            </form>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-1089" class="card submodule " data-bootcamp-user-submodule-id="640242" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">20.3. <span>Testy integracyjne</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Na tym etapie kursu zapewne nie musimy Cię już przekonywać co do użyteczności testów. Na razie jednak mieliśmy styczność tylko z jednym ich rodzajem. To za mało, aby dać nam pewność, że nasza aplikacja na pewno działa poprawnie. Testy jednostkowe mogą wydawać się wystarczający buforem bezpieczeństwa, ale... wcale nie są. Gwarantują Ci one tylko tyle, że dana część programu (komponent, funkcja itp.) działa poprawnie w izolacji. Nie mówią nam niczego o działaniu aplikacji jako większej całości.</p>
+<p>Co mamy na myśli? Prawie każda aplikacja w dużej mierze opiera się na interakcji modułów ze sobą. Możemy mieć np. komponent listy kontaktów, który renderuje komponenty poszczególnych kontaktów, a te z kolei – np. komponenty guzików, które mają wykonać jakąś akcję po kliknięciu. Takich sytuacji, nawet w naszej aplikacji biura podróży, jest mnóstwo. I właśnie to, a więc interakcje pomiędzy komponentami również musimy testować. To, że jeden czy drugi komponent jest zbudowany poprawnie i spełnia wymagania testów jednostkowych nie jest równoznaczne z tym, że interakcja pomiędzy tymi komponentami też działa poprawnie.</p>
+<p>I tutaj to gry wchodzi drugi rodzaj testów, o którym wspominaliśmy w poprzednim module – <strong>testy integracyjne</strong>. Ich rolą jest <strong>testowanie wszelkiej interakcji pomiędzy różnymi częściami kodu</strong>. I mowa tu nie tylko o współpracy komponentów z innymi komponentami – może to być też współdziałanie komponentu z funkcją czy też współpraca funkcji ze sobą.</p>
+<p>Sama interakcja też może być bardzo różna – może to być przekazywanie argumentu, odbieranie zdarzenia, a może po prostu zwracanie jakichś danych.</p>
+<p>W tym submodule zajmiemy się więc właśnie testami integracyjnymi. Od razu jednak wyjaśnijmy jedną kwestię. W poprzednim module mówiliśmy, że testy integracyjne rzadko są rolą junior developera i faktycznie tak jest. To już trochę bardziej skomplikowany temat niż testy jednostkowe. Dlatego też nie będziemy zamęczać Cię bardzo trudnymi przykładami. Jednak nawet spotkanie z prostymi przykładami testów integracyjnych bardzo poszerzy Twoje rozumienie całego zagadnienia testowania.</p>
+<h3>Testy integracyjne na przykładzie</h3>
+<p>Dość teorii. Żeby lepiej zobrazować rolę testów integracyjnych, posłużymy się prostym przykładem. Ten przykład nie dotyczy naszej aplikacji agencji turystycznej. Jeśli chcesz, możesz założyć na jego potrzeby osobny projekt, ale nie musisz tego robić (ten przykład nie będzie częścią zadania).</p>
+<p>Powiedzmy, że piszemy prosty kalkulator. Nie będzie to nic specjalnego – będzie tylko sumował dwie liczby. Nasza aplikacja mogłaby zawierać następujące funkcje:</p>
+<pre><code class="language-js">//app.js
+
+export const add = (a, b) =&gt; a + b;
+export const formatResult = (res) =&gt; ('Result: ' + res);
+export const sumResult = (a, b) =&gt; formatResult(add(a, b));
+</code></pre>
+<p>Pierwsza funkcja (<code>add</code>) ma służyć tylko do obliczeń, a druga (<code>formatResult</code>) powinna tylko zajmować się sformatowaniem komunikatu z wynikiem. Trzecia funkcja (<code>sumResult</code>) korzysta z obu wcześniejszych funkcji do wykonania obliczenia oraz zwrócenia sformatowanego komunikatu. Proste, prawda?</p>
+<p>Wiemy już jednak, że nawet w teorii prosty kod warto przetestować. Jak mogłyby wyglądać więc testy jednostkowe w naszej aplikacji?</p>
+<pre><code class="language-js">describe('add', () =&gt; {
+  it('should add two numbers properly', () =&gt; {
+    expect(add(1, 2)).toBe(3);
+    expect(add(3, 6)).toBe(9);
+  })
+});
+
+describe('formatResult', () =&gt; {
+  it('should return proper text', () =&gt; {
+    expect(formatResult(5)).toBe('Result: 5');
+    expect(formatResult(6)).toBe('Result: 6');
+  })
+});
+</code></pre>
+<p>Jak zapewne się domyślasz, oba powyższe testy jednostkowe zwrócą nam sukces. A jak wyglądałyby testy integracyjne?</p>
+<pre><code class="language-js">describe('add and formatResult', () =&gt; {
+  it('should show text result of adding two numbers', () =&gt; {
+    const addResult = add(1, 2);
+    const formattedResult = formatResult(addResult);
+    expect(formattedResult).toBe('Result: 3');
+  })
+});
+
+describe('sumResult', () =&gt; {
+  it('should show text result of adding two numbers', () =&gt; {
+    const formattedResult = sumResult(1, 2);
+    expect(formattedResult).toBe('Result: 3');
+  })
+});
+</code></pre>
+<p>Testy integracyjne sprawdzają, czy połączenie kilku <em>rzeczy</em> (funkcji, komponentów, instancji klas, etc.) działają poprawnie. W tym wypadku test zgłosi błąd, jeśli którakolwiek funkcja nie zadziała poprawnie, lub jeśli np. wartość zwracana przez jedną funkcję jest w innym formacie, niż spodziewa się tego druga funkcja.</p>
+<p>Czyli podsumowując <strong>testy integracyjne to takie testy, które bazują na zewnętrznych elementach i testują ich integrację oraz komunikację</strong>.</p>
+<p>Nieważne czy mówimy o zwykłych funkcjach (jak teraz) czy np. komponentach (częsta sytuacja w React), zasada zawsze będzie taka sama. Błąd w którymś z elementów oznacza błąd w całym teście integracyjnym.</p>
+<h3>Testy jednostkowe vs integracyjne</h3>
+<p>Nie zawsze łatwo jest określić, co jest testem jednostkowym, a co integracyjnym. Spójrz na testy, które pisaliśmy w pliku <code>HappyHourAd.test.js</code> – sprawdzają one poprawne działanie komponentu <code>HappyHourAd</code>, ale nie ingerują w to, czy ten komponent implementuje logikę swojego działania w konstruktorze, w metodzie <code>render</code>, czy w jeszcze innej metodzie. Co więcej, gdybyśmy teraz przenieśli metodę <code>HappyHourAd.getCountdownTime</code> do osobnego pliku i zaimportowali ją w komponencie <code>HappyHourAd</code>, to korzystałby on z zewnętrznej funkcji, więc tym bardziej nasze testy – pisane jako jednostkowe – zbliżyłyby się do definicji testów integracyjnych.</p>
+<p>Ta granica nie jest sztywna i często zależy od kontekstu. Test integracyjny kilku metod komponentu może być jednocześnie testem jednostkowym komponentu. Dla developera najważniejsze jest czy testy zapewniają poprawne działanie aplikacji – a w przypadku błędu, czy pomagają ustalić miejsce wystąpienia tego błędu.</p>
+<p>Weźmy powyższy przykład – gdybyśmy nie testowali osobno funkcji <code>add</code> i <code>formatResult</code> i zastosowali wyłącznie testy integracyjne, nadal wychwycilibyśmy błąd którejkolwiek z tych funkcji. Są one bardzo proste, więc znalezienie błędu nie byłoby problemem.</p>
+<p>Natomiast jeśli mówimy o komponentach reactowych posiadających kontenery, gdybyśmy testowali wyłącznie integrację kilku komponentów, znalezienie błędu mogłoby stanowić poważny problem – dlatego testy jednostkowe poszczególnych komponentów są nam potrzebne.</p>
+<p>Dlatego najlepiej nie ograniczać się wyłącznie do testów stricte jednostkowych, ale oprócz nich warto korzystać również z testów z pogranicza jednostkowych i integracyjnych.</p>
+<h3>Wracamy do projektu biura podróży</h3>
+<p>Pokazaliśmy już prosty przykład testu integracyjnego, teraz jednak czas na wykorzystanie tej idei w trochę większej aplikacji. Ponownie wrócimy do naszej aplikacji agencji turystycznej.</p>
+<p>Musisz przyznać, że format czasu w naszym komponencie nie jest zbyt ładny. Jeśli do rozpoczęcia promocji pozostało 20 czy 40 sekund, nie wygląda to bardzo źle – ale kiedy do następnego "Happy Hour" musimy czekać więcej niż kilka minut, to widoczna liczba sekund staje się wręcz monstrualna.</p>
+<p>Niedługo Twoim zadaniem będzie napisanie nowej funkcji w folderze <code>utils</code>, która posłuży nam do konwersji liczby sekund na bardziej czytelny format. Zaczniemy jednak od zupełnie innej strony – stworzymy pustą funkcję i użyjemy jej, mimo że nie będzie jeszcze gotowa. Wtedy zajmiemy się testami komponentu <code>HappyHourAd</code>, aby oddzielić testy jednostkowe tego komponentu od testów integracyjnych.</p>
+<h3>Zalążek funkcji <code>formatTime</code></h3>
+<p>W katalogu <code>utils</code> stwórz plik <code>formatTime.js</code> i wklej do niego poniższy kod:</p>
+<pre><code class="language-js">export const formatTime = () =&gt; 'formatted time';
+</code></pre>
+<p>Jak widzisz, ta funkcja będzie zawsze zwracać ten sam ciąg znaków. Oczywiście, jest to tylko stan przejściowy, ale pozwoli nam wykorzystać tę funkcję w komponencie <code>HappyHourAd</code> i zrozumieć stosowanie mockowania funkcji w testach jednostkowych.</p>
+<p>Przejdź teraz do komponentu <code>HappyHourAd</code> i w metodzie <code>render</code> znajdź fragment kodu odpowiedzialny za decyzję, czy ma zostać wyświetlona informacja o promocji, czy czas do najbliższego południa. W tym drugim przypadku liczba sekund powinna zostać przekazana do funkcji <code>formatTime</code>, a w komponencie powinniśmy wyświetlić wartość zwracaną przez tę funkcję.</p>
+<p>Nie zapomnij o zaimportowaniu tej funkcji w pliku komponentu <code>HappyHourAd</code>!</p>
+<p>W efekcie, poza godzinami 12:00-13:00, zamiast liczby sekund powinien pojawiać się tekst "formatted time". Oznacza to też, że zaczną zgłaszać błędy wszystkie testy sprawdzające poprawność wyświetlanego odliczania czasu do kolejnej promocji. Zaraz jednak się tym zajmiemy!</p>
+<h3>Wydzielenie testów integracyjnych</h3>
+<p>Zaczniemy od stworzenia pliku <code>HappyHourAd.int.js</code>, który będzie zawierał testy integracyjne.</p>
+<p>Skopiuj do niego całą zawartość pliku <code>HappyHourAd.test.js</code>, a następnie usuń pierwszy <code>describe</code> – ten, w którym sprawdzamy tylko, czy komponent nie zwraca błędu, zawiera elementy DOM na tytuł i komentarz, oraz czy tytuł ma poprawną treść. Skasuj też dwa ostatnie <code>describe</code>, w których testujemy czy wyświetla się informacja o promocji.</p>
+<p>W rezultacie w pliku <code>HappyHourAd.int.js</code> powinny zostać tylko te testy, które sprawdzają, czy wyświetla się odpowiednia liczba sekund.</p>
+<p>Zwróć uwagę, że <em>Jest</em> nie będzie wykonywał testów z tego pliku, ponieważ w jego nazwie nie ma członu <code>test</code> – zrobiliśmy to specjalnie, ponieważ te testy zaczną działać dopiero po poprawnej implementacji funkcji <code>formatTime</code>. Dopiero wtedy zmienimy jego nazwę na <code>HappyHourAd.int.test.js</code>.</p>
+<div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Struktura katalogów</h4>
+<p>W niniejszym przykładzie testy integracyjne dla komponentu <code>HappyHourAd</code> i funkcji <code>formatTime</code> umieściliśmy w folderze, w którym jest sam komponent. Obok jego testów jednostkowych. Często spotkasz się jednak zapewne z ideą, aby testy integracyjne trzymać osobno. Np. w folderze <code>tests/int</code> w głównym katalogu aplikacji. W przypadku bardziej skomplikowanej aplikacji również warto rozważyć taką możliwość.</p>
+</div>
+<h3>Naprawienie testów jednostkowych</h3>
+<p>Zamykamy plik <code>HappyHourAd.int.js</code> i wracamy do pliku <code>HappyHourAd.test.js</code>. Chcemy, aby testy w tym pliku były testami jednostkowymi komponentu <code>HappyHourAd</code>, czyli mają one być niezależne od funkcji <code>formatTime</code>.</p>
+<p>W poprzednim module stosowaliśmy mockowanie funkcji – czyli stosowanie atrapy rzeczywistej funkcji – do sprawdzenia, czy została wykonana. W tym module mockowaliśmy obiekt <code>Date</code>, aby zwracała zawsze taką samą wartość. W tym przypadku również zastosujemy mockowanie, ale tym razem będziemy mockować funkcję importowaną z innego pliku.</p>
+<p>Wystarczy, że przed pierwszym <code>describe</code> wstawimy ten fragment kodu:</p>
+<pre><code class="language-js">beforeAll(() =&gt; {
+  const utilsModule = jest.requireActual('../../../utils/formatTime.js');
+  utilsModule.formatTime = jest.fn(seconds =&gt; seconds);
+});
+</code></pre>
+<p>Pierwsza linia importuje plik <code>formatTime</code> – zamiast <code>import</code> używamy jednak <code>jest.requireActual</code>, aby upewnić się, że importujemy faktyczny kod tego pliku, a nie jego zmockowaną wersję. Następnie zmieniamy znajdującą się w nim funkcję <code>formatTime</code> na mock funkcji, który zawsze zwróci argument przekazany tej funkcji.</p>
+<div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Wywoływanie kodu przed i po testach</h4>
+<p>Przy pisaniu testów mamy do dyspozycji różne funkcje, dostarczane przez <em>Jesta</em>. Pozwalają nam one uniknąć powielania kodu wewnątrz poszczególnych testów (<code>it</code>). Należą do nich:</p>
+<ul>
+<li><code>beforeAll</code> – wykonuje operacje <strong>przed wszystkimi</strong> testami w tym <code>describe</code>,</li>
+<li><code>afterAll</code> – wykonuje operacje <strong>po wszystkich</strong> testach w tym <code>describe</code>,</li>
+<li><code>beforeEach</code> – wykonuje operacje <strong>przed każdym</strong> testem w tym <code>describe</code>,</li>
+<li><code>afterEach</code> – wykonuje operacje <strong>po każdym</strong> teście w tym <code>describe</code>.</li>
+</ul>
+<p>Jeśli umieścimy którąś z tych funkcji poza <code>describe</code> (np. na początku pliku), zadziała ona dla wszystkich testów w tym pliku. Możemy również umieścić te funkcje wewnątrz <code>describe</code> i wtedy zadziałają tylko dla testów w tym <code>describe</code>.</p>
+</div>
+<p>Dzięki temu, kiedy w naszym komponencie wykonujemy funkcję <code>formatTime</code> z jakimś argumentem, to po prostu zwróci ona otrzymany argument. Oczywiście, dotyczy to wyłącznie testów w tym pliku.</p>
+<p>Po dodaniu tego fragmentu kodu powinniśmy już widzieć, że wszystkie testy przechodzą.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block task-card" >
+                        <h3>Zadanie: <span class="task-title">Implementacja funkcji formatTime</span></h3>
+                        <div class="task-content">
+                            <p>Twoim zadaniem jest:</p>
+<ul>
+<li>implementacja funkcji <code>formatTime</code> zgodnie z TDD,</li>
+<li>zastosowanie testów integracyjnych komponentu <code>HappyHourAd</code>.</li>
+</ul>
+<h4>Implementacja <code>formatTime</code></h4>
+<p>Funkcja <code>formatTime</code> ma za zadanie przyjmować czas w sekundach i zwracać go w formacie <code>hh:mm:ss</code>. Przeprowadzimy Cię przez cały proces od strony testów. Po Twojej stronie będzie stała za to kwestia implementacji odpowiedniego kodu zgodnie z wymaganiami, które w tych testach się znajdą. Cały proces znowu będziemy prowadzić zgodnie z TDD.</p>
+<p>Końcowym efektem powinno być następujące działanie komponentu <code>HappyHourAd</code>.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/tdd4.gif" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/tdd4.gif" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Zacznij od stworzenia pliku na testy funkcji <code>formatTime</code>. Z racji tego, że ta oraz pozostałe funkcje w <code>utils</code> są bardzo małe, możemy zastosować jeden plik do testów – nazwijmy go <code>utils.test.js</code>. Oczywiście, idea "jeden plik testu do jednego pliku z funkcją" też nie była zła, ale w przypadku tak małych funkcji takie rozdzielanie na wiele plików nie jest konieczne.</p>
+<h4>Założenia</h4>
+<p>Zastanówmy się teraz, jak ta funkcja ma działać. Powinna ona przyjmować czas w sekundach (np. jako argument). Następnie jej zadaniem jest przeliczenie, ile da nam to osobno godzin, minut i sekund. Czyli np. <code>formatTime(122)</code> powinno zwrócić nam <code>00:02:02</code>. Przy okazji widzimy tutaj też drugie założenie. Jeśli godzina, minuta czy sekunda nie jest większa niż 9, to dana liczba powinna być rozpoczęta przedrostkiem z zerem. Czyli np. <code>formatTime(122)</code> nie może nam zwrócić <code>0:2:2</code>, zamiast tego oczekujemy na <code>00:02:02</code>. Do tego byłoby dobrze, gdyby podanie złej wartości jako argumentu albo w ogóle jego nieprzekazanie powodowało zwrócenie <code>null</code>.</p>
+<h4>Co musimy przetestować?</h4>
+<p>Podsumujmy więc, co będziemy musieli sprawdzić:</p>
+<ul>
+<li>Czy jeśli nie podano argumentu, to funkcja zwróci <code>null</code>?</li>
+<li>Czy jeśli podano coś innego niż liczbę, to funkcja zwróci <code>null</code>?</li>
+<li>Czy jeśli podano liczbę mniejszą niż zero, to funkcja zwróci <code>null</code>?</li>
+<li>Czy jeśli podano poprawny argument, to funkcja zwróci dobry czas w formacie hh:mm:ss?</li>
+<li>Czy jeśli godzina, minuta albo sekunda jest mniejsza niż 0, to otrzymuje przedrostek? (ten test możemy połączyć z poprzednim)</li>
+</ul>
+<h4>Pierwszy test – Czy jeśli nie podano argumentu, to funkcja zwróci <code>null</code>?</h4>
+<p>Czas na pierwsze test.</p>
+<p>Wejdź do pliku <code>utils.test.js</code> i wklej poniższy kod:</p>
+<pre><code class="language-js">import { formatTime } from './formatTime';
+
+describe('utils', () =&gt; {
+  describe('formatTime', () =&gt; {
+
+    it('should return null if there is no arg', () =&gt; {
+      expect(formatTime()).toBe(null);
+    });
+
+  });
+});
+</code></pre>
+<p>Włącz teraz Jesta (task <code>test:watch</code>).</p>
+<p>W tej chwili nasz test powinien zwrócić oczywiście błąd (fazę <strong>Red</strong>). Twoją rolą jest teraz taka modyfikacja pliku <code>formatTime.js</code>, żeby eksportował on nową funkcję (<code>formatTime</code>). Funkcja ta musi mieć jeden parametr i jeśli przy jej odpaleniu jego wartość nie będzie ustalona, to powinna ona zwrócić <code>null</code>. Po Twoich zmianach test powinien już przejść (faza <strong>Green</strong>).</p>
+<h4>Czy jeśli podane coś innego niż liczbę, to funkcja zwróci <code>null</code>?</h4>
+<p>Ponownie my piszemy test, a Twoją rolą jest taka modyfikacja naszej funkcji, aby go spełniała.</p>
+<pre><code class="language-js">it('should return null if arg is not a number', () =&gt; {
+  expect(formatTime('abc')).toBe(null);
+  expect(formatTime(() =&gt; {})).toBe(null);
+});
+</code></pre>
+<p>Sprawdzamy tutaj dwa przypadki – podanie tekstu albo funkcji. Dlaczego nie wystarczy jeden? Zawsze lepiej sprawdzić przynajmniej dwie możliwości. W końcu istnieje możliwość, że wadliwa funkcja zwraca coś na sztywno.</p>
+<h4>Czy jeśli podano liczbę mniejszą niż zero, to funkcja zwróci <code>null</code>?</h4>
+<p>Jak wyżej.</p>
+<pre><code class="language-js">it('should return null if arg is lower than zero', () =&gt; {
+  expect(formatTime(-1)).toBe(null);
+  expect(formatTime(-2)).toBe(null);
+});
+</code></pre>
+<h4>Czy jeśli podano poprawny argument, to funkcja zwróci dobry czas w formacie hh:mm:ss?</h4>
+<p>Ten test połączymy od razu z kolejnym: Czy jeśli godzina, minuta albo sekunda jest mniejsza niż 0, to otrzymuje przedrostek?</p>
+<pre><code class="language-js">it('should return time in hh:mm:ss if arg is proper', () =&gt; {
+  expect(formatTime(122)).toBe('00:02:02');
+  expect(formatTime(3793)).toBe('01:03:13');
+  expect(formatTime(120)).toBe('00:02:00');
+  expect(formatTime(3604)).toBe('01:00:04');
+});
+</code></pre>
+<h4>Przydatne informacje</h4>
+<p>Funkcja <code>formatTime</code> przyjmuje liczbę sekund. Jak obliczyć z niej liczbę godzin, minut i sekund?</p>
+<p>Zacznijmy od sekund – nasz format <code>hh:mm:ss</code> ma wyświetlać sekundy z zakresu od <code>0</code> do <code>59</code>. Innymi słowy, będzie to reszta z dzielenia (modulo, czyli <code>%</code>) argumentu funkcji przez <code>60</code>. Na wypadek, gdyby argument nie był liczbą całkowitą, warto osiągnięty wynik zaokrąglić w dół za pomocą <code>Math.floor</code>.</p>
+<p>Przy minutach będzie już nieco bardziej skomplikowanie – najpierw musimy argument funkcji podzielić przez <code>60</code>. Dalsze kroki będą analogiczne do poprzedniego przypadku – obliczamy resztę z dzielenia przez <code>60</code>, a otrzymany wynik zaokrąglamy w dół.</p>
+<p>Godziny obliczymy bardzo podobnie do minut, z tym że w pierwszym kroku podzielimy argument funkcji przez <code>3600</code>, a drugi krok pominiemy (nie musimy obliczać reszty z dzielenia). Wynik, tak jak poprzednio, zaokrąglimy w dół.</p>
+<p>Pozostaje jeszcze kwestia zer – jeśli z powyższego obliczenia wyjdzie nam np. liczba minut równa <code>3</code>, to jak zamienić ją na tekst <code>'03'</code>? Znalezienie rozwiązania należy do Ciebie, ale podpowiemy Ci, że ta operacja po angielsku nazywa się <em>zero-padding</em>. Ta informacja bardzo Ci się przyda, ponieważ będzie to okazja do treningu znajdowania ciekawych rozwiązań w internecie.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix ">
+                                                <div class="clearfix">
+                                                                                <a href="https://kodilla.com/pl/bootcamp-task/407/640242" target="_blank" class="btn btn-info-outline">Podgląd zadania</a>
+                            <form target="_blank" class="form-inline project-link-form">
+                                <div class="form-group">
+                                    <input type="text" name="link" class="form-control" value="">
+                                </div>
+                                <button type="submit" class="btn  btn-success-outline " >Wyślij link <i class="fa fa-check"></i></button>
+                            </form>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-1090" class="card submodule " data-bootcamp-user-submodule-id="640243" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">20.4. <span>Testy w praktyce</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Wiesz już, czym są testy jednostkowe, na czym polega TDD, również testy integracyjne nie są już dla Ciebie tajemnicą. Prawdopodobnie jednak nie czujesz się jeszcze do końca pewnie w tym temacie. Często pomagaliśmy Ci przy pisaniu testów i narzucaliśmy, jakie wymagania należy testować. W tym submodule będzie inaczej.</p>
+<p>Poniżej przedstawimy trzy funkcjonalności. Twoim zadaniem jest wybranie jednej z nich i zaimlementowanie jej w naszej aplikacji biura podróży. <strong>Całość powinna być wykonana przy tym zgodnie z ideą TDD</strong>. Nie będziemy narzucać Ci, jak dokładnie "pod maską" ma być zbudowana dana funkcjonalność, musisz jednak spełnić podane wymagania. Co do testów, to też nie będziemy mówić Ci wprost, co powinno być sprawdzone. Staraj się bez naszej pomocy zastanowić, jakie testy będą potrzebne. Nie bój się, że o czymś zapomnisz. To w końcu forma treningu. Masz prawo nie zaplanować ich jeszcze idealnie.</p>
+<p>Uwaga – możesz wykorzystywać zarówno testy jednostkowe, jak i integracyjne. Możesz również wykorzystywać takie możliwości <em>Jesta</em>, których nie używaliśmy we wcześniejszych materiałach. Wiedza, którą masz już obecnie, powinna Ci jednak wystarczyć.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block task-card" >
+                        <h3>Zadanie: <span class="task-title">Trening podejścia TDD</span></h3>
+                        <div class="task-content">
+                            <h3>Opcja 1 – odliczamy czas do lata</h3>
+<p>Na górze <code>Hero</code> należy dodać nowy komponent <code>daysToSummer</code>, którego zdaniem jest pokazywanie, ile dni pozostało do lata (21 czerwca).</p>
+<p>Komponent powinien działać następująco:</p>
+<ul>
+<li>Jeśli lato już trwa (21 czerwca - 23 września), to komponent nie powinien niczego pokazywać.</li>
+<li>Jeśli aktualna pora roku jest inna niż lato, to komponent powinien pokazywać liczbę dni do najbliższego 21 czerwca w formacie <code>&lt;days&gt; days to summer</code>.</li>
+<li>Jeśli liczba dni jest równo jeden, to zamiast <code>days</code>, tekst powinien używać słowa <code>day</code> (<code>1 day to summer!</code>).</li>
+</ul>
+<p>Pamiętaj, że liczbę dni trzeba ustalić tylko raz, na starcie. Nie musimy przejmować się, że jest np. <code>23:59:59</code> i za chwilę liczba dni się zmieni. Ważne jest tylko to, jaki był dzień przy wejściu na stronę.</p>
+<p><strong>Uwaga</strong> – klient prosi o opieranie się tylko na czasie UTC. Czyli nieważne, jaki dzień jest u użytkownika, ważne, jaki w strefie czasowej naszego zleceniodawcy (UTC).</p>
+<p>W testach możesz wzorować się na tym, co robiliśmy już przy pracy nad komponentem <code>HappyHourAd</code>. W implementacji skorzystaj z pomocy JS-owgo obiektu <code>Date</code>. W razie problemów możesz również szukać podobnych przykładów w internecie. Co do samej integracji nowego komponentu do <code>Hero</code>, to wzoruj się na tym, co zrobiliśmy w przypadku <code>HappyHourAd</code>. Nie zapomnij też o odpowiednim teście.</p>
+<p>Końcowy efekt mógłby wyglądać następująco:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/tdd5.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/tdd5.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<h3>Opcja 2 – cena podczas "Happy hour</h3>
+<p>Klient chciałby zachęcić użytkowników do kupna wycieczek poprzez pokazywanie najpierw ceny podczas "Happy Hour", a dopiero później standardowej. Twoim zadaniem jest dodanie na podstronie podglądu wycieczki jeszcze jednej ceny – pomniejszonej o 20% podczas "Happy Hour". Ma być ona większa od ceny standardowej, tak aby jako pierwsza rzucała się w oczy.</p>
+<p>Powinno to wyglądać następująco:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/tdd6.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/tdd6.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Oprócz tego klient chciałby, aby ta mniejsza cena była pokazywana również:</p>
+<ul>
+<li>w opisach wycieczek na podstronie <code>Trips</code> (w miejscu "price from" i właściwej ceny, powinniśmy widzieć "price from" i zmniejszoną cenę),</li>
+<li>w opisie wycieczki na górze podstrony <code>Trip</code> (w miejscu "price from" i właściwej ceny, powinniśmy widzieć "price from" i zmniejszoną cenę).</li>
+</ul>
+<p>Wykonanie może być dowolne. Nasza propozycja jest jednak taka, aby stworzyć nową funkcję (np. <code>promoPrice</code>) w <code>utils</code> i na niej się oprzeć. Funkcja ta powinna przyjmować dwa argumenty – kwotę i procenty, o które powinna być pomniejszona. Działanie tej funkcji powinno być dość proste. Np. <code>promoPrice(200, 20)</code> powinno zwrócić nam <code>160</code>. Gdy już będzie gotowa, reszta zadania powinna być już stosunkowo łatwa.</p>
+<h3>Opcja 3 – różne numery telefonów</h3>
+<p>Klient pozwala, aby jego pracownicy obsługiwali klientów telefonicznie poza biurem. Dlatego też każdy pracownik obsługi ma swój własny telefon służbowy z indywidualnym numerem. Tym samym numer telefonu na stronie nie powinien być stały, lecz różny zależnie tego, który pracownik pełnie aktualnie dyżur telefoniczny. Dodatkowo, jeśli to godziny nocne, a więc nikt nie pełni dyżuru, to zamiast numeru telefonu powinien pokazywać się komunikat <code>The office opens at 8:00 UTC</code>.</p>
+<p>Twoim zadaniem jest więc taka modyfikacja aplikacji, aby numer telefon był zgodny z poniższą listą:</p>
+<ul>
+<li><strong>8:00 - 12:00</strong> - Amanda, 678.243.8455</li>
+<li><strong>12:00 - 16:00</strong> - Tobias, 278.443.6443</li>
+<li><strong>16:00 - 22:00</strong> - Helena, 167.280.3970</li>
+</ul>
+<p><strong>Uwaga</strong> – pamiętaj, że opieramy się na strefie czasowej klienta. Nieważne więc, jaka jest lokalna godzina użytkownika, Ty bierz pod uwagę tylko strefę czasową UTC.</p>
+<p>Numer telefonu jest teraz częścią komponentu <code>Header</code>. Dla ułatwienia pracy i samych testów dobrze byłoby go wydzielić jako nowy komponent. W zdaniu możesz często zaglądać do przykładu z <code>HappyHourAd</code>. Może być dla Ciebie niezwykle pomocny.</p>
+<p>Gdy zadanie będzie już gotowe, zmodyfikowaną aplikację wyślij swojemu Mentorowi. Jeżeli zostanie Ci czas, możesz też zaimplementować pozostałe funkcjonalności z listy. Pamiętaj jednak, że <strong>do zaliczenia zadania wystarczy zakodowanie jednej z opcji</strong>.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix ">
+                                                <div class="clearfix">
+                                                                                <a href="https://kodilla.com/pl/bootcamp-task/407/640243" target="_blank" class="btn btn-info-outline">Podgląd zadania</a>
+                            <form target="_blank" class="form-inline project-link-form">
+                                <div class="form-group">
+                                    <input type="text" name="link" class="form-control" value="">
+                                </div>
+                                <button type="submit" class="btn  btn-success-outline " >Wyślij link <i class="fa fa-check"></i></button>
+                            </form>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-1091" class="card submodule " data-bootcamp-user-submodule-id="640244" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">20.5. <span>Quiz powt&oacute;rkowy</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Na koniec tego modułu przygotowaliśmy dla Ciebie quiz powtórkowy. Pomoże Ci on powtórzyć wiedzę z poprzednich modułów.</p>
+<p>Odpowiedzi tego quizu nie są nigdzie zapisywane, więc są tylko do Twojej wiadomości. Ten quiz ma Ci posłużyć jako pomoc w nauce – dlatego pod każdym pytaniem znajdziesz guzik, który sprawdzi poprawność Twoich odpowiedzi oraz poda Ci wyjaśnienie zagadnienia poruszanego w tym pytaniu.</p>
+
+        <div class='kodilla-quiz'>
+      
+        <article class='question' data-type='multiple-choice'>
+      
+        <header>
+          <p><em>1.</em> W kodzie HTML znajduje się element <code>div</code>, a w nim jego bezpośredni potomek, który jest linkiem. Które właściwości CSS nadane na ten <code>div</code> odziedziczy jego dziecko (zakładając, że nie nadamy na element potomny żadnych innych stylów)?</p>
+
+        </header>
+        <ol type='a' class='answers' data-correct='2,3,6,9,10,11'>
+          <li><label><input type='checkbox'> <code>display</code></label></li>
+<li><label><input type='checkbox'> <code>color</code></label></li>
+<li><label><input type='checkbox'> <code>font-weight</code></label></li>
+<li><label><input type='checkbox'> <code>text-transform</code></label></li>
+<li><label><input type='checkbox'> <code>text-decoration</code></label></li>
+<li><label><input type='checkbox'> <code>padding</code></label></li>
+<li><label><input type='checkbox'> <code>font-family</code></label></li>
+<li><label><input type='checkbox'> <code>width</code></label></li>
+<li><label><input type='checkbox'> <code>border-color</code></label></li>
+<li><label><input type='checkbox'> <code>text-shadow</code></label></li>
+<li><label><input type='checkbox'> <code>font-size</code></label></li>
+<li><label><input type='checkbox'> <code>font-family</code></label></li>
+        </ol>
+        <div class="buttons text-center">
+          <button class="button-ok btn btn-primary">Sprawdź odpowiedź</button>
+        </div>
+      
+      
+        <div class='explanation'>
+          <div class="bc-note alert-success">
+            <h4 class="alert-heading text-center">Wyjaśnienie</h4>
+      <p>W CSS niektóre właściwości mogą być dziedziczone przez elementy potomne.</p>
+<p>Zwykle właściwość <code>color</code> jest dziedziczona, ale przeglądarki nadają linkom własne, domyślne kolory, więc jeżeli nie nadamy na element-dziecko dodatkowych stylów, nie odziedziczy on koloru czcionki po elemencie-rodzicu.</p>
+<p>To, które właściwości się dziedziczą, a które nie, możesz sprawdzić w specyfikacji CSS. Jednak znacznie szybszym i wygodniejszym sposobem, w razie takich wątpliwości, jest przetestowanie tego za pomocą narzędzi developerskich lub CodePena.</p>
+
+          </div>
+        </div>
+      
+        </article>
+      
+        <article class='question' data-type='multiple-choice'>
+      
+        <header>
+          <p><em>2.</em> Które z poniższych tagów HTML mają znaczenie semantyczne?</p>
+
+        </header>
+        <ol type='a' class='answers' data-correct='0,1,3,4,5,6,8,9,10'>
+          <li><label><input type='checkbox'> aside</label></li>
+<li><label><input type='checkbox'> nav</label></li>
+<li><label><input type='checkbox'> span</label></li>
+<li><label><input type='checkbox'> h2</label></li>
+<li><label><input type='checkbox'> footer</label></li>
+<li><label><input type='checkbox'> summary</label></li>
+<li><label><input type='checkbox'> ruby</label></li>
+<li><label><input type='checkbox'> div</label></li>
+<li><label><input type='checkbox'> main</label></li>
+<li><label><input type='checkbox'> time</label></li>
+<li><label><input type='checkbox'> article</label></li>
+        </ol>
+        <div class="buttons text-center">
+          <button class="button-ok btn btn-primary">Sprawdź odpowiedź</button>
+        </div>
+      
+      
+        <div class='explanation'>
+          <div class="bc-note alert-success">
+            <h4 class="alert-heading text-center">Wyjaśnienie</h4>
+      <p>Tagi o znaczeniu semantycznym wskazują przeglądarce, jaka treść się w nich znajduje. Przeglądarka zatem "wie", że treść między znacznikiem <code>&lt;h2&gt;</code> a <code>&lt;/h2&gt;</code> to nagłówek, wewnątrz tagu <code>&lt;footer&gt;</code> to stopka itp. Oprócz tagów semantycznych istnieją także tagi niesemantyczne (generyczne), czyli takie, które nic nie mówią przeglądarce na temat tego, co znajduje się wewnątrz nich. Takimi tagami są <code>div</code> i <code>span</code>. Nieco więcej na temat semantyki możesz przeczytać <a href="https://html.com/semantic-markup/" target="_blank">tutaj</a>.</p>
+
+          </div>
+        </div>
+      
+        </article>
+      
+        <article class='question' data-type='multiple-choice'>
+      
+        <header>
+          <p><em>3.</em> Które poniższe stwierdzenia na temat HTML5 są prawdziwe?</p>
+
+        </header>
+        <ol type='a' class='answers' data-correct='0,4'>
+          <li><label><input type='checkbox'> Na jednej stronie można używać wielu elementów <code>&lt;h1&gt;</code>.</label></li>
+<li><label><input type='checkbox'> Na jednej stronie może znajdować się tylko jeden element <code>&lt;h1&gt;</code>.</label></li>
+<li><label><input type='checkbox'> Na jednej stronie może znajdować się po jednym elemencie <code>&lt;header&gt;</code> i <code>&lt;footer&gt;</code>.</label></li>
+<li><label><input type='checkbox'> Element <code>&lt;footer&gt;</code> przeznaczony jest tylko do stworzenia stopki całej strony.</label></li>
+<li><label><input type='checkbox'> Na jednej stronie może znajdować się wiele elementów <code>&lt;header&gt;</code> i <code>&lt;footer&gt;</code>.</label></li>
+<li><label><input type='checkbox'> Zawsze należy domykać wszystkie tagi, nawet te pojedyncze, np. <code>&lt;img src=&quot;logo.jpg&quot; /&gt;</code>.</label></li>
+<li><label><input type='checkbox'> Atrybuty (np. <code>src</code> w tagu <code>img</code>) zawsze należy umieszczać w cudzysłowie, inaczej nie będą działać.</label></li>
+<li><label><input type='checkbox'> Nie można używać wielkich liter w nazwach tagów i atrybutów, np. <code>&lt;IMG SRC=&quot;logo.jpg&quot;&gt;</code>.</label></li>
+<li><label><input type='checkbox'> HTML5 jest całkowicie niekompatybilny ze starszymi przeglądarkami.</label></li>
+<li><label><input type='checkbox'> W HTML5 należy używać wyłącznie semantycznych tagów.</label></li>
+
+        </ol>
+        <div class="buttons text-center">
+          <button class="button-ok btn btn-primary">Sprawdź odpowiedź</button>
+        </div>
+      
+      
+        <div class='explanation'>
+          <div class="bc-note alert-success">
+            <h4 class="alert-heading text-center">Wyjaśnienie</h4>
+      <p>Mogło Cię zaskoczyć, jak wiele z powyższych twierdzeń jest fałszywych. HTML5 jest dość "liberalny" w kwestii tego, co będzie działać, co absolutnie nie znaczy, że jest to zachęta do pisania niestarannego kodu. Specyfikacja HTML5 ściśle określa, w jaki sposób przeglądarki powinny parsować kod, tak by w każdej pojawiło się takie samo drzewo DOM.</p>
+<p>Jeżeli chodzi o semantyczne elementy HTML5, takie jak <code>&lt;header&gt;</code> i <code>&lt;footer&gt;</code>, swobodnie możemy używać wielu "egzemplarzy" każdego z nich na stronie, tam, gdzie pasują do "kontekstu". Przykładowo, tagu <code>&lt;footer&gt;</code> możemy użyć nie tylko do stopki całej strony, ale też np. do stopki każdego posta na blogu.</p>
+
+          </div>
+        </div>
+      
+        </article>
+      
+        </div>
+        
+<style>
+  .kodilla-quiz .question {
+    margin-bottom: 1.5em;
+  }
+  .kodilla-quiz .explanation {
+    display: none;
+  }
+  .kodilla-quiz li>label {
+    display: inline-block;
+    padding-top: 1px;
+    vertical-align: top;
+  }
+</style>
+<script>
+  if(typeof initQuizzes == 'undefined'){
+    function initQuizzes(){
+      var types = {
+        'multiple-choice': initMultipleChoice,
+      };
+
+      var questions = document.querySelectorAll('.kodilla-quiz .question');
+
+      for(var i=0; i<questions.length; i++){
+        var question = questions[i];
+        var initFunc = types[question.dataset.type];
+
+        if(typeof(initFunc) != 'undefined' && !question.classList.contains('initiated')){
+          question.classList.add('initiated');
+          initFunc(question);
+        }
+      }
+    }
+
+    function initMultipleChoice(question){
+      var answers = question.querySelector('.answers');
+      var inputs = answers.querySelectorAll('input');
+      var buttons = question.querySelector('.buttons');
+      var buttonOK = buttons.querySelector('.button-ok');
+      var explanation = question.querySelector('.explanation');
+      var correct = question.querySelector('[data-correct]').dataset.correct.split(',');
+
+      buttonOK.addEventListener('click', function(e){
+        e.preventDefault();
+
+        var inputsChecked = answers.querySelectorAll('input:checked');
+        if(inputsChecked.length == 0){
+          alert('Wybierz co najmniej jedna odpowiedź');
+          return;
+        }
+
+        correct.forEach(function(index){
+          inputs[index].parentNode.parentNode.classList.add('text-success', 'text-bold');
+        });
+
+        for (var i = 0; i < inputs.length; i++) {
+          var input = inputs[i];
+          var li = input.parentNode.parentNode;
+          input.setAttribute('disabled', true);
+          
+          if(input.checked){
+            li.classList.add('text-bold');
+            
+            if(!li.classList.contains('text-success')){
+              li.classList.add('text-danger');
+            }
+          }
+
+        }
+        
+        if(explanation) explanation.style.display = 'block';
+        buttons.setAttribute('hidden', true);
+      });
+    }
+  }
+  initQuizzes();
+</script>
+
+      
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-read btn-success-outline "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-1152" class="card submodule " data-bootcamp-user-submodule-id="640245" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">20.6. <span>Praca zespołowa w Gicie</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Już wkrótce czeka Cię praca w projekcie zespołowym. Dlatego w tym miejscu poszerzymy nieco Twoje wiadomości o Gicie, aby dać Ci trochę czasu na zapoznanie się z tym tematem.</p>
+<p>W tym submodule dowiesz się, jak używać repozytorium w pracy zespołowej. Opanowanie tego będzie bardzo pomocne podczas projektu tworzonego z innymi programistami. Wykorzystaj ten czas na ćwiczenia i zrozumienie specyfiki Gita, aby później móc w pełni skupić się na zadaniach projektowych.</p>
+<h3>Git</h3>
+<p>Umiesz już pracować na zdalnym repozytorium. Teraz jednak pojawi się nowe wyzwanie – praca wielu developerów w tym samym projekcie. Na szczęście, Git pomoże nam poradzić sobie z tym wyzwaniem!</p>
+<p>Zanim przejdziemy dalej, wyjaśnijmy sobie pojęcie odgałęzienia (ang. <em>branch</em>). Do tej pory wszystkie operacje w naszym repozytorium wykonywaliśmy na branchu o nazwie <code>master</code>. Jest to domyślny, główny branch w prawie każdym repozytorium. W Twoim repozytorium drugi commit wynika z pierwszego, a trzeci z drugiego, czyli każdy commit jest następstwem poprzedniego i leżą na tej samej "gałęzi".</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-0.gif" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-0.gif" alt="image" style="width: auto;"></a>
+<p>Odgałęzienia pozwalają na to, aby po którymś commicie rozdzielić te ścieżki, a następnie z powrotem je połączyć.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-1.gif" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-1.gif" alt="image" style="width: auto;"></a>
+<p>Dzięki temu możliwe są różne scenariusze pracy, np. kilkoro developerów może pracować równolegle nad jednym projektem, albo możesz w swoim projekcie pracować nad kilkoma niezależnymi funkcjonalnościami.</p>
+<p>Zwykle też stosuje się zasadę, że do brancha <code>master</code> lądują tylko działające wersje — czyli np. projekt z gotowymi trzema podstronami. Od tej wersji na innym odgałęzieniu pracuje się np. nad kolejną podstroną, i dopiero kiedy ją skończysz scala swoje zmiany z branchem <code>master</code>.</p>
+<h3>Branche - zaczynamy pracę na odgałęzieniach</h3>
+<p>Wiesz już czym jest odgałęzienie, czyli <em>branch</em>. Przejdźmy teraz do praktyki. W naszych przykładach w tym submodule będziemy udawać, że nad kodem <em>HTML</em> w Twoim projekcie pracuje dwoje developerów — Tadek i Kasia. Tadek zmienia tylko treści, a Kasia — klasy.</p>
+<div class="bc-note alert-warning">
+<h4 class="alert-heading text-center">Projekt do treningu pracy na branchach</h4>
+<p>Do treningu pracy na branchach możesz stworzyć nowy projekt albo wykorzystać projekt <code>learning-git</code> założony w trakcie nauki podstaw Gita.</p>
+<p>Jeśli wybierzesz pierwszą opcję, stwórz plik <code>index.html</code> z dowolną zawartością.</p>
+</div>
+<p>Otwórz projekt, na którym trenujesz znajomość Gita. Na początku sprawdź historię zmian oraz czy nie masz jakichś zmian w plikach, które nie zostały zapisane w commicie — jeśli jakieś są, zapisz commit. Historia Twojego projektu powinna pokazywać przy najnowszym commicie branche <code>master</code> i <code>origin/master</code> (jeśli tak nie jest, wykonaj <code>git push</code>).</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-2.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-2.png" alt="image" style="width: auto;"></a>
+<p>Dodajmy sobie teraz nowy branch na najnowszym commicie. Wykonaj komendę <code>git branch devTadek</code> i ponownie wyświetl historię zmian.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-3.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-3.png" alt="image" style="width: auto;"></a>
+<p>Na razie niewiele się zmieniło — przy najnowszym commicie pojawiło się tylko oznaczenie naszego nowego brancha. Sprawdźmy, co się stanie, kiedy dodamy nowy commit. Dodaj paragraf tekstu tuż przed zamknięciem <code>body</code> w pliku <em>index.html</em> i zapisz nowy commit.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-4.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-4.png" alt="image" style="width: auto;"></a>
+<p>Przy nowym commicie jest teraz tylko oznaczenie <code>HEAD -&gt; master</code>, które oznacza, że ten commit jest w branchu <code>master</code>, oraz że właśnie na tym branchu w tej chwili pracujemy — tzn. że nowe commity będą zapisywane w branchu <code>master</code>.</p>
+<div class="bc-note alert-info">
+<h4 class="alert-heading text-center">Co oznacza HEAD?</h4>
+<p>Słowo <strong>HEAD</strong> w Gicie oznacza commit, w oparciu o który pracujemy. Zwykle będzie to najnowszy commit w branchu, na którym pracujemy.</p>
+<p>Pamiętaj, że zdalne repozytorium nie różni się niczym od lokalnego — w nim również jest branch master (oznaczony jako <code>origin/master</code>) oraz HEAD (oznaczony jako <strong>origin/HEAD</strong>).</p>
+</div>
+<p>Poprzedni commit jest dalej oznaczony branchami <code>origin/master</code> (<code>master</code> na repozytorium zdalnym), <strong>origin/HEAD</strong> (aktualna wersja na repozytorium zdalnym) oraz <code>devTadek</code> (nasz nowy branch lokalny). Przełączmy się teraz na ten ostatni branch za pomocą komendy <code>git checkout devTadek</code> i sprawdźmy, co się zmieni w historii zmian.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-5.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-5.png" alt="image" style="width: auto;"></a>
+<p>Zadziało się teraz kilka istotnych rzeczy:</p>
+<ol>
+<li>oznaczenie <code>HEAD -&gt;</code> jest teraz przy branchu <code>devTadek</code>, co mówi nam, że przełączyliśmy się na ten branch i teraz nowe commity będą dodawanego właśnie do tego odgałęzienia,</li>
+<li>jeśli sprawdzisz teraz plik <em>index.html</em>, zobaczysz że nie ma w nim najnowszych zmian,</li>
+<li>w wyniku <code>git tree</code> nie widzimy najnowszego commita, który wykonaliśmy w branchu <code>master</code> – to normalne zachowanie, ponieważ <code>git tree</code> pokazuje nam tylko historię istotną z punktu widzenia aktywnego brancha. Aby zobaczyć wszystkie branche, użyj komendy <code>git tree --all</code>.</li>
+</ol>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-6.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-6.png" alt="image" style="width: auto;"></a>
+<p>Zanim przejdziemy dalej przypomnijmy:</p>
+<ul>
+<li><code>git branch nazwa-brancha</code> tworzy nowy branch,</li>
+<li><code>git checkout nazwa-brancha</code> zmienia aktywny branch.</li>
+</ul>
+<p>Jeśli chcesz wykonać obie te operacje na raz, wystarczy że wpiszesz komendę <code>git checkout -b nazwa-brancha</code>. Przetestujmy to tworząc branch <code>devKasia</code> i przełączając się na niego za pomocą komendy <code>git checkout -b devKasia</code>.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-7.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-7.png" alt="image" style="width: auto;"></a>
+<p>Zarówno branch <code>devKasia</code>, jak i <code>devTadek</code> są oznaczone przy tym samym commicie — tzn. ten commit jest najnowszym w obu tych branchach. Mimo tego, widzimy że tylko jeden z branchy jest aktywny.</p>
+<p>Jak zapewne pamiętasz, Kasia zmienia klasy, więc dodaj teraz klasę na jednym elemencie, np. <code>h1</code>, i zapisz commit. Następnie wykonaj komendę <code>git tree --all</code>.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-8.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-8.png" alt="image" style="width: auto;"></a>
+<p>Zauważ, że wzdłuż lewej krawędzi okna terminala pojawiły się dodatkowe znaki. Tworzą one prosty graf, który pokazuje przebieg zmian w branchach. Nadal commit na samej górze jest najnowszy, ale nie wynika on z drugiego commita, wykonanego na branchu <code>master</code>.</p>
+<p>Powtórzmy to samo dla brancha <code>devTadek</code> – zanim spojrzysz na kolejną ilustrację, spróbuj samodzielnie wykonać następujące zadania:</p>
+<ol>
+<li>przełącz się na brancha <code>devTadek</code>,</li>
+<li>zmień treść w <code>h2</code> lub <code>p</code> (ważne, aby ta zmiana nie była w tej samej linii, w której wprowadzaliśmy zmiany na innych branchach),</li>
+<li>zapisz nowy commit i wyświetl historię dla wszystkich branchy.</li>
+</ol>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-9.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-9.png" alt="image" style="width: auto;"></a>
+<p>I znów powtórka — tym razem dla brancha <code>master</code> zmieniamy <code>title</code> wewnątrz <code>head</code> i zapisujemy commit. Następnie wracamy na branch <code>devKasia</code>, dodajemy klasę na <code>body</code> i zapisujemy commit. Zobaczmy jak po tych wszystkich operacjach wygląda historia zmian dla wszystkich branchy.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-10.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-10.png" alt="image" style="width: auto;"></a>
+<p>Zauważ, że commity nie są wyświetlane chronologicznie. Komenda <code>git tree</code> automatycznie poukładała nam commity według branchy (tj. została domyślnie dodana flaga <code>--topo-order</code>), aby pokazać uporządkowany graf. Możemy zmienić to za pomocą flagi <code>--date-order</code>.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-11.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-11.png" alt="image" style="width: auto;"></a>
+<p>Jest to dokładnie ten sam graf, jednak w związku z chronologicznym ułożeniem commitów, ścieżki grafu muszą się krzyżować. Dlatego tego widoku będziemy używać tylko, kiedy istotna będzie chronologiczna kolejność commitów.</p>
+<p>Możesz teraz przełączać się pomiędzy branchami, aby zobaczyć, jak będzie zmieniać się wykres historii repozytorium oraz zawartość w plikach. Nie dodawaj jednak kolejnych commitów, aby nie powodować konfliktów (nie zmieniać tej samej linii kodu w więcej niż jednym branchu). Konfliktami zajmiemy się nimi w późniejszym rozdziale.</p>
+<p>Pamiętasz jeszcze komendę <code>git diff</code>, za pomocą której porównywaliśmy dwa commity? Podawaliśmy wtedy ich identyfikatory, bądź nazwy tagów, które na nich ustawiliśmy. Możesz teraz porównywać zmiany podając w tej komendzie nazwy branchów. W ramach ćwiczenia sprawdź, czym różnią się od siebie:</p>
+<ul>
+<li>branche devTadek i devKasia,</li>
+<li>branch devKasia i commit przy którym jest <code>origin/master</code>,</li>
+<li>branch devTadek i commit przy którym jest <code>origin/master</code>.</li>
+</ul>
+<div class="bc-note alert-danger">
+<h4 class="alert-heading text-center">Ważne - branch master</h4>
+<p>W naszych przykładach pominęliśmy jedną z kluczowych dobrych praktyk.</p>
+<p>Najnowszym commitem w branchu <code>master</code> powinna być zawsze wersja projektu, która jest gotowa do opublikowania.</p>
+<p>Nie oznacza to, oczywiście, że nie można zapisywać commitów, które nie są wersjami gotowymi do opublikowania — ale takie commity zapisujemy na innym branchu. Nie jest to również problemem przy pracy zespołowej, ponieważ każdy branch można wysłać do zdalnego repozytorium za pomocą komendy <code>git push</code>.</p>
+<p>Wytłumaczymy to na przykładzie: zaczynając pracę nad projektem możesz od razu pracować na branchu <code>homepage</code>. Możesz zapisywać kolejne commity np. po dodaniu kodu HTML nagłówka, ostylowaniu go, dodaniu responsive, etc. Po zakończeniu prac nad stroną główną i przetestowaniu pod względem ew. błędów, możesz wykonać merge (czyli scalenie zmian, opisane w kolejnym rozdziale) do brancha <code>master</code>. Następnie rozpoczynasz pracę np. na branchu <code>contact-page</code>.</p>
+<p>Dzięki temu, jeśli klient poprosi Cię o podgląd bieżącej wersji, będziesz zawsze wiedzieć, że na branchu <code>master</code> jest wersja, która nadaje się do zaprezentowania klientowi.</p>
+<p>Co więcej, w późniejszym rozdziale dowiesz się, w jaki sposób publikować swoje strony za pomocą usługi <strong>GitHub Pages</strong> - wtedy zawsze branch master będzie opublikowany na serwerze. Tym bardziej w takiej sytuacji nie chcemy publikować np. nieostylowanych elementów lub stron z błędami.</p>
+<p>Dlatego powtórzymy jeszcze raz — nigdy nie zapisuj commitów na branchu <code>master</code>. Przełączaj się na ten branch wyłącznie w celu wykonania scalenia zmian (merge) z innego brancha.</p>
+</div>
+<h3>Merge - scalamy zmiany z różnych odgałęzień</h3>
+<p>W naszym projekcie mamy równolegle wprowadzane zmiany w branchach <code>master</code>, <code>devKasia</code> i <code>devTadek</code>. Czas scalić te zmiany do jednej wersji w branchu <code>master</code>.</p>
+<p>W tym celu przełącz się na branch <code>master</code> i sprawdź, jak wygląda historia zmian wszystkich odgałęzień.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-12.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-12.png" alt="image" style="width: auto;"></a>
+<p>Operacja merge zaktualizuje nasz aktualny branch (<code>master</code>) o zmiany wprowadzone we wskazanym w komendzie branchu (w tym przypadku <strong>devKasia)</strong>. W tym celu wpisz komendę <code>git merge devKasia</code>. Po tej komendzie wyświetli się edytor opisu, analogicznie jak przy zapisywaniu commita. W naszym wypadku możemy z niego po prostu wyjść, a następnie sprawdzić historię repozytorium.</p>
+<div class="bc-note alert-warning">
+<h4 class="alert-heading text-center">Może pojawić się konflikt</h4>
+<p>W zależności od zmian wykonanych w plikach, w trakcie komendy <code>git merge</code> może pojawić się konflikt, o czym poinformuje Cię komunikat w terminalu.</p>
+<p>W takim wypadku możesz:</p>
+<ul>
+<li>przejść do rozdziału "Rozwiązywanie konfliktów", aby nauczyć się jak go rozwiązać, lub</li>
+<li>wykonać ponownie ten rozdział w innym projekcie (może być to nowy projekt), upewniając się, że pomiędzy liniami zmienianymi w różnych branchach występuje przynajmniej jedna linia, która nie ulega zmianie.</li>
+</ul>
+</div>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-13.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-13.png" alt="image" style="width: auto;"></a>
+<p>Przeanalizujmy, co się wydarzyło. W branchu <code>master</code> pojawił się nowy commit o nazwie <em>"Merge branch 'devKasia'"</em>. Za to sam branch <code>devKasia</code> pozostał niezmieniony i jest nadal na równoległej ścieżce w grafie.</p>
+<p>Wykonajmy teraz ponowny merge, tym razem zaktualizujemy branch <code>master</code> o zmiany z brancha <code>devTadek</code>. Jeśli wszystko poszło pomyślnie, możesz obejrzeć wykres historii repozytorium w domyślnym, oraz chronologicznym sortowaniu.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-14.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-14.png" alt="image" style="width: auto;"></a>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-15.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-15.png" alt="image" style="width: auto;"></a>
+<p>Za chwilę będziemy kontynuować pracę na branchach <code>master</code> oraz <code>devKasia</code>, więc potrzebujemy, aby ten drugi "dogonił" pierwszy. W tym celu potrzebujemy zrobić ponownie merge, tyle że tym razem chcemy zaktualizować branch <code>devKasia</code> o zmiany z brancha <code>master</code>. W tym celu musimy przełączyć się na branch, który chcemy zaktualizować, a dopiero potem wykonać merge.</p>
+<p>Komendy do wykonania to:</p>
+<ul>
+<li><code>git checkout devKasia</code></li>
+<li><code>git merge master</code></li>
+</ul>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-16.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-16.png" alt="image" style="width: auto;"></a>
+<p>Tym razem przy merge'u nie powstał nowy commit. Wynika to z tego, że w momencie wykonywania merge'a, na tych dwóch branchach nie było zmian na dwóch, równoległych ścieżkach. Na razie wystarczy jak zapamiętasz, że przy merge'u nie zawsze powstanie nowy commit.</p>
+<h3>Przykładowy scenariusz pracy zespołowej</h3>
+<p>Wyobraź sobie, że dołączasz do projektu, nad którym cały czas pracuje inny developer. Twoim zadaniem będzie wprowadzenie zmian, o które poprosił klient po obejrzeniu wstępnej wersji projektu.</p>
+<p>Lepiej nawet sobie nie wyobrażać jak miałaby wyglądać Wasza praca bez Gita. Co chwilę musielibyście rozmawiać o tym, czy możesz wprowadzić zmianę w jakimś pliku, bo może akurat kolega z zespołu coś zmienił w tym pliku. I zapewne wysyłalibyście sobie pliki mailami, zaśmiecając sobie skrzynki mailowe dziesiątkami zipów z projektem</p>
+<p>Git rozwiązuje te problemy i pozwala, aby każdy pracował nad swoimi zadaniami. Możesz przełączyć się na commit zawierający dokładnie tę wersję projektu, którą zobaczył klient, mimo że było to już kilka dni temu i w tym czasie główny developer pracował dalej nad projektem. Zacznijmy od spojrzenia, jak może wyglądać historia commitów:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-17.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-17.png" alt="image" style="width: auto;"></a>
+<p>Jak już wiesz, przyjęło się, że główny branch nazywa się <code>master</code> i założymy, że to właśnie w tym branchu główny developer zapisuje kolejne działające wersje (szerzej omówimy tę kwestię w późniejszym rozdziale). Dlatego na poniższej ilustracji na zielono zaznaczyliśmy gdzie znajduje się aktualnie najnowszy commit w branchu master. Natomiast na czerwono zaznaczyliśmy commit, od którego musisz zacząć pracę.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-18.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-18.png" alt="image" style="width: auto;"></a>
+<p>Jak widzisz, powyższa ilustracja pokazuje stan już po przełączeniu się na wybrany commit. W tym celu w komendzie <code>git checkout</code> podaliśmy identyfikator commita zamiast nazwy brancha.</p>
+<p>Kiedy już przełączysz się na wspomniany commit, utworzysz na nim nowe odgałęzienie, czyli <em>branch</em>. Na tym etapie niewiele się zmieni:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-19.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-19.png" alt="image" style="width: auto;"></a>
+<p>Kiedy zaczniesz wprowadzać zmiany i zapiszesz commit, zobaczysz, że teraz Twoje zmiany biegną równolegle do zmian na branchu <code>master</code>. Komenda <code>git tree</code>pokaże wtedy odgałęzienie na wykresie. Dokładnie o to nam chodziło — dzięki temu możesz spokojnie pracować dalej nad uwagami od klienta.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-20.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-20.png" alt="image" style="width: auto;"></a>
+<p>Załóżmy, że kończysz pracę nad tymi zmianami akurat w momencie, kiedy główny developer szykuje się do zaprezentowania nowych stron. W związku z tym potrzebujecie scalić Wasze zmiany do wspólnej wersji. Taka operacja nazywa się merge i została przedstawiona na poniższej ilustracji:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-21.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-21.png" alt="image" style="width: auto;"></a>
+<p>Merge może przebiec bez żadnych problemów albo mogą wystąpić konflikty. Git jednak świetnie radzi sobie, nawet jeśli zmiany były wprowadzane w tym samym pliku, o ile jest w stanie rozróżnić te zmiany. Oznacza to, że jeśli w kodzie była jakaś linia zmieniona przez Ciebie, ale nie była ona zmieniana w drugim branchu, Git powinien poradzić sobie z tą sytuacją bezkonfliktowo.</p>
+<p>Jeśli jednak w obu branchach zmieniana była ta sama linia kodu albo został dopisany nowy kod na końcu pliku, Git nie będzie wiedział którą zmianę zachować, albo w jakiej kolejności dodać nowe linie z obu branchów. Wtedy powstanie <strong>konflikt</strong>, tzn. w plikach zostaną oznaczone fragmenty, z którymi Git ma problem. Pozwoli Ci to na rozwiązanie konfliktów, czyli ręczne doprowadzenie pliku do takiego stanu, w jakim powinien być po zakończeniu merge’a.</p>
+<p>Ze względu na to, że merge łączy zmiany z dwóch branchów, warto pamiętać o sprawdzeniu projektu po wykonaniu merge’a. Pozwoli to uniknąć sytuacji, kiedy w czasie pracy na dwóch branchach zmieniły się np. style dla <code>body</code>, przez które Twoje zmiany mogą po merge’u wyglądać inaczej niż w trakcie pracy nad zmianami.</p>
+<p>Akurat w tym wypadku mieliście szczęście — nie było żadnych konfliktów. Kiedy główny developer pracował nad nowymi podstronami, Twoim zadaniem było poprawienie wcześniejszych, więc nie wchodziliście sobie w drogę, nawet kiedy zmienialiście te same pliki <em>.scss</em>. Dzięki temu merge został wykonany automatycznie i zajął tylko kilka sekund. Po sprawdzeniu wysyłacie podgląd projektu klientowi, który dzięki Waszej równoległej pracy zobaczy zarówno poprawki wykonane po jego uwagach, jak i nowy fragment projektu.</p>
+<h3>Rozwiązywanie konfliktów</h3>
+<p>Jak już wspomnieliśmy, konflikt występuje w sytuacji, kiedy Git nie potrafi "domyślić się" w jaki sposób ma pogodzić zmiany. Zwykle ma to miejsce, kiedy zmiany na dwóch branchach zostały wprowadzone:</p>
+<ul>
+<li>w tej samej linii tego samego pliku, lub</li>
+<li>na końcu pliku.</li>
+</ul>
+<p>Zanim jednak przejdziemy do rozwiązywania konfliktu, musimy stworzyć sobie przykładowy konflikt.</p>
+<h4>Jak stworzyć konflikt?</h4>
+<p>Przełącz się na branch <code>master</code> i wprowadź zmiany:</p>
+<ul>
+<li>dodaj słowo "master" do <code>title</code> w <code>head</code>,</li>
+<li>dodaj akapit ze słowem "master" tuż przed zamknięciem <code>body</code>.</li>
+</ul>
+<p>Następnie, zapisz commit, przełącz się na branch <code>devKasia</code> i wprowadź zmiany w tych samych miejscach — tym razem jednak zadbaj o to, aby w każdej wprowadzanej zmianie było słowo "Kasia" zamiast "master". Dzięki temu będzie nam łatwiej zobaczyć, jak wygląda konflikt.</p>
+<p>Ponownie zapisz commit i przełącz się z powrotem na <code>master</code>, a następnie wykonaj merge zmian z <code>devKasia</code> do <code>master</code>.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-22.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-22.png" alt="image" style="width: auto;"></a>
+<p>Jeśli wszystko poszło zgodnie z planem, pojawił się komunikat o powstaniu konfliktu i konieczności naprawienia konfliktu.</p>
+<h4>Jak rozwiązać konflikt?</h4>
+<p>Komunikat o konflikcie informuje nas które pliki wymagają naszej uwagi. Warto zaznaczyć, że do naprawienia będziemy mieli tylko konfliktowe zmiany — pozostałe zostają automatycznie połączone.</p>
+<p>Otwórz w edytorze plik, w którym wystąpił konflikt. Plik powinien wygląda podobnie do tego:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-23.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-23.png" alt="image" style="width: auto;"></a>
+<p>Widzimy tutaj dwa konflikty, zaznaczone poniżej:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-24.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-24.png" alt="image" style="width: auto;"></a>
+<p>Każdy z konfliktów składa się z:</p>
+<ul>
+<li>linii <em>"<<<<<<<"</em> z oznaczeniem jednej z wersji — w naszym przypadku jest to <em>HEAD</em>, czyli aktualna wersja na dysku,</li>
+<li>fragmentu kodu z powyższej wersji</li>
+<li>linii <em>"======="</em>, która rozdziela dwie wersje kodu,</li>
+<li>tego samego fragmentu kodu, ale z wersji podpisanej poniżej,</li>
+<li>linii <em>">>>>>>>"</em> z oznaczeniem drugiej wersji — w naszym wypadku jest to nazwa brancha <code>devKasia</code>.</li>
+</ul>
+<p>Rozwiązanie konfliktu polega na doprowadzeniu pliku do stanu, w jakim ma być po merge'u. Załóżmy, że chcemy zachować zmiany z brancha <code>master</code>, czyli w obu konfliktach chcemy zostawić tylko pierwszy fragment kodu (nad linią "======="). Oznacza to, że będziemy usuwać wszystkie pozostałe linie w konfliktach, wymienione na powyższej liście, czyli linie z oznaczeniami wersji, linię rozdzielającą oraz drugi fragment kodu. W naszym przykładzie kod po zmianach wygląda następująco:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-25.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-25.png" alt="image" style="width: auto;"></a>
+<p>Po zapisaniu pliku możemy przejść do kontynuowania merge'a. W tym celu musimy wykonać commit, z tym że bez tytułu commita. Będą to więc komendy:</p>
+<ul>
+<li><code>git add .</code></li>
+<li><code>git commit</code></li>
+</ul>
+<div class="bc-note alert-info">
+<h4 class="alert-heading text-center">Użycie <em>git status</em> oraz <em>git add</em></h4>
+<p>Przy większej ilości plików może być przydatne używanie komendy <code>git status</code> do sprawdzania, w których plikach pozostały jeszcze konflikty do rozwiązania.</p>
+<p>W tym celu po rozwiązaniu konfliktów w pojedynczym pliku należy wykonać komendę <code>git add nazwa-pliku</code>, aby <code>git status</code> na bieżąco pokazywał, w których plikach konflikty zostały już rozwiązane.</p>
+<p>Procedura wyglądałaby wtedy następująco:</p>
+<ol>
+<li><code>git merge nazwa-brancha</code>,</li>
+<li>edycja pierwszego pliku, rozwiązanie konfliktów,</li>
+<li><code>git add nazwa-pierwszego-pliku</code>,</li>
+<li><code>git status</code> aby sprawdzić listę plików, w których jeszcze mamy konflikt do rozwiązania,</li>
+<li>powtórzenie kroków 2-4, jeśli istnieje jeszcze jakiś plik z konfliktami,</li>
+<li><code>git commit</code>.</li>
+</ol>
+</div>
+<p>Dalej merge będzie wykonany podobnie do sytuacji bez konfliktu, czyli wyświetli się edytor opisu, a po jego zamknięciu zostanie stworzony nowy commit w branchu <code>master</code>.</p>
+<p>Przećwicz jeszcze raz wywoływanie oraz rozwiązywanie konfliktu. Tym razem spróbuj wykonać konflikt w dwóch plikach – ale zamiast merge'a wykonaj Pull Request.</p>
+<h3>Pull Request</h3>
+<p>Pull Request, nazywany czasem Merge Request, to prośba o zgodę na merge dwóch branchy. Najczęściej stosuje się go w sytuacji, gdy chcemy np. na branchu <code>master</code> dbać o jakość kodu. Wtedy nie chcielibyśmy, żeby każdy developer mógł dodać do tego brancha swoje zmiany, bez zatwierdzenia przez co najmniej jednego z pozostałych developerów.</p>
+<p>Aby wykonać PR (Pull Request), wystarczy że nie będziesz merge'ować dwóch branchy – zamiast tego, po wysłaniu nowych commitów na jakiś branch (w naszym przykładzie niech będzie to branch inny niż <code>master</code>) wejdź na stronę projektu na GitHubie i kliknij guzik "New pull request". Wyświetli się wtedy strona z dwoma dropdownami, pozwalającymi wybrać:</p>
+<ol>
+<li>do którego brancha mają zostać wcielone zmiany,</li>
+<li>na którym branchu są zmiany, które mają być zmerge'owane.</li>
+</ol>
+<p>W pierwszym z nich pozostaw <code>master</code>, a w drugim wybierz branch ze swoimi zmianami. Na dole strony możesz sprawdzić, jakie zmiany zawiera nowo przesłany branch w stosunku do brancha <code>master</code>.</p>
+<p>Po wykonaniu Pull Requesta zostanie on sprawdzony – na razie przez jednego z Mentorów, a w późniejszym etapie projektu również przez innych developerów. Dopiero po zatwierdzeniu PR-a będzie wykonany merge.</p>
+<h3>Stash, czyli coś-jakby-tymczasowy-commit</h3>
+<p>W pracy z Gitem pojawiają się czasem sytuacje, w których potrzebujemy zapisać tymczasowo zmiany w plikach, bez zapisywania commita.</p>
+<p>Przykładem może być sytuacja, w której po godzinie zmian w kodzie orientujemy się, że nie przełączyliśmy się na właściwy branch. W takiej sytuacji nie można po prostu użyć komendy <code>git checkout</code>, ponieważ grozi to wystąpieniem konfliktu pomiędzy aktualnymi zmianami w plikach, a ich wersją z innego brancha.</p>
+<p>Innym przykładem będzie sytuacja, w której nie chcesz zapisywać commita, ponieważ nie chcesz commitować kodu z bugiem, ale potrzebujesz szybko wykonać inne zmiany w kodzie.</p>
+<p>W takich sytuacjach możesz korzystać ze <strong>stasha</strong>, który można nazwać "roboczym commitem". Wykonujemy go za pomocą komendy <code>git stash</code>.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-28.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-28.png" alt="image" style="width: auto;"></a>
+<p>Jak widzisz, <code>git status</code> pokazywał zmiany w pliku <em>index.html</em>, ale po wykonaniu komendy <code>git stash</code> te zmiany nie są już widoczne dla Gita. Po sprawdzeniu treści pliku również zobaczysz, że zmiany zostały cofnięte.</p>
+<p>Możesz zapisywać wiele stashów jednocześnie — z tego względu warto znać komendę, która wyświetli listę zapisanych stashów, czyli <code>git stash list</code>.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-29.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-29.png" alt="image" style="width: auto;"></a>
+<p>Zwróć uwagę, że identyfikator i tytuł commita nie odnoszą się do zmian, które zostały zapisane w stashu, ale do ostatniego zapisanego commita. Może to być bardzo istotne w momencie, kiedy zmiany z przywracanego stasha kolidują z aktualną wersją plików.</p>
+<p>Zacznijmy jednak od prostszej sytuacji, czyli przywrócenia zmian ze stasha bez wcześniejszego wprowadzania jakichkolwiek innych zmian. Wykonujemy tę operację za pomocą komendy <code>git stash apply</code>.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-30.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-30.png" alt="image" style="width: auto;"></a>
+<p>W ten sposób został przywrócony stan plików sprzed wykonania komendy <code>git stash</code>. Nasz "roboczy commit" nie został jednak usunięty, co możemy sprawdzić za pomocą komendy <code>git stash list</code>. Po zakończeniu przywracania zmian ze stasha i upewnieniu się, że zmiany w plikach działają, jak chcieliśmy, możemy usunąć stash za pomocą komendy <code>git stash drop</code>.</p>
+<p>W przypadku posiadania wielu stashów możemy w komendach <code>git stash apply</code> oraz <code>git stash drop</code> używać identyfikatorów wyświetlanych przez komendę <code>git stash list</code>, np. <code>stash@{1}</code>. Pamiętaj jednak, że identyfikatory mogą się zmienić po dodaniu bądź usunięciu stasha.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-31.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/20.tdd/wdp-git-31.png" alt="image" style="width: auto;"></a>
+<h3>Materiały do pogłębienia znajomości Gita</h3>
+<p>Przypominamy listę materiałów, które mogą Ci pomóc w pogłębieniu umiejętności posługiwania się Gitem.</p>
+<ul>
+<li><a href="https://www.git-tower.com/learn/git/ebook/en/command-line/introduction" target="_blank">Learn Version Control with Git</a> – przystępnie napisany ebook dla początkujących</li>
+<li><a href="https://backlog.com/git-tutorial/" target="_blank">Git Guide</a> – mnóstwo przydatnych wskazówek, które pomogą Ci w pracy samodzielnej i grupowej</li>
+<li><a href="https://blog.prototypr.io/git-for-beginners-12-commands-you-need-to-know-e084cce9cc94" target="_blank">Git for beginners: 12 commands you need to know</a> – przystępne omówienie najbardziej podstawowych komend Gita</li>
+<li><a href="https://learngitbranching.js.org/" target="_blank">Learn Git branching</a> – interaktywne narzędzie pozwalające lepiej zrozumieć, jak działają branche</li>
+<li><a href="https://services.github.com/on-demand/downloads/github-git-cheat-sheet/" target="_blank">Git Cheatsheet</a> – przygotowana przez GitHuba ściągawka, zawierająca podstawowe komendy Gita</li>
+<li><a href="https://chris.beams.io/posts/git-commit/" target="_blank">Git Commit</a> – jak napisać dobry commit message</li>
+</ul>
+<p>W razie wątpliwości co do którejkolwiek z komend, możesz skorzystać z <a href="https://git-scm.com/docs" target="_blank">dokumentacji</a>, która szczegółowo opisuje zastosowanie każdej z komend.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-read btn-success-outline "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-1165" class="card submodule " data-bootcamp-user-submodule-id="640246" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">20.7. <span>Zaawansowane techniki Gita</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Tematów związanych z Gitem jest bardzo dużo, a technik pracy na nim jeszcze więcej. W tej drugiej części uzupełnimy Twoją wiedzę o ważne zagadnienia — rebase do mastera, łączenie commitów i kopiowanie commitów.</p>
+<p>Na pewno dobrze już znasz komendę <code>git merge</code> i wiesz jak wygląda merge'owanie branchów. Teraz przedstawimy Ci inną technikę, która nazywa się <strong>rebase</strong>.</p>
+<p>Ta technika jest nieco bardziej zaawansowana, więc gorąco zachęcamy Cię do przetestowania jej na tymczasowym repozytorium stworzonym na potrzeby nauki rebase'a.</p>
+<h3>Czym jest rebase?</h3>
+<p>Jest to bardzo powszechna komenda, którą wykonujemy za każdym razem, kiedy oddajemy branch do code review. Rebase do mastera oznacza pobranie wszystkich zmian, które pojawiły się w międzyczasie, i ustawienie naszych nowych commitów na samej górze tego stosu. W efekcie drzewo branchy będzie wyglądało tak, jakby wszystkie Twoje zmiany na obecnym branchu były wykonane po ostatniej zmianie na masterze (lub innym branchu, do którego się rebase'ujesz).</p>
+<p>Bardzo dobrze ilustruje to poniższy graf z <a href="https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase" target="_blank">dokumentacji Atlassiana</a>:</p>
+<a href="https://wac-cdn.atlassian.com/dam/jcr:e4a40899-636b-4988-9774-eaa8a440575b/02.svg?cdnVersion=kb" class="img-modal-group"><img src="https://wac-cdn.atlassian.com/dam/jcr:e4a40899-636b-4988-9774-eaa8a440575b/02.svg?cdnVersion=kb" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Jak widzisz, commity na branchu <code>Feature</code> były wykonywane równolegle do zmian na masterze. Za pomocą rebase'a te zmiany zostały przeniesione tak, aby następowały po najnowszym commicie na masterze.</p>
+<p>Pamiętaj, że rebase nie łączy branchów, a więc nie zastępuje komendy <code>git merge</code>. Sprawia jednak, że drzewo brancha master jest znacznie uproszczone, a commity merge'a nie zawierają w sobie zmian wynikających z rozwiązywania konfliktów. Dzięki temu łatwiej będzie znaleźć się w historii commitów.</p>
+<p>Po wykonaniu rebase'a można już zrobić merge (lub Pull Request) i nie powinno być żadnych konfliktów, ponieważ zostaną one rozwiązane na etapie rebase'a.</p>
+<h3>Jak wykonać rebase do mastera?</h3>
+<p>W ten sposób sprawdzamy przed pull requestem, czy nasz kod nie powoduje konfliktów w kodzie.</p>
+<pre><code class="language-markup">git pull --rebase origin master
+</code></pre>
+<p>Może pojawić się sytuacja, że dojdzie do konfliktów i proces rebase’u się zatrzyma. W takim wypadku należy rozwiązywać po kolei konflikty. O rozwiązywaniu konfliktów mówiliśmy sobie przy okazji modułu o Gicie. I co paczkę konfliktów dodawać je za pomocą:</p>
+<pre><code class="language-markup">git add [SCIEZKA_DO_PLIKU_Z_KONFLIKTEM]
+</code></pre>
+<p>a następnie kontynuować proces.</p>
+<pre><code class="language-markup">git rebase --continue
+</code></pre>
+<p>Pamiętaj, że w razie jakichkolwiek problemów z rozwiązywaniem konfliktów możesz zatrzymać proces rebase’u bez krzywdy dla kodu, korzystając z polecenia:</p>
+<pre><code class="language-markup">git rebase --abort
+</code></pre>
+<h3>Łączenie commitów</h3>
+<p>Ile to razy zdarzyła się sytuacja, kiedy napisaliśmy kod i zorientowaliśmy się, że popełniliśmy literówkę? Robienie kolejnego commita o nazwie "Fix typo" lub "Format code" sprawi, że nasze repozytorium urośnie do niesamowitych rozmiarów. Idąc za założeniem, że każdy commit rozwiązuje całkowicie jeden problem lub dodaje nową funkcjonalność, powinniśmy unikać nadmiarowych commitów.</p>
+<p>Dlatego pokażemy Ci, w jaki sposób można łączyć commity w jeden. Do tego celu użyjemy tzw. rebase’u brancha w formie interaktywnej. Aby go uruchomić, wprowadzamy następującą komendę:</p>
+<pre><code class="language-markup">git rebase -i HEAD~3
+</code></pre>
+<p>Gdzie <code>3</code> jest liczbą oznaczającą liczbę commitów, które chcemy wyświetlić w interaktywnej formie. Tutaj otworzy nam się konsolowy edytor.</p>
+<div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Zmiana domyślnego edytora</h4>
+<p>UWAGA! W większości systemów dostępny jest edytor konsolowy VIM. Jego obsługa jest bardzo specyficzna, więc <a href="http://vim.wikia.com/wiki/Tutorial" target="_blank">przypomnij sobie</a> wcześniej jak go obsługiwać.</p>
+<p>Możesz też <a href="https://www.kevinkuszyk.com/2016/03/08/git-tips-2-change-editor-for-interactive-git-rebase/" target="_blank">zmienić domyślny edytor</a> na dowolny inny, nawet graficzny (tzn. nie-konsolowy).</p>
+</div>
+<p>Po otwarciu terminala pojawi nam się mniej więcej taki dokument:</p>
+<pre><code class="language-markup">pick f4b0988 Add header and footer
+pick 3f91f8b Add new content
+pick 6d9c1c8 Fix typo
+
+# Rebase 7c044ca..6d9c1c8 onto 7c044ca (3 commands)
+#
+# Commands:
+# p, pick = use commit
+# r, reword = use commit, but edit the commit message
+# e, edit = use commit, but stop for amending
+# s, squash = use commit, but meld into previous commit
+# f, fixup = like &quot;squash&quot;, but discard this commit's log message
+# x, exec = run command (the rest of the line) using shell
+# d, drop = remove commit
+...
+</code></pre>
+<p>Wszystko, co zaczyna się znaczkiem <code>#</code>, jest komentarzem. Na górze znajduje się lista commitów w kolejności od najstarszego do najnowszego. Składa się ona z 3 elementów - komenda, hasha i nazwy commita.</p>
+<p>Poniżej listy znajduje się legenda objaśniająca wszystkie dostępne komendy. Jeśli chcielibyśmy połączyć commit <code>Fix typo</code>  z commitem <code>Add new content</code>, należy dokonać takiej zmiany:</p>
+<pre><code class="language-markup">pick f4b0988 Add header and footer
+pick 3f91f8b Add new content
+fixup 6d9c1c8 Fix typo
+...
+</code></pre>
+<p>A następnie zamknąć edytor.</p>
+<p>Jeśli nie wystąpią żadne błędy, to powinniśmy zobaczyć, że nasza praca zakończyła się sukcesem. Po wykonaniu komendy <code>git tree</code> zobaczysz, że commit <code>Fix typo</code> "zniknął", a hash commita <code>Add new content</code> jest inny niż wcześniej.</p>
+<p><strong>UWAGA!! - Uważaj dokładnie na to, co zmieniasz i na co.</strong></p>
+<p>I tutaj następuje najważniejsza rzecz — jeśli wcześniej już dokonano wypchnięcia zmian do zdalnego repozytorium, to przy próbie ich wypchnięcia może pojawić się błąd. Wynika on z faktu, że zdalne repozytorium widzi konflikt w kolejności i hashach commitów pomiędzy tym, co już ma, a w tym, co ma dostać. Jeśli dokonujemy zmian za pomocą interaktywnego rebase’owania, to należy wypychać dane, używając polecenia <code>git push -f</code>, gdzie flaga <code>-f</code> oznacza <code>--force</code>, czyli wymuszenie.</p>
+<p>Pamiętaj jednak, że nigdy nie używamy <code>--force</code> na masterze! Korzystaj z niego (bardzo ostrożnie) tylko na swoich branchach, stworzonych na potrzebę rozwiązania konkretnych problemów.</p>
+<h3>Kopiowanie commitów - CherryPick</h3>
+<p>Czasem tak się zdarza, że pracujemy na kilku branchach i chcielibyśmy skopiować jeden i tylko jeden commit do drugiego brancha, bez merge'owania wszystkich zmian na tym branchu. Jak to zrobić? Od tego jest komenda <code>cherry-pick</code>.</p>
+<ol>
+<li>Po pierwsze musimy upewnić się, że oba branche dostępne są lokalnie.</li>
+<li>Następnie wycheckoutować się na branch, z którego chcemy wziąć commit.</li>
+<li>Za pomocą funkcji <code>git log</code> lub <code>git tree</code> kopiujemy hash commita, który chcemy skopiować.</li>
+<li>Checkoutujemy się na docelowy branch, gdzie commit ma być wkopiowany.</li>
+<li>CherryPickujemy za pomocą polecenia <code>git cherry-pick HASH_COMMITA</code>.</li>
+</ol>
+<p>Możemy sprawdzić za pomocą <code>git log</code> lub <code>git tree</code> czy zmiany się wprowadziły.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-read btn-success-outline "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                            </main>
+        </div>
+    </section>
+</main>
+;
+<script type="text/x-translation" data-translation-name="SentBootcampLinkReviewFormMessage">Wysłano link do zatwierdzenia</script>
+    <div id="alerts">
+    <div class="alert alert-danger" role="alert">
+        <i class="fa fa-exclamation" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                        </ul>
+    </div>
+    <div class="alert alert-success" role="alert">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-warning" role="alert">
+        <i class="fa fa-warning" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-info" role="alert">
+        <i class="fa fa-info" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                    </ul>
+    </div>
+    <div class="container">
+        <div class="alert alert-notify" role="alert">
+            <i class="fa fa-info" aria-hidden="true"></i>
+            <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Zamknij</span>
+            </button>
+            <ul>
+                            </ul>
+        </div>
+    </div>
+</div>
+    <div class="modal fade informator-modal" id="informator" tabindex="-1" role="dialog" aria-labelledby="informatorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="https://kodilla.com/static/img/logo-menu.png?00000" alt="Logo Kodilla" class="brand-logo">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body content-container">
+                <h3>Zam&oacute;w szczeg&oacute;łowy informator</h3>
+                <form class="row js-ajax-form" data-view-class="InformatorForm" action="https://kodilla.com/pl/download-informator" method="post">
+                    <input type="hidden" name="ga-pobieranie-informatora-z-modala" value="wypelnienie">
+                    <input type="hidden" name="tags[0]" value="informator">
+                                        <div class="user-data-container">
+                        <input type="text" class="form-control" name="firstname" placeholder="Imię">
+                        <input type="text" class="form-control" name="surname" placeholder="Nazwisko">
+                    </div>
+                    <div class="user-data-container">
+                        <input type="email" class="form-control" name="email" placeholder="Email" required/>
+                        <input type="tel" class="form-control" name="phone" placeholder="Numer telefonu" pattern="^([\+][0-9]{1,3}([ \.\-])?)?([\(]{1}[0-9]{3}[\)])?([0-9 \.\-]{1,15})$" title="Wpisz poprawny numer telefonu, np. 453 674 897" minlength="9" maxlength="15" data-custom-message="Wpisz poprawny numer telefonu, np. 453 674 897">
+                    </div>
+                    <div class="terms-box">
+                        <label>
+                            <input name="accept_terms" value="true" data-custom-message="Prosimy o zaakceptowanie regulaminu" type="checkbox" class="form-control input-checkbox" required>
+                            <span>Akceptuję <a target="_blank" href="https://kodilla.com/pl/regulamin">regulamin</a>  i nie wnoszę zastrzeżeń</span>
+                        </label>
+                    </div>
+                    <div class="personal-terms-box">
+                        <label>
+                            <input name="accept_marketing" value="true" data-custom-message="Jeśli chcesz otrzymać dostęp do materiał&oacute;w, konieczna jest akceptacja obydwu zg&oacute;d" type="checkbox" class="form-control input-checkbox" required>
+                            <span>Chcę otrzymywać newsletter, informacje o promocjach i produktach dostępnych w Kodilla.
+                                <span class="details-button" data-action="show-details" data-identifier="personal-terms-details-informator">Czytaj więcej</span>
+                                <span class="display-none" data-identifier="personal-terms-details-informator">Wyrażam zgodę na otrzymywanie informacji handlowych od Kodilla na podany przeze mnie adres e-mail. Zgoda jest dobrowolna, jednakże niezbędna do otrzymywania informacji o produktach, promocjach i o tym, co u nas słychać. Administratorem danych jest Codemy S.A. z siedzibą we Wrocławiu, Plac Powstańc&oacute;w Śląskich 13/4. Mam prawo cofnąć zgodę w każdym czasie, jednak wtedy nie będę otrzymywać informacji. Dane mogą być przetwarzane pomimo cofnięcia zgody wyłącznie w takim zakresie i celu, w jakim ich przetwarzanie jest niezbędne do ustalenia, dochodzenia lub obrony roszczeń Administratora w związku z udzieloną zgodą. Mam prawo dostępu do danych, sprostowania, usunięcia, ograniczenia przetwarzania, prawo wniesienia sprzeciwu, skargi do organu nadzorczego i przeniesienia danych. Szczeg&oacute;łowe informacje znajdują się na stronie kodilla.com, zakładka &quot;Polityka Prywatności&quot;.</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="display-none">
+                        <input type="text" name="myName" value="">
+                    </div>
+                    <div class="">
+                        <button type="submit" class="btn btn-primary">
+                            Pobierz Informator
+                            <i data-role="loading-icon" class="fa fa-spinner fa-spin fa-1x fa-fw display-none"></i>
+                        </button>
+                    </div>
+                </form>
+                <a href="https://kodilla.com/pl/informator" id="informator-link" target="_blank" class="display-none"></a>
+            </div>
+            <div class="modal-footer">
+                <p>Pobranie informatora do niczego nie zobowiązuje</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="site-footer">
+                <section class="footer-lower">
+            <nav class="container">
+                <a class="navbar-img" href="https://kodilla.com/pl">
+                    <svg id="kodilla-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 29.553" width="168" height="30">
+                        <defs>
+                            <style>
+                                .footer-logo-fill {
+                                    fill: #fff;
+                                }
+                            </style>
+                        </defs>
+                        <g id="Group_1" data-name="Group 1" transform="translate(23.59)">
+                            <path id="KODILLA_copy_5_1_" class="footer-logo-fill" d="M78.058,0a14.758,14.758,0,1,0,.075,0Zm0,23.739a8.939,8.939,0,0,1-8.944-8.907V14.8c0-4.957,4.584-.708,8.907-.708,4.919,0,9.019-4.211,9.019.708a8.978,8.978,0,0,1-8.981,8.944Z" transform="translate(-63.3)"/>
+                            <ellipse id="eye_copy_4_1_" class="footer-logo-fill" cx="3.876" cy="3.876" rx="3.876" ry="3.876" transform="translate(9.462 13.2) rotate(-28.436)"/>
+                        </g>
+                        <path id="Path_1" data-name="Path 1" class="footer-logo-fill" d="M0,29.819V.9H6.671V13.347L17.255.9h7.491L13.938,13.794,25.491,29.819h-7.6l-8.2-11.665-3.019,3.13v8.5H0Z" transform="translate(0 -0.565)"/>
+                        <path id="Path_2" data-name="Path 2" class="footer-logo-fill" d="M151.4,29.819V.9h10.807a15.515,15.515,0,0,1,6.261,1.155,12.966,12.966,0,0,1,4.509,3.093A12.918,12.918,0,0,1,175.7,9.732a17.245,17.245,0,0,1,.932,5.59,16.821,16.821,0,0,1-1.006,5.963,12.227,12.227,0,0,1-2.907,4.547,13.484,13.484,0,0,1-4.547,2.944,15.964,15.964,0,0,1-5.925,1.043Zm18.41-14.5a11.274,11.274,0,0,0-.522-3.466,7.723,7.723,0,0,0-1.491-2.72,6.616,6.616,0,0,0-2.385-1.752,8.055,8.055,0,0,0-3.205-.6h-4.1v17.18h4.1a7.985,7.985,0,0,0,3.242-.634,6.8,6.8,0,0,0,2.385-1.826,8.286,8.286,0,0,0,1.453-2.72A11.634,11.634,0,0,0,169.81,15.322Z" transform="translate(-94.978 -0.565)"/>
+                        <path id="Path_3" data-name="Path 3" class="footer-logo-fill" d="M228.3,29.819V.9h6.671V29.819Z" transform="translate(-143.219 -0.565)"/>
+                        <path id="Path_4" data-name="Path 4" class="footer-logo-fill" d="M259.9,29.819V.9h6.671V23.968h14.012v5.851Z" transform="translate(-163.043 -0.565)"/>
+                        <path id="Path_5" data-name="Path 5" class="footer-logo-fill" d="M327.371,23.931V.9H320.7V29.819h18.522l2.124-5.851H327.371Z" transform="translate(-201.185 -0.565)"/>
+                        <path id="Path_6" data-name="Path 6" class="footer-logo-fill" d="M388.547.9h6.037L405.13,29.819h-6.857l-2.236-6.484h-9.019l-2.2,6.484H378Zm6.373,17.851L391.528,8.54l-3.466,10.211Z" transform="translate(-237.13 -0.565)"/>
+                    </svg>
+                </a>
+                <ul class="nav">
+                    <li>
+                        <a href="https://kodilla.com/pl/regulamin" rel="nofollow">Regulamin</a>
+                    </li>
+                    <li>
+                        <a href="https://kodilla.com/pl/polityka-prywatnosci" rel="nofollow">Polityka prywatności</a>
+                    </li>
+                    <li class="nav-item">&copy; 2021 Kodilla</li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
+
+<!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN2WWBH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <script src="https://kodilla.com/static/js/libs/jquery-2.1.4.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/js.cookie-2.1.0.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/jquery-dateFormat.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/bootstrap.min.js?00000"></script>
+<script>
+    (function () {
+        $(document).ready(function () {
+            if (window.location.hash === '#informator-modal') {
+                showInformator();
+            }
+        });
+
+        $('[data-action="show-modal"]').click(function() {
+            showInformator();
+        });
+
+        function showInformator() {
+            $('#informator').modal('show');
+        }
+    })();
+</script>
+<script src="https://kodilla.com/build/minified/js/fb-0370c8f03e.js" async></script>
+<script src="https://kodilla.com/build/minified/js/call-us-72a84920dc.js"></script>
+<script>
+    if (document.querySelector('main.editor')) {
+        document.querySelector('body').classList.add('editor');
+    }
+</script>
+
+<script type="text/javascript">
+    (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+    vgo('setAccount', '649095895');
+    vgo('setTrackByDefault', true);
+
+    vgo('process');
+</script>
+
+        <script src="https://kodilla.com/static/js/libs/underscore-min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-relational.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-super.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/handlebars-v4.0.5.min.js?00000"></script>
+<script src="https://kodilla.com/build/minified/js/extends/handlebars-ifCond-139a2339f7.js"></script>
+<script src="https://kodilla.com/build/minified/js/application-0dcfdc1306.js"></script>
+<script src="https://kodilla.com/build/minified/js/main-cf3b73d734.js"></script>
+<script src="https://kodilla.com/build/minified/js/views/settings-5fc44a761b.js"></script>
+<script src="https://kodilla.com/build/minified/js/views/delete-account-da2b3de486.js"></script>
+<script type="text/x-translation" data-translation-name="checkAccountDeleteCalculationMessage">Wynik jest nieprawidłowy</script>
+<script src="https://kodilla.com/build/minified/js/helpers/forms-222ea01b08.js"></script>
+<script src="https://kodilla.com/build/minified/js/helpers/alerts-66650c3acb.js"></script>
+<script>
+    App.Views.InpageAlertManager = Backbone.View.extend({
+        events: {
+            'click [data-alert-type][data-alert-text]': 'showAlert'
+        },
+        showAlert: function(e) {
+            var $el = $(e.currentTarget);
+            App.alertsView['show'+$el.data('alertType')]([App.Translations($el.data('alertText'))]);
+        }
+    });
+</script>
+<script src="https://kodilla.com/build/minified/js/collections-c07e1162e2.js"></script>
+<script src="https://kodilla.com/build/minified/js/models-4e0e4fcffb.js"></script>
+<script src="https://kodilla.com/build/minified/js/views/knowledge-base-61f71273c9.js"></script>
+<script>
+    App.Views.LearningProgram = Backbone.View.extend({
+        events: {
+            'click [data-technology-desc-expander]' : 'expandTechnologyDesc'
+        },
+
+        initialize: function() {
+            this.$allTechnologyDesc = this.$el.find('[data-technology-desc]');
+            this.$allTechnologyExpanderIcons = this.$el.find('[data-technology-expander-icon]');
+        },
+
+        expandTechnologyDesc: function() {
+            this.$allTechnologyDesc.each(function(){
+                var $desc = $(this);
+                $desc.slideToggle('fast');
+            });
+            this.$allTechnologyExpanderIcons.each(function(){
+                var $icon = $(this);
+                $icon.toggleClass("fa-minus");
+            });
+        },
+    });
+</script>
+
+    <script src="https://kodilla.com/static/js/libs/tether.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/prism.min.js?00000"></script>
+
+    <script src="https://kodilla.com/build/minified/js/views/bootcamp-1522c7c010.js"></script>
+    <script src="https://kodilla.com/static/js/libs/jquery.seourl.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/perfect-scrollbar.jquery.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/fancybox/jquery.fancybox.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/moment.timezone.locales.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/bootstrap-datetimepicker.min.js?00000"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("a.img-modal-group").fancybox();
+        });
+    </script>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="call-us-modal">
+    <div class="modal-dialog modal-dialog-callus" role="document">
+        <div class="modal-content call-modal">
+            <div id="call-us-step1">
+                <h2>Um&oacute;w się na rozmowę z doradcą Kodilli</h2>
+                <p>Krok <span>1/2:</span> Podaj numer telefonu</p>
+                <form action="https://kodilla.com/pl/call-center/dates/phone_calls" method="post" id="call-us-form1">
+                    <input type="tel" name="phone" id="call-us-input-phone" class="call-center-input" placeholder="731771787">
+                    <p class="error-message display-none" id="validation-message-phone">Pole Numer Telefonu jest wymagane. Nieprawidłowy format.</p>
+                    <button class="btn btn-success" id="call-us-submit-phone">Zarezerwuj rozmowę</button>
+                </form>
+                <p id="call-us-counter-holder" style="display: none;">Dzisiaj już  <span id="call-us-counter" class="call-counter" data-url="https://kodilla.com/pl/call-center/counter/phone_calls">-</span> <span id="call-us-counter-text" data-one=" osoba zam&oacute;wiła rozmowę z nami." data-few=" osoby zam&oacute;wiły rozmowę z nami." data-more=" os&oacute;b zam&oacute;wiło rozmowę z nami."></span></p>
+                <div class="data-protection">
+                    <p>Twój numer telefonu nie będzie wykorzystywany w celach marketingowych ani przekazany dalej. Tylko oddzwonimy. Dane są przetwarzane zgodnie z <a href="/pl/polityka-prywatnosci">Polityką Prywatności</a>.</p>
+                </div>
+            </div>
+
+            <div id="call-us-step2" style="display: none;">
+                <h2>Wybierz dogodny termin i godzinę na rozmowę z doradcą</h2>
+                <p>Krok <span>2/2:</span>
+                <form action="https://kodilla.com/pl/call-center/step2/phone_calls" method="post" id="call-us-form2">
+                    <div class="select-date">
+                        <select name="date" id="call-us-input-date">
+                        </select>
+                        <select name="time" id="call-us-input-time">
+                        </select>
+                    </div>
+                    <button class="btn btn-success" id="call-us-submit-call">Oddzwońcie do mnie!</button>
+                </form>
+            </div>
+
+            <div id="call-us-step3" style="display: none;">
+                <div  class="thanks">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    <h2>Dziękujemy za zamowienie rozmowy! Do usłyszenia w wybranym terminie!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+                <style type="text/css">
+    .embeddedServiceHelpButton .helpButton .uiButton {
+        background-color: #1EA71C;
+        font-family: "Arial", sans-serif;
+    }
+    .embeddedServiceHelpButton .helpButton .uiButton:focus {
+        outline: 1px solid #1EA71C;
+    }
+</style>
+<script>
+    function openChat(){
+        $('.helpButtonEnabled').trigger('click');
+    }
+</script>
+<script type="text/javascript" src="https://service.force.com/embeddedservice/5.0/esw.min.js"></script>
+
+<script type="text/javascript">
+    var initESW = function(gslbBaseURL) {
+        let firstName = 'Marek Baberowski'.split(" ")[0];
+        let lastName = 'Marek Baberowski'.split(" ")[1];
+        console.log(name);
+        embedded_svc.settings.displayHelpButton = true;
+        embedded_svc.settings.language = '';
+
+        embedded_svc.settings.defaultMinimizedText =  'Skontaktuj się z nami';
+        embedded_svc.settings.disabledMinimizedText = ' ';
+
+        embedded_svc.settings.loadingText = 'Ładowanie';
+        embedded_svc.settings.storageDomain = 'kodilla.com';
+
+        embedded_svc.settings.prepopulatedPrechatFields = {
+            'FirstName': firstName,
+            'LastName': lastName,
+            'Email': 'm.z.baberowski@gmail.com'
+        };
+        embedded_svc.settings.offlineSupportMinimizedText = 'Napisz do nas';
+
+        embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+        embedded_svc.settings.entryFeature = 'LiveAgent';
+
+        embedded_svc.init(
+            'https://kodilla.my.salesforce.com',
+            'https://kodillacommunity.force.com',
+            gslbBaseURL,
+            '00D1i000000VBFH',
+            'Support_Kodilla',
+            {
+                baseLiveAgentContentURL: 'https://c.la1-c2-fra.salesforceliveagent.com/content',
+                deploymentId: '5721i00000009s9',
+                buttonId: '5731i0000000AJN',
+                baseLiveAgentURL: 'https://d.la1-c2-fra.salesforceliveagent.com/chat',
+                eswLiveAgentDevName: 'Support_Kodilla',
+                isOfflineSupportEnabled: true
+            }
+        );
+    };
+
+    if (!window.embedded_svc) {
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://kodilla.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+        s.onload = function() {
+            initESW(null);
+        };
+        document.body.appendChild(s);
+    } else {
+        initESW('https://service.force.com');
+    }
+</script>
+        <div data-role="notifications-wrapper" class="notifications-wrapper"></div>
+</body>
+</html>

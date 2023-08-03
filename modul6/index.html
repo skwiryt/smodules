@@ -1,0 +1,2117 @@
+<!DOCTYPE html>
+<html lang=pl class="no-js">
+<head>
+    <meta name="ahrefs-site-verification" content="c2d3c04b9f125c5b8c98d89f738d343f69d841f035150344a932150235c5639a">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="csrf-token" content="FGlA4RkObUo18UXAEnOqvfNMqmQValvEVBDjQsbF" />
+
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="https://kodilla.com/static/img/icons/apple-touch-icon-60x60.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://kodilla.com/static/img/icons/apple-touch-icon-76x76.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://kodilla.com/static/img/icons/apple-touch-icon-120x120.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://kodilla.com/static/img/icons/apple-touch-icon-152x152.png?00000">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kodilla.com/static/img/icons/favicon-32x32.png?00000">
+<link rel="icon" type="image/png" sizes="96x96" href="https://kodilla.com/static/img/icons/favicon-96x96.png?00000">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kodilla.com/static/img/icons/favicon-16x16.png?00000">
+
+    <link rel="canonical" href="https://kodilla.com/pl/bootcamp-module/407/255/5935" />
+
+    <meta name="robots" content="noindex, follow" />
+    <title>    Moduł: 6. Praktyka JavaScriptu
+</title>
+        <script>document.documentElement.classList.remove("no-js")</script>
+<script src="https://kodilla.com/static/js/libs/yall.min.js?00000"></script>
+<link href="https://kodilla.com/static/css/libs/bootstrap.min.css?00000" rel="stylesheet">
+<link href="https://kodilla.com/static/css/libs/font-awesome.min.css?00000" rel="stylesheet">
+<link href="https://kodilla.com/build/minified/css/main-b3cf79332c.css" rel="stylesheet" type="text/css">
+            
+    <link href="https://kodilla.com/static/css/libs/prism.min.css?00000" rel="stylesheet">
+
+    <link href="https://kodilla.com/build/minified/css/bootcamp-6d0888d826.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://kodilla.com/static/css/libs/perfect-scrollbar.css?00000" />
+    <link rel="stylesheet" href="https://kodilla.com/static/css/libs/fancybox/jquery.fancybox.min.css?00000" type="text/css" media="screen" />
+    <link href="https://kodilla.com/static/css/libs/bootstrap-datetimepicker.min.css?00000">
+    <link rel="stylesheet" href="https://uploads.kodilla.com/bootcamp/styles/content.css">
+    <script>
+    document.addEventListener("DOMContentLoaded", yall);
+    window.environment = 'production';
+    window.loggedIn = true;
+    window.domain = 'https://kodilla.com';
+            window.fbAppId = 1449248938627896;
+    window.chatService = 'LiveAgent';
+    window.useMessenger = window.chatService === 'Messenger';
+    window.locale = 'pl';
+    window.lang = 'pl';
+
+    window.serverUTC       = 1625590260000;
+    window.serverOffset    = 120;
+    window.userDate        = new Date();
+    window.userUTC         = userDate.getTime();
+    window.userOffset      = userDate.getTimezoneOffset() * (-1);
+    window.userClockDiff   = userUTC - serverUTC;
+    window.diffRounded     = Math.round( userClockDiff / ( 1000 * 60 * 15 ) );
+    window.isDifferentZone = ( userOffset - serverOffset !== 0 ) ? 1 : 0;
+    window.hasWrongTime    = ( diffRounded !== 0 ) ? 1 : 0;
+    window.dateTooltipText = 'Data i godzina są podane dla Twojej strefy czasowej GMT. <br>W razie wątpliwości napisz: <u>support@kodilla.com</u>.';
+    window.wrongHourNotice = 'Godzina na Twoim urządzeniu r&oacute;żni się od godziny obowiązującej w strefie czasowej wybranej w ustawieniach Twojego urządzenia.';
+
+    window.PAYU_HASH_ALGORITHM = 'SHA-256';
+    window.PAYU_POS_ID = 1429452;
+    window.PAYU_MD5_SECOND_KEY = 'f3627be5fab5a4238c8474936f057908';
+
+    var moment = undefined,
+        momentReady = function( method, method2, count ){
+            var c = ( count ) ? count : 0;
+
+            if      ( isDifferentZone && moment !== undefined ){
+                if      ( method ) { method(); }
+                else    { return false; }
+            }
+            else if ( isDifferentZone && moment === undefined ) {
+                if ( c < 20 ) {
+                    c++;
+                    setTimeout( function() { momentReady( method, method2, c ); }
+                        , 300 );
+                } else {
+                    if      ( method2 === true && method )  { method(); }
+                    else if ( method2 !== true && method2 ) { method2(); }
+                }
+            }
+            else {
+                if      ( method2 === true && method )  { method(); }
+                else if ( method2 !== true && method2 ) { method2(); }
+                else    { return false; }
+            }
+        };
+
+    if ( window.isDifferentZone && moment === undefined ) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = '/static/js/libs/moment.timezone.locales.min.js?v=2.22.2';
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+</script>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+        OneSignal.init({
+            appId: "92552bb5-b477-4ea2-8260-dba65be198d9",
+        });
+    });
+</script>
+<script data-ad-client="ca-pub-9483216428129091" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2404285,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 389137334769464 );
+        fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KN2WWBH');</script>
+    <!-- End Google Tag Manager -->
+    
+    </head>
+<body class="no-js student ">
+<!-- Facebook Pixel Code -->
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=389137334769464&ev=PageView&noscript=1"/></noscript>
+<!-- End Facebook Pixel Code -->
+<script>
+    document.getElementsByTagName('body')[0].classList.remove('no-js');
+    if ( window.isDifferentZone ) {
+        document.querySelector('body').classList.add('time-conversion-applied');
+    }
+    if ( window.hasWrongTime ) {
+        document.querySelector('body').classList.add('wrong-hour');
+    }
+</script>
+
+    <nav class="navbar-main hidden-sm-down dark navbar">
+    <div class="nav-container">
+        <div class="navbar-header clearfix">
+            <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbarUpper"><i class="fa fa-bars"></i></button>
+        </div>
+        <div class="collapse navbar-toggleable-sm container" id="collapsingNavbarUpper">
+            <ul class="nav navbar-nav navbar-nav-left">
+                                    <li class="nav-item nav-contact">
+    <span>Skontaktuj się z nami:</span>
+    <a href="mailto:support@kodilla.com">
+        <i class="fa fa-envelope-o"></i>
+        support@kodilla.com
+    </a>
+    <span>lub</span>
+    <a href="javascript:openChat();">
+        <i class="fa fa-comments"></i>
+        porozmawiaj na czacie
+    </a>
+</li>
+                                </ul>
+            <ul class="nav navbar-nav pull-right">
+                                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/informator" class="nav-link" target="_blank">
+        Informator
+    </a>
+                </li>
+                <li class="nav-item hidden-sm-down">
+    <a href="https://kodilla.com/pl/account" class="nav-link">Konto</a>
+</li>
+        <li class="nav-item">
+    <a class="analytics-track nav-link nav-link-accent" data-event="account_logout" href="https://kodilla.com/pl/sign-out">Wyloguj</a>
+</li>
+                            </ul>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-main light navbar">
+    <div class="container clearfix">
+        <a class="navbar-brand"  href="https://kodilla.com/pl">
+            <img src="https://kodilla.com/static/img/kodilla-nav-logo.svg?00000" alt="Kodilla - szkoła programowania">
+        </a>
+        <span class="contact-us-button-container"></span>
+        <button class="navbar-toggler pull-right collapsed" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <i class="fa fa-bars navbar-ico-open"></i>
+            <i class="fa fa-times navbar-ico-close"></i>
+        </button>
+        <ul id="navbar-main" class="nav navbar-nav pull-right collapse">
+            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        Szkolenia Bootcamp
+    </a>
+    <ul class="bootcamp-list">
+                    <li class="list-sub list-sub-fe">
+                <img src="https://kodilla.com/static/img/svg/menu_fer.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_fer_logo">
+                <a href="https://kodilla.com/pl/bootcamp/front-end">
+                    <h4 class="bootcamp-name">Front-end: React</h4>
+                    <p>Naucz się tworzyć front-end aplikacji w 4 miesiące</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_wd.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_wd_logo">
+                <a href="https://kodilla.com/pl/bootcamp/webdeveloper?type=wdp">
+                    <h4 class="bootcamp-name">Web Developer</h4>
+                    <p>Naucz&nbsp;się tworzyć aplikacje internetowe od&nbsp;podstaw</p>
+                    <span class="bootcamp-label">FRONT-END i BACK-END</span>
+                </a>
+            </li>
+
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_java.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_java_logo">
+                <a href="https://kodilla.com/pl/bootcamp/java?type=jdp">
+                    <h4 class="bootcamp-name">Java Developer</h4>
+                    <p>Poznaj najpopularniejszy na&nbsp;świecie język programowania od&nbsp;zera</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_python.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_python_logo">
+                <a href="https://kodilla.com/pl/bootcamp/python">
+                    <h4 class="bootcamp-name">Python Developer</h4>
+                    <p>Zdobądź kompetencje do tworzenia rozwiązań webowych</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_tester.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_tester_logo">
+                <a href="https://kodilla.com/pl/bootcamp/tester-automatyzujacy">
+                    <h4 class="bootcamp-name">Tester Automatyzujący</h4>
+                    <p>Poznaj podstawy testowania automatycznego w Javie</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_game.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_mage_logo">
+                <a href="https://kodilla.com/pl/bootcamp/game-dev">
+                    <h4 class="bootcamp-name">Mobile Game Developer</h4>
+                    <p>Zdobądź kompetencje do tworzenia gier</p>
+                    <span class="bootcamp-label">nowość</span>
+                </a>
+            </li>
+            </ul>
+</li>
+
+                        <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        Szkolenia Pro
+    </a>
+    <ul>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/mikroserwisy" class="nav-link">Mikroserwisy w Javie</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/spring-hibernate" class="nav-link">Spring i Hibernate</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/wielowatkowosc" class="nav-link">Wielowątkowość w Javie</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/django" class="nav-link">Aplikacje webowe z Django</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/wizualizacja-danych" class="nav-link">Analiza danych w Pythonie</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/machine-learning" class="nav-link">Podstawy Machine Learning</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/bigdata-pyspark" class="nav-link">Big Data z PySpark</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/automatyzacja-testow" class="nav-link">Automatyzacja test&oacute;w</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/vanilla-js" class="nav-link">Advanced Vanilla JS</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/typescript" class="nav-link">TypeScript - kurs praktyczny</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/vue3" class="nav-link">Vue3 - kompletny przewodnik</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/zaawansowany-backend" class="nav-link">Backend zaawansowany</a></li>
+    </ul>
+</li>
+            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        Strefa kursanta
+    </a>
+    <ul>
+                    <li><a href="https://kodilla.com/pl/bootcamp-dashboard/407" class="nav-link">Bootcamp WD PLUS 2020-12</a></li>
+                    <li><a class="nav-link" href="https://kodilla.com/pl/kursy">Samodzielne kursy</a></li>
+                    <li><a class="nav-link" href="https://chat.kodilla.com" target="_blank">Komunikator</a></li>
+                    <li><a class="nav-link" href="https://kodilla.com/pl/projects">Moje projekty</a></li>
+    </ul>
+</li>
+                            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        O nas
+    </a>
+    <ul class="about-us">
+        <li><a href="https://kodilla.com/pl/mentorzy" class="nav-link">Mentorzy</a></li>
+        <li><a href="https://kodilla.com/pl/zespol" class="nav-link">Zesp&oacute;ł Kodilli</a></li>
+        <li><a href="https://kodilla.com/pl/o-nas" class="nav-link">O firmie</a></li>
+    </ul>
+</li>
+                                                                    <li class="nav-item hidden-md-up nav-group">
+    <span class="mobile-menu-separator">Szkolenia Bootcamp</span>
+    <ul>
+                    <li class="nav-item list-sub-fe">
+                <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/front-end">Bootcamp Front-end: React
+                </a>
+            </li>
+                <li class="nav-item">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/webdeveloper">Bootcamp Web Developer
+                <span class="bootcamp-label">FRONT-END i BACK-END</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://kodilla.com/pl/bootcamp/java">Bootcamp Java</a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/tester-automatyzuj%C4%85cy">Bootcamp Tester Automatyzujący
+            </a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/python">Python Developer
+            </a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/game-dev">Mobile Game Developer
+                <span class="bootcamp-label">nowość</span>
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="nav-item hidden-md-up nav-group">
+    <a class="nav-link-bold" href="https://kodilla.com/pl/szkolenia-pro">Szkolenia Pro</a>
+</li>
+            <li class="nav-item hidden-md-up nav-group">
+            <span class="mobile-menu-separator">Strefa kursanta</span>
+            <ul>
+                <li class="nav-item ">
+                                            <a class="nav-link" href="https://kodilla.com/pl/bootcamp-dashboard/407">
+                            Bootcamp   WD PLUS 2020-12
+                        </a>
+                                    </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://kodilla.com/pl/kursy">Samodzielne kursy</a>
+                </li>
+                                    <li class="nav-item ">
+                        <a class="nav-link" href="https://chat.kodilla.com" target="_blank">Komunikator</a>
+                    </li>
+                                <li class="nav-item">
+                    <a class="nav-link" href="https://kodilla.com/pl/projects">Moje projekty</a>
+                </li>
+            </ul>
+        </li>
+    
+        
+            <li class="nav-item hidden-md-up nav-group">
+            <span class="mobile-menu-separator">O nas</span>
+            <ul>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/mentorzy" class="nav-link">Mentorzy</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/zespol" class="nav-link">Zesp&oacute;ł Kodilli</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/o-nas" class="nav-link">O firmie</a>
+                </li>
+            </ul>
+        </li>
+    
+<li class="nav-item hidden-md-up nav-group">
+    <span class="mobile-menu-separator">Pozostałe</span>
+    <ul>
+                                        
+        <li class="nav-item">
+            <a href="https://kodilla.com/pl/informator" class="nav-link" target="_blank">
+        Informator
+    </a>
+        </li>
+    </ul>
+
+</li>
+
+    <li class="nav-item hidden-md-up">
+        <a class="nav-link" href="https://kodilla.com/pl/account">Konto</a>
+    </li>
+    <li class="nav-item hidden-md-up">
+        <a class="nav-link analytics-track" data-event="account_logout" href="https://kodilla.com/pl/sign-out">Wyloguj</a>
+    </li>
+
+        
+    <li class="nav-item hidden-md-up nav-group">
+        <span class="mobile-menu-separator">Skontaktuj się z nami</span>
+        <ul>
+            <li class="nav-item">
+                <a href="mailto:support@kodilla.com" class="nav-link">
+                    <i class="fa fa-envelope-o"></i>
+                    support@kodilla.com
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:openChat();" class="nav-link">
+                    <i class="fa fa-comments"></i>
+                    <span>Porozmawiaj na czacie</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+        </ul>
+    </div>
+</nav>
+<main class="bootcamp module page-height-fix" id="bootcamp-module">
+    <div class="aside-toggle hidden-md-up">
+        <button class="navbar-toggler pull-left collapsed" type="button" data-toggle="collapse" data-target="#aside-sticky" aria-expanded="false">
+            <i class="fa fa-bars navbar-ico-open"></i>
+            <i class="fa fa-times navbar-ico-close"></i>
+        </button>
+    </div>
+    <div class="table-of-contents aside-sticky collapsed collapse" id="aside-sticky">
+        <section class="container">
+            <div class="row">
+                <aside class="module-nav col-md-4 col-md-offset-8">
+                    <section class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Spis treści modułu</h4>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-969" class="clearfix">
+                                    <p>6.1. Kilka sł&oacute;w o zmiennych</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-970" class="clearfix">
+                                    <p>6.2. Tworzymy bloga!</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-971" class="clearfix">
+                                    <p>6.3. Wyświetlanie artykułu po kliknięciu</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-972" class="clearfix">
+                                    <p>6.4. Generowanie listy tytuł&oacute;w</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-973" class="clearfix">
+                                    <p>6.5. Podsumowanie</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-975" class="clearfix">
+                                    <p>6.6. Quiz powt&oacute;rkowy</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                    </ul>
+                        <div class="card-block text-center">
+                                                                                                <a href="https://kodilla.com/pl/bootcamp-dashboard/407">Powr&oacute;t do dashboardu</a>
+                                                                                    </div>
+                    </section>
+                </aside>
+            </div>
+        </section>
+    </div>
+    <section class="container module-content">
+        <div class="row">
+            <main class="col-md-8">
+                <section class="card">
+                    <div class="card-block module-header clearfix  completed ">
+                        <h1 class="card-title">6. Praktyka JavaScriptu</h1>
+                                                <i class="fa fa-bookmark fa-3x" aria-hidden="true"></i>
+                    </div>
+                                        <div class="card-block challenge">
+                        <h3>Wyzwania:</h3>
+                        <ul>
+<li>nabierzesz wprawy w pisaniu javascriptowego kodu,</li>
+<li>dowiesz się czym są eventy, obiekty i pętle,</li>
+<li>zaczniesz tworzyć prostą "aplikację".</li>
+</ul>
+<h3>Wstęp</h3>
+<p>W poprzednim module udało nam się wspólnie stworzyć prostą grę! Jest to jednak dopiero początek Twojej nauki JS-a.</p>
+<p>W tym module rozpoczniemy projekt, który zajmie nam <strong>dwa tygodnie</strong>. Mamy Ci do przekazania dużo nowej wiedzy, więc postanowiliśmy rozłożyć pracę w czasie, aby nauka była bardziej efektywna.</p>
+<p>Nie obawiaj się rozmiaru tego projektu – będziemy rozwijać go krok po kroku, więc powoli przyzwyczaimy się do pracy nad nieco większym przedsięwzięciem.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+                    </div>
+                                    </section>
+                                    
+                <section id="submodule-969" class="card submodule completed" data-bootcamp-user-submodule-id="597593" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">6.1. <span>Kilka sł&oacute;w o zmiennych</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Mamy nadzieję, że trochę już rozumiesz pojęcia zmiennych, logiki warunkowej czy funkcji. W tym module będziemy je dalej stosować i pogłębiać naszą znajomość JS-a. Zaczniemy od tematu zmiennych!</p>
+<h3>Dlaczego potrzebujemy zmiennych?</h3>
+<p>Jak pamiętasz, zmienne można porównać do "pudełek", w których przechowujemy pewne informacje lub wartości. Możemy później odwoływać się do tych wartości, podając tylko nazwę zmiennej, co znacznie poprawia czytelność i wydajność naszego kodu.</p>
+<p>Rozpatrzmy to na przykładzie. Wyobraź sobie, że na stronie mamy element o identyfikatorze (<code>id</code>) równym <code>box</code>, który chcemy modyfikować na różne sposoby w zależności od sytuacji: zmieniać jego tekst, dodawać lub usuwać klasę, i tak dalej. Ponieważ będziemy odwoływać się do tego elementu wielokrotnie w naszym kodzie, możemy zadeklarować dla niego zmienną, a następnie używać jej w poszczególnych operacjach:</p>
+<pre><code class="language-js">
+// Deklarujemy zmienną
+
+let boxElement = document.getElementById('box');
+
+// Dodajemy klasę do elementu
+
+boxElement.classList.add('active');
+
+// Zmieniamy tekst elementu
+
+boxElement.innerText = &quot;This is new content of our element&quot;;
+
+</code></pre>
+<p>A jak wyglądałby kod, gdybyśmy nie użyli zmiennej?</p>
+<pre><code class="language-js">
+// Dodajemy klasę do elementu
+
+document.getElementById('box').classList.add('active');
+
+// Zmieniamy tekst elementu
+
+document.getElementById('box').innerText = &quot;This is new content of our element&quot;
+
+</code></pre>
+<p>Jak widzisz, różnica w ilości i czytelności kodu jest znaczna! Przy rozbudowanych aplikacjach, liczących wiele tysięcy linii kodu, potrzeba używania zmiennych staje się jeszcze bardziej oczywista.</p>
+<h3>Rodzaje zmiennych i stałych</h3>
+<p>Do tej pory używaliśmy tylko zmiennych, które były deklarowane za pomocą słowa <code>let</code>. Oprócz nich musisz również poznać stałe <code>const</code> oraz dowiedzieć się o zmiennych <code>var</code>. Zanim jednak do nich przejdziemy, wprowadzimy temat <em>zakresy zmiennej</em>.</p>
+<h3>Zakres zmiennej</h3>
+<p>Przy dużych projektach, oprócz konieczności deklaracji zmiennych, paląca staje się jeszcze inna kwestia – prawidłowe używanie <strong>zakresu zmiennych</strong>.</p>
+<p>Czym jest zakres zmiennej? Najprościej rzecz ujmując, jest to "przestrzeń" w której istnieje ta zmienna. Innymi słowy, zakres decyduje o tym, gdzie możemy użyć jej użyć.</p>
+<p>Przejdźmy od razu do konkretnego przykładu:</p>
+<pre><code class="language-js">let count = 0;
+
+if(count == 0){
+  count = 1;
+  let sum = 1;
+}
+
+console.log('count is', count); // count is 1
+console.log('sum is', sum); // ERROR: sum is not defined
+</code></pre>
+<p>Dlaczego ostatnia linia z powyższego przykładu spowoduje błąd? Ponieważ zmienna <code>sum</code> została zdefiniowana wewnątrz bloku <code>if</code>, a zakresem zmiennej <code>let</code> jest blok kodu zamknięty w nawiasy klamrowe <code>{ }</code>.</p>
+<p>Zmienna <code>count</code> została zdefiniowana poza blokiem <code>if</code>, więc możemy wyświetlić jej wartość, ale zmienna <code>sum</code> "istnieje" tylko wewnątrz bloku <code>if</code>, i tylko w nim możemy się do niej odnosić.</p>
+<p>W tym przykładzie zmienną <code>count</code> nazwalibyśmy zmienną globalną – jest zdefiniowana poza jakimkolwiek blokiem <code>{ }</code>, więc będzie dostępna nie tylko w całej reszcie tego samego pliku JS, ale w całym kodzie JS (o ile jest wykonywany po wykonaniu tej deklaracji).</p>
+<p>Możesz w pierwszej chwili pomyśleć sobie, że pilnowanie zakresu zmiennych będzie Ci tylko komplikować życie. Może lepiej, żeby wszystkie zmienne były globalne? Nic bardziej mylnego!</p>
+<p>Gdyby wszystkie zmienne były globalne, tzn. miały zakres całego skryptu, musielibyśmy bardzo ostrożnie je nazywać. Przecież gdzieś, w jakimś miejscu w kodzie, mogliśmy już użyć zmiennej <code>computerMove</code>. W innym miejscu kodu musielibyśmy użyć innej nazwy. Łatwo sobie wyobrazić, że przy skrypcie liczącym tysiące linii kodu, to może (a wręcz – będzie) powodować sporo problemów i nieczytelne nazwy zmiennych.</p>
+<p>Właśnie z tego względu będziemy starali się, aby nasze zmienne miały <strong>jak najmniejszy zakres</strong>. Będą istniały tylko tam, gdzie są nam potrzebne. Co więcej, będziemy unikać stosowania zmiennych globalnych i z tego względu całą zawartość pliku będziemy zamykać w nawiasach klamrowych.</p>
+<h3>Stała <code>const</code></h3>
+<p>Oprócz zmiennych możemy też używać stałych – zamiast <code>let</code> napiszemy wtedy <code>const</code>. Różnią się one od zmiennych tym, że nie można później zmienić ich wartości. Dlaczego warto ich używać? Czasami możemy chcieć się upewnić, że przypadkiem nie zmienimy wartości zmiennej – wtedy warto użyć stałej. Dzięki temu nie musimy ani pamiętać, ani sprawdzać, czy jakaś nazwa zmiennej została już wykorzystana.</p>
+<p>Dlatego możesz przyjąć, że zawsze używamy stałych, a tylko tam, gdzie jest taka potrzeba, będziemy używać zmiennych. Nie musisz się nad tym zastanawiać przy deklarowaniu zmiennej/stałej – możesz <strong>zawsze deklarować stałą</strong>, a dopiero w razie potrzeby zmienić <code>const</code> na <code>let</code>.</p>
+<p>Pamiętaj, że przy deklaracji stałej musimy od razu nadać jej wartość. Inaczej jej istnienie nie miałoby sensu – skoro nie możemy później zmienić wartości, nie ma powodu deklarowania stałej bez nadawania jej wartości.</p>
+<h3>Zmierzch zmiennych <code>var</code></h3>
+<p>Zarówno na samym początku nauki programowania, jak i posiadając lata doświadczenia, często będziesz szukać w internecie rozwiązań problemów, czy odpowiedzi na nurtujące Cię pytania. Dlatego warto poznać również zmienne <code>var</code>, mimo że dziś już raczej unika się ich używania.</p>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/sunset.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/sunset-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/sunset.png 2x" class="img-inline img-right">
+<p>JavaScript ewoluuje, jak każdy język programowania. Do 2015 roku, kiedy został opublikowany standard ES6, w JS-ie nie istniały zmienne <code>let</code> ani stałe <code>const</code> – zamiast nich zawsze używało się właśnie zmiennych <code>var</code>.</p>
+<p>Czym zmienne <code>var</code> różnią się od zmiennych <code>let</code>? W praktyce główną różnicą jest zakres zmiennej. Podczas gdy zakresem zmiennej <code>let</code> jest blok <code>{ }</code>, to w przypadku zmiennej <code>var</code> jest to funkcja.</p>
+<p>Spójrz na ten przykład:</p>
+<pre><code class="language-js">function differenceBetweenNumbers(argNumA, argNumB){
+  if(argNumA &gt; argNumB){
+    var numAIsBigger = true;
+  }
+
+  if(numAIsBigger){
+    return argNumA - argNumB;
+  } else {
+    return argNumB - argNumA;
+  }
+}
+</code></pre>
+<p>Ten kod zadziała poprawnie, mimo że zmienna <code>numAIsBigger</code> została zadeklarowana wewnątrz bloku <code>if</code>. Jej zakresem jest cała funkcja, dlatego będzie dostępna również poza pierwszym blokiem <code>if</code>.</p>
+<p>Gdybyśmy zamiast niej chcieli użyć zmiennej <code>let</code>, musielibyśmy zadeklarować zmienną <em>na wyższym poziomie</em>, czyli poza blokiem <code>if</code>:</p>
+<pre><code class="language-js">function differenceBetweenNumbers(argNumA, argNumB){
+  let numAIsBigger;
+
+  if(argNumA &gt; argNumB){
+    numAIsBigger = true;
+  }
+
+  if(numAIsBigger){
+    return argNumA - argNumB;
+  } else {
+    return argNumB - argNumA;
+  }
+}
+</code></pre>
+<p>Różnica zakresu jest największą zmianą, ale nie jedyną – np. zmienną <code>var</code> można też wielokrotnie deklarować, co zawsze było złą praktyką, ale możesz się z tym spotkać w przykładach kodu znalezionych w internecie. Kolejne deklaracje zmiennej <code>var</code> są traktowane po prostu jako przypisanie wartości (lub ignorowane, jeśli nie ma w nich przypisania wartości).</p>
+<h3>Deklarowanie funkcji nazwanych</h3>
+<p>Kolejną istotną kwestią, która łączy się z tematem zmiennych, jest zakres funkcji nazwanej – tzn. takiej, która nie jest anonimowa, czyli po <code>function</code> ma podaną nazwę. Funkcje nazwane są traktowane przez JS inaczej niż reszta kodu – są one parsowane (analizowane przez silnik JS-a) przed wykonaniem kodu z danego pliku. Spójrz na poniższy przykład:</p>
+<pre><code class="language-js">saySomething();
+
+function saySomething(){
+  console.log('Hi!');
+}
+
+saySomething();
+
+function saySomething(){
+  console.log('Bye!');
+}
+</code></pre>
+<p>Czytając ten kod, mogłoby Ci się wydawać, że pierwsze wywołanie <code>saySomething()</code> powinno powodować błąd. Gdyby go nie było, drugie wywołanie powinno wyświetlić "Hi!". Prawda?</p>
+<p>Funkcje nazwane są jednak parsowane przed resztą kodu, w związku z czym najpierw zostanie stworzona funkcja <code>saySomething</code> wyświetlająca "Hi!", potem zostanie ona nadpisana nową funkcją o tej samej nazwie, która wyświetli "Bye!", a dopiero potem zostaną wykonane oba wywołania tej funkcji – i oba wyświetlą "Bye!"...</p>
+<p>To może powodować, że ciężej będzie Ci zrozumieć kod aplikacji i odnaleźć potencjalne błędy. Dlatego zachęcamy Cię do używania funkcji anonimowych i zapisywania ich w stałych (lub ew. zmiennych).</p>
+<pre><code class="language-js">const saySomething = function(){
+  console.log('Hi!');
+};
+</code></pre>
+<p>Dzięki temu nie musisz pamiętać jakimi prawami rządzą się funkcje nazwane, ponieważ w tym przypadku zastosowanie będą miały zasady dotyczące zakresu zmiennych i stałych.</p>
+<h3>Deklarowanie wielu zmiennych</h3>
+<p>Jeżeli chcemy zadeklarować wiele zmiennych lub stałych, nie musimy za każdym razem powtarzać słów <code>let</code> lub <code>const</code>. Wystarczy użyć ich raz, a potem po przecinku wymienić zmienne lub stałe, które chcemy zadeklarować:</p>
+<pre><code class="language-js">let button,
+  activeClass = 'active',
+  description;
+</code></pre>
+<p>Używanie tej pisowni zależy od osobistych (lub zespołowych) preferencji.</p>
+<h3>Deklarowanie argumentów funkcji</h3>
+<p>Argumenty funkcji są definiowane poprzez wymienienie ich w nawiasach okrągłych <code>( )</code> przy deklaracji funkcji. Nie ma potrzeby dodatkowego używania słów <code>let</code> czy <code>const</code>:</p>
+<pre><code class="language-js">const quoteText = function (quoted){
+  return '&lt;quote&gt;' + quoted + '&lt;/quote&gt;';
+}
+</code></pre>
+<h3>Podsumowanie</h3>
+<p>W tym submodule pojawiło się sporo nowych informacji. Teraz kiedy już rozumiesz te zagadnienia, możemy je bardzo krótko podsumować. Dzięki temu lepiej zapamiętasz wszystko, co potrzebujesz już teraz wiedzieć na temat zmiennych i stałych.</p>
+<h4>Deklarowanie zmiennych i stałych</h4>
+<p>Poprawne sposoby deklaracji zmiennych, stałych i argumentów to:</p>
+<pre><code class="language-js">
+// Zdefiniowanie zmiennej bez przypisanej wartości
+
+let players;
+
+// Zdefiniowanie zmiennej z przypisaną wartości
+
+let amount = 20.5;
+
+// Zdefiniowanie stałej z przypisaną wartości
+
+const homeUrl = 'https://google.com';
+
+// Definiowanie wielu stałych
+
+const activeClass = 'active',
+  highlightClass = 'highlight';
+
+// Definiowanie wielu zmiennych
+
+let button,
+  pointsSum = 0;
+
+</code></pre>
+<p>Pamiętaj, że domyślnie używamy stałych, a tylko tam, gdzie jest taka potrzeba – zmiennych.</p>
+<h4>Argumenty funkcji</h4>
+<p>Definiowanie argumentów funkcji nie wymaga użycia słów <code>let</code> ani <code>const</code>.</p>
+<pre><code class="language-js">// Deklaracja funkcji z użyciem argumentu
+
+const quoteText = function (quoted){
+  return '&lt;quote&gt;' + quoted + '&lt;/quote&gt;';
+}
+</code></pre>
+<h4>Zakres zmiennych i stałych</h4>
+<p>Zmienna istnieje tylko w swoim zakresie i chcemy, żeby zakres zmiennej był najmniejszy jak to możliwe. Innymi słowy, stosujemy większy zakres zmiennej, tylko jeśli w danym przypadku jest to nam potrzebne.</p>
+<p>Zmienne <code>let</code> i stałe <code>const</code> mają zakres najbliższego bloku, zamkniętego w nawiasy klamrowe <code>{ }</code>. Jeśli potrzebujemy, aby zakres zmiennej lub stałej był większy, deklarujemy ją wcześniej. Staramy się jednak unikać deklarowania zmiennych globalnych, czyli deklarowania poza jakąkolwiek funkcją czy blokiem, np. na samym początku pliku.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block task-card" >
+                        <h3>Zadanie: <span class="task-title">Poprawa kodu projektu</span></h3>
+                        <div class="task-content">
+                            <p>Teraz czas na zastosowanie wiedzy o zmiennych w praktyce! Otwórz swój projekt z poprzedniego modułu i znajdź w nim plik <code>js/script.js</code>. Twoim zadaniem jest poprawa deklaracji zmiennych zgodnie z informacjami z tego submodułu, czyli:</p>
+<ul>
+<li>cały kod znajdujący się w tym pliku zamknij w bloku za pomocą nawiasów klamrowych <code>{ }</code>, aby unikać używania zmiennych/stałych globalnych,</li>
+<li>jeśli to możliwe, używaj stałych,</li>
+<li>deklaracje stałych/zmiennych powinny być – w miarę możliwości – zagnieżdżone tak samo, jak miejsce ich wykorzystania, czyli staramy się używać możliwie małych zakresów,</li>
+<li>unikaj sytuacji, w których tuż pod deklaracją zmiennej nadajesz jej wartość – lepiej zrobić to od razu w deklaracji,</li>
+<li>zamień funkcje nazwane na funkcje anonimowe zapisane w stałych,</li>
+</ul>
+<h4>Testuj krok po kroku!</h4>
+<p>To bardzo ważne – nie zmieniaj wszystkiego naraz! Zmień jedną zmienną na stałą i wtedy sprawdź, czy skrypt działa, a w konsoli nie ma błędów. Po kilku zmianach zapisz commit i wtedy pracuj dalej.</p>
+<p>To może wydawać się oczywiste, ale łatwo się zapomnieć i zrobić wiele zmian w kodzie. Potem testujemy i zaczynamy przeprawę przez morze błędów, wątpiąc, co zrobiliśmy dobrze, a co źle. Pamiętaj też o commitowaniu po każdej przetestowanej zmianie – dzięki temu zawsze możesz wrócić do ostatniej działającej wersji.</p>
+<p>Po zakończeniu zadania upewnij się, że wszystkie zmiany są zapisane w commitach. Wtedy wyślij je na zdalne repozytorium, a link do najnowszego commita wyślij do sprawdzenia.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <div class="clearfix">
+                                                                                <a href="https://kodilla.com/pl/bootcamp-task/407/597593" target="_blank" class="btn btn-info-outline">Podgląd zadania</a>
+                            <form target="_blank" class="form-inline project-link-form">
+                                <div class="form-group">
+                                    <input type="text" name="link" class="form-control" value="https://github.com/skwiryt/javascript-prework/commit/629e75dd5c20be66a4650922c33469bb169e903f">
+                                </div>
+                                <button type="submit" class="btn  btn-primary " >Wyślij link <i class="fa fa-check"></i></button>
+                            </form>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-970" class="card submodule completed" data-bootcamp-user-submodule-id="597594" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">6.2. <span>Tworzymy bloga!</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Wyposażeni w powyższą wiedzę, możemy przystąpić do działania!</p>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/diary.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/diary-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/diary.png 2x" class="img-inline img-right">
+<p>Jak pamiętasz, nad projektem będziemy pracować przez dwa moduły. Naszym zadaniem będzie stworzenie <strong>prostej aplikacji bloga</strong>. Jak zwykle, zaczniemy od podstawowej wersji (stworzymy ją w ramach bieżącego modułu), a skończymy na stronie z działającym skryptem (w kolejnym tygodniu).</p>
+<p>Dzięki temu projektowi poznasz wiele nowych zagadnień – będą to przede wszystkim: tablice, obiekty i pętle. Zacznijmy jednak od sprecyzowania, co chcemy zrobić.</p>
+<h3>Specyfikacja projektu</h3>
+<p>Naszym celem będzie stworzenie strony, która składa się z:</p>
+<ul>
+<li>nagłówka,</li>
+<li>lewej kolumny, w której znajdą się tytuły artykułów,</li>
+<li>środkowej kolumny, która wyświetla jeden artykuł,</li>
+<li>prawej kolumny, która zawiera chmurę tagów oraz listę autorów.</li>
+</ul>
+<div class="bc-note alert-info">
+<h4 class="alert-heading text-center">Czym jest chmura tagów?</h4>
+<p>Nie wszyscy spotkali się z tym określeniem, więc wyjaśniamy – tagi to słowa kluczowe związane np. z artykułem. Każdy post na naszym blogu może mieć wiele tagów.</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/05.jsbasics/fer-05-01.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/05.jsbasics/fer-05-01.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Chmura tagów to lista, w której wielkość czcionki zależy od tego, jak często występuje dane słowo kluczowe. Np. tag występujący w dziesięciu artykułach będzie większą czcionką niż ten występujący tylko w trzech.</p>
+</div>
+<p>Działanie projektu:</p>
+<ul>
+<li>w kodzie HTML będą znajdować się wyłącznie artykuły,</li>
+<li>po otwarciu strony, za pomocą JS zostanie wygenerowana lista tytułów, chmura tagów, oraz lista autorów,</li>
+<li>po kliknięciu któregoś z tytułów w lewej kolumnie, odpowiedni artykuł wyświetli się w środkowej kolumnie,</li>
+<li>po kliknięciu któregoś tagu lub autora, lista tytułów w lewej kolumnie zostanie przefiltrowana.</li>
+</ul>
+<h3>Możliwe zastosowania projektu</h3>
+<p>Będziemy nazywać ten projekt <em>blogiem</em>, ale nic nie stoi na przeszkodzie, aby w Twojej implementacji stał się czymś innym. Najważniejsze, aby każdy artykuł posiadał jedno pole, które może zawierać wiele wartości (post na blogu może mieć wiele tagów), oraz drugie – z tylko jedną wartością (post na blogu ma jednego autora).</p>
+<p>Kilka propozycji zastosowania:</p>
+<ul>
+<li>portfolio programisty
+<ul>
+<li>tagi – kluczowe cechy projektu i technologie w nim wykorzystane, np. <em>slideshow</em></li>
+<li>zamiast autorów – przeznaczenie projektu, np. <em>portfolio fotografa</em></li>
+</ul>
+</li>
+<li>książka kucharska
+<ul>
+<li>tagi – nazwy składników,</li>
+<li>zamiast autorów – rodzaje dań, np. <em>przystawka</em>,</li>
+</ul>
+</li>
+<li>katalog ulubionych filmów
+<ul>
+<li>tagi – gatunki, aktorzy,</li>
+<li>zamiast autorów – reżyser filmu,</li>
+</ul>
+</li>
+<li>notatki z nauki (web developmentu, obcego języka, etc.)
+<ul>
+<li>tagi – słowa kluczowe notatki, np. <em>funkcje</em>,</li>
+<li>zamiast autorów – główna kategoria notatki, np. <em>JavaScript</em>,</li>
+</ul>
+</li>
+</ul>
+<p>To tylko parę pomysłów – z pewnością przyjdą Ci do głowy również inne, które możesz wykorzystać w tym projekcie. Dzięki temu Twój projekt będzie unikatowy, a praca nad nim będzie przyjemniejsza – co z kolei wpłynie na większą wydajność nauki!</p>
+<h3>Od czego zacząć?</h3>
+<p>Przygotowaliśmy dla Ciebie prosty szablon naszej strony, żebyśmy mogli od razu przejść do pisania kodu JS. Postaraj się na razie nie poświęcać zbyt wiele czasu na zmianę wyglądu strony – przyjdzie na to czas pod koniec tego modułu. Pod podglądem znajdziesz instrukcje konfiguracji środowiska pracy.</p>
+<p style="min-height:600px; border: 1px solid #d0e9c6; border-radius: 4px; padding: 20px; text-align: center;" data-height="600" data-theme-id="33276" data-slug-hash="963243bfbb9fb737b59b7f0f9ba4e5ce" data-default-tab="result" data-user="kodilla" data-embed-version="2" data-editable="true" class="codepen">See <a href="https://codepen.io/kodilla/pen/963243bfbb9fb737b59b7f0f9ba4e5ce/">the Pen</a> on <a href="https://codepen.io">CodePen</a>.</p><br>
+<h3>Przygotowanie środowiska pracy</h3>
+<p>Podobnie jak w poprzednim module, przygotuj środowisko nowego projektu o nazwie <code>javascript-blog</code>, korzystając z poniższych kroków:</p>
+<ol>
+<li>Stwórz na GitHubie nowe repozytorium pod nazwą <code>javascript-blog</code>.</li>
+<li>Sklonuj stworzone repozytorium na swój komputer.</li>
+<li>Skopiuj plik <code>package.json</code> stworzony w poprzednim module do katalogu projektu.</li>
+<li>Zainicjuj projekt za pomocą komendy <code>npm run init-project</code> uruchomionej w katalogu projektu.</li>
+<li>Zapisz commit i wyślij go (wykonaj <em>push</em>) do zdalnego repozytorium.</li>
+<li>Sprawdź w panelu GitHub, czy pliki są widoczne w repozytorium.</li>
+<li>W pliku <code>index.html</code> stwórz podstawową strukturę strony (<code>doctype</code>, <code>html</code>, <code>head</code>, <code>meta</code>, <code>title</code>, <code>body</code>).</li>
+<li>Podlinkuj plik <code>css/style.css</code> za pomocą tagu <code>link</code>.</li>
+<li>Skopiuj kod HTML z szablonu załączonego powyżej i wstaw go wewnątrz tagu <code>body</code>.</li>
+<li>Przed zamknięciem tagu <code>body</code> (czyli przed tagiem <code>&lt;/body&gt;</code>) załącz plik <code>script.js</code> w następujący sposób: <code>&lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;</code></li>
+<li>Skopiuj kod SCSS z powyższego szablonu i wklej go do swojego pliku <code>style.scss</code>.</li>
+</ol>
+<h4>Modyfikacja task runnera</h4>
+<p>Począwszy od tego modułu, będziemy pracować również na plikach <code>.js</code>, więc warto zmodyfikować nasz task runner, aby reagował na zmiany w tych plikach i automatycznie odświeżał podgląd – do tej pory ta funkcjonalność działała tylko dla plików <em>.html</em> i <em>.css</em>. W związku z tym zmień poniższą linijkę w obecnym task runnerze:</p>
+<pre><code class="language-js">&quot;watch:browsersync&quot;: &quot;browser-sync start --server --files \&quot;css/*.css\&quot; \&quot;*.html\&quot;&quot;,
+</code></pre>
+<p>na następującą:</p>
+<pre><code class="language-js">&quot;watch:browsersync&quot;: &quot;browser-sync start --server --files \&quot;css/*.css\&quot; \&quot;*.html\&quot; \&quot;js/*.js\&quot;&quot;,
+</code></pre>
+<p>Gotowe! Upewnij się, że zmiany we wszystkich powyższych plikach zostały zachowane i zapisz nowy commit.</p>
+<p>Z tak przygotowanym środowiskiem jesteśmy gotowi do rozpoczęcia pisania naszego skryptu!</p>
+<h3>Dobre praktyki w JS</h3>
+<p>Zanim rozpoczniemy pracę, krótko wspomnimy o dobrych praktykach, które będą dla Ciebie istotne w trakcie dalszej nauki JS-a.</p>
+<h4>Średniki</h4>
+<p>W poprzednim module wspomnieliśmy, że na końcu każdej linii znajduje się średnik, i że później wspomnimy o wyjątkach. Teraz jest to "później". :)</p>
+<p>Średników nie stawiamy po:</p>
+<ul>
+<li>deklaracjach funkcji nazwanych, czyli np. <code>function myFunc(){}</code>,</li>
+<li>blokach <code>if</code>, <code>else if</code> i <code>else</code>,</li>
+<li>pętlach, z których pierwszą poznasz w tym module.</li>
+</ul>
+<p>A co się stanie, kiedy zapomnę postawić średnik? Odpowiedź na to pytanie może Cię zdziwić – nic się nie stanie. Wszystko zadziała tak samo. Używanie średników jest konwencją, którą stosuje większość programistów JS, i głównie dlatego uczymy Cię tego podejścia. Dzięki temu będą większe szanse, że Twoje przyzwyczajenia będą zgodne z przyzwyczajeniami innych członków Twojego zespołu, kiedy rozpoczniesz pracę jako Junior Web Developer.</p>
+<h4>Wcięcia</h4>
+<p>Jak już pewnie udało Ci się zauważyć, kod JS ma wcięcia. Podobnie jak w CSS oraz SCSS, wcięcia oznaczają przejście na <em>kolejny poziom</em>. Dzięki temu dużo łatwiej jest znaleźć koniec deklaracji funkcji lub bloku <code>if/else</code>.</p>
+<p>Dbaj o porządek we wcięciach kodu! To znacznie ułatwi Ci rozumienie JS-a!</p>
+<h4>Strict mode</h4>
+<p>Na początku każdego pliku, zawierającego kod JS, będziemy umieszczać następującą linię:</p>
+<pre><code class="language-js">'use strict';
+</code></pre>
+<p>Dzięki niej nasz kod będzie uruchamiany w <em>trybie ścisłym</em>. Pomyłki, które normalnie nie wywołałyby błędu, teraz będą traktowane jak błąd i wyświetlane na czerwono w konsoli, znajdującej się w narzędziach developerskich przeglądarki.</p>
+<p>Możesz pomyśleć: "nie chcę mieć więcej błędów!", ale możesz nam wierzyć, że chcesz! Spójrz na poniższy przykład, w którym zrobiliśmy literówkę.</p>
+<pre><code class="language-js">let counter = 0;
+
+caunter = counter + 1;
+
+console.log(counter); // 0
+</code></pre>
+<p>Wyobraź sobie, że popełniasz taką pomyłkę, ukrytą gdzieś pośród setek linii kodu. Twój kod nie działa poprawnie, ale konsola nie wyświetla żadnych przydatnych informacji. Rwiesz włosy z głowy jak tysiące programistów przed Tobą...</p>
+<p>Właśnie dlatego chcemy używać <code>'use strict'</code> – wtedy ten błąd byłby od razu wychwycony i wyświetlony w konsoli!</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-971" class="card submodule completed" data-bootcamp-user-submodule-id="597595" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">6.3. <span>Wyświetlanie artykułu po kliknięciu</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Podstawową funkcjonalnością naszego bloga ma być wyświetlanie artykułu po kliknięciu w jego tytuł w lewej kolumnie. Skorzystamy tutaj z rozwiązań, które poznaliśmy już w poprzednim module. Zacznijmy jednak od doprecyzowania działania tej funkcjonalności.</p>
+<p>Na razie skupimy się tylko na kliknięciu w link, który został dodany w pliku <code>index.html</code> – dopiero później zastanowimy się, w jaki sposób generować listę linków. Przejdźmy więc do algorytmu naszej pierwszej funkcjonalności!</p>
+<h3>Algorytm działania skryptu</h3>
+<p>Wiemy już, że możemy powiązać kliknięcie w guzik (lub – w tym wypadku – link) z wykonaniem funkcji. Skąd jednak mamy wiedzieć, że dany link ma wyświetlić ten konkretny artykuł? Jak pamiętasz z modułu o Bootstrapie, skrypt musi "wiedzieć", że jeden element ma wpływać na drugi. Musimy je jakoś ze sobą powiązać!</p>
+<p>Spójrz na kod HTML naszego bloga. Lista tytułów składa się z linków, których atrybuty <code>href</code> zostały wypełnione. Bliższa analiza kodu pokazuje, że wartości tych atrybutów to symbol <code>#</code>, po którym podane jest <code>id</code> powiązanego artykułu. Za chwilę wykorzystamy tę zbieżność w naszym kodzie!</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/05.jsbasics/fer-05-02.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/05.jsbasics/fer-05-02.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Skoro już wiemy, w jaki sposób link z listy tytułów jest powiązany z artykułem, to w jaki sposób będziemy wyświetlać i ukrywać artykuły? Jeżeli przyjrzysz się SCSS-owi z naszego szablonu, zauważysz, że domyślnie wszystkie artykuły na blogu (elementy o klasie <code>.post</code>) są ukryte za pomocą deklaracji <code>display: none;</code>. Wyświetlane są tylko artykuły, które posiadają dodatkowo klasę <code>active</code>, która nadaje elementowi właściwość <code>display: block;</code>. Możemy zatem za pomocą JS dynamicznie nadawać i usuwać klasę <code>active</code>, aby pokazywać lub ukrywać artykuł.</p>
+<p>Zostaje jeszcze jedna ważna kwestia: chcielibyśmy, żeby kliknięty link zmieniał kolor. W ten sposób oznaczymy na liście tytuł aktualnie wyświetlanego artykułu. W tym przypadku również wykorzystamy klasę <code>active</code>.</p>
+<p>W takim razie algorytm działania skryptu będzie taki:</p>
+<ul>
+<li>po kliknięciu linka:
+<ul>
+<li>ustaw klasy linków:
+<ul>
+<li>usuń klasę <code>active</code> ze wszystkich linków na liście tytułów,</li>
+<li>dodaj klasę <code>active</code> do klikniętego linka,</li>
+</ul>
+</li>
+<li>ukryj wszystkie artykuły:
+<ul>
+<li>usuń klasę <code>active</code> ze wszystkich artykułów,</li>
+</ul>
+</li>
+<li>znajdź artykuł do wyświetlenia:
+<ul>
+<li>z klikniętego linka weź zawartość atrybutu <code>href</code>, np. <code>#article-2</code>,</li>
+<li>znajdź na stronie element pasujący do selektora takiego, jak wartość atrybutu <code>href</code>, np. <code>#article-2</code> – czyli szukamy elementu o <code>id=&quot;article-2&quot;</code>,</li>
+</ul>
+</li>
+<li>wyświetl znaleziony artykuł:
+<ul>
+<li>dodaj klasę <code>active</code> do znalezionego artykułu.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Z tak rozpisanym algorytmem jesteśmy prawie gotowi do pisania skryptu! Prawie, bo jeszcze nie wszystko z tej listy umiemy zrobić – ale będziemy to tłumaczyć na bieżąco.</p>
+<h3>Zdarzenia, czyli eventy</h3>
+<p>Podobnie jak w poprzednim module, napiszemy funkcję, która będzie działać po kliknięciu elementu na stronie. Zanim do tego przejdziemy, warto wspomnieć, że kliknięcie jest <em>zdarzeniem</em>, czyli <strong>eventem</strong>.</p>
+<p>W JavaScripcie spotkasz się z wieloma różnymi eventami. Możesz nawet tworzyć własne i wykorzystywać do budowania lepszej architektury skryptu. Zacznijmy jednak od krótkiego wyjaśnienia, czym są eventy.</p>
+<div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Metafora — event</h4>
+<p>Event możesz wyobrazić sobie jako zdarzenie, które każdy może zaobserwować. Przykładem może być zapalenie się zielonego światła na skrzyżowaniu.</p>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/trafficlight.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/trafficlight-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/trafficlight.png 2x" class="img-inline img-right">
+<p>To samo zdarzenie będzie miało różne skutki dla różnych osób:</p>
+<ul>
+<li>piesi w ogóle nie patrzą na sygnalizator dla samochodów, więc w żaden sposób nie zareagują na zapalenie się zielonego światła,</li>
+<li>kierowcy jadący na wprost ruszą i przejadą przez skrzyżowanie,</li>
+<li>kierowcy skręcający w prawo będą mogli skręcić, ale muszą najpierw udzielić pierwszeństwa pieszym przechodzącym przez jezdnię, w którą chcą skręcić,</li>
+<li>kierowca karetki jadącej na sygnale nie stosuje się do sygnalizacji, ale zielone światło do jazdy na wprost mówi mu, że nie musi się obawiać samochodu wjeżdżającego na skrzyżowanie z innego kierunku.</li>
+</ul>
+<p>Zwróć uwagę, że nie każdy na skrzyżowaniu patrzy na to światło, i nie każdy, kto je obserwuje, zareaguje w ten sam sposób.</p>
+</div>
+<p>W JavaScripcie, do każdego elementu na stronie, można dodać "nasłuchiwacz zdarzeń". Brzmi to dużo zgrabniej po angielsku – <em>event listener</em>. Będzie on czekać na konkretny event występujący na tym elemencie. Kiedy się doczeka, wykona wcześniej zdefiniowaną funkcję, której przekaże informacje o tym evencie.</p>
+<p>Rozpoczynając pracę z eventami, warto wspomnieć o kluczowej zasadzie ich działania. Zastanów się nad taką sytuacją: mamy link, w którym umieściliśmy obrazek. Czy kliknięcie obrazka oznacza też kliknięcie linka? Musi tak być, bo inaczej musielibyśmy przypisać funkcję do kliknięcia każdego elementu w linku!</p>
+<p>W JS zostało to rozwiązane za pomocą bąbelkowania, czy bardziej profesjonalnie – propagacji. W podanym przykładzie obrazek otrzyma event <code>click</code>. Następnie przekaże ten event swojemu rodzicowi – linkowi. Dzięki temu link też będzie mógł zareagować na kliknięcie. Link również przekaże ten event swojemu rodzicowi – i tak event będzie bąbelkować do samej góry, aż do <code>body</code>, <code>document</code> i wreszcie <code>window</code>.</p>
+<h4>Funkcja <code>addEventListener</code></h4>
+<p>W poprzednim module mieliśmy już do czynienia z tą funkcją przy obsługiwaniu kliknięcia guzika:</p>
+<pre><code class="language-js">document.getElementById('test-button').addEventListener('click', function(){
+  console.log('Guzik został kliknięty');
+});
+</code></pre>
+<div class="bc-note alert-warning">
+<h4 class="alert-heading text-center">Funkcja czy metoda?</h4>
+<p>W tym module używamy określenia "funkcja", aby nie komplikować sytuacji. W następnym module dowiesz się, że kiedy funkcję wykonujemy po kropce, to nazywa się ona <em>metodą</em>. Technicznie rzecz biorąc, każda metoda jest funkcją, tak jak każdy kwadrat jest jednocześnie prostokątem, jednak w praktyce używa się dokładniejszego określenia – <em>metoda</em>. Wspominamy o tym teraz, aby nie zdziwiło Cię, kiedy spotkasz się z tym określeniem.</p>
+</div>
+<p>Przeanalizujmy ostatnią linię powyższego kodu:</p>
+<ul>
+<li><code>document.getElementById('test-button')</code> znajduje na stronie element o <code>id=&quot;test-button&quot;</code>),</li>
+<li><code>.addEventListener</code> jest wybraniem funkcji <code>addEventListener</code> przypisanej do tego guzika – czyli chcemy powiązać jakąś funkcję z jakimś eventem występującym na tym elemencie,</li>
+<li><code>( )</code> – te nawiasy, umieszczone bezpośrednio po nazwie funkcji, mówią nam, że wykonujemy tę funkcję,
+<ul>
+<li><code>'click'</code> to rodzaj eventu, którego będziemy nasłuchiwać,</li>
+<li><code>function</code> rozpoczyna anonimową funkcję, która ma zostać wykonana po wystąpieniu tego eventu na tym elemencie.</li>
+</ul>
+</li>
+</ul>
+<p>Przy okazji warto wspomnieć, że funkcja wykonywana w reakcji na event jest często nazywana <em>handlerem</em>. Innymi słowy, handler eventu zostanie wykonany przez listener w momencie wykrycia eventu danego typu.</p>
+<h4>Jak znaleźć wszystkie linki?</h4>
+<p>Wiemy już sporo o eventach i ich listenerach, więc czas zastosować tę wiedzę do linków na liście tytułów. Moglibyśmy każdemu z nich nadać <code>id</code> i wykorzystać powyższy fragment kodu, ale musielibyśmy to zrobić wiele razy – i dodawać kolejne fragmenty kodu JS przy każdym dodaniu nowego artykułu.</p>
+<p>Jak pewnie się domyślasz, jest na to lepszy sposób. Wykorzystamy jedną z dwóch funkcji, która pozwala na znalezienie elementu za pomocą selektora CSS! To się świetnie składa, bo znasz już działanie selektorów!</p>
+<p>Mamy do dyspozycji dwie funkcje:</p>
+<ul>
+<li><code>document.querySelector(selector)</code>, która wyszuka pierwszy pasujący element,</li>
+<li><code>document.querySelectorAll(selector)</code>, która wyszuka wszystkie elementy, pasujące do selektora.</li>
+</ul>
+<p>Będzie nas interesować druga metoda, więc to właśnie ją zastosujemy w docelowym skrypcie. Przećwiczmy ją teraz i wykorzystajmy wcześniejszy kod do wyświetlenia w konsoli listy linków po kliknięciu w guzik:</p>
+<ol>
+<li>W swoim pliku <code>index.html</code>, w dowolnym miejscu (np. w lewym sidebarze nad listą linków) dodaj element <code>button</code> z atrybutem <code>id=&quot;test-button&quot;</code>.</li>
+<li>W pliku <code>js/script.js</code> wklej poniższy kod:</li>
+</ol>
+<pre><code class="language-js">document.getElementById('test-button').addEventListener('click', function(){
+  const links = document.querySelectorAll('.titles a');
+  console.log('links:', links);
+});
+</code></pre>
+<ol start="3">
+<li>Otwórz konsolę w narzędziach developerskich i sprawdź, co się w niej pojawi po kliknięciu guzika, który przed chwilą dodaliśmy do strony.</li>
+</ol>
+<p>Jak widzisz w konsoli, po kliknięciu guzika funkcja <code>querySelectorAll</code> znalazła wszystkie elementy pasujące do selektora <code>.titles a</code>. Koniecznie w konsoli kliknij trójkąt, który pojawił się przy wyświetlonym komunikacie. W ten sposób zobaczysz pełną zawartość stałej <code>links</code>!</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/05.jsbasics/console-links.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/05.jsbasics/console-links.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Jeżeli udało Ci się uzyskać taki sam efekt – znakomicie! Twój kod działa, jak należy. Możesz teraz skasować button z pliku <code>index.html</code> oraz zakomentuj kod, który wstawiliśmy do pliku <code>js/script.js</code>.</p>
+<p>Wiemy już, jak wyszukać wszystkie linki. Czy zatem teraz wystarczy napisać tylko <code>links.addEventListener(...)</code>? Niestety, nie będzie tak łatwo. Funkcji <code>addEventListener</code> możemy użyć tylko na pojedynczym elemencie. W takim razie musimy napisać pętlę...</p>
+<h3>Pętla <code>for-of</code></h3>
+<p>Jeśli pamiętasz jeszcze rozdział o algorytmach z poprzedniego modułu, pokazaliśmy w nim zagadnienie pętli. Teraz poznamy pętle w JS.</p>
+<p>Pętla to nic innego jak wykonywanie tych samych czynności w kółko. Każde wykonanie tych operacji, czyli każdy "obrót" pętli, nazywamy <em>iteracją</em>.</p>
+<div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Metafora — pętla</h4>
+<p>Załóżmy, że Twój kot często chowa się w pudełku, kiedy chcesz go zabrać do weterynarza. Potrzebujesz w takim razie znaleźć kota, a masz przed sobą wiele pudełek.</p>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/loop.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/loop-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/loop.png 2x" class="img-inline img-left">
+<p>Dla każdego pudełka musisz wykonać następujący algorytm:</p>
+<ul>
+<li>jeśli pudełko jest za małe dla kota, przejść do kolejnego pudełka,</li>
+<li>jeśli pudełko jest oklejone taśmą klejącą i kot nie mógł do niego wejść, przejść do kolejnego pudełka,</li>
+<li>otwórz pudełko, i jeśli nie ma w nim kota, przejść do kolejnego pudełka,</li>
+<li>jeśli jest w nim kot, wyjmij kota i nie sprawdzać kolejnych pudełek.</li>
+</ul>
+</div>
+<p>W przypadku naszego skryptu, mamy stałą <code>links</code>, która zawiera jakąś liczbę linków. Pisząc nasz skrypt, nie wiemy ile linków będzie – i nie potrzebujemy tego wiedzieć. Pętla ma coś zrobić dla każdego z nich. Składnia pętli w naszym skrypcie będzie wyglądała następująco:</p>
+<pre><code class="language-js">const links = document.querySelectorAll('.titles a');
+
+for(let link of links){
+  console.log(link);
+}
+</code></pre>
+<p>Powyższy przykład po prostu wyświetli w konsoli każdy element, zawarty w <code>links</code>.</p>
+<p>Przeanalizujmy składnię tej pętli:</p>
+<ul>
+<li><code>for</code> – to będzie pętla,</li>
+<li><code>( )</code> – w tych nawiasach zawieramy definicję działania pętli,
+<ul>
+<li><code>let link</code> – deklarujemy zmienną, w której znajdzie się pojedynczy element z <code>links</code>,</li>
+<li><code>of</code> – łącznik, który wyjaśnimy w następnym module,</li>
+<li><code>links</code> – kolekcja, z której mają być brane elementy, po których <em>iterujemy</em> pętlę,</li>
+</ul>
+</li>
+<li><code>{ }</code> – w tych nawiasach wpisujemy operacje, które mają być wykonane dla każdego <em>iterowanego</em> elementu.</li>
+</ul>
+<p>Zobaczmy więc, w jaki sposób możemy wykorzystać pętlę do przypisania event listenerów do każdego linka. Wstaw w swoim pliku <code>js/script.js</code> poniższy kod, i obserwuj w konsoli developerskiej, co się dzieje, gdy klikasz linki na liście tytułów:</p>
+<pre><code class="language-js">const titleClickHandler = function(){
+  console.log('Link was clicked!');
+}
+
+const links = document.querySelectorAll('.titles a');
+
+for(let link of links){
+  link.addEventListener('click', titleClickHandler);
+}
+</code></pre>
+<p>Zwróć uwagę, że tym razem zapisaliśmy handler eventu w zmiennej <code>titleClickHandler</code> – za chwilę zacznie się on rozrastać, więc taki zapis będzie dla nas wygodniejszy, niż zastosowanie anonimowej funkcji bezpośrednio jako drugi argument funkcji <code>addEventListener</code> (wewnątrz pętli).</p>
+<p>No dobrze, zaglądamy do konsoli i coś się tam wyświetla, ale... co właściwie chcieliśmy w ten sposób osiągnąć?</p>
+<p>W trakcie pracy nad skryptem łatwo jest zapomnieć, jaki był algorytm. Dlatego warto przenieść go sobie bezpośrednio do kodu, który piszemy! Wykorzystamy do tego komentarze – oczywiście, zgodnie z dobrymi praktykami, napiszemy je po angielsku.</p>
+<p>Doprowadź swój plik <code>js/script.js</code> do stanu pokazanego poniżej:</p>
+<pre><code class="language-js">const titleClickHandler = function(event){
+  console.log('Link was clicked!');
+
+  /* remove class 'active' from all article links  */
+
+  /* add class 'active' to the clicked link */
+
+  /* remove class 'active' from all articles */
+
+  /* get 'href' attribute from the clicked link */
+
+  /* find the correct article using the selector (value of 'href' attribute) */
+
+  /* add class 'active' to the correct article */
+}
+
+const links = document.querySelectorAll('.titles a');
+
+for(let link of links){
+  link.addEventListener('click', titleClickHandler);
+}
+</code></pre>
+<p>Tym razem wykorzystaliśmy inny rodzaj komentarza – komentarz blokowy. W przeciwieństwie do komentarza rozpoczynającego się od <code>//</code>, ten rodzaj komentarza może mieć wiele linii. Tym razem jednak użyliśmy go tylko po to, aby wyglądał inaczej niż komentarze <code>//</code>, których będziemy używać do zamieszczania innych uwag.</p>
+<p>To świetna metoda na ułatwienie sobie pracy. Od teraz będziemy wypełniać kod pod każdym komentarzem. Przy okazji od razu zrobimy sobie dokumentację naszego skryptu.</p>
+<div class="bc-note alert-info">
+<h4 class="alert-heading text-center">Ćwiczenie</h4>
+<p>Każdy handler eventu będzie otrzymywał argument, zawierający informacje na temat wychwyconego zdarzenia. Standardowo temu argumentowi nadaje się nazwę <code>event</code>, co też zrobiliśmy w powyższym przykładzie.</p>
+<p>Do funkcji <code>titleClickHandler</code> dodaj <code>console.log</code>, który wyświetli zawartość argumentu <code>event</code>. Obejrzyj w konsoli jego zawartość.</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/05.jsbasics/console-event.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/05.jsbasics/console-event.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Jak widzisz, jest w nim mnóstwo informacji i funkcji. Jedną z ciekawszych jest <code>target</code>, które pokazuje element, który został kliknięty. W naszym przykładzie, w każdym linku znajduje się <code>&lt;span&gt;</code>, a dopiero w nim tekst. Dlatego w argumencie <code>event</code> jako <code>target</code> podany jest <code>span</code>.</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/05.jsbasics/console-event-target.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/05.jsbasics/console-event-target.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Dodaj kod z powyższego przykładu (razem z <code>console.log</code> dodanym w tym ćwiczeniu) do swojego pliku <code>js/script.js</code>. Zapisz commit i wyślij na zdalne repozytorium.</p>
+</div>
+<h3>Zmiana klas elementu na stronie</h3>
+<p>Pierwszy fragment kodu do napisania w funkcji <code>titleClickHandler</code> to usunięcie klasy <code>active</code> ze wszystkich linków. Musimy w takim razie:</p>
+<ul>
+<li>znaleźć wszystkie linki z klasą <code>active</code>,</li>
+<li>zastosować pętlę, aby dla każdego z nich:
+<ul>
+<li>usunąć klasę <code>active</code>.</li>
+</ul>
+</li>
+</ul>
+<p>Umiesz już znaleźć wszystkie elementy pasujące do selektora oraz napisać pętlę, więc bez trudu zrozumiesz je w poniższym kodzie. Nowością będzie tylko sposób na usunięcie klasy z elementu. W swoim pliku <code>js/script.js</code>, pod linią komentarza <code>/* remove class 'active' from all article links */</code>, dodaj następujący kod:</p>
+<pre><code class="language-js">const activeLinks = document.querySelectorAll('.titles a.active');
+
+for(let activeLink of activeLinks){
+  activeLink.classList.remove('active');
+}
+</code></pre>
+<p>Skupmy się na chwilę na tej linii kodu:</p>
+<pre><code class="language-js">activeLink.classList.remove('active');
+</code></pre>
+<ul>
+<li><code>activeLink</code> to pojedynczy link, spośród wyszukanych linków z klasą <code>active</code>,</li>
+<li><code>.classList</code> to "biblioteka", zawierająca informacje i funkcje dotyczące klas tego elementu,</li>
+<li><code>.remove</code> to jedna z tych funkcji, służąca do usunięcia klasy,</li>
+<li><code>( )</code> – te nawiasy, umieszczone bezpośrednio po nazwie funkcji, mówią nam, że wykonujemy funkcję,</li>
+<li><code>'active'</code> to klasa, którą chcemy usunąć.</li>
+</ul>
+<p>Inne przydatne funkcje w <code>classList</code>, których możemy użyć analogicznie do <code>remove</code>, to:</p>
+<ul>
+<li><code>add</code> – dodawanie klasy,</li>
+<li><code>toggle</code> – "przełączanie" klasy, czyli "jeśli element nie ma podanej klasy, to ją dodaj – w przeciwnym wypadku usuń tę klasę z tego elementu",</li>
+<li><code>contains</code> – sprawdzenie, czy element posiada daną klasę.</li>
+</ul>
+<p>Świetnie – usuwanie aktywnej klasy już działa. Możesz to sprawdzić, dodając któremuś linkowi klasę <code>active</code> w kodzie HTML. Po kliknięciu któregokolwiek linka klasa zostanie usunięta.</p>
+<div class="bc-note alert-info">
+<h4 class="alert-heading text-center">Ćwiczenie</h4>
+<p>Mamy już gotowy fragment funkcji <code>titleClickHandler</code>, zaczynający się od komentarza:</p>
+<pre><code class="language-js">/* remove class 'active' from all article links  */
+</code></pre>
+<p>Poniżej znajduje się bardzo podobny komentarz:</p>
+<pre><code class="language-js">/* remove class 'active' from all articles */
+
+</code></pre>
+<p>Uzupełnij ten fragment funkcjonalności, wykorzystując bardzo podobny kod – musisz wprowadzić tylko dwie zmiany:</p>
+<ul>
+<li>zmień nazwy stałych i zmiennych z <code>activeLinks</code> i <code>activeLink</code> na <code>activeArticles</code> i <code>activeArticle</code>,</li>
+<li>zmień selektor <code>.titles a.active</code> na odpowiedni dla artykułów znajdujących się w naszym blogu, które posiadają klasę <code>active</code>.</li>
+</ul>
+<p>W efekcie tych zmian, po kliknięciu któregokolwiek linka w lewej kolumnie, artykuł w środkowej kolumnie powinien zniknąć. Nie pojawi się na jego miejsce żaden inny, ponieważ jeszcze nie nadajemy klasy <code>active</code> na żaden artykuł.</p>
+<p>Nie zapomnij zapisać commita i wysłać go na zdalne repozytorium.</p>
+</div>
+<h3>"Magiczne" słowo <code>this</code></h3>
+<p>Kolejnym krokiem jest nadanie klasy <code>active</code> dla klikniętego linka. Domyślasz się pewnie, że pomoże nam w tym owo "magiczne" słowo <code>this</code>. Zobaczmy, jak zmieni się nasz kod, a później wyjaśnimy, dlaczego w ten sposób użyliśmy w nim <code>this</code>.</p>
+<p>W komentarzach, za pomocą <code>[DONE]</code> oznaczyliśmy fragmenty funkcji <code>titleClickHandler</code>, które są już gotowe, lub zostały wykonane przez Ciebie w ramach poprzedniego ćwiczenia. Fragment, nad którym pracujemy teraz, oznaczyliśmy jako <code>[IN PROGRESS]</code>.</p>
+<p>Zastosuj teraz taką samą konwencję w swoim pliku <code>js/script.js</code>.</p>
+<pre><code class="language-js">const titleClickHandler = function(event){
+  const clickedElement = this;
+  console.log('Link was clicked!');
+
+  /* [DONE] remove class 'active' from all article links  */
+
+  const activeLinks = document.querySelectorAll('.titles a.active');
+
+  for(let activeLink of activeLinks){
+    activeLink.classList.remove('active');
+  }
+
+  /* [IN PROGRESS] add class 'active' to the clicked link */
+
+  console.log('clickedElement:', clickedElement);
+
+  /* [DONE] remove class 'active' from all articles */
+
+  /* get 'href' attribute from the clicked link */
+
+  /* find the correct article using the selector (value of 'href' attribute) */
+
+  /* add class 'active' to the correct article */
+}
+
+const links = document.querySelectorAll('.titles a');
+
+for(let link of links){
+  link.addEventListener('click', titleClickHandler);
+}
+</code></pre>
+<p>Wewnątrz funkcji <code>titleClickHandler</code> mamy do dyspozycji dwa źródła informacji o evencie, czyli w naszym przypadku – o kliknięciu:</p>
+<ol>
+<li>argument funkcji, który nazwaliśmy <code>event</code>,</li>
+<li>obiekt <code>this</code>.</li>
+</ol>
+<p>Wcześniej już sprawdzaliśmy, jakie informacje znajdują się w argumencie <code>event</code>. Znaleźliśmy w nim m.in. informację <code>target</code>, która jednak w naszym przypadku zawierała odniesienie do spana, znajdującego się w linku. Moglibyśmy jednak skorzystać z <code>currentTarget</code> zamiast <code>target</code> – tam znaleźlibyśmy odniesienie do elementu, do którego dodaliśmy listener. Ta sama informacja znajdzie się jednak w obiekcie <code>this</code>, a jego znajomość jest bardzo ważna, więc to na nim się skupimy.</p>
+<p>Słowo <code>this</code> określiliśmy jako "magiczne", ponieważ – szczególnie na początku nauki JS – wydaje się nieco tajemnicze. Wynika to z faktu, że zmienia ono znaczenie, w zależności od tego, gdzie zostało użyte. Dlatego przyjmiemy zasadę, że dla unikania błędów i zwiększenia czytelności kodu, będziemy go używać jak najrzadziej – zapiszemy jego wartość do stałej, która będzie miała bardziej przyjazną nazwę.</p>
+<p>W przypadku handlera eventu <code>click</code>, pierwszą linijką funkcji niech zawsze będzie:</p>
+<pre><code class="language-js">const clickedElement = this;
+</code></pre>
+<p>Dzięki temu w całej funkcji będziemy mogli używać <code>clickedElement</code>, bez zastanawiania się, co w tym miejscu oznacza <code>this</code>.</p>
+<p>Przy okazji zauważ, że tym razem inaczej użyliśmy <code>console.log</code>. Zamiast łączyć teksty za pomocą znaku <code>+</code>, podaliśmy dwa argumenty, rozdzielając je przecinkiem. Dzięki temu zobaczymy znacznie więcej informacji o sprawdzanej zmiennej (lub stałej, argumencie czy obiekcie). Sprawdź jak zmieni się komunikat w konsoli, jeśli użyjesz np. <code>console.log('clickedElement (with plus): ' + clickedElement);</code>.</p>
+<div class="bc-note alert-info">
+<h4 class="alert-heading text-center">Ćwiczenie</h4>
+<p>Mamy już odniesienie do klikniętego linka, zapisane w stałej <code>clickedElement</code>. Twoim zadaniem jest dodanie mu klasy <code>active</code>.</p>
+<p>Pamiętaj, że nie potrzebujesz pętli, ponieważ <code>clickedElement</code> jest odniesieniem do pojedynczego elementu, a nie grupy elementów. W takim razie wystarczy jedna linijka kodu, w której zamiast usuwania klasy (<code>remove</code>) będziemy dodawać klasę (<code>add</code>).</p>
+<p>Już wcześniej po kliknięciu któregokolwiek linka w lewej kolumnie, aktywny link tracił klasę <code>active</code>. W efekcie tego ćwiczenia, kliknięty link powinien otrzymywać klasę <code>active</code> – dzięki temu ostatnio kliknięty link powinien być podświetlony!</p>
+<p>Nie zapomnij zapisać commita i wysłać go na zdalne repozytorium.</p>
+</div>
+<h3>Blokowanie domyślnej akcji</h3>
+<p>Jak dobrze wiesz, kliknięcie linka na stronie zmienia adres strony. Jeśli wartość atrybutu <code>href</code> będzie się zaczynać od <code>#</code>, to zmieni się tylko końcówka adresu. Ten fragment URL-a strony, od znaku <code>#</code> do końca, nazywa się określeniem <em>hash</em>.</p>
+<p>Zmiana hasha adresu strony ma domyślne zastosowanie – przewija stronę tak, aby element o takim samym <code>id</code> znajdował się na samej górze okna. Jest to mechanizm pozwalający na proste przewijanie strony do odpowiedniej sekcji. Dla przykładu, spis treści artykułu na Wikipedii działa dokładnie w ten sposób – po kliknięciu tytułu rozdziału w spisie treści zostajemy natychmiast przeniesieni do odpowiedniego rozdziału.</p>
+<p>Na naszym blogu nie potrzebujemy tego mechanizmu, a wręcz przeciwnie – byłby on irytujący dla użytkownika. Dlatego skorzystamy z możliwości wyłączenia domyślnego zachowania przeglądarki przy kliknięciu w linki, które obsługujemy za pomocą naszego skryptu JS.</p>
+<p>Wystarczy, że w handlerze eventu (w naszym przypadku jest to funkcja <code>titleClickHandler</code>) dodamy linię:</p>
+<pre><code class="language-js">  event.preventDefault();
+</code></pre>
+<p>Jak widzisz, implementacja rozwiązania jest dużo prostsza, niż wytłumaczenie tej kwestii. Zwróć uwagę, że wykorzystujemy tutaj argument <code>event</code>, który jest przyjmowany przez handler.</p>
+<p>Zwyczajem jest dodawanie tej linii na początku funkcji, więc tak też zrobimy – dodaj ją przed deklaracją stałej <code>clickedElement</code>. Adres strony nie powinien się już zmieniać przy klikaniu w linki w lewej kolumnie.</p>
+<p>W ten sam sposób możemy blokować domyślne zachowanie dowolnego eventu – np. częstym zastosowaniem jest blokowanie domyślnego działania formularzy, aby umożliwić sprawdzenie poprawności wypełnienia poszczególnych pól (walidacja), oraz wysłać formularz za pomocą JS-a, czyli bez przeładowania strony. Jednak do tego tematu jeszcze wrócimy. ;)</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block task-card" >
+                        <h3>Zadanie: <span class="task-title">Dokończenie handlera eventu</span></h3>
+                        <div class="task-content">
+                            <p>W tym submodule znalazło się kilka ćwiczeń – ich wykonanie jest elementem tego zadania. Pozostały nam też do napisania trzy fragmenty funkcji <code>titleClickHandler</code> – to będzie pozostała część tego zadania. Jeśli czujesz się na siłach, spróbuj wykonać je bez opisu, załączonego poniżej.</p>
+<p><strong>Ważne:</strong> do wykonania zadania z pewnością przyda Ci się <a href="https://developer.mozilla.org/pl/docs/Web/API/Element/getAttribute" target="_blank">funkcja <code>getAttribute</code></a>.</p>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse--UxwSu1bT-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż opis rozwiązania</a>
+    <a href="#collapse--UxwSu1bT-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj opis rozwiązania</a>
+  </span>
+</p>
+<div id="collapse--UxwSu1bT-toggle" class="collapse">
+<p>Zajmijmy się po kolei fragmentami, które pozostały nam do uzupełnienia.</p>
+<h4>Pobranie atrybutu klikniętego linka</h4>
+<pre><code class="language-js">/* get 'href' attribute from the clicked link */
+</code></pre>
+<p>Umiemy już znaleźć kliknięty link – zapisaliśmy go w stałej <code>clickedElement</code>. Znajdziemy teraz jego atrybut <code>href</code>.</p>
+<p>Zadeklarujmy nową stałą o nazwie <code>articleSelector</code>. Od razu możemy ustawić jej wartość, czyli wartość atrybutu <code>href</code> pobraną z klikniętego linka.</p>
+<p>Spójrz na przykład znajdujący się w <a href="https://developer.mozilla.org/pl/docs/Web/API/Element/getAttribute" target="_blank">dokumentacji</a> funkcji <code>getAttribute</code> – powinien podpowiedzieć Ci, w jaki sposób użyć tej funkcji. Pamiętaj, że musimy ją wykonać na elemencie <code>clickedElement</code>, a w nawiasach podać nazwę atrybutu w cudzysłowach, czyli <code>href</code>.</p>
+<p>Użyj <code>console.log</code> dla stałej <code>articleSelector</code>, aby sprawdzić, czy udało się pobrać wartość tego atrybutu. Powinna być inna dla każdego linka, i wyświetlać się w konsoli po kliknięciu w link.</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/05.jsbasics/fer-05-05.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/05.jsbasics/fer-05-05.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<h4>Wyszukanie właściwego artykułu</h4>
+<pre><code class="language-js">/* find the correct article using the selector (value of 'href' attribute) */
+</code></pre>
+<p>W stałej <code>articleSelector</code> mamy już zapisaną wartość atrybutu <code>href</code> klikniętego linka. Jak pamiętasz, <code>href</code> każdego linka był identyczny, jak <code>id</code> odpowiadającego mu artykułu. Czas to wykorzystać!</p>
+<p>Zadeklaruj nową stałą o nazwie <code>targetArticle</code>. Jako jej wartość ustawimy odwołanie do artykułu. Do tej pory używaliśmy do tego <code>querySelectorAll</code>, ale skoro teraz szukamy tylko jednego elementu, możemy skorzystać z funkcji <code>querySelector</code>. Działa dokładnie tak samo, ale zwróci pojedynczy element, a nie kolekcję elementów (która działa inaczej, nawet jeśli zawiera w sobie tylko jeden element).</p>
+<p>Innymi słowy: jako wartość stałej <code>targetArticle</code> ustaw <code>querySelector</code>, wyszukujący artykuł o danym atrybucie <code>href</code>. Może się to wydawać zagmatwane, ale w rzeczywistości jest bardzo proste – znaleźliśmy ten artykuł w poprzednim punkcie i zapisaliśmy w stałej!</p>
+<p>Ponownie użyj <code>console.log</code>, aby sprawdzić, czy udało się znaleźć właściwy artykuł. Po kliknięciu któregoś linka w lewej kolumnie, w konsoli powinien zostać wyświetlony odpowiadający mu artykuł.</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/05.jsbasics/fer-05-04.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/05.jsbasics/fer-05-04.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<h4>Dodanie klasy <code>active</code> na znalezionym artykule</h4>
+<pre><code class="language-js">/* add class 'active' to the correct article */
+</code></pre>
+<p>Ostatni krok zadania to dodanie klasy <code>active</code> artykułowi, który zapisaliśmy w stałej <code>targetArticle</code>. Wystarczy, że skopiujesz kod, za pomocą którego ustawiliśmy klasę <code>active</code> dla klikniętego linka, i zmienisz w niej element, któremu dodajesz tę klasę.</p>
+<p>Po wykonaniu tego kroku zadanie powinno być skończone i działać tak, jak opisaliśmy poniżej.</p>
+</div>
+<hr>
+<h4>Oczekiwany efekt zadania</h4>
+<p>Efektem tego zadania powinna być strona z blogiem, na której kliknięcie w którykolwiek link w lewej kolumnie powoduje:</p>
+<ul>
+<li>usunięcie podświetlenia linka, który do tej pory był aktywny,</li>
+<li>dodanie podświetlenia klikniętego linka,</li>
+<li>ukrycie artykułu, który do tej pory był widoczny w środkowej kolumnie,</li>
+<li>wyświetlenie w środkowej kolumnie artykułu powiązanego z klikniętym linkiem.</li>
+</ul>
+<a href="https://uploads.kodilla.com/bootcamp/fer/05.jsbasics/fer-05-06.gif" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/05.jsbasics/fer-05-06.gif" alt="image" style="width: auto; max-width: 50%;"></a>
+<h4>Wskazówka</h4>
+<p>Możesz łatwo sprawdzić w Inspektorze, czy nadawanie i usuwanie klasy przy kliknięciu działa jak należy. Kiedy napiszesz skrypt, zbadaj Inspektorem link na liście postów. Klikaj link na stronie, a w Inspektorze obserwuj, czy zmienia się jego klasa:</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/05.jsbasics/fer-05-03.gif" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/05.jsbasics/fer-05-03.gif" alt="image" style="width: auto; max-width: 50%;"></a>
+<h4>Po skończonej pracy</h4>
+<p>Przeczytaj jeszcze raz cały kod swojego skryptu i zapisz sobie wszystko, czego nie rozumiesz. Będzie to świetna lista pytań na spotkanie z Mentorem!</p>
+<p>Nie zapomnij o zapisaniu commita, wypchnięciu go na zdalne repozytorium, oraz wysłaniu linka do najnowszego commita do sprawdzenia!</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <div class="clearfix">
+                                                                                <a href="https://kodilla.com/pl/bootcamp-task/407/597595" target="_blank" class="btn btn-info-outline">Podgląd zadania</a>
+                            <form target="_blank" class="form-inline project-link-form">
+                                <div class="form-group">
+                                    <input type="text" name="link" class="form-control" value="https://github.com/skwiryt/javascript-blog/commit/99d8a18f2da8f7754357c6e0df0d01833ad0ca35">
+                                </div>
+                                <button type="submit" class="btn  btn-primary " >Wyślij link <i class="fa fa-check"></i></button>
+                            </form>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-972" class="card submodule completed" data-bootcamp-user-submodule-id="597596" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">6.4. <span>Generowanie listy tytuł&oacute;w</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Poprzedni submoduł był spory, ale też dużo się w nim nauczyliśmy. Teraz będziemy mogli wykorzystać tę wiedzę do wprowadzania kolejnych funkcjonalności!</p>
+<p>Na razie wszystko, co widzisz na stronie bloga, znajduje się w kodzie HTML. Następnym krokiem będzie wygenerowanie listy tytułów wszystkich artykułów i wstawienie jej do lewej kolumny.</p>
+<h3>Algorytm działania skryptu</h3>
+<p>Zaczynamy, jak zwykle, od zapisania algorytmu skryptu, który chcemy napisać. Tym razem chcemy dla każdego artykułu odnaleźć jego <code>id</code> oraz tytuł i wykorzystać je do stworzenia linka w lewej kolumnie.</p>
+<p>Wiemy, że docelowo będziemy chcieli generować nową listę linków po każdym kliknięciu tagu lub autora. Dlatego w naszym skrypcie od razu uwzględnimy wyczyszczenie listy z dotychczasowej zawartości.</p>
+<ul>
+<li>usuń zawartość listy linków w lewej kolumnie,</li>
+<li>następnie dla każdego artykułu:
+<ul>
+<li>odczytaj jego <code>id</code> i zapisz je do stałej,</li>
+<li>znajdź element z tytułem i zapisz jego zawartość do stałej,</li>
+<li>na podstawie tych informacji stwórz kod HTML linka i zapisz go do stałej,</li>
+<li>wstaw stworzony kod HTML do listy linków w lewej kolumnie.</li>
+</ul>
+</li>
+</ul>
+<p>Zastanówmy się, czy znamy już sposoby na wykonanie wszystkich kroków algorytmu:</p>
+<ul>
+<li>zapisywanie wartości do stałej nie powinno już być problemem – znamy już zmienne <code>let</code> i stałe <code>const</code>,</li>
+<li>umiemy znaleźć pojedynczy element za pomocą selektora CSS – wykorzystujemy funkcję <code>querySelector</code>,</li>
+<li>w poprzednim module, w pliku <code>functions.js</code> poznaliśmy też sposób na odczytanie lub zmianę (w tym wyczyszczenie) zawartości elementu – za pomocą jego właściwości <code>innerHTML</code>,</li>
+<li>niedawno nauczyliśmy się odczytywać atrybuty elementu, więc bez problemu odczytamy <code>id</code> elementu – wykorzystamy funkcję <code>getAttribute</code>,</li>
+<li>stworzenie kodu HTML będzie po prostu połączeniem tekstu (kod HTML jest tekstem) ze stałymi przechowującymi <code>id</code> i tytuł artykułu,</li>
+<li>dodawanie linka do listy można też wykonać za pomocą <code>innerHTML</code>.</li>
+</ul>
+<h3>Spróbuj samodzielnie!</h3>
+<p>Z powyższej listy wynika, że umiesz już wszystko, co potrzebne, aby poradzić sobie z tym zadaniem! Jeśli czujesz się na siłach, spróbuj samodzielnie stworzyć funkcję <code>generateTitleLinks</code>, która spełni powyższy algorytm.</p>
+<p>Pamiętaj, żeby zacząć od zadeklarowania tej funkcji, a następnie umieść w niej <code>console.log</code> informujący o tym, że funkcja została wykonana. Warto dodać w niej również komentarze z algorytmem, który zapisaliśmy powyżej.</p>
+<p>Nie zapomnij, że deklaracja funkcji sama się nie wykona — pod deklaracją dodaj jej wywołanie. Ta funkcja ma uruchamiać się od razu po odświeżeniu strony, więc nie musisz umieszczać wywołania w żadnej dodatkowej funkcji, ani tworzyć listenerów eventów.</p>
+<p>Do samodzielnego wykonania tego zadania przyda Ci się informacja, że <code>querySelector</code> do tej pory wykonywaliśmy zawsze na elemencie <code>document</code>, ale równie dobrze możemy wykonać tę funkcję na dowolnym innym elemencie. Dzięki temu będziemy mogli wyszukać tytuł w konkretnym artykule!</p>
+<p>Koniecznie przeczytaj też treść zadania na końcu tego submodułu! Powodzenia!</p>
+<h3>Dodawanie kodu w pliku <code>script.js</code></h3>
+<p>Pamiętaj, żeby <strong>nie usuwać</strong> kodu, który masz już w pliku <code>js/script.js</code>. Kolejne skrypty – tak jak ten, który napiszemy w tym submodule – dodawaj pod obecnym kodem, ale wewnątrz bloku <code>{ }</code> okalającego całą zawartość pliku.</p>
+<p>Zacznijmy od przygotowania kodu, który opisaliśmy w poprzednim rozdziale. Tym razem zastosujemy dobrą praktykę, którą jest zapisanie "ustawień" skryptu w stałych. Dzięki temu będzie można łatwo przystosować kod np. do zmiany nazewnictwa klas w kodzie HTML. Aby odróżnić te stałe, ich nazwy zaczniemy od prefiksu <code>opt</code> – skrót od <em>options</em>.</p>
+<pre><code class="language-js">const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles';
+
+function generateTitleLinks(){
+
+  /* remove contents of titleList */
+
+  /* for each article */
+
+    /* get the article id */
+
+    /* find the title element */
+
+    /* get the title from the title element */
+
+    /* create HTML of the link */
+
+    /* insert link into titleList */
+
+}
+
+generateTitleLinks();
+</code></pre>
+<p>Mamy już gotowy szablon – teraz czas na rozpoczęcie pisania skryptu!</p>
+<h3>Usunięcie zawartości listy linków</h3>
+<p>Aby wyczyścić listę linków, musimy ją znaleźć, a następnie nadać jej pustą zawartość.</p>
+<p>Wiemy, że szukamy jednego elementu, więc wykorzystamy <code>querySelector</code>. Tym razem jednak argumentem nie będzie tekst zamknięty w cudzysłowy, ale stała <code>optTitleListSelector</code>. Znaleziony element zapisujemy w nowo zadeklarowanej stałej <code>titleList</code>.</p>
+<p>Następnie musimy wyczyścić zawartość tego elementu. Sposób na to znasz z poprzedniego modułu, w którym przygotowaliśmy dla Ciebie funkcję <code>clearMessages</code>:</p>
+<pre><code class="language-js">function clearMessages(){
+	document.getElementById('messages').innerHTML = '';
+}
+</code></pre>
+<p>W tym wypadku mamy już znaleziony element, więc interesuje nas tylko ostatnia część wyrażenia w funkcji, czyli <code>.innerHTML = '';</code>. Zastosuj ten fragment do elementu zapisanego w stałej <code>titleList</code>, a jej zawartość powinna zniknąć.</p>
+<p>Odśwież stronę, aby przetestować, czy faktycznie zniknęła zawartość listy linków w lewej kolumnie. Jeśli tak, to wiemy, że skrypt działa.</p>
+<p>Chcielibyśmy uniknąć bałaganu w kodzie, więc teraz – kiedy skrypt już usuwa dotychczasową zawartość listy – nie będą już nam potrzebne linki zawarte w kodzie HTML. Usuń wszystkie elementy <code>&lt;li&gt;</code> wewnątrz tagu <code>&lt;ul class=&quot;list titles&quot;&gt;</code>, aby pozostała lista była początkowo pusta.</p>
+<h3>Pętla dla wszystkich artykułów</h3>
+<p>Podobną operację wykonywaliśmy już kilka razy, więc możesz wzorować się na kodzie stworzonym w poprzednim submodule. Zadeklaruj nową stałą <code>articles</code> i zapisz do niej odniesienie do wszystkich elementów pasujących do selektora zapisanego w stałej <code>optArticleSelector</code>.</p>
+<p>Następnie wykorzystaj pętlę <em>for-of</em> do wykonania pozostałych operacji z osobna dla każdego z artykułów. W dalszej części submodułu założymy, że w deklaracji pętli pojedynczy artykuł został nazwany <code>article</code>.</p>
+<h3>Odczytanie <code>id</code> artykułu</h3>
+<p>Znów, nic nowego – odczytywaliśmy już atrybuty elementu. We wcześniejszym przykładzie był to atrybut <code>href</code>, ale sposób pobrania wartości atrybutu będzie identyczny. Zadeklaruj nową stałą o nazwie <code>articleId</code> i przypisz jej wartość argumentu <code>id</code>.</p>
+<h3>Odczytanie tytułu artykułu</h3>
+<p>To zadanie wymaga dwóch kroków — odnalezienia elementu zawierającego tytuł oraz odczytania jego zawartości. Jak już wcześniej wspomnieliśmy, do znalezienia elementu w konkretnym artykule wykorzystamy <code>querySelector</code> wywołany na artykule!</p>
+<p>Jeszcze tego nie robiliśmy, więc pokażemy Ci ten fragment kodu. Aby nauczyć się na nim jak najwięcej, spróbujemy poradzić sobie z tym krokiem w jednej linii kodu!</p>
+<pre><code class="language-js">  const articleTitle = article.querySelector(optTitleSelector).innerHTML;
+</code></pre>
+<p>Przeanalizuj tę linię kodu i spróbuj na głos powiedzieć, co ona robi – czytając od lewej do prawej.</p>
+<h3>Tworzymy kod HTML linka</h3>
+<p>Mamy już wszystkie informacje, które będą nam potrzebne do stworzenia kodu linka. Co prawda wcześniej łączyliśmy już teksty, ale tym razem może to być nieco trudniejsze, ponieważ będą się pojawiać dwa rodzaje cudzysłowów:</p>
+<ul>
+<li>pojedyncze (<code>'</code>), które będą rozpoczynać i kończyć ciąg znaków,</li>
+<li>podwójne (<code>&quot;</code>), które będą elementem kodu HTML.</li>
+</ul>
+<p>Warto zacząć od zapisania kodu HTML bez żadnych stałych zawartych w nim:</p>
+<pre><code class="language-js">  const linkHTML = '&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;';
+</code></pre>
+<p>Podzielmy teraz ten ciąg znaków na fragmenty, zgodnie z tym, gdzie będziemy potrzebowali wstawić wartości stałych:</p>
+<pre><code class="language-js">  const linkHTML = '&lt;li&gt;&lt;a href=&quot;#' + '&quot;&gt;&lt;span&gt;' + '&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;';
+</code></pre>
+<p>Jak wspomnieliśmy, te cudzysłowy mogą się mienić w oczach. Właśnie dlatego pokazujemy Ci, jak stworzyć tę linijkę kodu krok po kroku. Pozostaje już tylko wstawić stałe!</p>
+<pre><code class="language-js">  const linkHTML = '&lt;li&gt;&lt;a href=&quot;#' + articleId + '&quot;&gt;&lt;span&gt;' + articleTitle + '&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;';
+</code></pre>
+<p>Dodaj <code>console.log</code>, aby wyświetlić kod wygenerowany za pomocą tego wyrażenia! W ten sposób możesz przyjrzeć się, czy wygenerowany kod HTML jest poprawny – np. czy poprawnie zamknęliśmy cudzysłów po wartości atrybutu <code>href</code>.</p>
+<h3>Dodanie linka do listy</h3>
+<p>Wszystko gotowe, można dodawać link do listy! Korzystając ze znanego Ci już <code>innerHTML</code>, możemy to zrobić w ten sposób:</p>
+<pre><code class="language-js">  titleList.innerHTML = titleList.innerHTML + linkHTML;
+</code></pre>
+<p>Nie jest to jednak zbyt optymalne rozwiązanie. Po każdym wykonaniu tej linii kodu zostanie dodany kolejny link, a następnie wszystkie linki zostaną na nowo wyświetlone na stronie. Wynika to z tego, że kiedy przypisujemy nową wartość do <code>innerHTML</code> jakiegoś elementu, jego zawartość jest usuwana i zastępowana tą zawartością.</p>
+<p>W naszym przypadku najpierw pętla wykonuje się dla pierwszego artykułu, więc wyświetli się pierwszy link. Później pętla wykona się dla drugiego artykułu, więc do listy zostanie dodany kod HTML obu linków, zamiast jednego linka. Czyli ten pierwszy link będzie musiał zostać ponownie wyświetlony przez przeglądarkę. Ten proces będzie powtórzony tyle razy, ile mamy postów na naszym blogu.</p>
+<p>Stanie się to tak szybko, że w ogóle tego nie zauważysz, ale na bardzo rozbudowanych stronach każde dodatkowe obciążenie jest niemile widziane.</p>
+<p>Są dwa sposoby, które pozwalają zoptymalizować ten kod.</p>
+<h4>Wstawianie "przyległego" HTML-a</h4>
+<p>Pierwszym ze sposobów jest użycie innej metody dodawania kodu HTML do elementu. Jest to funkcja <code>insertAdjacentHTML</code>, którą wykonuje się na elemencie, do którego chcemy wstawić kod HTML.</p>
+<p>Właściwie powinniśmy powiedzieć "do którego lub wokół którego", ponieważ ta funkcja pozwala na wstawienie kodu HTML przed elementem, po nim, lub wewnątrz niego (na samym początku lub końcu). Spójrz na <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML" target="_blank">dokumentację i przykład</a> tej funkcji, aby lepiej zrozumieć jej działanie.</p>
+<div class="bc-note alert-info">
+<h4 class="alert-heading text-center">Ćwiczenie</h4>
+<p>Spróbuj samodzielnie wykorzystać tę funkcję, zamiast pokazanego powyżej sposobu z wykorzystaniem <code>innerHTML</code>.</p>
+</div>
+<h4>Zbudowanie kodu HTML wszystkich linków</h4>
+<p>Zastosujemy ten sposób, ponieważ będzie dla nas okazją do zobaczenia w praktyce, jak działa zakres zmiennych (ang. <em>variable scope</em>).</p>
+<p>Naszym celem jest stworzenie zmiennej (nie stałej!) o nazwie <code>html</code>, do której będziemy kolejno doklejać wszystkie linki. Wewnątrz pętli nie będziemy ich dodawać do listy. Dopiero po wykonaniu pętli wstawimy do listy kod HTML wszystkich linków naraz.</p>
+<pre><code class="language-js">const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles';
+
+function generateTitleLinks(){
+  /* remove contents of titleList */
+  /* ... */
+
+  /* find all the articles and save them to variable: articles */
+  /* ... */
+
+  let html = '';
+
+  for(let article of articles){
+    /* get the article id */
+    /* ... */
+
+    /* find the title element */
+    /* ... */
+
+    /* get the title from the title element */
+    /* ... */
+
+    /* create HTML of the link */
+    /* ... */
+
+    /* insert link into html variable */
+    html = html + linkHTML;
+  }
+
+  titleList.innerHTML = html;
+}
+
+generateTitleLinks();
+</code></pre>
+<p>Oczywiście, nie uzupełniliśmy kodu całego skryptu. Umieściliśmy komentarz <code>/* ... */</code> w miejscach, gdzie powinny znaleźć się napisane przez Ciebie fragmenty kodu (może 1 linia kodu, może więcej).</p>
+<p>Zwróć uwagę, że zmienną <code>html</code> musieliśmy zdefiniować poza pętlą <em>for-of</em>. Inaczej ta zmienna istniałaby tylko na czas jednego "obrotu" pętli. Musieliśmy również zadbać o to, aby była to zmienna <code>let</code>, a nie stała <code>const</code>, abyśmy mogli zmieniać jej wartość.</p>
+<div class="bc-note alert-info">
+<h4 class="alert-heading text-center">Ćwiczenie</h4>
+<p>Na końcu pętli umieść <code>console.log</code> wyświetlający w konsoli zawartość zmiennej <code>html</code>. Odśwież stronę i zwróć uwagę, jak zawartość tej zmiennej zwiększa się z każdym "obrotem" pętli.</p>
+<p>Teraz spróbuj przenieść wyrażenie <code>let html = '';</code> do środka pętli, i ponownie odśwież stronę. Zobacz, jak zmienił się wynik wyświetlany w konsoli, oraz ile linków zostało dodanych do lewej kolumny. Czy rozumiesz, dlaczego dodał się właśnie ten konkretny link?</p>
+</div>
+
+                        </div>
+                    </div>
+                                        <div class="card-block task-card" >
+                        <h3>Zadanie: <span class="task-title">Przywrócenie funkcjonalności klikania linków</span></h3>
+                        <div class="task-content">
+                            <p>W tym submodule wygenerowaliśmy listę linków w lewej kolumnie, w oparciu o posty naszego bloga. Jeśli jednak spróbujesz teraz kliknąć któryś z tytułów, to szybko stwierdzisz, że <strong>mamy buga!</strong> Klikanie linków nie wyświetla artykułów!</p>
+<div class="bc-note alert-warning">
+<h4 class="alert-heading text-center">U mnie działa!</h4>
+<p>Jeśli u Ciebie wszystko działa poprawnie – nie wykonujesz poleceń dokładnie. ;)</p>
+<p>W takim wypadku przeczytaj poniższy opis buga, aby zrozumieć jego działanie i znaleźć powód, dla którego u Ciebie ten problem nie wystąpił.</p>
+</div>
+<h4>Diagnozowanie buga</h4>
+<p>Ten konkretny problem często pojawia się u młodych developerów. Aby go zdiagnozować, musimy znaleźć fragment kodu, napisany w poprzednim submodule.</p>
+<pre><code class="language-js">const links = document.querySelectorAll('.titles a');
+</code></pre>
+<p>Jest to definicja linków, którym chwilę później dodajemy listener nasłuchujący eventu <code>click</code> i wywołujący funkcję <code>clickHandler</code>.</p>
+<p>Pod linią kodu, którą zacytowaliśmy powyżej, dodaj <code>console.log</code>, sprawdzający co zawiera stała <code>links</code>. W zależności od tego, jak dokładnie wykonujesz polecenia z tego submodułu, możesz zobaczyć w konsoli:</p>
+<ul>
+<li>pustą kolekcję elementów, czyli nie znaleziono żadnego linka,</li>
+<li>kolekcję linków.</li>
+</ul>
+<p>W drugim przypadku rozwiń tę kolekcję i kliknij prawym przyciskiem myszy w któryś z linków. Spróbuj odnaleźć go w panelu za pomocą opcji <em>Reveal in elements panel</em>. Jak szybko zauważysz, nie da się znaleźć tego linka.</p>
+<p>Te dwa przypadki różnią się tylko tym, czy w Twoim kodzie HTML zostały usunięte linki z listy w lewej kolumnie (pierwszy przypadek), czy też zostały w kodzie HTML (drugi przypadek).</p>
+<p>W obu przypadkach wynika to z faktu, że ten skrypt (włącznie z nowo-dodanym <code>console.log</code>) wykonał się, zanim wygenerowaliśmy listę linków!</p>
+<p>Popatrz na zawartość swojego pliku <code>js/script.js</code> – najpierw znajdujemy linki i dodajemy do nich event listenery, a dopiero potem czyścimy listę linków i generujemy nowe linki!</p>
+<h3>Rozwiązanie buga</h3>
+<p>Zamiana kolejności mogłaby pomóc, ale tylko na tym etapie prac. Jak wiesz, zamierzamy generować nową listę linków np. po kliknięciu tagu, więc ten problem by się powtórzył.</p>
+<p>Dlatego kod odpowiedzialny za powiązanie kliknięcia w linki z funkcją <code>titleClickHandler</code> musimy przenieść na sam koniec funkcji <code>generateTitleLinks</code>. Mówimy tutaj o deklaracji stałej <code>links</code> oraz pętli <em>for-of</em>, w której dodajemy event listenery do tych linków. Nie musisz przenosić funkcji <code>titleClickHandler</code>.</p>
+<p>Teraz klikanie w linki powinno działać tak jak wcześniej – ale klikamy już w linki wygenerowane za pomocą JS!</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <div class="clearfix">
+                                                                                <a href="https://kodilla.com/pl/bootcamp-task/407/597596" target="_blank" class="btn btn-info-outline">Podgląd zadania</a>
+                            <form target="_blank" class="form-inline project-link-form">
+                                <div class="form-group">
+                                    <input type="text" name="link" class="form-control" value="https://github.com/skwiryt/javascript-blog/commit/345ebc9769963655c085a2a3d6fa7c14c9688e05">
+                                </div>
+                                <button type="submit" class="btn  btn-primary " >Wyślij link <i class="fa fa-check"></i></button>
+                            </form>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-973" class="card submodule completed" data-bootcamp-user-submodule-id="597597" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">6.5. <span>Podsumowanie</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Po wykonaniu wszystkich zadań w tym module strona po odświeżeniu wygląda dokładnie tak samo, jak wcześniej – ale to nie oznacza, że nic się nie zmieniło! Dzięki naszej pracy możemy przełączać się pomiędzy artykułami! Przygotowaliśmy też generowanie listy linków do artykułów, które już niedługo wykorzystamy do wyświetlania przefiltrowanej listy artykułów!</p>
+<p>Jednocześnie udało nam się wiele nauczyć:</p>
+<ul>
+<li>o zmiennych i stałych oraz ich zakresach,</li>
+<li>o eventach, listenerach i handlerach,</li>
+<li>o pętlach i iteracji po elementach kolekcji,</li>
+<li>o znajdowaniu elementów na stronie i zmianie ich zawartości,</li>
+<li>o generowaniu i wstawianiu kodu HTML nowych elementów,</li>
+<li>o pobieraniu atrybutów i zmianach klas elementów na stronie,</li>
+<li>i wreszcie, o zapisywaniu algorytmu przed rozpoczęciem pisania skryptu.</li>
+</ul>
+<p>Ten ostatni punkt jest kluczowy. To on scala wszystkie pozostałe elementy w działający skrypt, który pozwala nam rozbudowywać nasz projekt.</p>
+<p>W następnym module będziemy dalej pracować nad tym projektem. Jak pamiętasz ze specyfikacji, pozostało nam dodanie tagów i autorów dla każdego artykułu, generowanie linków w prawej kolumnie, oraz filtrowanie linków do artykułów.</p>
+<h3>Dla chętnych</h3>
+<p>Jeżeli udało Ci się wykonać wszystkie zadania w tym module przed czasem – gratulacje! Sugerujemy, by wykorzystać ten moment na poćwiczenie umiejętności z poprzednich modułów. Poniżej znajdziesz kilka opcjonalnych zadań, dzięki którym odświeżysz swoją wiedzę.</p>
+<h4>Stylowanie strony</h4>
+<p>Puść wodze fantazji i ostyluj projekt zgodnie z własnym gustem. Pamiętaj o dobrych praktykach (czytelność, estetyka, spójne kolory) i spraw, by strona prezentowała się dobrze zarówno w wersji desktop, jak i mobile.</p>
+<h4>Animacja przełączania artykułów</h4>
+<p>Artykuły na Twoim blogu pojawiają się po kliknięciu na tytuł, ale nie wygląda to zbyt estetycznie. Spróbuj sprawić, by artykuły pojawiały się płynniej: zamiast przełączania właściwości <code>display</code> (z <code>none</code> na <code>block</code> i na odwrót), pobaw się z <code>opacity</code> i <code>transition</code>. Możesz też potrzebować <code>position: absolute;</code> by znikające artykuły nie zostawiały po sobie pustego miejsca na stronie.</p>
+<p>Dodatkowo aktywny artykuł powinien mieć wyższy <code>z-index</code> niż pozostałe, aby dało się w nim zaznaczyć fragment tekstu (np. gdyby ktoś chciał kliknąć w link). Wynika to z faktu, że jeśli wszystkie artykuły będą miały <code>display: block;</code>, to te z <code>opacity: 0;</code> mogą uniemożliwiać kliknięcie w link aktywnym artykule.</p>
+<h4>Rozbudowa task runnera</h4>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/lunch.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/lunch-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/lunch.png 2x" class="img-inline img-left">
+<p>Teraz kiedy piszemy już własne skrypty, warto zainstalować kolejny pakiet NPM, który sprawdzi za nas kod JS. Twoim zadaniem jest instalacja w tym projekcie paczki <strong><a href="https://www.npmjs.com/package/eslint" target="_blank">Eslint</a></strong> i dodanie do task runnera kolejnego taska typu <code>test:</code> (podobnego do tego, który sprawdza poprawność HTML), który odpali sprawdzanie pliku <code>script.js</code>. Spróbuj zrobić to samodzielnie, opierając się na dokumentacji – w następnym module podamy rozwiązanie, więc będziesz mieć szansę sprawdzić swoją wersję.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-975" class="card submodule completed" data-bootcamp-user-submodule-id="597598" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">6.6. <span>Quiz powt&oacute;rkowy</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Na koniec tego modułu przygotowaliśmy dla Ciebie quiz powtórkowy. Pomoże Ci on powtórzyć wiedzę z poprzednich modułów.</p>
+<p>Odpowiedzi tego quizu nie są nigdzie zapisywane, więc są tylko do Twojej wiadomości. Ten quiz ma Ci posłużyć jako pomoc w nauce – dlatego pod każdym pytaniem znajdziesz guzik, który sprawdzi poprawność Twoich odpowiedzi oraz poda Ci wyjaśnienie zagadnienia poruszanego w tym pytaniu.</p>
+
+        <div class='kodilla-quiz'>
+      
+        <article class='question' data-type='multiple-choice'>
+      
+        <header>
+          <p><em>1.</em> Zaznacz prawdziwe zdania dotyczące <code>if/else</code>:</p>
+
+        </header>
+        <ol type='a' class='answers' data-correct='3,7'>
+          <li><label><input type='checkbox'> wyrażenie <code>if/else</code> musi mieć więcej niż jeden blok <code>if</code></label></li>
+<li><label><input type='checkbox'> wyrażenie <code>if/else</code> musi mieć więcej niż jeden blok <code>else if</code></label></li>
+<li><label><input type='checkbox'> wyrażenie <code>if/else</code> musi mieć więcej niż jeden blok <code>else</code></label></li>
+<li><label><input type='checkbox'> wyrażenie <code>if/else</code> musi mieć dokładnie jeden blok <code>if</code></label></li>
+<li><label><input type='checkbox'> wyrażenie <code>if/else</code> musi mieć dokładnie jeden blok <code>else if</code></label></li>
+<li><label><input type='checkbox'> wyrażenie <code>if/else</code> musi mieć dokładnie jeden blok <code>else</code></label></li>
+<li><label><input type='checkbox'> wyrażenie <code>if/else</code> może mieć wiele bloków <code>if</code></label></li>
+<li><label><input type='checkbox'> wyrażenie <code>if/else</code> może mieć wiele bloków <code>else if</code></label></li>
+<li><label><input type='checkbox'> wyrażenie <code>if/else</code> może mieć wiele bloków <code>else</code></label></li>
+<li><label><input type='checkbox'> w warunku możemy sprawdzić, czy dwie wartości są takie same za pomocą operatora równości, czyli <code>=</code></label></li>
+        </ol>
+        <div class="buttons text-center">
+          <button class="button-ok btn btn-primary">Sprawdź odpowiedź</button>
+        </div>
+      
+      
+        <div class='explanation'>
+          <div class="bc-note alert-success">
+            <h4 class="alert-heading text-center">Wyjaśnienie</h4>
+      <p>W <code>if/else</code> musi być jeden blok <code>if</code>. Opcjonalnie, może zawierać dowolną liczbę bloków <code>else if</code> oraz jeden blok <code>else</code>.</p>
+<p>Najczęstszą pomyłką przy korzystaniu z <code>if/else</code> jest użycie pojedynczego znaku <code>=</code>. Jest to operator przypisania i służy do przypisania wartości do zmiennej.</p>
+<p>Sprawdzenie, czy dwie wartości są takie same, wykonujemy za pomocą operatorów <code>==</code> i <code>===</code>. Różnią się one tym, że pierwszy automatycznie konwertuje wartości do innych typów, czyli np. prawdą będzie, że <code>3 == '3'</code>. W przypadku <code>===</code> to wyrażenie będzie fałszywe, ponieważ jedna z wartości jest liczbą, a druga tekstem.</p>
+
+          </div>
+        </div>
+      
+        </article>
+      
+        <article class='question' data-type='multiple-choice'>
+      
+        <header>
+          <p><em>2.</em> Zaznacz prawdziwe zdania dotyczące <strong>funkcji</strong>:</p>
+
+        </header>
+        <ol type='a' class='answers' data-correct='2,4,6'>
+          <li><label><input type='checkbox'> funkcja jest fragmentem kodu, który wykonuje się pod warunkiem spełnienia zdefiniowanego warunku</label></li>
+<li><label><input type='checkbox'> funkcja jest fragmentem kodu, który zawsze wykonywany jest wielokrotnie</label></li>
+<li><label><input type='checkbox'> funkcja jest fragmentem kodu, który może być wykonywany wielokrotnie</label></li>
+<li><label><input type='checkbox'> funkcja musi przyjmować argumenty</label></li>
+<li><label><input type='checkbox'> funkcja może przyjmować argumenty</label></li>
+<li><label><input type='checkbox'> funkcja musi zwracać jakąś wartość tekstową lub liczbową</label></li>
+<li><label><input type='checkbox'> funkcja może zwracać jakąś wartość, np. tekstową lub liczbową</label></li>
+        </ol>
+        <div class="buttons text-center">
+          <button class="button-ok btn btn-primary">Sprawdź odpowiedź</button>
+        </div>
+      
+      
+        <div class='explanation'>
+          <div class="bc-note alert-success">
+            <h4 class="alert-heading text-center">Wyjaśnienie</h4>
+      <p>Funkcja jest fragmentem kodu, który może być wykonywany wielokrotnie. Może przyjmować argumenty i zwracać jakąś wartość.</p>
+
+          </div>
+        </div>
+      
+        </article>
+      
+        <article class='question' data-type='multiple-choice'>
+      
+        <header>
+          <p><em>3.</em> Zaznacz prawdziwe zdania dotyczące <strong>eventów</strong>:</p>
+
+        </header>
+        <ol type='a' class='answers' data-correct='0,3,4'>
+          <li><label><input type='checkbox'> event jest zdarzeniem, np. kliknięciem</label></li>
+<li><label><input type='checkbox'> event jest wykonywany wyłącznie na jednym elemencie</label></li>
+<li><label><input type='checkbox'> event jest wykonywany najpierw na <code>body</code>, a dopiero potem np. na klikniętym elemencie</label></li>
+<li><label><input type='checkbox'> event jest wykonywany najpierw np. na jakimś (np. klikniętym) elemencie, potem na jego rodzicu, i jego rodzicu itd.</label></li>
+<li><label><input type='checkbox'> event listener nasłuchuje na jednym, wskazanym przez nas elemencie</label></li>
+<li><label><input type='checkbox'> event listener nasłuchuje wszystkich eventów w dokumencie</label></li>
+<li><label><input type='checkbox'> niektóre eventy mają domyślne akcje i nie da się ich zablokować</label></li>
+<li><label><input type='checkbox'> niektóre eventy mają domyślne akcje, ale możemy je zablokować za pomocą <code>event.stopPropagation()</code></label></li>
+        </ol>
+        <div class="buttons text-center">
+          <button class="button-ok btn btn-primary">Sprawdź odpowiedź</button>
+        </div>
+      
+      
+        <div class='explanation'>
+          <div class="bc-note alert-success">
+            <h4 class="alert-heading text-center">Wyjaśnienie</h4>
+      <p>Event to zdarzenie, np. kliknięcie, które wykonuje się najpierw na jakimś (np. klikniętym) elemencie, potem na jego rodzicu itd. – w ten sposób event jest propagowany aż do <code>body</code>, <code>document</code> i <code>window</code>. Możemy jednak zatrzymać propagację, dodając do jakiegoś elementu listener i używając w nim <code>event.stopPropagation()</code>.</p>
+<p>Event listener pozwala nam na nasłuchiwanie konkretnego rodzaju eventu na wybranym przez nas elemencie, niezależnie od tego, czy jest to element, na którym pierwotnie został wykonany event, czy event <em>dotarł</em> do tego elementu poprzez propagację.</p>
+<p>Domyślne akcje eventów, np. kliknięcia w link, można zablokować. Służy do tego funkcja <code>event.preventDefault()</code>.</p>
+
+          </div>
+        </div>
+      
+        </article>
+      
+        <article class='question' data-type='multiple-choice'>
+      
+        <header>
+          <p><em>4.</em> Zakres zmiennych:</p>
+
+        </header>
+        <ol type='a' class='answers' data-correct='0,3'>
+          <li><label><input type='checkbox'> zależy od miejsca zadeklarowania zmiennej</label></li>
+<li><label><input type='checkbox'> oznacza zakres liczb przechowywanych w zmiennych, od najmniejszej do największej z nich</label></li>
+<li><label><input type='checkbox'> to liczbę zmiennych, których możemy użyć w skrypcie</label></li>
+<li><label><input type='checkbox'> decyduje, w jakiej części skryptu będzie dostępna konkretna zmienna</label></li>
+        </ol>
+        <div class="buttons text-center">
+          <button class="button-ok btn btn-primary">Sprawdź odpowiedź</button>
+        </div>
+      
+      
+        <div class='explanation'>
+          <div class="bc-note alert-success">
+            <h4 class="alert-heading text-center">Wyjaśnienie</h4>
+      <p>Zakres zmiennych mówi o tym, że zmienna <em>istnieje</em> tylko w bloku kodu (np. <code>if</code>, funkcja, etc.), bezpośrednio w której została zdefiniowana. Oznacza to, że jeśli chcemy np. zliczać ilość wywołań jakiejś funkcji, to zmienną w której przechowujemy liczbę wywołań, musimy zadeklarować poza tą funkcją.</p>
+
+          </div>
+        </div>
+      
+        </article>
+      
+        <article class='question' data-type='multiple-choice'>
+      
+        <header>
+          <p><em>5.</em> Aby w JS-ie móc wykorzystywać takie same selektory, jak w CSS-ie, musimy:</p>
+
+        </header>
+        <ol type='a' class='answers' data-correct='3'>
+          <li><label><input type='checkbox'> zaktualizować przeglądarkę</label></li>
+<li><label><input type='checkbox'> korzystać z Sassa</label></li>
+<li><label><input type='checkbox'> na początku pliku wpisać <code>use strict</code></label></li>
+<li><label><input type='checkbox'> użyć funkcji, która przyjmuje selektor jako argument, np. <code>querySelector</code></label></li>
+<li><label><input type='checkbox'> żadne z powyższych</label></li>
+        </ol>
+        <div class="buttons text-center">
+          <button class="button-ok btn btn-primary">Sprawdź odpowiedź</button>
+        </div>
+      
+      
+        <div class='explanation'>
+          <div class="bc-note alert-success">
+            <h4 class="alert-heading text-center">Wyjaśnienie</h4>
+      <p>W JavaScripcie możemy znajdować elementy DOM za pomocą selektorów CSS-owych tylko w funkcjach, które jako argument przyjmują selektor. Najczęściej wykorzystywanym przykładem może być funkcja <code>querySelector</code>.</p>
+
+          </div>
+        </div>
+      
+        </article>
+      
+        </div>
+        
+<style>
+  .kodilla-quiz .question {
+    margin-bottom: 1.5em;
+  }
+  .kodilla-quiz .explanation {
+    display: none;
+  }
+  .kodilla-quiz li>label {
+    display: inline-block;
+    padding-top: 1px;
+    vertical-align: top;
+  }
+</style>
+<script>
+  if(typeof initQuizzes == 'undefined'){
+    function initQuizzes(){
+      var types = {
+        'multiple-choice': initMultipleChoice,
+      };
+
+      var questions = document.querySelectorAll('.kodilla-quiz .question');
+
+      for(var i=0; i<questions.length; i++){
+        var question = questions[i];
+        var initFunc = types[question.dataset.type];
+
+        if(typeof(initFunc) != 'undefined' && !question.classList.contains('initiated')){
+          question.classList.add('initiated');
+          initFunc(question);
+        }
+      }
+    }
+
+    function initMultipleChoice(question){
+      var answers = question.querySelector('.answers');
+      var inputs = answers.querySelectorAll('input');
+      var buttons = question.querySelector('.buttons');
+      var buttonOK = buttons.querySelector('.button-ok');
+      var explanation = question.querySelector('.explanation');
+      var correct = question.querySelector('[data-correct]').dataset.correct.split(',');
+
+      buttonOK.addEventListener('click', function(e){
+        e.preventDefault();
+
+        var inputsChecked = answers.querySelectorAll('input:checked');
+        if(inputsChecked.length == 0){
+          alert('Wybierz co najmniej jedna odpowiedź');
+          return;
+        }
+
+        correct.forEach(function(index){
+          inputs[index].parentNode.parentNode.classList.add('text-success', 'text-bold');
+        });
+
+        for (var i = 0; i < inputs.length; i++) {
+          var input = inputs[i];
+          var li = input.parentNode.parentNode;
+          input.setAttribute('disabled', true);
+          
+          if(input.checked){
+            li.classList.add('text-bold');
+            
+            if(!li.classList.contains('text-success')){
+              li.classList.add('text-danger');
+            }
+          }
+
+        }
+        
+        if(explanation) explanation.style.display = 'block';
+        buttons.setAttribute('hidden', true);
+      });
+    }
+  }
+  initQuizzes();
+</script>
+
+      
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                            </main>
+        </div>
+    </section>
+</main>
+;
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<script type="text/x-translation" data-translation-name="SentBootcampLinkReviewFormMessage">Wysłano link do zatwierdzenia</script>
+    <div id="alerts">
+    <div class="alert alert-danger" role="alert">
+        <i class="fa fa-exclamation" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                        </ul>
+    </div>
+    <div class="alert alert-success" role="alert">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-warning" role="alert">
+        <i class="fa fa-warning" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-info" role="alert">
+        <i class="fa fa-info" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                    </ul>
+    </div>
+    <div class="container">
+        <div class="alert alert-notify" role="alert">
+            <i class="fa fa-info" aria-hidden="true"></i>
+            <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Zamknij</span>
+            </button>
+            <ul>
+                            </ul>
+        </div>
+    </div>
+</div>
+    <div class="modal fade informator-modal" id="informator" tabindex="-1" role="dialog" aria-labelledby="informatorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="https://kodilla.com/static/img/logo-menu.png?00000" alt="Logo Kodilla" class="brand-logo">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body content-container">
+                <h3>Zam&oacute;w szczeg&oacute;łowy informator</h3>
+                <form class="row js-ajax-form" data-view-class="InformatorForm" action="https://kodilla.com/pl/download-informator" method="post">
+                    <input type="hidden" name="ga-pobieranie-informatora-z-modala" value="wypelnienie">
+                    <input type="hidden" name="tags[0]" value="informator">
+                                        <div class="user-data-container">
+                        <input type="text" class="form-control" name="firstname" placeholder="Imię">
+                        <input type="text" class="form-control" name="surname" placeholder="Nazwisko">
+                    </div>
+                    <div class="user-data-container">
+                        <input type="email" class="form-control" name="email" placeholder="Email" required/>
+                        <input type="tel" class="form-control" name="phone" placeholder="Numer telefonu" pattern="^([\+][0-9]{1,3}([ \.\-])?)?([\(]{1}[0-9]{3}[\)])?([0-9 \.\-]{1,15})$" title="Wpisz poprawny numer telefonu, np. 453 674 897" minlength="9" maxlength="15" data-custom-message="Wpisz poprawny numer telefonu, np. 453 674 897">
+                    </div>
+                    <div class="terms-box">
+                        <label>
+                            <input name="accept_terms" value="true" data-custom-message="Prosimy o zaakceptowanie regulaminu" type="checkbox" class="form-control input-checkbox" required>
+                            <span>Akceptuję <a target="_blank" href="https://kodilla.com/pl/regulamin">regulamin</a>  i nie wnoszę zastrzeżeń</span>
+                        </label>
+                    </div>
+                    <div class="personal-terms-box">
+                        <label>
+                            <input name="accept_marketing" value="true" data-custom-message="Jeśli chcesz otrzymać dostęp do materiał&oacute;w, konieczna jest akceptacja obydwu zg&oacute;d" type="checkbox" class="form-control input-checkbox" required>
+                            <span>Chcę otrzymywać newsletter, informacje o promocjach i produktach dostępnych w Kodilla.
+                                <span class="details-button" data-action="show-details" data-identifier="personal-terms-details-informator">Czytaj więcej</span>
+                                <span class="display-none" data-identifier="personal-terms-details-informator">Wyrażam zgodę na otrzymywanie informacji handlowych od Kodilla na podany przeze mnie adres e-mail. Zgoda jest dobrowolna, jednakże niezbędna do otrzymywania informacji o produktach, promocjach i o tym, co u nas słychać. Administratorem danych jest Codemy S.A. z siedzibą we Wrocławiu, Plac Powstańc&oacute;w Śląskich 13/4. Mam prawo cofnąć zgodę w każdym czasie, jednak wtedy nie będę otrzymywać informacji. Dane mogą być przetwarzane pomimo cofnięcia zgody wyłącznie w takim zakresie i celu, w jakim ich przetwarzanie jest niezbędne do ustalenia, dochodzenia lub obrony roszczeń Administratora w związku z udzieloną zgodą. Mam prawo dostępu do danych, sprostowania, usunięcia, ograniczenia przetwarzania, prawo wniesienia sprzeciwu, skargi do organu nadzorczego i przeniesienia danych. Szczeg&oacute;łowe informacje znajdują się na stronie kodilla.com, zakładka &quot;Polityka Prywatności&quot;.</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="display-none">
+                        <input type="text" name="myName" value="">
+                    </div>
+                    <div class="">
+                        <button type="submit" class="btn btn-primary">
+                            Pobierz Informator
+                            <i data-role="loading-icon" class="fa fa-spinner fa-spin fa-1x fa-fw display-none"></i>
+                        </button>
+                    </div>
+                </form>
+                <a href="https://kodilla.com/pl/informator" id="informator-link" target="_blank" class="display-none"></a>
+            </div>
+            <div class="modal-footer">
+                <p>Pobranie informatora do niczego nie zobowiązuje</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="site-footer">
+                <section class="footer-lower">
+            <nav class="container">
+                <a class="navbar-img" href="https://kodilla.com/pl">
+                    <svg id="kodilla-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 29.553" width="168" height="30">
+                        <defs>
+                            <style>
+                                .footer-logo-fill {
+                                    fill: #fff;
+                                }
+                            </style>
+                        </defs>
+                        <g id="Group_1" data-name="Group 1" transform="translate(23.59)">
+                            <path id="KODILLA_copy_5_1_" class="footer-logo-fill" d="M78.058,0a14.758,14.758,0,1,0,.075,0Zm0,23.739a8.939,8.939,0,0,1-8.944-8.907V14.8c0-4.957,4.584-.708,8.907-.708,4.919,0,9.019-4.211,9.019.708a8.978,8.978,0,0,1-8.981,8.944Z" transform="translate(-63.3)"/>
+                            <ellipse id="eye_copy_4_1_" class="footer-logo-fill" cx="3.876" cy="3.876" rx="3.876" ry="3.876" transform="translate(9.462 13.2) rotate(-28.436)"/>
+                        </g>
+                        <path id="Path_1" data-name="Path 1" class="footer-logo-fill" d="M0,29.819V.9H6.671V13.347L17.255.9h7.491L13.938,13.794,25.491,29.819h-7.6l-8.2-11.665-3.019,3.13v8.5H0Z" transform="translate(0 -0.565)"/>
+                        <path id="Path_2" data-name="Path 2" class="footer-logo-fill" d="M151.4,29.819V.9h10.807a15.515,15.515,0,0,1,6.261,1.155,12.966,12.966,0,0,1,4.509,3.093A12.918,12.918,0,0,1,175.7,9.732a17.245,17.245,0,0,1,.932,5.59,16.821,16.821,0,0,1-1.006,5.963,12.227,12.227,0,0,1-2.907,4.547,13.484,13.484,0,0,1-4.547,2.944,15.964,15.964,0,0,1-5.925,1.043Zm18.41-14.5a11.274,11.274,0,0,0-.522-3.466,7.723,7.723,0,0,0-1.491-2.72,6.616,6.616,0,0,0-2.385-1.752,8.055,8.055,0,0,0-3.205-.6h-4.1v17.18h4.1a7.985,7.985,0,0,0,3.242-.634,6.8,6.8,0,0,0,2.385-1.826,8.286,8.286,0,0,0,1.453-2.72A11.634,11.634,0,0,0,169.81,15.322Z" transform="translate(-94.978 -0.565)"/>
+                        <path id="Path_3" data-name="Path 3" class="footer-logo-fill" d="M228.3,29.819V.9h6.671V29.819Z" transform="translate(-143.219 -0.565)"/>
+                        <path id="Path_4" data-name="Path 4" class="footer-logo-fill" d="M259.9,29.819V.9h6.671V23.968h14.012v5.851Z" transform="translate(-163.043 -0.565)"/>
+                        <path id="Path_5" data-name="Path 5" class="footer-logo-fill" d="M327.371,23.931V.9H320.7V29.819h18.522l2.124-5.851H327.371Z" transform="translate(-201.185 -0.565)"/>
+                        <path id="Path_6" data-name="Path 6" class="footer-logo-fill" d="M388.547.9h6.037L405.13,29.819h-6.857l-2.236-6.484h-9.019l-2.2,6.484H378Zm6.373,17.851L391.528,8.54l-3.466,10.211Z" transform="translate(-237.13 -0.565)"/>
+                    </svg>
+                </a>
+                <ul class="nav">
+                    <li>
+                        <a href="https://kodilla.com/pl/regulamin" rel="nofollow">Regulamin</a>
+                    </li>
+                    <li>
+                        <a href="https://kodilla.com/pl/polityka-prywatnosci" rel="nofollow">Polityka prywatności</a>
+                    </li>
+                    <li class="nav-item">&copy; 2021 Kodilla</li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
+
+<!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN2WWBH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <script src="https://kodilla.com/static/js/libs/jquery-2.1.4.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/js.cookie-2.1.0.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/jquery-dateFormat.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/bootstrap.min.js?00000"></script>
+<script>
+    (function () {
+        $(document).ready(function () {
+            if (window.location.hash === '#informator-modal') {
+                showInformator();
+            }
+        });
+
+        $('[data-action="show-modal"]').click(function() {
+            showInformator();
+        });
+
+        function showInformator() {
+            $('#informator').modal('show');
+        }
+    })();
+</script>
+<script src="https://kodilla.com/build/minified/js/fb-0370c8f03e.js" async></script>
+<script src="https://kodilla.com/build/minified/js/call-us-d1ed4dfa39.js"></script>
+<script>
+    if (document.querySelector('main.editor')) {
+        document.querySelector('body').classList.add('editor');
+    }
+</script>
+
+<script type="text/javascript">
+    (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+    vgo('setAccount', '649095895');
+    vgo('setTrackByDefault', true);
+
+    vgo('process');
+</script>
+
+        <script src="https://kodilla.com/static/js/libs/underscore-min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-relational.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-super.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/handlebars-v4.0.5.min.js?00000"></script>
+<script src="https://kodilla.com/build/minified/js/extends/handlebars-ifCond-139a2339f7.js"></script>
+<script src="https://kodilla.com/build/minified/js/application-0dcfdc1306.js"></script>
+<script src="https://kodilla.com/build/minified/js/main-cf3b73d734.js"></script>
+<script src="https://kodilla.com/build/minified/js/views/settings-5fc44a761b.js"></script>
+<script src="https://kodilla.com/build/minified/js/views/delete-account-da2b3de486.js"></script>
+<script type="text/x-translation" data-translation-name="checkAccountDeleteCalculationMessage">Wynik jest nieprawidłowy</script>
+<script src="https://kodilla.com/build/minified/js/helpers/forms-222ea01b08.js"></script>
+<script src="https://kodilla.com/build/minified/js/helpers/alerts-66650c3acb.js"></script>
+<script>
+    App.Views.InpageAlertManager = Backbone.View.extend({
+        events: {
+            'click [data-alert-type][data-alert-text]': 'showAlert'
+        },
+        showAlert: function(e) {
+            var $el = $(e.currentTarget);
+            App.alertsView['show'+$el.data('alertType')]([App.Translations($el.data('alertText'))]);
+        }
+    });
+</script>
+<script src="https://kodilla.com/build/minified/js/collections-c07e1162e2.js"></script>
+<script src="https://kodilla.com/build/minified/js/models-4e0e4fcffb.js"></script>
+<script src="https://kodilla.com/build/minified/js/views/knowledge-base-61f71273c9.js"></script>
+<script>
+    App.Views.LearningProgram = Backbone.View.extend({
+        events: {
+            'click [data-technology-desc-expander]' : 'expandTechnologyDesc'
+        },
+
+        initialize: function() {
+            this.$allTechnologyDesc = this.$el.find('[data-technology-desc]');
+            this.$allTechnologyExpanderIcons = this.$el.find('[data-technology-expander-icon]');
+        },
+
+        expandTechnologyDesc: function() {
+            this.$allTechnologyDesc.each(function(){
+                var $desc = $(this);
+                $desc.slideToggle('fast');
+            });
+            this.$allTechnologyExpanderIcons.each(function(){
+                var $icon = $(this);
+                $icon.toggleClass("fa-minus");
+            });
+        },
+    });
+</script>
+
+    <script src="https://kodilla.com/static/js/libs/tether.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/prism.min.js?00000"></script>
+
+    <script src="https://kodilla.com/build/minified/js/views/bootcamp-1522c7c010.js"></script>
+    <script src="https://kodilla.com/static/js/libs/jquery.seourl.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/perfect-scrollbar.jquery.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/fancybox/jquery.fancybox.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/moment.timezone.locales.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/bootstrap-datetimepicker.min.js?00000"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("a.img-modal-group").fancybox();
+        });
+    </script>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="call-us-modal">
+    <div class="modal-dialog modal-dialog-callus" role="document">
+        <div class="modal-content call-modal">
+            <div id="call-us-step1">
+                <h2>Um&oacute;w się na rozmowę z doradcą Kodilli</h2>
+                <p>Krok <span>1/2:</span> Podaj numer telefonu</p>
+                <form action="https://kodilla.com/pl/call-center/dates/phone_calls" method="post" id="call-us-form1">
+                    <input type="tel" name="phone" id="call-us-input-phone" class="call-center-input" placeholder="731771787">
+                    <p class="error-message display-none" id="validation-message-phone">Pole Numer Telefonu jest wymagane. Nieprawidłowy format.</p>
+                    <button class="btn btn-success" id="call-us-submit-phone">Zarezerwuj rozmowę</button>
+                </form>
+                <p id="call-us-counter-holder" style="display: none;">Dzisiaj już  <span id="call-us-counter" class="call-counter" data-url="https://kodilla.com/pl/call-center/counter/phone_calls">-</span> <span id="call-us-counter-text" data-one=" osoba zam&oacute;wiła rozmowę z nami." data-few=" osoby zam&oacute;wiły rozmowę z nami." data-more=" os&oacute;b zam&oacute;wiło rozmowę z nami."></span></p>
+                <div class="data-protection">
+                    <p>Twój numer telefonu nie będzie wykorzystywany w celach marketingowych ani przekazany dalej. Tylko oddzwonimy. Dane są przetwarzane zgodnie z <a href="/pl/polityka-prywatnosci">Polityką Prywatności</a>.</p>
+                </div>
+            </div>
+
+            <div id="call-us-step2" style="display: none;">
+                <h2>Wybierz dogodny termin i godzinę na rozmowę z doradcą</h2>
+                <p>Krok <span>2/2:</span>
+                <form action="https://kodilla.com/pl/call-center/step2/phone_calls" method="post" id="call-us-form2">
+                    <div class="select-date">
+                        <select name="date" id="call-us-input-date">
+                        </select>
+                        <select name="time" id="call-us-input-time">
+                        </select>
+                    </div>
+                    <button class="btn btn-success" id="call-us-submit-call">Oddzwońcie do mnie!</button>
+                </form>
+            </div>
+
+            <div id="call-us-step3" style="display: none;">
+                <div  class="thanks">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    <h2>Dziękujemy za zamowienie rozmowy! Do usłyszenia w wybranym terminie!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+                <style type="text/css">
+    .embeddedServiceHelpButton .helpButton .uiButton {
+        background-color: #1EA71C;
+        font-family: "Arial", sans-serif;
+    }
+    .embeddedServiceHelpButton .helpButton .uiButton:focus {
+        outline: 1px solid #1EA71C;
+    }
+</style>
+<script>
+    function openChat(){
+        $('.helpButtonEnabled').trigger('click');
+    }
+</script>
+<script type="text/javascript" src="https://service.force.com/embeddedservice/5.0/esw.min.js"></script>
+
+<script type="text/javascript">
+    var initESW = function(gslbBaseURL) {
+        let firstName = 'Marek Baberowski'.split(" ")[0];
+        let lastName = 'Marek Baberowski'.split(" ")[1];
+        console.log(name);
+        embedded_svc.settings.displayHelpButton = true;
+        embedded_svc.settings.language = '';
+
+        embedded_svc.settings.defaultMinimizedText =  'Skontaktuj się z nami';
+        embedded_svc.settings.disabledMinimizedText = ' ';
+
+        embedded_svc.settings.loadingText = 'Ładowanie';
+        embedded_svc.settings.storageDomain = 'kodilla.com';
+
+        embedded_svc.settings.prepopulatedPrechatFields = {
+            'FirstName': firstName,
+            'LastName': lastName,
+            'Email': 'm.z.baberowski@gmail.com'
+        };
+        embedded_svc.settings.offlineSupportMinimizedText = 'Napisz do nas';
+
+        embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+        embedded_svc.settings.entryFeature = 'LiveAgent';
+
+        embedded_svc.init(
+            'https://kodilla.my.salesforce.com',
+            'https://kodillacommunity.force.com',
+            gslbBaseURL,
+            '00D1i000000VBFH',
+            'Support_Kodilla',
+            {
+                baseLiveAgentContentURL: 'https://c.la1-c2-fra.salesforceliveagent.com/content',
+                deploymentId: '5721i00000009s9',
+                buttonId: '5731i0000000AJN',
+                baseLiveAgentURL: 'https://d.la1-c2-fra.salesforceliveagent.com/chat',
+                eswLiveAgentDevName: 'Support_Kodilla',
+                isOfflineSupportEnabled: true
+            }
+        );
+    };
+
+    if (!window.embedded_svc) {
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://kodilla.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+        s.onload = function() {
+            initESW(null);
+        };
+        document.body.appendChild(s);
+    } else {
+        initESW('https://service.force.com');
+    }
+</script>
+        <div data-role="notifications-wrapper" class="notifications-wrapper"></div>
+</body>
+</html>

@@ -1,0 +1,2333 @@
+<!DOCTYPE html>
+<html lang=pl class="no-js">
+<head>
+    <meta name="ahrefs-site-verification" content="c2d3c04b9f125c5b8c98d89f738d343f69d841f035150344a932150235c5639a">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="csrf-token" content="FGlA4RkObUo18UXAEnOqvfNMqmQValvEVBDjQsbF" />
+
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="https://kodilla.com/static/img/icons/apple-touch-icon-60x60.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://kodilla.com/static/img/icons/apple-touch-icon-76x76.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://kodilla.com/static/img/icons/apple-touch-icon-120x120.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://kodilla.com/static/img/icons/apple-touch-icon-152x152.png?00000">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kodilla.com/static/img/icons/favicon-32x32.png?00000">
+<link rel="icon" type="image/png" sizes="96x96" href="https://kodilla.com/static/img/icons/favicon-96x96.png?00000">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kodilla.com/static/img/icons/favicon-16x16.png?00000">
+
+    <link rel="canonical" href="https://kodilla.com/pl/bootcamp-module/407/532/5935" />
+
+    <meta name="robots" content="noindex, follow" />
+    <title>    Moduł: 10. Warsztaty JS cz.1
+</title>
+        <script>document.documentElement.classList.remove("no-js")</script>
+<script src="https://kodilla.com/static/js/libs/yall.min.js?00000"></script>
+<link href="https://kodilla.com/static/css/libs/bootstrap.min.css?00000" rel="stylesheet">
+<link href="https://kodilla.com/static/css/libs/font-awesome.min.css?00000" rel="stylesheet">
+<link href="https://kodilla.com/build/minified/css/main-b3cf79332c.css" rel="stylesheet" type="text/css">
+            
+    <link href="https://kodilla.com/static/css/libs/prism.min.css?00000" rel="stylesheet">
+
+    <link href="https://kodilla.com/build/minified/css/bootcamp-6d0888d826.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://kodilla.com/static/css/libs/perfect-scrollbar.css?00000" />
+    <link rel="stylesheet" href="https://kodilla.com/static/css/libs/fancybox/jquery.fancybox.min.css?00000" type="text/css" media="screen" />
+    <link href="https://kodilla.com/static/css/libs/bootstrap-datetimepicker.min.css?00000">
+    <link rel="stylesheet" href="https://uploads.kodilla.com/bootcamp/styles/content.css">
+    <script>
+    document.addEventListener("DOMContentLoaded", yall);
+    window.environment = 'production';
+    window.loggedIn = true;
+    window.domain = 'https://kodilla.com';
+            window.fbAppId = 1449248938627896;
+    window.chatService = 'LiveAgent';
+    window.useMessenger = window.chatService === 'Messenger';
+    window.locale = 'pl';
+    window.lang = 'pl';
+
+    window.serverUTC       = 1625590735000;
+    window.serverOffset    = 120;
+    window.userDate        = new Date();
+    window.userUTC         = userDate.getTime();
+    window.userOffset      = userDate.getTimezoneOffset() * (-1);
+    window.userClockDiff   = userUTC - serverUTC;
+    window.diffRounded     = Math.round( userClockDiff / ( 1000 * 60 * 15 ) );
+    window.isDifferentZone = ( userOffset - serverOffset !== 0 ) ? 1 : 0;
+    window.hasWrongTime    = ( diffRounded !== 0 ) ? 1 : 0;
+    window.dateTooltipText = 'Data i godzina są podane dla Twojej strefy czasowej GMT. <br>W razie wątpliwości napisz: <u>support@kodilla.com</u>.';
+    window.wrongHourNotice = 'Godzina na Twoim urządzeniu r&oacute;żni się od godziny obowiązującej w strefie czasowej wybranej w ustawieniach Twojego urządzenia.';
+
+    window.PAYU_HASH_ALGORITHM = 'SHA-256';
+    window.PAYU_POS_ID = 1429452;
+    window.PAYU_MD5_SECOND_KEY = 'f3627be5fab5a4238c8474936f057908';
+
+    var moment = undefined,
+        momentReady = function( method, method2, count ){
+            var c = ( count ) ? count : 0;
+
+            if      ( isDifferentZone && moment !== undefined ){
+                if      ( method ) { method(); }
+                else    { return false; }
+            }
+            else if ( isDifferentZone && moment === undefined ) {
+                if ( c < 20 ) {
+                    c++;
+                    setTimeout( function() { momentReady( method, method2, c ); }
+                        , 300 );
+                } else {
+                    if      ( method2 === true && method )  { method(); }
+                    else if ( method2 !== true && method2 ) { method2(); }
+                }
+            }
+            else {
+                if      ( method2 === true && method )  { method(); }
+                else if ( method2 !== true && method2 ) { method2(); }
+                else    { return false; }
+            }
+        };
+
+    if ( window.isDifferentZone && moment === undefined ) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = '/static/js/libs/moment.timezone.locales.min.js?v=2.22.2';
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+</script>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+        OneSignal.init({
+            appId: "92552bb5-b477-4ea2-8260-dba65be198d9",
+        });
+    });
+</script>
+<script data-ad-client="ca-pub-9483216428129091" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2404285,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 389137334769464 );
+        fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KN2WWBH');</script>
+    <!-- End Google Tag Manager -->
+    
+    </head>
+<body class="no-js student ">
+<!-- Facebook Pixel Code -->
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=389137334769464&ev=PageView&noscript=1"/></noscript>
+<!-- End Facebook Pixel Code -->
+<script>
+    document.getElementsByTagName('body')[0].classList.remove('no-js');
+    if ( window.isDifferentZone ) {
+        document.querySelector('body').classList.add('time-conversion-applied');
+    }
+    if ( window.hasWrongTime ) {
+        document.querySelector('body').classList.add('wrong-hour');
+    }
+</script>
+
+    <nav class="navbar-main hidden-sm-down dark navbar">
+    <div class="nav-container">
+        <div class="navbar-header clearfix">
+            <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbarUpper"><i class="fa fa-bars"></i></button>
+        </div>
+        <div class="collapse navbar-toggleable-sm container" id="collapsingNavbarUpper">
+            <ul class="nav navbar-nav navbar-nav-left">
+                                    <li class="nav-item nav-contact">
+    <span>Skontaktuj się z nami:</span>
+    <a href="mailto:support@kodilla.com">
+        <i class="fa fa-envelope-o"></i>
+        support@kodilla.com
+    </a>
+    <span>lub</span>
+    <a href="javascript:openChat();">
+        <i class="fa fa-comments"></i>
+        porozmawiaj na czacie
+    </a>
+</li>
+                                </ul>
+            <ul class="nav navbar-nav pull-right">
+                                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/informator" class="nav-link" target="_blank">
+        Informator
+    </a>
+                </li>
+                <li class="nav-item hidden-sm-down">
+    <a href="https://kodilla.com/pl/account" class="nav-link">Konto</a>
+</li>
+        <li class="nav-item">
+    <a class="analytics-track nav-link nav-link-accent" data-event="account_logout" href="https://kodilla.com/pl/sign-out">Wyloguj</a>
+</li>
+                            </ul>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-main light navbar">
+    <div class="container clearfix">
+        <a class="navbar-brand"  href="https://kodilla.com/pl">
+            <img src="https://kodilla.com/static/img/kodilla-nav-logo.svg?00000" alt="Kodilla - szkoła programowania">
+        </a>
+        <span class="contact-us-button-container"></span>
+        <button class="navbar-toggler pull-right collapsed" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <i class="fa fa-bars navbar-ico-open"></i>
+            <i class="fa fa-times navbar-ico-close"></i>
+        </button>
+        <ul id="navbar-main" class="nav navbar-nav pull-right collapse">
+            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        Szkolenia Bootcamp
+    </a>
+    <ul class="bootcamp-list">
+                    <li class="list-sub list-sub-fe">
+                <img src="https://kodilla.com/static/img/svg/menu_fer.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_fer_logo">
+                <a href="https://kodilla.com/pl/bootcamp/front-end">
+                    <h4 class="bootcamp-name">Front-end: React</h4>
+                    <p>Naucz się tworzyć front-end aplikacji w 4 miesiące</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_wd.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_wd_logo">
+                <a href="https://kodilla.com/pl/bootcamp/webdeveloper?type=wdp">
+                    <h4 class="bootcamp-name">Web Developer</h4>
+                    <p>Naucz&nbsp;się tworzyć aplikacje internetowe od&nbsp;podstaw</p>
+                    <span class="bootcamp-label">FRONT-END i BACK-END</span>
+                </a>
+            </li>
+
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_java.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_java_logo">
+                <a href="https://kodilla.com/pl/bootcamp/java?type=jdp">
+                    <h4 class="bootcamp-name">Java Developer</h4>
+                    <p>Poznaj najpopularniejszy na&nbsp;świecie język programowania od&nbsp;zera</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_python.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_python_logo">
+                <a href="https://kodilla.com/pl/bootcamp/python">
+                    <h4 class="bootcamp-name">Python Developer</h4>
+                    <p>Zdobądź kompetencje do tworzenia rozwiązań webowych</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_tester.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_tester_logo">
+                <a href="https://kodilla.com/pl/bootcamp/tester-automatyzujacy">
+                    <h4 class="bootcamp-name">Tester Automatyzujący</h4>
+                    <p>Poznaj podstawy testowania automatycznego w Javie</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_game.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_mage_logo">
+                <a href="https://kodilla.com/pl/bootcamp/game-dev">
+                    <h4 class="bootcamp-name">Mobile Game Developer</h4>
+                    <p>Zdobądź kompetencje do tworzenia gier</p>
+                    <span class="bootcamp-label">nowość</span>
+                </a>
+            </li>
+            </ul>
+</li>
+
+                        <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        Szkolenia Pro
+    </a>
+    <ul>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/mikroserwisy" class="nav-link">Mikroserwisy w Javie</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/spring-hibernate" class="nav-link">Spring i Hibernate</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/wielowatkowosc" class="nav-link">Wielowątkowość w Javie</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/django" class="nav-link">Aplikacje webowe z Django</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/wizualizacja-danych" class="nav-link">Analiza danych w Pythonie</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/machine-learning" class="nav-link">Podstawy Machine Learning</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/bigdata-pyspark" class="nav-link">Big Data z PySpark</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/automatyzacja-testow" class="nav-link">Automatyzacja test&oacute;w</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/vanilla-js" class="nav-link">Advanced Vanilla JS</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/typescript" class="nav-link">TypeScript - kurs praktyczny</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/vue3" class="nav-link">Vue3 - kompletny przewodnik</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/zaawansowany-backend" class="nav-link">Backend zaawansowany</a></li>
+    </ul>
+</li>
+            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        Strefa kursanta
+    </a>
+    <ul>
+                    <li><a href="https://kodilla.com/pl/bootcamp-dashboard/407" class="nav-link">Bootcamp WD PLUS 2020-12</a></li>
+                    <li><a class="nav-link" href="https://kodilla.com/pl/kursy">Samodzielne kursy</a></li>
+                    <li><a class="nav-link" href="https://chat.kodilla.com" target="_blank">Komunikator</a></li>
+                    <li><a class="nav-link" href="https://kodilla.com/pl/projects">Moje projekty</a></li>
+    </ul>
+</li>
+                            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        O nas
+    </a>
+    <ul class="about-us">
+        <li><a href="https://kodilla.com/pl/mentorzy" class="nav-link">Mentorzy</a></li>
+        <li><a href="https://kodilla.com/pl/zespol" class="nav-link">Zesp&oacute;ł Kodilli</a></li>
+        <li><a href="https://kodilla.com/pl/o-nas" class="nav-link">O firmie</a></li>
+    </ul>
+</li>
+                                                                    <li class="nav-item hidden-md-up nav-group">
+    <span class="mobile-menu-separator">Szkolenia Bootcamp</span>
+    <ul>
+                    <li class="nav-item list-sub-fe">
+                <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/front-end">Bootcamp Front-end: React
+                </a>
+            </li>
+                <li class="nav-item">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/webdeveloper">Bootcamp Web Developer
+                <span class="bootcamp-label">FRONT-END i BACK-END</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://kodilla.com/pl/bootcamp/java">Bootcamp Java</a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/tester-automatyzuj%C4%85cy">Bootcamp Tester Automatyzujący
+            </a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/python">Python Developer
+            </a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/game-dev">Mobile Game Developer
+                <span class="bootcamp-label">nowość</span>
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="nav-item hidden-md-up nav-group">
+    <a class="nav-link-bold" href="https://kodilla.com/pl/szkolenia-pro">Szkolenia Pro</a>
+</li>
+            <li class="nav-item hidden-md-up nav-group">
+            <span class="mobile-menu-separator">Strefa kursanta</span>
+            <ul>
+                <li class="nav-item ">
+                                            <a class="nav-link" href="https://kodilla.com/pl/bootcamp-dashboard/407">
+                            Bootcamp   WD PLUS 2020-12
+                        </a>
+                                    </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://kodilla.com/pl/kursy">Samodzielne kursy</a>
+                </li>
+                                    <li class="nav-item ">
+                        <a class="nav-link" href="https://chat.kodilla.com" target="_blank">Komunikator</a>
+                    </li>
+                                <li class="nav-item">
+                    <a class="nav-link" href="https://kodilla.com/pl/projects">Moje projekty</a>
+                </li>
+            </ul>
+        </li>
+    
+        
+            <li class="nav-item hidden-md-up nav-group">
+            <span class="mobile-menu-separator">O nas</span>
+            <ul>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/mentorzy" class="nav-link">Mentorzy</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/zespol" class="nav-link">Zesp&oacute;ł Kodilli</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/o-nas" class="nav-link">O firmie</a>
+                </li>
+            </ul>
+        </li>
+    
+<li class="nav-item hidden-md-up nav-group">
+    <span class="mobile-menu-separator">Pozostałe</span>
+    <ul>
+                                        
+        <li class="nav-item">
+            <a href="https://kodilla.com/pl/informator" class="nav-link" target="_blank">
+        Informator
+    </a>
+        </li>
+    </ul>
+
+</li>
+
+    <li class="nav-item hidden-md-up">
+        <a class="nav-link" href="https://kodilla.com/pl/account">Konto</a>
+    </li>
+    <li class="nav-item hidden-md-up">
+        <a class="nav-link analytics-track" data-event="account_logout" href="https://kodilla.com/pl/sign-out">Wyloguj</a>
+    </li>
+
+        
+    <li class="nav-item hidden-md-up nav-group">
+        <span class="mobile-menu-separator">Skontaktuj się z nami</span>
+        <ul>
+            <li class="nav-item">
+                <a href="mailto:support@kodilla.com" class="nav-link">
+                    <i class="fa fa-envelope-o"></i>
+                    support@kodilla.com
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:openChat();" class="nav-link">
+                    <i class="fa fa-comments"></i>
+                    <span>Porozmawiaj na czacie</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+        </ul>
+    </div>
+</nav>
+<main class="bootcamp module page-height-fix" id="bootcamp-module">
+    <div class="aside-toggle hidden-md-up">
+        <button class="navbar-toggler pull-left collapsed" type="button" data-toggle="collapse" data-target="#aside-sticky" aria-expanded="false">
+            <i class="fa fa-bars navbar-ico-open"></i>
+            <i class="fa fa-times navbar-ico-close"></i>
+        </button>
+    </div>
+    <div class="table-of-contents aside-sticky collapsed collapse" id="aside-sticky">
+        <section class="container">
+            <div class="row">
+                <aside class="module-nav col-md-4 col-md-offset-8">
+                    <section class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Spis treści modułu</h4>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-1983" class="clearfix">
+                                    <p>10.1. Rozgrzewka</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-1984" class="clearfix">
+                                    <p>10.2. Manipulacja DOM-em i powt&oacute;rka z OOP</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-1985" class="clearfix">
+                                    <p>10.3. Podział JS na komponenty</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-1986" class="clearfix">
+                                    <p>10.4. Dodanie obsługi podstron</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-1987" class="clearfix">
+                                    <p>10.5. Podsumowanie</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                    </ul>
+                        <div class="card-block text-center">
+                                                                                                <a href="https://kodilla.com/pl/bootcamp-dashboard/407">Powr&oacute;t do dashboardu</a>
+                                                                                    </div>
+                    </section>
+                </aside>
+            </div>
+        </section>
+    </div>
+    <section class="container module-content">
+        <div class="row">
+            <main class="col-md-8">
+                <section class="card">
+                    <div class="card-block module-header clearfix  completed ">
+                        <h1 class="card-title">10. Warsztaty JS cz.1</h1>
+                                                <i class="fa fa-bookmark fa-3x" aria-hidden="true"></i>
+                    </div>
+                                    </section>
+                                    
+                <section id="submodule-1983" class="card submodule completed" data-bootcamp-user-submodule-id="611180" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">10.1. <span>Rozgrzewka</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdxpGigtR_NTu0tr80I3uTQSuyt-tTTe5bTcCXCIllZjPgt5Q/viewform?embedded=true" width="640" height="730" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<p><strong>Dziękujemy!</strong></p>
+<p>Zaczniemy od naprawdę krótkich ćwiczeń, powoli przechodząc do coraz trudniejszych. Przygotuj sobie otwarte okno Codepena lub edytor, przydadzą się do wykonywania kolejnych wyzwań. Pod każdym zadaniem ukryte jest rozwiązanie, które pozwoli Ci sprawdzić, jak można było je wykonać. Nie otwieraj go jednak tak długo, jak Twoja wersja nie będzie gotowa.</p>
+<h3>Pierwsze kroki – tablice i obiekty</h3>
+<p>Zaczniemy od krótkich ćwiczeń. Nie będą one bardzo trudne, ale jednak powinny stanowić dla Ciebie małe wyzwanie. Postaraj się podejść do nich "na logikę", zastanowić się, co komputer musiałby zrobić, jakie kroki podjąć, aby dojść do konkretnego efektu.</p>
+<h4>Ćwiczenie 1</h4>
+<p>Istnieje podana tablica:</p>
+<pre><code class="language-js">const names = ['Kasia', 'Tomek', 'Amanda', 'Maja'];
+</code></pre>
+<p>Twoim zadaniem jest stworzenie nowej, w której będą zawarte tylko imiona żeńskie obecne w tej oryginalnej. Dla uproszczenia załóżmy, że imiona żeńskie to takie, które kończą się na "a".</p>
+<p>Do wykonania ćwiczenia przydatne mogą być wbudowane w JS-a metody. Zainteresuj się zwłaszcza metodami <code>slice</code> lub <code>charAt</code>. Być może pomocna będzie również informacja, że właściwość <code>length</code> użyta na stringu, zwraca jego długość.</p>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-4k3V_ynQZ-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż podpowiedź</a>
+    <a href="#collapse-4k3V_ynQZ-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj podpowiedź</a>
+  </span>
+</p>
+<div id="collapse-4k3V_ynQZ-toggle" class="collapse">
+<p>Zastanów się, jak powinien wyglądać nasz algorytm.</p>
+<ol>
+<li>JS na pewno musi zacząć od przygotowania nowej tablicy, na starcie pustej, do której sukcesywnie będzie dodawać kolejne elementy.</li>
+<li>Następnie musi przejść po każdym elemencie tablicy z imionami i dla każdego elementu sprawdzić, jaką wartość ma jego ostatnia litera.</li>
+<li>Jeśli dane imię kończy się na "a", to należy dodać je do tej nowej tablicy.</li>
+<li>Tym samym na końcu będzie ona tablicą przefiltrowanych wyników.</li>
+</ol>
+</div>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-LcoyJYGIQx-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż rozwiązanie</a>
+    <a href="#collapse-LcoyJYGIQx-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj rozwiązanie</a>
+  </span>
+</p>
+<div id="collapse-LcoyJYGIQx-toggle" class="collapse">
+<pre><code class="language-js">const names = ['Kasia', 'Tomek', 'Amanda', 'Maja'];
+const filteredNames = [];
+
+for(const name of names) {
+  if(name.slice(-1) === 'a') {
+    filteredNames.push(name);
+  }
+}
+</code></pre>
+</div>
+<h4>Ćwiczenie 2</h4>
+<pre><code class="language-js">const employees = {
+  john: {
+    name: 'John Doe',
+    salary: 3000
+  },
+  amanda: {
+    name: 'Amanda Doe',
+    salary: 4000
+  },
+}
+</code></pre>
+<p>To już trochę trudniejsze zadanie. Za pomocą pętli <code>for</code> przejdź po każdym obiekcie w <code>employees</code> i wygeneruj dwie nowe tablice. <code>employeesNames</code> powinno być listą imion pracowników (tylko imion!). <code>employeesSalaries</code> powinno być listą pensji.</p>
+<p>Uwaga! Bardzo przydatna może okazać się znana Ci już metoda <code>split</code>.</p>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-fQXkUEZ_iu-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż rozwiązanie</a>
+    <a href="#collapse-fQXkUEZ_iu-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj rozwiązanie</a>
+  </span>
+</p>
+<div id="collapse-fQXkUEZ_iu-toggle" class="collapse">
+<pre><code class="language-js">const employees = {
+  john: {
+    name: 'John Doe',
+    salary: 3000
+  },
+  amanda: {
+    name: 'Amanda Doe',
+    salary: 4000
+  },
+}
+
+const employeesNames = [];
+const employeesSalaries = [];
+
+for(const employeeId in employees) {
+  const employee = employees[employeeId];
+
+  // split name at ' ' and get first element
+  // (John Doe -&gt; ['John', 'Doe'] -&gt; 'John')
+  const name = employee.name.split(' ')[0];
+  employeesNames.push(name);
+  employeesSalaries.push(employee.salary);
+}
+</code></pre>
+</div>
+<h4>Ćwiczenie 3</h4>
+<pre><code class="language-js">const salaries = [2000, 3000, 1500, 6000, 3000];
+</code></pre>
+<p>Twoim zadaniem jest ustalenie i wyświetlenie w konsoli:</p>
+<ul>
+<li>sumy wszystkich pensji</li>
+<li>najwyższej pensji</li>
+<li>najniższej pensji</li>
+</ul>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-jMKp-VwHzk-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż wskazówkę</a>
+    <a href="#collapse-jMKp-VwHzk-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj wskazówkę</a>
+  </span>
+</p>
+<div id="collapse-jMKp-VwHzk-toggle" class="collapse">
+<p>Obliczenie sumy zapewne nie będzie dla Ciebie problemem, ale jak poradzić sobie z największą i najmniejszą wartością?</p>
+<p>Jak ustalić największą wartość? Najlepiej również wspomóc się pętlą. Jeśli stworzysz jakąś zmienną i nadasz jej wartość pierwszego elementu tablicy, to następnie wystarczy porównywać jej wartość do kolejnych sprawdzanych pensji. Jeśli kolejna pensja jest większa od tej, która aktualnie w tej zmiennej jest, to należy podmienić wartość zmiennej. Tym samym na końcu działania pętli, wartość która w tej zmiennej pozostanie, będzie można uznać za największą.</p>
+<p>Podobnie postąpimy przy szukaniu najmniejszej pensji.</p>
+</div>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-iHcIaaoouK-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż rozwiązanie</a>
+    <a href="#collapse-iHcIaaoouK-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj rozwiązanie</a>
+  </span>
+</p>
+<div id="collapse-iHcIaaoouK-toggle" class="collapse">
+<pre><code class="language-js">const salaries = [2000, 3000, 1500, 6000, 3000];
+
+let sum = 0;
+let highestSalary = salaries[0];
+let lowestSalary = salaries[0];
+
+for(const salary of salaries) {
+  sum += salary;
+  if(salary &gt; highestSalary) highestSalary = salary;
+  if(salary &lt; lowestSalary) lowestSalary = salary;
+}
+
+console.log(sum, highestSalary, lowestSalary);
+</code></pre>
+</div>
+<h4>Ćwiczenie 4</h4>
+<pre><code class="language-js">const persons = {
+  john: 2000,
+  amanda: 3000,
+  thomas: 1500,
+  james: 6000,
+  claire: 3000
+};
+</code></pre>
+<p>Dla praktyki, mamy dla Ciebie podobny przykład, tylko że tym razem dane wejściowe to obiekt, a nie tablica.</p>
+<p>Znowu Twoim zadaniem jest ustalenie i wyświetlenie w konsoli:</p>
+<ul>
+<li>sumy wszystkich pensji</li>
+<li>najwyższej pensji</li>
+<li>najniższej pensji</li>
+</ul>
+<p>Wskazówka: Możesz zastanowić się nad wspomożeniem się wbudowaną metodą <code>Object.values</code>. Nie jest to konieczne, ale jest to zdecydowanie krótsza opcja.</p>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-LdvRdibam3-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż rozwiązanie</a>
+    <a href="#collapse-LdvRdibam3-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj rozwiązanie</a>
+  </span>
+</p>
+<div id="collapse-LdvRdibam3-toggle" class="collapse">
+<pre><code class="language-js">const persons = {
+  john: 2000,
+  amanda: 3000,
+  thomas: 1500,
+  james: 6000,
+  claire: 3000
+}
+
+let sum = 0;
+let highestSalary = persons.john;
+let lowestSalary = persons.john;
+
+for(const personId in persons) {
+  const personSalary = persons[personId];
+  sum += personSalary;
+  if(personSalary &gt; highestSalary) highestSalary = personSalary;
+  if(personSalary &lt; lowestSalary) lowestSalary = personSalary;
+}
+
+console.log(sum, highestSalary, lowestSalary);
+</code></pre>
+<p>lub</p>
+<pre><code class="language-js">const persons = {
+  john: 2000,
+  amanda: 3000,
+  thomas: 1500,
+  james: 6000,
+  claire: 3000
+}
+// covert obj to array of its values ([2000, 3000, 1500...])
+const salaries = Object.values(persons);
+
+let sum = 0;
+let highestSalary = salaries[0];
+let lowestSalary = salaries[0];
+
+for(const salary of salaries) {
+  sum += salary;
+  if(salary &gt; highestSalary) highestSalary = salary;
+  if(salary &lt; lowestSalary) lowestSalary = salary;
+}
+
+console.log(sum, highestSalary, lowestSalary);
+</code></pre>
+</div>
+<h4>Ćwiczenie 5</h4>
+<p>Czas na ostatni przykład z pierwszego etapu.</p>
+<pre><code class="language-js">const tags = ['news', 'code', 'news', 'sport', 'hot', 'news', 'code'];
+</code></pre>
+<p>Twoim zdaniem jest zbudowanie na podstawie powyższej tablicy, obiektu <code>uniqueTags</code>, który posiada tylko unikalne tagi. W taki sposób, że każdy unikalny tag, to nowa właściwość w tym obiekcie. Jego wartością powinien być za to kolejny obiekt z właściwością <code>appearances</code> o wartości liczby wystąpień tego tagu.</p>
+<p>Czyli, dla naszych tagów wyżej, powinno wygenerować się coś w stylu:</p>
+<pre><code class="language-js">{ 
+  news: { appearances: 3 },
+  code: { appearances: 2 },
+  sport: { appearances: 1 },
+  hot: { appearances: 1 },
+}
+</code></pre>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-F0mDmMoVW1-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż wskazówkę</a>
+    <a href="#collapse-F0mDmMoVW1-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj wskazówkę</a>
+  </span>
+</p>
+<div id="collapse-F0mDmMoVW1-toggle" class="collapse">
+<p>Zastanów się nad algorytmem. JS na pewno musi posiadać nowy pusty obiekt, który następnie będzie rozwijany o kolejne właściwości. Na pewno musimy przejść po wszystkich elementach z tablicy <code>tags</code> i każdy sprawdzić. Należy ustalić, czy dany tag był już w tym obiekcie podsumowania, czy nie. Jeśli nie, to należy dodać właściwość o nazwie równej nazwie tagu oraz o wartości równej <code>{ appearances: 1 }</code>. Jeśli już taki tag w tym obiekcie podsumowania jest, to należy tylko zwiększyć jego właściwość <code>appearances</code> o 1.</p>
+</div>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-vLn37s-eK0-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż rozwiązanie</a>
+    <a href="#collapse-vLn37s-eK0-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj rozwiązanie</a>
+  </span>
+</p>
+<div id="collapse-vLn37s-eK0-toggle" class="collapse">
+<pre><code class="language-js">const tags = ['news', 'code', 'news', 'sport', 'hot', 'news', 'code'];
+
+const uniqueTags = {};
+
+for(const tag of tags) {
+  if(!uniqueTags[tag]) uniqueTags[tag] = { appearances: 1 };
+  else uniqueTags[tag].appearances++;
+}
+</code></pre>
+</div>
+<h3>Praca z funkcjami</h3>
+<p>Przejdziemy teraz krok dalej. Zabierzemy się za funkcje. Zaczniemy jednak od pytań, w których nie będzie koniecznie pisanie ani linijki kodu. Dopiero później przejdziemy do bardziej praktycznych przykładów.</p>
+<h4>Ćwiczenie 1</h4>
+<pre><code class="language-js">const foo = 4;
+
+function Bar() {
+  const foo = 5;
+  const spam = 6;
+  console.log(foo, spam, eggs);
+
+  function Baz() {
+    const spam = 7;
+    const eggs = 8;
+    console.log(foo, spam);
+  }
+}
+</code></pre>
+<p>Mamy dla Ciebie kilka pytań:</p>
+<ol>
+<li>Czy funkcja <code>Baz</code> może mieć dostęp do stałych <code>foo</code> i <code>spam</code> z zakresu funkcji <code>Bar</code>?</li>
+<li>Czy funkcja <code>Bar</code> ma dostęp do stałej <code>eggs</code> z zakresu <code>Baz</code>?</li>
+<li>Czy to, że stała o takiej samej nazwie (<code>foo</code>) jest deklarowana w dwóch zakresach (zakres globalny i zakres <code>Bar</code>) spowoduje jakiś błąd?</li>
+<li>Gdybyśmy uruchomili funkcję <code>Baz</code>, to jaką wartość pokaże nam jako <code>foo</code>?</li>
+</ol>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-0CkJATF00z-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż odpowiedź</a>
+    <a href="#collapse-0CkJATF00z-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj odpowiedź</a>
+  </span>
+</p>
+<div id="collapse-0CkJATF00z-toggle" class="collapse">
+<ol>
+<li>Tak. Zakres wewnętrzny zawsze ma dostęp do zakresu zewnętrznego.</li>
+<li>Nie. Zakres zewnętrzny nie ma dostępu do zakresu wewnętrznego.</li>
+<li>Nie. Każdy zakres może mieć swoją własną stałą o danej nazwie. Nie możemy więc powtórzyć nazwy <code>foo</code> w jednym zakresie, ale kolejny jak najbardziej może mieć swoją własną stałą o nazwie <code>foo</code>.</li>
+<li>Wartość wziętą z zakresu wyżej, a więc <code>5</code>. JS zawsze szuka danej zmiennej/stałej najpierw w zakresie samej funkcji, ale jeśli się mu nie powiedzie, to przejdzie wyżej, do zakresu zewnętrznego. Jeśli i tam takiej informacji nie znajdzie, to pójdzie jeszcze wyżej... aż do zakresu globalnego.</li>
+</ol>
+</div>
+<h4>Ćwiczenie 2</h4>
+<p>O "zakresie" mówimy tylko w przypadku funkcji?</p>
+<pre><code class="language-js">const foo = 4;
+
+function Bar(param) {
+  const baz = 5;
+  if(param === 1) {
+    const spam = 6;
+  }
+}
+</code></pre>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-f7b7araDyC-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż odpowiedź</a>
+    <a href="#collapse-f7b7araDyC-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj odpowiedź</a>
+  </span>
+</p>
+<div id="collapse-f7b7araDyC-toggle" class="collapse">
+<p>Nie. Istnieje również zakres globalny. Dodatkowo każde <code>{}</code> także tworzy nowy zakres. Każdy <code>if</code>, każda pętla <code>for</code> itd. tym samym oznacza również utworzenie nowego zakresu.</p>
+<p>W naszym przykładzie będziemy więc posiadać trzy zakresy:</p>
+<ul>
+<li>zakres globalny,</li>
+<li>zakres funkcji <code>Bar</code>,</li>
+<li>zakres pętli <code>if</code>.</li>
+</ul>
+</div>
+<h4>Ćwiczenie 3</h4>
+<p>Czy słowo kluczowe <code>this</code> zależy od miejsca wywołania funkcji? Jakie wartości <code>this</code> pojawią się w konsoli, po uruchomieniu poniższego kodu?</p>
+<pre><code class="language-js">'use strict';
+
+const foo = function() {
+  console.log(this);
+}
+
+const obj = {
+  foo: foo
+}
+
+foo();
+foo.call(5);
+obj.foo();
+</code></pre>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-a8uIko4jC--toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż odpowiedź</a>
+    <a href="#collapse-a8uIko4jC--toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj odpowiedź</a>
+  </span>
+</p>
+<div id="collapse-a8uIko4jC--toggle" class="collapse">
+<p>Tak, co można zresztą obserwować na powyższym przykładzie.</p>
+<p>Za każdy razem włączamy jedną i tę samą funkcję. Zauważ, że <code>obj.foo</code> to też tylko referencja (adres) do funkcji <code>foo</code> zadeklarowanej wyżej. Trzy razy wywołujemy więc jedną i tę samą funkcję. Za pierwszym razem pokaże ona w konsoli <code>undefined</code> (pierwsza zasada – default rule), za drugim razem 5 (<code>call</code> "wymusza" podane <code>this</code>), a za trzecim <code>obj</code> (druga zasada – funkcja uruchomiona na obiekcie, wskazuje właśnie na ten obiekt).</p>
+</div>
+<h4>Ćwiczenie 4</h4>
+<p>Czas na przejście do bardziej praktycznych zadań.</p>
+<p>Napisz funkcję <code>filterEmployees</code>, która będzie pobierać dwa argumenty:</p>
+<ul>
+<li>tablicę z obiektami o strukturze <code>{ name: 'Imię nazwisko', salary: kwota-pensji }</code></li>
+<li>wartość minimalną zakresu,</li>
+<li>wartość maksymalną zakresu.</li>
+</ul>
+<p>Zadaniem naszej funkcji ma być zwrócenie <strong>nowej</strong> tablicy, która będzie posiadać tylko te osoby, których dochód jest większy niż wartość minimalna i mniejszy niż maksymalna.</p>
+<p>Poniżej przykład wywołania takiej funkcji.</p>
+<pre><code class="language-js">const employees = [
+  { name: 'Amanda Doe', salary: 3000 },
+  { name: 'John Doe', salary: 4000 },
+  { name: 'Claire Downson', salary: 2000 },
+  { name: 'Freddie Clarkson', salary: 6000 },
+  { name: 'Thomas Delaney', salary: 8200 }
+];
+
+const filteredEmployees = filterEmployees(employees, 2000, 8000);
+console.log(filteredEmployees); 
+/* It should return
+[{
+  { name: 'Amanda Doe', salary: 3000 },
+  { name: 'John Doe', salary: 4000 },
+  { name: 'Freddie Clarkson', salary: 6000 },
+}];*/
+</code></pre>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-WZ_sBAFhrJ-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż odpowiedź</a>
+    <a href="#collapse-WZ_sBAFhrJ-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj odpowiedź</a>
+  </span>
+</p>
+<div id="collapse-WZ_sBAFhrJ-toggle" class="collapse">
+<pre><code class="language-js">function filterEmployees(arr, min, max) {
+  const filteredArray = [];
+
+  for(const empl of employees) {
+    if(empl.salary &gt; min &amp;&amp; empl.salary &lt; max) {
+      filteredArray.push(empl);
+    }
+  }
+
+  return filteredArray;
+}
+
+const employees = [
+  { name: 'Amanda Doe', salary: 3000 },
+  { name: 'John Doe', salary: 4000 },
+  { name: 'Claire Downson', salary: 2000 },
+  { name: 'Freddie Clarkson', salary: 6000 },
+  { name: 'Thomas Delaney', salary: 8200 }
+];
+
+const filteredEmployees = filterEmployees(employees, 2000, 8000);
+console.log(filteredEmployees); 
+</code></pre>
+</div>
+<h4>Ćwiczenie 5</h4>
+<p>Napisz funkcję, która przyjmie jeden argument (dowolny obiekt), a następnie wyświetli w konsoli informacje o jego wszystkich właściwościach.</p>
+<p>Np. dla obiektu:</p>
+<pre><code class="language-js">const obj = {
+  firstName: 'John',
+  lastName: 'Doe'
+}
+</code></pre>
+<p>Wyświetli:</p>
+<pre><code class="language-plaintext">firstName: John
+lastName: Doe
+</code></pre>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-giUIHdsmwR-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż odpowiedź</a>
+    <a href="#collapse-giUIHdsmwR-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj odpowiedź</a>
+  </span>
+</p>
+<div id="collapse-giUIHdsmwR-toggle" class="collapse">
+<pre><code class="language-js">function showObjectParams(obj) {
+  for(const paramId in obj) {
+    const param = obj[paramId];
+    console.log(paramId + ': ' + param);
+  }
+}
+</code></pre>
+</div>
+<h4>Ćwiczenie 6</h4>
+<p>Napisz funkcję <code>forEach</code>, która przyjmie dwa argumenty:</p>
+<ul>
+<li>dowolną tablicę,</li>
+<li>dowolną funkcję callback.</li>
+</ul>
+<p>Zadaniem funkcji powinna być przejście po każdym elemencie tablicy i wywołanie dla każdego z osobna funkcji callback. Tej, którą otrzymamy w drugim parametrze. Co ważne, ta funkcja callback powinna być wywołana z jednym argumentem, równym właśnie obsługiwanemu w danej chwili elementowi.</p>
+<p>Możesz wspomóc się powrotem do pierwszego modułu z projektem pizzerii. Tam bardzo dużo czasu spędziliśmy nad omawianiem wykorzystania funkcji callback. Przykłady tam dostępne mogą Ci dużo rozjaśnić.</p>
+<p>Np. takie wywołanie:</p>
+<pre><code class="language-js">forEach(['John', 'Amanda', 'Thomas'], function(item) { console.log(item); });
+</code></pre>
+<p>...powinno dać nam w konsoli następujący rezultat:</p>
+<pre><code class="language-plaintext">John
+Amanda
+Thomas
+</code></pre>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-QYt6Mv9btw-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż odpowiedź</a>
+    <a href="#collapse-QYt6Mv9btw-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj odpowiedź</a>
+  </span>
+</p>
+<div id="collapse-QYt6Mv9btw-toggle" class="collapse">
+<pre><code class="language-js">function forEach(arr, cb) {
+  for(const elem of arr) {
+    cb(elem);
+  }
+}
+</code></pre>
+</div>
+<h4>Ćwiczenie 7</h4>
+<p>Napisz funkcję <code>formatName</code>, która przyjmie w argumencie imię i nazwisko, a następnie zwróci poprawioną jego formę. Poprawioną, czyli taką, w której tylko pierwsza litera imienia i nazwiska będą duże, a pozostałe małe.</p>
+<pre><code class="language-js">formatName('aMAnDa dOE'); // returns Amanda Doe
+formatName('AMANDA DOE'); // returns Amanda Doe
+formatName('john DOE'); // returns John Doe
+</code></pre>
+<p>Bardzo pomocne mogą być wbudowane w JS funkcje:</p>
+<ul>
+<li><code>split</code> – tę już znasz.</li>
+<li><code>charAt</code> – zwraca informacje o znaku obecnym na danej pozycji w stringu.</li>
+<li><code>substr</code> – pozwala na zwrócenie tylko części stringu (np. wszystkich liter z wyjątkiem pierwszej).</li>
+<li><code>toUpperCase</code> – pozwala na zmianę liter na duże (np. <code>aa</code> do <code>AA</code>).</li>
+<li><code>toLowerCase</code> – analogicznie jak wyżej, tylko w drugą stronę.</li>
+</ul>
+<p>Uwaga! Załóż, że bierzemy pod uwagę tylko proste tożsamości. Nie musisz obawiać się, że funkcja otrzyma tylko imię albo dwuczłonowe nazwisko.</p>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-g3bn0xeOm1-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż wskazówkę</a>
+    <a href="#collapse-g3bn0xeOm1-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj wskazówkę</a>
+  </span>
+</p>
+<div id="collapse-g3bn0xeOm1-toggle" class="collapse">
+<pre><code class="language-js">const str = 'Jeremy';
+const newStr = str.charAt(0).toLowerCase() + str.substr(1).toUpperCase();
+console.log(newStr); // returns jEREMY
+</code></pre>
+</div>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-1-VgO_NeNJ-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż odpowiedź</a>
+    <a href="#collapse-1-VgO_NeNJ-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj odpowiedź</a>
+  </span>
+</p>
+<div id="collapse-1-VgO_NeNJ-toggle" class="collapse">
+<pre><code class="language-js">function formatName(name) {
+  const firstNameAndLastName = name.split(' ');
+  let firstName = firstNameAndLastName[0];
+  let lastName = firstNameAndLastName[1];
+
+  firstName = firstName.charAt(0).toUpperCase() + firstName.substr(1).toLowerCase()
+  lastName = lastName.charAt(0).toUpperCase() + lastName.substr(1).toLowerCase()
+  return firstName + ' ' + lastName;
+}
+
+console.log(formatName('AMANdA doE')); // returns Amanda Doe
+</code></pre>
+</div>
+<h4>Ćwiczenie 8</h4>
+<p>Przygotuj funkcję <code>getEvensInRange</code>, która przyjmie dwa argumenty:</p>
+<ul>
+<li>liczbę wskazującą początek zakresu do sprawdzenia,</li>
+<li>liczbę wskazującą jego koniec.</li>
+</ul>
+<p>Zadaniem funkcji jest przejście po wszystkich liczbach wewnątrz podanego zakresu i zwrócenie tablicy, która będzie zawierać tylko te, które są parzyste.</p>
+<p>Do wykonania zadania pomocne będzie przypomnienie sobie składni <a href="https://poradnik-js.kodilla.com/loops" target="_blank">podstawowej pętli for</a> oraz <a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Operatory/Operatory_arytmetyczne" target="_blank">dzielenia modulo</a>.</p>
+<p>Przykład użycia funkcji:</p>
+<pre><code class="language-js">getEvensInRange(0, 9); // returns [0, 2, 4, 6, 8]
+getEvensInRange(7, 12); // returns [8, 10, 12]
+</code></pre>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-PWCfqrWS3IG-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż wskazówkę</a>
+    <a href="#collapse-PWCfqrWS3IG-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj wskazówkę</a>
+  </span>
+</p>
+<div id="collapse-PWCfqrWS3IG-toggle" class="collapse">
+<p>Aby sprawdzić, czy liczba jest parzysta, wystarczy podzielić ją przez dwa i ustalić, czy otrzymano zero reszty.</p>
+</div>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-ep3shKlPAE4-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż odpowiedź</a>
+    <a href="#collapse-ep3shKlPAE4-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj odpowiedź</a>
+  </span>
+</p>
+<div id="collapse-ep3shKlPAE4-toggle" class="collapse">
+<pre><code class="language-js">function getEvensInRange(start, end) {
+  const evensArray = [];
+
+  for(let i = start; i &lt;= end; i++) {
+    if(i%2 === 0) evensArray.push(i);
+  }
+
+  return evensArray;
+}
+</code></pre>
+</div>
+<h4>Ćwiczenie 9</h4>
+<p>Czas na ostatnią funkcję w niniejszym submodule. Przypuszczalnie najtrudniejszą. Chociaż, kto wie... może akurat łatwo sobie z nią poradzisz?</p>
+<p>Twoim zadaniem jest napisanie funkcji o nazwie <code>filter</code>, która przyjmie dwa argumenty – dowolną tablicę oraz funkcję callback. Celem funkcji jest zwrócenie nowej przefiltrowanej tablicy, w której znajdą się tylko te elementy, dla których przekazana funkcja callback zwróci <code>true</code>.</p>
+<p>Pomysł jest bardzo ciekawy. Dzięki takiej funkcji, bylibyśmy w stanie bardzo szybko i łatwo dowolnie przefiltrowywać wybraną tablicę. Wystarczy podać dane wejściowe i warunek do sprawdzenia (schowany w funkcji callback), a ta zwróci nam nowe dane. Już przefiltrowane!</p>
+<p>Może brzmieć to dziwne, więc wspomożemy się małym przykładem.</p>
+<pre><code class="language-js">filter([5, 6, 7], function(item) { return item%2 === 0 });
+</code></pre>
+<p>Przykładowo, odpalając <code>filter</code> jak wyżej, oczekiwalibyśmy, że jako wynik otrzymamy tablicę <code>[6]</code>. Dlaczego?</p>
+<p>Jak mówiliśmy już wcześniej, <code>filter</code> powinno przejść po wszystkich elementach, dla każdego odpalić funkcję callback (przekazując jako argument obsługiwany w danej chwili element) i zależnie od tego, czy jej wywołanie zwróci true albo false, decydować o pozostawieniu go w nowej przefiltrowanej tablicy.</p>
+<p>No więc pomyślmy. Najpierw <code>filter</code> będzie chciało sprawdzić pierwszy element tablicy, czyli 5. Uruchomi wiec funkcję callback <code>function(item) { return item%2 === 0 }</code>, przekazując jako pierwszy argument (<code>item</code>) właśnie wartość 5. Co taka funkcja zwróci? Dla 5 – <code>false</code>. Bo w końcu reszta z dzielenia 5 przez dwa na pewno będzie większa. Skoro więc funkcja callback zwróci nam <code>false</code>, to dany element nie będzie dodawany do nowej tablicy.</p>
+<p>Następnie <code>filter</code> zajmie się kolejnym elementem <code>6</code>. Wykona ten sam algorytm. Uruchomi funkcję <code>callback</code>, przekazując jako <code>item</code> 6. Co tym razem zwróci ta funkcja? <code>true</code>. Tym razem więc weźmiemy ten element pod uwagę, przy konstrukcji nowej przefiltrowanej tablicy.</p>
+<p>Na końcu <code>filter</code> zajmie się <code>7</code>. Tutaj znowu <code>callback</code> zwróci <code>false</code>, więc element nie będzie dodany do nowej przefiltrowanej tablicy.</p>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-9Y1pVllfzo9-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż wskazówkę</a>
+    <a href="#collapse-9Y1pVllfzo9-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj wskazówkę</a>
+  </span>
+</p>
+<div id="collapse-9Y1pVllfzo9-toggle" class="collapse">
+<p>Jeśli nie masz pomysłu jak zacząć, to poniżej przedstawiamy nasz.</p>
+<ol>
+<li>Zacznij od utworzenia nowej pustej tablicy. To właśnie do niej będziemy zbierać za moment "pasujące" elementy.</li>
+<li>Przygotuj pętle <code>for</code>, która przejdzie po każdym elemencie tablicy przekazanej w formie argumentu.</li>
+<li>Wewnątrz tej pętli przygotuj kod, który uruchomi funkcję callback, przekazując jej jako argument aktualnie obsługiwany przez pętlę element. Następnie sprawdź, czy jej wywołanie zwróciło <code>true</code> czy <code>false</code>. Jeśli <code>true</code>, to dodaj ten element do naszej nowej tablicy. Do tej, którą utworzyliśmy w punkcie pierwszym.</li>
+<li>Po pętli dodaj instrukcję, która zadba o zwrócenie naszej przefiltrowanej tablicy.</li>
+</ol>
+</div>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-ZZ-xkt8BBx7-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż rozwiązanie</a>
+    <a href="#collapse-ZZ-xkt8BBx7-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj rozwiązanie</a>
+  </span>
+</p>
+<div id="collapse-ZZ-xkt8BBx7-toggle" class="collapse">
+<pre><code class="language-js">function filter(arr, cb) {
+  const filteredArray = [];
+  
+  for(const elem of arr) {
+    if(cb(elem)) filteredArray.push(elem);
+  }
+
+  return filteredArray;
+}
+</code></pre>
+</div>
+<h3>Podsumowanie</h3>
+<p>Na sam koniec, musimy kilka razy uderzyć się w pierś. Powiedzieliśmy, że to tylko rozgrzewka, a jednak niektóre zadania mogły dać Ci w kość. No cóż, nie ukrywamy, że taki był nasz cel. Zadania miały być stosunkowo krótkie, ale ich poziom miał być w założeniu minimalnie wyższy, niż ten, który pozwoliłby Ci na wykonanie ich bez zająknięcia. Chcieliśmy dać Ci szanse na ich wykonanie, ale jednak zmusić do naprawdę wytężonej pracy. I jak? Chyba nam się to udało? ;)</p>
+<p>Dlaczego o tym mówimy? Dlatego, że nie chcemy, aby to jak Ci z nimi poszło, w jakiś sposób Cię martwiło. Tak naprawdę tego typu zadania mają to do siebie, że im więcej ich robimy, tym lepiej nam idzie. A jeśli nie robimy ich wcale, to na początku bardzo się męczymy. Zauważ, że w gruncie rzeczy, wszystkie były w Twoim zasięgu. Większość metod, pomysłów, które należało użyć, były już obecne w kursie, ale... często wykorzystywaliśmy je w prostszych i bardziej "logicznych" przykładach. Tym razem, chcieliśmy pokazać JS-a trochę z innej strony i uzmysłowić Ci, że to często również w pewien sposób praca, w której na co dzień rozwiązujemy "zagadki", a wtedy bez logicznego i analitycznego myślenia, ciężko sobie z nimi radzić. Jeśli jednak nie poszło Ci dobrze, nie martw się. Obie te umiejętności można zdecydowanie poprawić właśnie przez praktykę.</p>
+<p>Pamiętaj też, że liczba popularnych problemów, na które możesz natrafić podczas kodowania, nie jest nieskończona. Zauważ, że nawet w naszych przykładach, mimo tego, że każdy traktował o czymś innym, to często rozwiązania były bardzo podobne. Wykorzystywały te same pomysły.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-1984" class="card submodule completed" data-bootcamp-user-submodule-id="611181" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">10.2. <span>Manipulacja DOM-em i powt&oacute;rka z OOP</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>W poprzednim module zajmowaliśmy się głównie tym, czego użytkownik nie widzi. Jeśli jakieś informacje wyświetlaliśmy, to tylko w konsoli. Tym razem bardzo mocno skupimy się za to na DOM-ie. Oczywiście, wciąż będziemy korzystać z pętli <code>for</code> czy działać na zbiorach danych, nadal pojawią się funkcje, ale tym razem dojdzie jednak do tego dużo działań na elementach DOM. Ponownie skorzystamy również z biblioteki Handlebars.</p>
+<p>Wszystkie zadania z tego submodułu będą tyczyły się stosunkowo małych funkcjonalności. Będą one jednak częścią trochę większej aplikacji. Tym samym z każdym zadaniem będziemy rozwijać jeden i ten sam projekt.</p>
+<p>Nie będzie to nic wielkiego. Poziom skomplikowania na pewno nie zbliży się nawet o krok do Pizzerii. To, co zbudujemy będzie tylko prostą aplikacją z listą książek. Naszym zadaniem będzie tylko generowanie odpowiednich tytułów na stronie, możliwość dodawania ich do listy "ulubionych" oraz zaoferowanie prostego filtrowania. Nic wielkiego, prawda?</p>
+<p>Zanim zabierzemy się do pracy, zacznij od pobrania plików startowych:</p>
+<ul>
+<li><a href="https://uploads.kodilla.com/bootcamp/wdp/10/BooksApp.zip" target="_blank">BooksApp</a></li>
+</ul>
+<p>Zadbaj również o pobranie odpowiednich paczek:</p>
+<pre><code class="language-markup">npm install
+</code></pre>
+<p>Struktura projektu może wydawać Ci się bardzo znajoma. Nie bez powodu. Aby ułatwić Ci zadanie, oparliśmy strukturę plików i katalogów na tym, co znasz już z Pizzerii. Oczywiście, tym razem będziemy pracować nad mniejszą aplikacją, samych plików będzie więc znacznie mniej, tak samo, jak funkcji pomocniczych czy arkuszy ze stylami, ale to chyba powinno tylko ułatwić sprawę, prawda?</p>
+<p>Podsumujmy więc, co tu mamy.</p>
+<p>W pliku <code>index.html</code> posiadamy bardzo prostą strukturę:</p>
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div class=&quot;container&quot;&gt;
+
+      &lt;!-- FILTERS FORM --&gt;
+      &lt;section class=&quot;filters&quot;&gt;
+        &lt;form&gt;
+          &lt;label&gt;
+            Adults only: &lt;input name=&quot;filter&quot; value=&quot;adults&quot; type=&quot;checkbox&quot;&gt;
+          &lt;/label&gt;
+          &lt;label&gt;
+            Non-fiction: &lt;input name=&quot;filter&quot; value=&quot;nonFiction&quot; type=&quot;checkbox&quot;&gt;
+          &lt;/label&gt;
+        &lt;/form&gt;
+      &lt;/section&gt;
+
+      &lt;!-- BOOKS PANEL --&gt;
+      &lt;section class=&quot;books-panel&quot;&gt;
+        &lt;h1&gt;Your collection&lt;/h1&gt;
+        &lt;ul class=&quot;books-list&quot;&gt;
+        &lt;/ul&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+
+  &lt;!-- BOOK TEMPLATE --&gt;
+  &lt;script id=&quot;template-book&quot; type=&quot;text/x-handlebars-template&quot;&gt;
+    &lt;li class=&quot;book&quot;&gt;
+
+      &lt;!-- title and price --&gt;
+      &lt;header class=&quot;book__header&quot;&gt;
+        &lt;h2 class=&quot;book__name&quot;&gt;{{ name }}&lt;/h2&gt;
+        &lt;p class=&quot;product__base-price no-spacing&quot;&gt;${{ price }}&lt;/p&gt;
+      &lt;/header&gt;
+
+      &lt;!-- cover image --&gt;
+      &lt;a href=&quot;#&quot; class=&quot;book__image&quot; data-id=&quot;{{ id }}&quot;&gt;
+        &lt;figure&gt;
+          &lt;img src=&quot;{{ image }}&quot; alt=&quot;{{ name }}&quot;&gt;
+        &lt;/figure&gt;
+      &lt;/a&gt;
+      &lt;!-- ratings --&gt;
+      &lt;div class=&quot;book__rating&quot;&gt;
+        &lt;div class=&quot;book__rating__fill&quot;&gt;
+          {{ rating }}/10
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+
+    &lt;/li&gt;
+  &lt;/script&gt;
+</code></pre>
+<p>Jest tu formularz do filtrowania książek, ich lista (na razie) pusta i szablon, na którego podstawie będziemy te książki renderować.</p>
+<p>Stylami nie będziemy się zajmować. Jest ich bardzo mało, a jeśli coś będzie potrzebne w celu wykonania któregoś z zadań, to na pewno Ci o tym powiemy. Na razie więc się nimi kompletnie nie przejmuj.</p>
+<p>Ważniejsze jest to, co w plikach JS. Ponownie mamy aż trzy pliki:</p>
+<ul>
+<li>data.js</li>
+<li>functions.js</li>
+<li>script.js</li>
+</ul>
+<p>W pierwszym (podobnie jak na początku w pizzerii) jest po prostu obiekt z danymi. Tym razem jednak zamiast produktów mamy naturalnie książki.</p>
+<pre><code class="language-js">const dataSource = {}; // eslint-disable-line no-unused-vars
+
+dataSource.books = [
+  {
+    id: 1,
+    name: 'Lady in red',
+    price: 20,
+    rating: 8,
+    image: 'images/books/1.jpg',
+    details: {
+      adults: true,
+      nonFiction: false
+    }
+  },
+  {
+    id: 2,
+    name: 'Eloquent Javascript',
+    price: 15,
+    rating: 9.2,
+    image: 'images/books/2.jpg',
+    details: {
+      adults: false,
+      nonFiction: true
+    }
+  },
+  ...
+</code></pre>
+<p>W drugim (<code>functions.js</code>) znajdzie się tym razem tylko jedna funkcja pomocnicza – <code>utils.createDOMFromHTML</code>. Pamiętasz, do czego służy, prawda? Pomoże nam w generowaniu elementów DOM na podstawie kodu HTML. Używaliśmy tej funkcji nagminnie w projekcie pizzerii.</p>
+<p>Plik <code>script.js</code> jest na razie pusty. To właśnie tu znajdzie się cały Twój kod.</p>
+<p>No i jak? Wszystko jasne? Jeśli tak, to bierzmy się do pracy!</p>
+<h3>Ćwiczenie 1</h3>
+<p>Zaczniemy od czegoś stosunkowo prostego.</p>
+<p>Twoim zadaniem jest utworzenie i wywołanie funkcji, która przejdzie po wszystkich książkach z <code>dataSource.books</code> i wyrenderuje dla nich reprezentacje HTML w liście <code>.books-list</code>. Oczywiście musisz wykorzystać w tym celu dostarczony już szablon (<code>#template-book</code>).</p>
+<p>Staraj się wspierać kodem, który napisaliśmy już razem w pizzerii. Zobacz, jak tam radziliśmy sobie z taką funkcjonalnością. Przejrzyj np. klasę <code>Product</code> czy też <code>Cart</code>. Oczywiście tutaj nie musisz tworzyć żadnej klasy, chodzi o prostą funkcję. Nie będzie tu niczego nowego. Dasz sobie radę?</p>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-LHZWhD_xG-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż wskazówkę</a>
+    <a href="#collapse-LHZWhD_xG-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj wskazówkę</a>
+  </span>
+</p>
+<div id="collapse-LHZWhD_xG-toggle" class="collapse">
+<p>Jeśli masz problem, aby zacząć, to poniżej przedstawiamy algorytm, który powinien znacząco Ci pomóc:</p>
+<ol>
+<li>Przygotuj referencję do szablonu oraz listy <code>.books-list</code>.</li>
+<li>Dodaj nową funkcję <code>render</code>.</li>
+<li>Wewnątrz niej przejdź po każdym elemencie z <code>dataSource.books</code>. Pamiętaj, że plik <code>script.js</code> ma do tego obiektu bezpośredni dostęp.</li>
+<li>Wewnątrz tej pętli zadbaj o wygenerowanie kodu HTML na podstawie szablonu oraz danych o konkretnej książce.</li>
+<li>Na postawie tego kodu HTML wygeneruj element DOM.</li>
+<li>Wygenerowany element DOM dołącz jako nowe dziecko DOM do listy <code>.books-list</code>.</li>
+</ol>
+</div>
+<p>Jeśli wszystko poszło dobrze, to strona na tym etapie powinna wyglądać następująco:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/10/10-01.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/10/10-01.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Tym razem nie pokażemy Ci już rozwiązania. Nie chcemy kusić Cię gotowcem, kiedy wiemy, że spokojnie dasz sobie radę :)</p>
+<h3>Ćwiczenie 2</h3>
+<p>Kolejną funkcjonalnością będzie możliwość dodawania książek do ulubionych.</p>
+<p>Od strony użytkownika sam proces dodania powinien opierać się na dwukrotnym kliknięciu na obrazek książki. Klikasz dwa razy na okładkę książki i zostaje ona dodana do ulubionych. Powinno być to równoznaczne dodaniu do <code>.book__image</code> książki nowej klasy – <code>favorite</code>. Nie będziemy jej stylować, gdyż jest już gotowa. Wystarczy, że ją nadamy, a okładka automatycznie zmieni swój styl.</p>
+<p>Od strony technicznej powinno wyglądać to tak, że w JS będziemy posiadać specjalną tablicę – <code>favoriteBooks</code>. Będzie to tablica z identyfikatorami książek, które dodano do ulubionych. Kliknięcie dwukrotnie okładkę książki to dodanie jej id do tablicy. Dzięki temu w każdej chwili będziemy w stanie kontrolować, jak wygląda sytuacja z naszymi książkami, bez potrzeby sprawdzania HTML-a.</p>
+<p>Powinno to działać następująco:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/10/10-02.gif" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/10/10-02.gif" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Podsumowując, musisz dodać do JS-a pustą tablicę <code>favoriteBooks</code> oraz odpowiedni kod, który zadba o to, aby przy dwukliku na okładkę dowolnej książki, jej id było dodawane do tej tablicy, a do samego elementu HTML została dodana klasa <code>favorite</code>. Tyle.</p>
+<p>Dodatkowo mamy dla Ciebie trzy informacje:</p>
+<ol>
+<li>Choć nie jest to najwydajniejsza opcja, możesz skorzystać z pętli <code>for</code>, która nada nasłuchiwacz dla każdego elementu z osobna.</li>
+<li>Event dwukliku nazywa się <code>dblclick</code>.</li>
+<li>Każdy link <code>.book__image</code> posiada atrybut <code>data-id</code>. Może Ci się on bardzo przydać.</li>
+</ol>
+<p>Cały kod odpowiedzialny za dodanie nasłuchiwaczy powinien być zamknięty w nowej funkcji <code>initActions</code>. Nie jest to konieczne, ale dobrze starać się korzystać ze znanych już praktyk. Stosowanie znanych już nazw funkcji ułatwi nam nawigację w projekcie.</p>
+<p>Zadbaj o to, aby funkcja ta była uruchamiana po funkcji <code>render</code>.</p>
+<p>Spróbuj wykonać to zadanie bez wskazówek. Jeśli jednak przez długi czas nie będziesz mieć rezultatów, to poniżej, tak jak w poprzednim zadaniu, przedstawiamy gotowy plan algorytmu.</p>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-9Wv0rERJlG-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż wskazówkę</a>
+    <a href="#collapse-9Wv0rERJlG-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj wskazówkę</a>
+  </span>
+</p>
+<div id="collapse-9Wv0rERJlG-toggle" class="collapse">
+<ol>
+<li>Zacznij od dodania nowej pustej tablicy <code>favoriteBooks</code>.</li>
+<li>Dodaj funkcję <code>initActions</code>.</li>
+<li>Przygotuj w niej referencję do listy wszystkich elementów <code>.book__image</code> w liście <code>.booksList</code>.</li>
+<li>Następnie przejdź po każdym elemencie z tej listy.</li>
+<li>Dla każdego z nich dodaj nasłuchiwacz, który po wykryciu uruchomi funkcję, która...</li>
+<li>...zatrzyma domyślne zachowanie przeglądarki (<code>preventDefault</code>),</li>
+<li>doda do klikniętego elementu klasę <code>favorite</code>,</li>
+<li>pobierze z jego <code>data-id</code> identyfikator książki,</li>
+<li>i doda ten identyfikator do <code>favoriteBooks</code>.</li>
+</ol>
+</div>
+<h3>Ćwiczenie 3</h3>
+<p>Nasz funkcjonalność "lajkowania" książek działa już całkiem ładnie, ale niestety tylko w jedną stronę... A co w sytuacji, gdybyśmy jednak chcieli "odlajkować" dany tytuł?</p>
+<p>Właśnie to będzie tematem tego ćwiczenia.</p>
+<p>Musisz tak zmodyfikować swoją funkcję przypiętą do nasłuchiwacza, aby najpierw sprawdzała, czy książka nie jest już w "ulubionych". Jeśli nie jest, to funkcja ma działać tak, jak dotychczas, a więc dodać klasę <code>favorite</code> i zapisać <code>id</code> książki w tablicy <code>favoriteBooks</code>. Jeśli jednak jest, to skrypt powinien usuwać <code>id</code> takiej książki z tablicy <code>favoriteBooks</code> oraz zabierać takiemu elementowi klasę <code>favorite</code>.</p>
+<p>Efekt powinien być następujący:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/10/10-03.gif" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/10/10-03.gif" alt="image" style="width: auto; max-width: 50%;"></a>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-rMrwW1-VFR-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż wskazówkę</a>
+    <a href="#collapse-rMrwW1-VFR-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj wskazówkę</a>
+  </span>
+</p>
+<div id="collapse-rMrwW1-VFR-toggle" class="collapse">
+<p>Tym razem nie będziemy wspomagać Cię algorytmem. Zadanie jest bowiem naprawdę krótkie. Wspomożemy Cię tylko w jednej kwestii, sprawdzenia, czy dana książka jest już w ulubionych, czy nie.</p>
+<p>Masz dwie możliwości.</p>
+<ol>
+<li>Sprawdź, czy <code>favoriteBooks</code> zawiera id zapisane <code>data-id</code> tej książki. Jeśli tak, to wiemy już, że jest w "ulubionych".</li>
+<li>Sprawdź, czy element zawiera klasę <code>.favorite</code>. Jeśli ma, to również oznacza to, że tak dana książka musi być już w "ulubionych".</li>
+</ol>
+</div>
+<h3>Ćwiczenie 4</h3>
+<p>Już w ćwiczeniu drugim powiedzieliśmy, że idea dodawania osobnego nasłuchiwacza dla każdej książki to trochę słaby pomysł. Dlaczego?</p>
+<p>Pomyśl tylko. Mamy na razie 5 książek i 5 nasłuchiwaczy. Czyli JS na bieżąco musi "nasłuchiwać" aż na 5 elementów. A gdyby tych książek było więcej, np. 100 albo 200? JS musiałby nasłuchiwać na 100 lub 200 elementów jednocześnie!</p>
+<p>Na szczęście możemy coś na to zaradzić. W takich sytuacjach najczęściej stosuje się tzw. <em>event delegation</em>. Technika ta polega na tym, że zamiast nasłuchiwać na pojedyncze elementy, nasłuchuje się na cały kontener. Właśnie ten, w którym te elementy są przechowywane. W takiej sytuacji JS obserwuje tylko na jeden element, cały kontener. Dopiero kiedy wykryje, że dany event się wydarzył, określa się już konkretnie, na którym elemencie doszło do działania (np. kliknięcia).</p>
+<p>W naszej sytuacji moglibyśmy więc nasłuchiwać zamiast na pojedyncze książki, na całą ich listę. Po wykryciu kliknięcia nasza funkcja po prostu ustalałaby, czy faktycznie kliknięto na okładkę, a nie np. na tytuł. Następnie wykonywałaby te same operacje, które dotychczas mieliśmy już zapisane dla pojedynczych nasłuchiwaczy.</p>
+<p>To rozumowanie może mieć dla Ciebie jedną niewiadomą. Skąd funkcja callback będzie wiedzieć, co dokładnie kliknięto? Gdybyśmy taki dostęp do klikniętego elementu mieli, to problemu nie ma. Łatwo możemy sprawdzić, czy jego <code>classList</code> zawiera klasę <code>book__image</code> (<code>classList.contains('book__image</code>). Jeśli tak, to wiadomo, że to właśnie okładka książki. Tyle że aby to było możliwe, musimy mieć dostęp do elementu, który brał udział w zdarzeniu. Tego klikniętego. Tylko wtedy będziemy w stanie to sprawdzić.</p>
+<p>Na szczęście mamy! Znasz już nasz obiekt <code>event</code>, prawda? Na razie ciągle mówiliśmy, że mamy w nim metodę <code>preventDefault</code>. Jest tam jednak znacznie więcej informacji. M.in. znajdziemy tam właściwość <code>target</code>, która... jest właśnie referencją do elementu, który brał udział w zdarzeniu! Czyli, w przypadku <code>dblClick</code> elementu, który został kliknięty!</p>
+<p>No i jak, teraz powinno już być z górki, prawda?</p>
+<p>Twoim zadaniem jest więc taka modyfikacja funkcji <code>initActions</code>, aby zamiast nadawać nasłuchwiacze na wszystkie okładki książek z osobna, dodawała tylko jeden na całą listę. Sama funkcja w środku nasłuchiwacza (callback) powinna być prawie identyczna. Z tym, że teraz dostęp do elementu klikniętego będzie możliwy tylko przez <code>event.target</code>, a zanim funkcja zacznie wykonywać dalsze operacje, powinna sprawdzić, czy <code>event.target</code> jest odpowiednim elementem, a więc, czy posiada klasę <code>.book__image</code> (<code>event.target.classList.contains('.book__image')</code>).</p>
+<p>Możesz wspomóc się również <a href="https://davidwalsh.name/event-delegate" target="_blank">artykułem na blogu MDN</a>. Wykorzystuje on inny sposób na sprawdzenie, czy kliknięty element jest tym, o który nam chodzi, ale również tłumaczy, o co chodzi w delegacji eventów.</p>
+<div class="bc-note alert-info">
+<h4 class="alert-heading text-center">Uwaga!</h4>
+<p>Musimy zawrócić tutaj uwagę na pewien problem. Elementy <code>.book-image</code> posiadają jednego potomka, który zajmuje praktycznie cały ich rozmiar. Nie jesteśmy więc w stanie kliknąć <code>.book-image</code> w taki sposób, żeby kliknąć ten element bezpośrednio. Zamiast tego zawsze będziemy klikać obrazek... Zatem <code>event.target</code> zawsze będzie <code>img</code>, a nie linkiem. Co zrobić z tym fantem, skoro przecież chcieliśmy pracować na linku?</p>
+<p>Mamy dwa problemy. Po pierwsze, nie możemy sprawdzić, czy <code>event.target</code> posiada klasę <code>.book-image</code>, bo obrazek nigdy takiej klasy nie miał i mieć nie będzie. Jednak jakoś musimy sprawdzić, czy kliknięto w dobre miejsce. Po drugie nie mamy możliwość nadania klasy <code>.favorite</code>, a przecież musimy to robić.</p>
+<p>Na szczęście jest jedno wyjście! Zapewne udało Ci się już zauważyć, że elementy DOM mają sporo wbudowanych właściwości i metod. Jedna z nich może nam pomóc. Chodzi o właściwość, która jest odnośnikiem do kontenera, w którym jest element. Co nam to da? Zamiast sprawdzać tak jak wcześniej, czy <code>event.target</code>, a więc obrazek, ma klasę <code>.book-image</code>, co nie ma sensu, możemy sprawdzić, czy np. rodzic albo kontener, w którym znajduje się ten element taką klasę posiada. Czyli np. sprawdzić, czy link, w którym znajduje się nasz <code>event.target</code> ma klasę <code>.book-image</code>. Analogicznie będziemy modyfikować taki element i dodawać do niego np. klasę <code>.favorite</code>.</p>
+<p>Zatem nie będziemy sprawdzać elementu w taki sposób <code>if(event.target.classList.contains('.book__image'))</code>, lecz w taki <code>if(event.target.jakasWlasciwosc.classList.contains('.book__image'))</code>.</p>
+<p>Odpowiednią właściwość odnajdziesz <a href="https://developer.mozilla.org/pl/docs/Web/API/Element" target="_blank">tutaj</a>.</p>
+</div>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-eKs9IFctdz-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż wskazówkę</a>
+    <a href="#collapse-eKs9IFctdz-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj wskazówkę</a>
+  </span>
+</p>
+<div id="collapse-eKs9IFctdz-toggle" class="collapse">
+<p>Idealna będzie właściwość  <code>offsetParent</code>.</p>
+</div>
+<p>Jeśli wszystko pójdzie dobrze, Twój kod powinien działać tak samo, jak wcześniej. Chociaż jak wiemy, pod maską, będzie to robić wydajniej.</p>
+<h3>Ćwiczenie 5</h3>
+<p>Została nam już tylko jedna ze wspomnianych funkcjonalność – filtrowanie książek przy użyciu formularza. Pomysł jest dość prosty. Każda książka posiada obiekt <code>details</code>, który określa, czy jest on fiction czy non-fiction, oraz czy nadaje się tylko dla dorosłych.</p>
+<p>Spójrz chociażby na książkę "Lady in Red".</p>
+<pre><code class="language-js">  {
+    id: 1,
+    name: 'Lady in red',
+    price: 20,
+    rating: 8,
+    image: 'images/books/1.jpg',
+    details: {
+      adults: true,
+      nonFiction: false
+    }
+  },
+</code></pre>
+<p>Co chcemy zrobić? Jak ma to działać w praktyce? Chcemy, aby wybranie danego filtra odpowiednio modyfikowało naszą listę książek. Zaznaczamy <code>adults only</code> – w liście powinny znaleźć się tylko te książki, których <code>details.adults</code> równa się <code>true</code>. Zaznaczamy <code>non-fiction</code> – na liście powinny znaleźć się tylko te książki, których <code>details.nonFiction</code> równa się <code>true</code>. Zaznaczmy obie opcje, to analogicznie pojawią się tylko te książki, które mają w <code>details</code> obie właściwości ustawione na <code>true</code>.</p>
+<p>Będzie to działało następująco:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/10/10-05.gif" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/10/10-05.gif" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Jak widzisz, książki nie będą "naprawdę" znikać. Po prostu będziemy je "wyszarzać" przy użyciu klasy.</p>
+<p>Zadanie nie wydaje się zbyt skomplikowane, ale jednak będzie wymagało od nas trochę pracy. Dlatego też podzielimy je na dwa etapy.</p>
+<h4>Etap 1</h4>
+<p>Zacznij od dodania do kodu pustej tablicy <code>filters</code>. To w niej będziemy przechowywać informacje, jakie aktualnie filtry są wybrane w aplikacji.</p>
+<p>Następnie przygotuj referencję do formularza w <code>.filters</code>. Dodaj też do <code>initActions</code> nowy nasłuchiwacz, który będzie obserwować właśnie nasz formularz i kiedy wykryje jakiekolwiek kliknięcie, to uruchomi funkcję callback.</p>
+<p>W funkcji tej sprawdzaj, czy kliknięto na element, który faktycznie jest naszym checkboxem (czy jego <code>tagName</code> to <code>INPUT</code>, <code>type</code> to <code>checkbox</code>, a <code>name</code> to <code>filter</code>), a jeśli tak, to pokaż w konsoli, jego wartość (<code>value</code>).</p>
+<p>Jak widzisz, ponownie wykorzystaliśmy właśnie koncept event delegation, brawo!</p>
+<p>Na razie konsola powinna już pokazywać, co wybraliśmy:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/10/10-04.gif" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/10/10-04.gif" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Od tej chwili kliknięcie na checkbox będzie już pokazywało w konsoli, co wybraliśmy, ale nie aktualizuje jeszcze samej tablicy <code>filters</code>, a powinno. W końcu chcemy, aby przechowywała ona aktualne informacje na temat filtrów.</p>
+<p>Twoim zadaniem jest dokończenie tego etapu. Musisz zadbać, aby funkcja callback sprawdziła, czy input jest zaznaczony (właściwość <code>checked</code>) czy nie. Jeśli tak, to trzeba dodać <code>value</code> takiego filtra do tablicy <code>filters</code>. Jeśli jest za to odznaczony, to musimy go z takiej tablicy usunąć.</p>
+<p>Znowu pomocne będą metody <code>push</code>, <code>indexOf</code> i <code>splice</code>.</p>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-du4Sjbk-Pm-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż wskazówkę</a>
+    <a href="#collapse-du4Sjbk-Pm-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj wskazówkę</a>
+  </span>
+</p>
+<div id="collapse-du4Sjbk-Pm-toggle" class="collapse">
+<p>Właściwość <code>checked</code> zwraca <code>true</code>, jeśli checkbox jest zaznaczony i <code>false</code> jeśli nie jest.</p>
+</div>
+<p>Na końcu tego etapu, <code>filters</code> powinno zawsze mieć poprawne informacje na temat wybranych filtrów.</p>
+<h4>Etap 2</h4>
+<p>JS już wie, co wybrano, ale w żaden sposób nie wpływa to na naszą listę. Musimy na pewno zadbać więc o to, aby każdorazowo przy zmianie filtru, JS odpowiednio ją modyfikował. Możemy np. renderować ją od nowa, ale już w zmniejszonej formie. Możemy pójść również w trochę innym kierunku i po prostu chować/zmieniać niepasujące do filtrów książki. I jak udało Ci się zauważyć już wcześniej, my wybierzemy właśnie tę drugą opcję.</p>
+<p>W CSS-ie jest już przygotowana specjalna klasa dla <code>.book-image</code> o nazwie <code>.hidden</code>, która będzie powodowała "zszarzenie" okładki takiej książki. Wystarczy więc, że przygotujemy funkcję, która przejdzie po wszystkich książkach z <code>dataSource.books</code> i dla tych, które nie pasują do filtrów, doda klasę <code>hidden</code>. Z kolei dla tych, które pasują do filtrów, upewni się, że tej klasy nie mają.</p>
+<p>Jeśli to dla Ciebie za mało, to poniżej znajdziesz dokładniejszy opis algorytmu. Nie odkrywaj go jednak od razu. Daj sobie szansę i spróbuj napisać tę funkcję bez naszej pomocy.</p>
+<p>Pamiętaj również, aby dodać wywołanie tej funkcji na końcu funkcji callback, którą wcześniej "przypięliśmy" do formularza (w <code>initActions</code>).</p>
+<p>Efekt końcowy powinien być następujący:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/10/10-05.gif" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/10/10-05.gif" alt="image" style="width: auto; max-width: 50%;"></a>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-5XwKgB913w-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż wskazówkę</a>
+    <a href="#collapse-5XwKgB913w-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj wskazówkę</a>
+  </span>
+</p>
+<div id="collapse-5XwKgB913w-toggle" class="collapse">
+<p>Rozpiszmy to trochę dokładniej.</p>
+<ol>
+<li>Zacznij od stworzenia nowej funkcji <code>filterBooks</code>. Zadbaj, aby była wywoływana każdorazowo przy zmianie checkboxa w formularzu.</li>
+<li>Wewnątrz tej funkcji przygotuj pętle, która przejdzie po wszystkich elementach <code>dataSource.books</code>.</li>
+<li>Stwórz zmienną <code>shouldBeHidden</code>, która jest domyślnie równa <code>false</code>. To właśnie tę zmienną wykorzystamy na końcu, aby ustalić, czy trzeba dodać do naszej książki <code>hidden</code>. Na starcie zakładamy, że nie trzeba (stąd wartość <code>false</code>), ale po przejściu przez filtr może się to potem zmienić.</li>
+<li>Następnie, dalej w tej pętli <code>for</code>, utwórz kolejną. Taką, która przejdzie po tablicy <code>filters</code> i ustali, czy dany filtr pasuje do informacji o danej książce. Jeśli sprawdzamy filtr <code>adults</code>, to musimy np. ustalić, czy <code>details.adults</code> w obiekcie książki jest <code>true</code>. A dokładnie...</li>
+<li>...jeśli dana właściwość powinna być <code>true</code>, a nie jest, to należy zmienić <code>shouldBeHidden</code> na <code>true</code> i przerwać działanie pętli (słowo kluczowe <code>break</code>). W końcu skoro już pierwszy filtr nie jest spełniony, to po co szukać dalej? I tak, trzeba taką książkę wyszarzyć.</li>
+<li>Po pętli <code>for</code> z filtrami dodaj pętle warunkową, która sprawdzi wartość <code>shouldBeHidden</code>. Jeśli jest równa <code>true</code>, to należy znaleźć element <code>.book__image</code> danej książki i nadać mu klasę <code>hidden</code>. Jeśli jest równa <code>false</code>, to należy taką klasę zabrać.</li>
+</ol>
+<p>Jeśli masz problem z punktem 5, to sprawdź drugą wskazówkę.
+Jeśli masz problem z punktem 6, to sprawdź trzecią wskazówkę.</p>
+</div>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-K1XM_Ts6Zk-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż wskazówkę nr 2</a>
+    <a href="#collapse-K1XM_Ts6Zk-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj wskazówkę nr 2</a>
+  </span>
+</p>
+<div id="collapse-K1XM_Ts6Zk-toggle" class="collapse">
+<p>Punkt 5 może wydawać się trudny, ale wcale nie będzie aż tak źle.</p>
+<pre><code class="language-js">for(const filter of filters) {
+  if(!condition) {
+    shouldBeHidden = true;
+    break;
+  }
+}
+</code></pre>
+<p>To, co wewnątrz warunku jest raczej proste, ale możesz mieć problem z ustaleniem warunku. Zauważ jednak, że tak naprawdę informacje, które są nam potrzebne, są już w obiekcie książki, a dokładnie w jej właściwości <code>details</code>. Wystarczy więc np. sprawdzić, czy <code>details.adults</code> danej książki równa się <code>true</code> albo, czy <code>details.nonFiction</code> równa się <code>true</code>.</p>
+<p>Jedyna trudność to więc fakt, że nie możemy w warunku wpisać np. od razu:</p>
+<pre><code class="language-js">if(!details.adults) {
+  ...
+}
+</code></pre>
+<p>Bo raz sprawdzamy <code>adults</code>, a raz <code>nonFiction</code>, ale... przecież nazwa właściwości do sprawdzenia jest równa wartości <code>filter</code>. Tym samym wystarczy:</p>
+<pre><code class="language-js">if(!book.details[filter]) {
+  ...
+}
+</code></pre>
+<p>...które sprawdzi, czy dana właściwość, której nazwa to wartość <code>filter</code> jest <code>false</code>.</p>
+</div>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-aKFKF5UhrP-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż wskazówkę nr 3</a>
+    <a href="#collapse-aKFKF5UhrP-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj wskazówkę nr 3</a>
+  </span>
+</p>
+<div id="collapse-aKFKF5UhrP-toggle" class="collapse">
+<p>Jak znaleźć taki element? Masz do dyspozycji id danej książki. Wiesz też, że <code>book__image</code> zawsze posiada atrybut <code>data-id</code> o wartości równej właśnie id książki. Aby znaleźć więc <code>book__image</code> odpowiadające danej książce, wystarczy znaleźć element o tejże klasie i <code>data-id</code> równym właśnie id książki.</p>
+<pre><code class="language-markup">.book__image[data-id=&quot;id-of-the-book-here&quot;]
+</code></pre>
+<p>Pamiętasz? Podobne selektory wykorzystywaliśmy już w aplikacji bloga.</p>
+</div>
+<h3>Ćwiczenie 6</h3>
+<p>Idzie nam tak dobrze... Może zrobimy coś "ekstra"?</p>
+<p>Spójrz na nasz "rating" pod książkami.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/10/10-06.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/10/10-06.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Nie wygląda to zbyt dobrze, prawda? Ten szary kolor nie daje nam żadnej informacji. Nie uważasz, że byłoby znacznie ładniej, gdyby pasek lepiej oddawał ocenę? Np. gdy ocena to 5, wtedy połowa paska byłaby żółta. A jeśli 8, to prawie cały pasek byłby zielony.</p>
+<p>Zauważ, że sam element jest nawet odpowiednio zbudowany do takich operacji:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/10/10-07.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/10/10-07.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Mamy tutaj div w divie. Ten wewnętrzny może być więc wykorzystany właśnie jako nasz kolorowy pasek. Wystarczy zadbać o to, aby zależnie od wartości <code>rating</code> danej książki zależał jego kolor i rozmiar. Np. <code>rating</code> 5 powinien oznaczać, że kolorem paska będzie żółty gradient, a jego rozmiar to 50% rodzica itd.</p>
+<p>Żeby jakoś to sobie uporządkować, ustalmy kilka progów, co do wyglądu tła (naszego paska).</p>
+<p>Rating < 6</p>
+<pre><code class="language-css">background: linear-gradient(to bottom,  #fefcea 0%, #f1da36 100%);
+</code></pre>
+<p>Rating > 6 && <= 8</p>
+<pre><code class="language-css">background: linear-gradient(to bottom, #b4df5b 0%,#b4df5b 100%);
+</code></pre>
+<p>Rating > 8 && <= 9</p>
+<pre><code class="language-css">background: linear-gradient(to bottom, #299a0b 0%, #299a0b 100%);
+</code></pre>
+<p>Rating > 9</p>
+<pre><code class="language-css">background: linear-gradient(to bottom, #ff0084 0%,#ff0084 100%);
+</code></pre>
+<p>Sam rozmiar paska powinien być zależny tylko od samej wartości ratingu. Rating 0 to <code>width: 0%</code>, rating 55% to <code>width: 55%</code>, rating 9.9 to <code>width: 99%</code> itd.</p>
+<p>Całość powinna dać nam na końcu następujący efekt:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/10/10-08.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/10/10-08.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Jak się za to w ogóle zabrać? Pomysł, który pewnie przychodzi Ci do głowy, to przygotowanie klas, następnie nadawanie ich w JS, zależnie od wartości <code>rating</code>. Cóż, w aplikacji z blogiem, coś w tym stylu zrobiliśmy. Dokładnie w panelu z chmurą tagów. Weź jednak pod uwagę, że wtedy tych klas mieliśmy kilka: <code>tag-size-1</code>, <code>tag-size-2</code>, <code>tag-size-3</code> i jeszcze tylko parę kolejnych. Tutaj musielibyśmy przygotować aż 100 klas... Po jednej dla każdego ratingu. Do tego większość z nich w naszej sytuacji nie byłaby nawet wykorzystana. Jaka jest bowiem szansa, że na naszej liście będzie akurat minimum 100 książek i do tego każda będzie miała inny rating?</p>
+<p>Dlatego tym razem lepiej pomyśleć o innym sposobie nadaniu stylów. Jeszcze nigdy tego nie robiliśmy, ale musisz wiedzieć, że elementy można stylować nie tylko przy użyciu reguł CSS, ale również bezpośrednio w HTML.</p>
+<p>Np.</p>
+<pre><code class="language-html">&lt;a style=&quot;color: red&quot;&gt;
+</code></pre>
+<p>Przeważnie tego unikamy, gdyż właściwości zapisane w <code>style</code> mają wysoki priorytet, przez co ciężko, byłoby je w razie potrzeby nadpisać. W specjalnych sytuacji jednak możemy z nich skorzystać. Taki zapis daje nam bowiem bardzo ważną zaletę. Możemy bowiem traktować <code>style</code> jak każdy inny atrybut. Jako właściwość obiektu DOM, a tym samym bardzo łatwo również ją modyfikować. Np. ustalić, że <code>elem.style.background</code> powinno mieć wartość jakiegoś gradientu.</p>
+<p>Oczywiście w taki sposób modyfikujemy tylko jeden konkretny element, ale przecież i tak będziemy musieli stylować każdy element indywidualnie. W końcu każdy ma inny rating. Nie będzie więc to dla nas problem.</p>
+<p>Więcej o <code>style</code> możesz przeczytać <a href="https://developer.mozilla.org/pl/docs/Web/API/Element/style" target="_blank">tutaj</a>.</p>
+<p>Pozostaje jednak jeszcze inna kwestia. Wiemy jak nadać konkretne style, ale od czego zacząć? Zrobić jakąś funkcję?</p>
+<p>Prawdopodobnie, pamiętając już jak rozwiązywaliśmy poprzednie zadanie, wydaje Ci się, że powinniśmy zacząć od napisania funkcji, która przejdzie po każdym elemencie w HTML i odpowiednio zmieni jego <code>style</code>, a konkretnie ustawi <code>style.background</code>. No i cóż... jest to opcja, która jak najbardziej jest możliwa do wykonania, ale warto się zastanowić, czy naprawdę nie da się tego zrobić łatwiej.</p>
+<p>Zauważ, że wcześniej musieliśmy faktycznie modyfikować elementy na stronie, kiedy te były już wyrenderowane. Kiedy coś "lajkowaliśmy", książki były już na stronie. Trzeba było więc "odpowiednią" znaleźć i z modyfikować. Chcieliśmy włączyć filtry – podobnie. Mieliśmy więc dynamiczne operacje, które mogły być wykonane raz po 2 minutach, raz po 5 minutach, a innym razem np. w ogóle. Wszystko zależało od użytkownika.</p>
+<p>Teraz jednak chcemy przygotować coś, co będzie stałe od samego początku. Przecież rating nigdy się nie zmieni. W takim razie spokojnie możemy zadbać o nadanie stylu już w momencie generowania widoku na podstawie szablonu.</p>
+<p>Pomyśl tylko, jaki sens miałoby bowiem generowanie wszystkich książek bez kolorowego paska, tylko po to, aby za chwilę znowu po nich przejść i ten kolor nadać? Lepiej od razu przygotować w szablonie placeholder, który przyjmie ten styl i ustalać go przed tym, jak generujemy widok danej książki.</p>
+<p>No i jak? Może spróbujesz zrobić to zadanie bez naszej pomocy? ;)</p>
+<p>Jeśli mimo wszystko nie wiesz jak zacząć, to sprawdź wskazówki poniżej. Każda kolejna wskazówka to kolejny krok lub kroki. Postaraj się korzystać z nich, tylko jeśli już naprawdę będzie Ci brakować jakiekolwiek pomysłu.</p>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-QTrW1Fd7Re-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż wskazówkę</a>
+    <a href="#collapse-QTrW1Fd7Re-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj wskazówkę</a>
+  </span>
+</p>
+<div id="collapse-QTrW1Fd7Re-toggle" class="collapse">
+<ol>
+<li>Zacznij od modyfikacji szablonu <code>#template-book</code>. Musisz dodać do <code>book__rating__fill</code> atrybut <code>style</code>, którego wartość ma być równa <code>&quot;width: {{ ratingWidth }}%; background: {{ ratingBgc }}&quot;</code>. Zauważ, że mamy tutaj dwa nowe placeholdery. Co to oznacza? Że posiadamy dwa nowe miejsca, których wartość będziemy mogli dynamicznie ustawić podczas generowania widoku. Raz np. <code>ratingWidth</code> będzie równe <code>20</code> więc da nam <code>width: 20%</code>, a innym 99 itd.</li>
+</ol>
+</div>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-HK2GuKtSgC-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż wskazówkę nr 2</a>
+    <a href="#collapse-HK2GuKtSgC-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj wskazówkę nr 2</a>
+  </span>
+</p>
+<div id="collapse-HK2GuKtSgC-toggle" class="collapse">
+<ol>
+<li>Dodaj do aplikacji nową funkcję <code>determineRatingBgc</code>. Powinna ona przyjmować jako argument rating i zwracać odpowiedni background. Zależnie od ratingu będzie to <code>linear-gradient(to bottom, #b4df5b 0%,#b4df5b 100%);</code> albo inny z podanych wyżej backgroundów. Pamiętaj, że należy traktować te wartości jako zwykły string.</li>
+<li>Odnajdź funkcję <code>render</code> i w pętli, która przechodzi po każdym produkcie, przygotuj stałą <code>ratingBgc</code>, która będzie równa temu, co zwróci <code>determineRatingBgc</code> dla <code>rating</code> danej książki.</li>
+<li>Przygotuj również stałą <code>ratingWidth</code>, która ustali długość paska. Musi się ona opierać na wartości ratingu. Jeśli <code>rating</code> równa się 5, to <code>ratingWidth</code> musi równać się 50 itd. Czyli tak naprawdę konwertujemy <code>rating</code> do skali procentowej.</li>
+</ol>
+<p>Teraz pozostało już tylko przekazać te informacje do szablonu, przy generowaniu widoku.</p>
+</div>
+
+                        </div>
+                    </div>
+                                        <div class="card-block task-card" >
+                        <h3>Zadanie: <span class="task-title">powtórka z OOP</span></h3>
+                        <div class="task-content">
+                            <p>Na koniec modułu czas na obiecaną powtórkę z OOP. Póki co, całą naszą aplikację budowaliśmy w bardzo prosty sposób, dodając po prostu kolejne funkcje. Im jednak ich więcej, tym mniej czytelny staje się kod. Pamiętasz, jak ciężko nawigowało się po aplikacji bloga, gdy ta się rozwinęła? Spójrz tylko na to, jak w tej chwili wygląda <code>script.js</code>. A gdyby doszły kolejne funkcjonalności, byłoby tylko gorzej... Wiesz już jednak, że w takich sytuacjach jest proste i znane Ci już wyjście – OOP. I właśnie konwersja naszej aplikacji na styl OOP będzie Twoim zadaniem.</p>
+<p>Co mamy przez to na myśli? Przede wszystkim cała logika aplikacji będzie "schowana" w klasie <code>BooksList</code>, a wszystkie referencje do DOM-u, tablice, funkcje itd. powinny być częścią klasy –  w formie właściwości (np. tablice) albo metod (funkcje). Poza ciałem klasy ma znaleźć się tylko jedna linijka kodu, która po prostu utworzy jedną instancję na niej opartą.</p>
+<pre><code class="language-js">class BooksList {
+  ...
+}
+
+const app = new BooksList();
+</code></pre>
+<p>W pracy nad klasą staraj trzymać się pomysłów, które wykorzystaliśmy już wcześniej w pizzerii. Np. referencje do elementów DOM warto przechowywać we właściwościach <code>this</code>, a za ich nadanie może odpowiadać metoda o nazwie <code>getElements</code>.</p>
+<p>Jeśli przez dłuższy czas będziesz mieć problem z rozpoczęciem zadania, to poniżej przedstawiamy propozycję podziału klasy na metody. Użyj jej jednak tylko wtedy, jeśli naprawdę się zatniesz.</p>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-7Zk07CeRrB-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż wskazówkę</a>
+    <a href="#collapse-7Zk07CeRrB-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj wskazówkę</a>
+  </span>
+</p>
+<div id="collapse-7Zk07CeRrB-toggle" class="collapse">
+<pre><code class="language-js">class BooksList {
+  constructor() {
+    ...
+  }
+
+  initData() {
+    this.data = dataSource.books;
+  }
+
+  getElements() {
+    ...
+  }
+
+  initActions() {
+    ...
+  }
+
+  filterBooks() {
+    ...
+  }
+
+  determineRatingBgc() {
+    ...
+  }
+  
+}
+
+const app = new BooksList();
+</code></pre>
+<p>Gdy zadanie będzie już gotowe, opublikuj je na GitHubie, a link wyślij swojemu Mentorowi do sprawdzenia.</p>
+</div>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <div class="clearfix">
+                                                                                <a href="https://kodilla.com/pl/bootcamp-task/407/611181" target="_blank" class="btn btn-info-outline">Podgląd zadania</a>
+                            <form target="_blank" class="form-inline project-link-form">
+                                <div class="form-group">
+                                    <input type="text" name="link" class="form-control" value="https://github.com/skwiryt/books-app/commit/21a647752cb459cdc11ea970c1947985aaaa9c56">
+                                </div>
+                                <button type="submit" class="btn  btn-primary " >Wyślij link <i class="fa fa-check"></i></button>
+                            </form>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-1985" class="card submodule completed" data-bootcamp-user-submodule-id="611182" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">10.3. <span>Podział JS na komponenty</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Młodzi developerzy najczęściej uczą się na małych projektach. Takie podejście wydaje się mieć sens, ale mści się dosyć szybko, kiedy dołącza się do zespołu pracującego nad większym przedsięwzięciem. Właśnie dlatego po mniejszych zadaniach z wcześniejszych submodułów, teraz przyszedł czas na powrót do naszej pizzerii. Będziemy kontynuować pracę, dodając do niej kolejne funkcjonalności. Dzięki temu nauczymy się również, w jaki sposób możemy zastosować rozwiązania, które pomogą nam łatwo pracować z coraz większym projektem.</p>
+<p>Ten i następny submoduł będzie mieć formę <strong>wideowarsztatów</strong>. Na nagraniach będziemy pokazywać i tłumaczyć kolejne kroki rozwoju projektu, a Twoim zadaniem będzie dodawanie tych funkcjonalności do swojej aplikacji. Nagrania będą przeplatane samodzielnymi zadaniami, które pomogą Ci utrwalić wiedzę.</p>
+<h3>Opis nowej funkcjonalności</h3>
+<p>Czym się zajmiemy? Na razie, możemy tylko zamawiać produkty. Teraz dodamy kolejną dużą funkcjonalność <strong>rezerwację stolików</strong>, która będzie znajdować się na zupełnie nowej podstronie.</p>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/booking.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/booking-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/booking.png 2x" class="img-inline img-right">
+<p>Na stronie jest już podstrona zamawiania produktów. Będziemy więc musieli nie tylko przygotować nową, ale też zadbać o to, aby dało się pomiędzy nimi przełączać.</p>
+<p>Wbrew pozorom, nie będzie to aż takie trudne. Obie podstrony będą zawarte w tym samym pliku <code>index.html</code> jako divy. Aby uzyskać przełączanie pomiędzy podstronami bez przeładowania strony, wystarczy odpowiednio chować jeden div, a pokazywać drugi. Tak naprawdę ten pomysł nie różni się wiele od mechanizmu przełączania artykułów, który zbudowaliśmy w aplikacji bloga. Tam też jeden artykuł się chował, drugi pokazywał.</p>
+<p>Sama rezerwacja stolików będzie odbywać się poprzez wybór daty i godziny, dla której zostanie wyświetlony plan ustawienia stolików w restauracji. Każdy stolik będzie oznaczony jako dostępny lub zajęty. Dzięki temu klienci będą mogli bez problemu wybrać stolik, który chcą zarezerwować.</p>
+<p>To może brzmieć jak bardzo rozbudowana funkcjonalność, ale za chwilę przekonasz się, że nie będzie to aż tak skomplikowane. Zanim jednak faktycznie się za to zabierzemy, zajmiemy się zmianą, która uporządkuje nam to, co w tym projekcie już mamy.</p>
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/4LtModKC3LM" frameborder='0' allowfullscreen></iframe></div>
+                        </div>
+                    </div>
+                                        <div class="card-block task-card" >
+                        <h3>Zadanie: <span class="task-title">importowanie w pozostałych plikach</span></h3>
+                        <div class="task-content">
+                            <p>Dodaj importy w pozostałych plikach JS. Korzystaj z ESLinta jako wskazówki, które obiekty lub klasy jeszcze nie zostały zaimportowane. Czytaj komunikaty ESLinta – jeśli zaimportujesz obiekt, który nie jest używany w danym pliku, ESLint również zgłosi błąd.</p>
+<p>Kiedy ESLint nie będzie już informował o żadnych błędach, uruchom <code>npm run watch</code> i sprawdź komunikaty wyświetlane w konsoli. Jeśli któraś ze ścieżek do importowanych plików jest nieprawidłowa, w konsoli zobaczysz błąd. Wtedy musisz sprawdzić ścieżki do importowanych plików. Pamiętaj, że ścieżka do importowanego pliku jest zawsze <strong>relatywna</strong> do pliku, w którym importujesz. W razie wątpliwości, wróć do przykładów które podaliśmy powyżej i wzoruj się na nich.</p>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/delivery.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/delivery-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/delivery.png 2x" class="img-inline img-left">
+<p>Efektem tych zmian powinna być strona działająca tak samo jak wcześniej – bez błędów zgłaszanych przez ESLinta czy konsolę.</p>
+<p>Dzięki temu udało nam się zachować całą funkcjonalność, włącznie z dodawaniem do koszyka, ale z podziałem na kilka mniejszych plików z kodem JS. Będzie nam łatwiej się w nich odnaleźć, a nawet otwierać je obok siebie, jeśli mamy taką potrzebę.</p>
+<p>Co więcej, przyzwyczajamy się w ten sposób do architektury projektu, która często jest stosowana w komercyjnych projektach, i z którą zapewne spotkasz się w swojej pracy. Przygotujesz się również do rozpoczęcia pracy z React.js, którym zajmiemy się już niedługo. Tam również spotkasz się z podejściem komponentowym.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <div class="clearfix">
+                                                                                <a href="https://kodilla.com/pl/bootcamp-task/407/611182" target="_blank" class="btn btn-info-outline">Podgląd zadania</a>
+                            <form target="_blank" class="form-inline project-link-form">
+                                <div class="form-group">
+                                    <input type="text" name="link" class="form-control" value="https://github.com/skwiryt/project-pizzeria/commit/104751ae1e6626ff5e3cff382b3668f51707c83e">
+                                </div>
+                                <button type="submit" class="btn  btn-primary " >Wyślij link <i class="fa fa-check"></i></button>
+                            </form>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-1986" class="card submodule completed" data-bootcamp-user-submodule-id="611183" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">10.4. <span>Dodanie obsługi podstron</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Za nami pierwszy etap usprawnienia naszej pracy w projekcie. Zanim przejdziemy do kolejnej zmiany, musimy go uzupełnić. Podobnie jak w poprzednim module, przygotowaliśmy dla Ciebie trochę kodu, abyśmy mogli się skupić na samych funkcjonalnościach.</p>
+<h3>Uzupełnienie kodu projektu</h3>
+<p>Zanim przejdziemy do konkretnej pracy, musimy dokonać kilku zmian w projekcie.</p>
+<h4>Baza danych</h4>
+<p>Zaczniemy od zmiany w pliku <code>src/app.json</code>. Jak zapewne pamiętasz, to od zawartości tego pliku zależy działanie naszego serwera. To właśnie na podstawie tego pliku JSON-server tworzy bazę danych, a także endpointy do ich obsługi.</p>
+<p>W tej chwili przechowujemy w tym pliku dwie kolekcje: <code>products</code> i <code>orders</code>. Teraz dodamy dwie kolejne, które będziemy wykorzystywać w niniejszym module. Będą to <code>bookings</code> i <code>events</code>, a więc kolekcje przechowujące pojedyncze rezerwacje, a także informację o różnych imprezach okolicznościowych, które mogą odbywać się w naszej pizzerii. Tak jest! W naszej aplikacji będzie można dokonywać rezerwacji!</p>
+<p>Dodaj więc do pliku <code>src/app.json</code> następujące kolekcje:</p>
+<pre><code class="language-js"> &quot;events&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;date&quot;: &quot;2021-01-01&quot;,
+      &quot;hour&quot;: &quot;12:30&quot;,
+      &quot;table&quot;: 1,
+      &quot;repeat&quot;: false,
+      &quot;duration&quot;: 4,
+      &quot;ppl&quot;: 3,
+      &quot;starters&quot;: []
+    },
+    {
+      &quot;id&quot;: 2,
+      &quot;date&quot;: &quot;2021-01-01&quot;,
+      &quot;hour&quot;: &quot;16:00&quot;,
+      &quot;table&quot;: 3,
+      &quot;repeat&quot;: &quot;daily&quot;,
+      &quot;duration&quot;: 2,
+      &quot;ppl&quot;: 3,
+      &quot;starters&quot;: [&quot;bread&quot;, &quot;lemonWater&quot;]
+    },
+    {
+      &quot;id&quot;: 3,
+      &quot;date&quot;: &quot;2021-01-01&quot;,
+      &quot;hour&quot;: &quot;12:00&quot;,
+      &quot;table&quot;: 3,
+      &quot;repeat&quot;: &quot;daily&quot;,
+      &quot;duration&quot;: 2,
+      &quot;ppl&quot;: 3,
+      &quot;starters&quot;: [&quot;bread&quot;, &quot;lemonWater&quot;]
+    },
+    {
+      &quot;id&quot;: 4,
+      &quot;date&quot;: &quot;2021-01-01&quot;,
+      &quot;hour&quot;: &quot;13:00&quot;,
+      &quot;table&quot;: 2,
+      &quot;repeat&quot;: &quot;daily&quot;,
+      &quot;duration&quot;: 4,
+      &quot;ppl&quot;: 3,
+      &quot;starters&quot;: []
+    },
+    {
+      &quot;id&quot;: 5,
+      &quot;date&quot;: &quot;2021-01-01&quot;,
+      &quot;hour&quot;: &quot;18:00&quot;,
+      &quot;table&quot;: 2,
+      &quot;repeat&quot;: &quot;daily&quot;,
+      &quot;duration&quot;: 2,
+      &quot;ppl&quot;: 3,
+      &quot;starters&quot;: [&quot;lemonWater&quot;]
+    }
+  ],
+  &quot;bookings&quot;: []
+</code></pre>
+<h4>index.html</h4>
+<p>Podczas warsztatów będziemy dodawać do naszej aplikacji nowe podstrony. Musimy więc odpowiednio zmodyfikować pod takie plany nasz plik <code>index.html</code>.</p>
+<p>Po pierwsze, przed divem <code>#cart</code> dodaj nowy div z nawigacją:</p>
+<pre><code class="language-html">&lt;div class=&quot;main-nav&quot;&gt;
+    &lt;a href=&quot;#order&quot;&gt;Order&lt;/a&gt;
+    &lt;a href=&quot;#booking&quot;&gt;Booking&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Po drugie, odnajdź i zamień diva naszej jedynej podstrony, a więc ten kod:</p>
+<pre><code class="language-html">&lt;div id=&quot;product-list&quot; class=&quot;product-list container&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>...na taki, który zakłada istnienie jeszcze jednej – podstrony rezerwacji:</p>
+<pre><code class="language-html"> &lt;div id=&quot;pages&quot;&gt;
+    &lt;section id=&quot;order&quot;&gt;
+      &lt;div id=&quot;product-list&quot; class=&quot;product-list container&quot;&gt;&lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section id=&quot;booking&quot;&gt;
+      &lt;div class=&quot;booking-wrapper container&quot;&gt;&lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+</code></pre>
+<p>Na końcu dodaj jeszcze dodatkowy szablon, z którego ta nowa podstrona będzie korzystać:</p>
+<pre><code class="language-markup"> &lt;script id=&quot;template-booking-widget&quot; type=&quot;text/x-handlebars-template&quot;&gt;
+    &lt;div class=&quot;booking-widget&quot;&gt;
+      &lt;h2 class=&quot;page__title no-spacing&quot;&gt;Book a table&lt;/h2&gt;
+      &lt;form class=&quot;booking-form&quot;&gt;
+        &lt;div class=&quot;time-picker&quot;&gt;
+          &lt;div class=&quot;date-picker&quot;&gt;
+            &lt;label class=&quot;booking-option-title&quot;&gt;Pick a date&lt;/label&gt;
+            &lt;input type=&quot;text&quot; name=&quot;date&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;hour-picker range-slider&quot;&gt;
+              &lt;div class=&quot;output&quot;&gt;&lt;/div&gt;
+              &lt;label class=&quot;booking-option-title&quot;&gt;Pick a time&lt;/label&gt;
+            &lt;input type=&quot;range&quot; name=&quot;hour&quot; value=&quot;12&quot; min=&quot;12&quot; max=&quot;24&quot; step=&quot;0.5&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;floor-plan&quot;&gt;
+          &lt;div class=&quot;object entry&quot;&gt;entry&lt;/div&gt;
+          &lt;div class=&quot;object bar&quot;&gt;bar&lt;/div&gt;
+          &lt;div class=&quot;object table&quot; data-table=&quot;1&quot;&gt;table-1&lt;/div&gt;
+          &lt;div class=&quot;object table table--round&quot; data-table=&quot;2&quot;&gt;table-2&lt;/div&gt;
+          &lt;div class=&quot;object table&quot; data-table=&quot;3&quot;&gt;table-3&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;booking-options&quot;&gt; &lt;!-- options --&gt;
+          &lt;label class=&quot;booking-option-title&quot;&gt; &lt;!-- option-row --&gt;
+            People
+            &lt;div class=&quot;widget-amount people-amount&quot;&gt; &lt;!-- widget-amount --&gt;
+              &lt;a class=&quot;btn-quantity&quot; href=&quot;#less&quot;&gt;&lt;i class=&quot;fas fa-minus&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;input class=&quot;amount&quot; type=&quot;text&quot; name=&quot;people&quot; value=&quot;1&quot;&gt;
+              &lt;a class=&quot;btn-quantity&quot; href=&quot;#more&quot;&gt;&lt;i class=&quot;fas fa-plus&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/label&gt;
+          &lt;label class=&quot;booking-option-title&quot;&gt; &lt;!-- option-row --&gt;
+            Hours
+            &lt;div class=&quot;widget-amount hours-amount&quot;&gt; &lt;!-- widget-amount --&gt;
+              &lt;a class=&quot;btn-quantity&quot; href=&quot;#less&quot;&gt;&lt;i class=&quot;fas fa-minus&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;input class=&quot;amount&quot; type=&quot;text&quot; name=&quot;hours&quot; value=&quot;1&quot;&gt;
+              &lt;a class=&quot;btn-quantity&quot; href=&quot;#more&quot;&gt;&lt;i class=&quot;fas fa-plus&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/label&gt;
+          &lt;div&gt; &lt;!-- option-row --&gt;
+            &lt;span class=&quot;booking-option-title&quot;&gt;Starters&lt;/span&gt;
+            &lt;div class=&quot;checkbox&quot;&gt; &lt;!-- checkbox --&gt;
+              &lt;label&gt;
+                &lt;input type=&quot;checkbox&quot; name=&quot;starter&quot; value=&quot;water&quot;&gt;
+                &lt;span class=&quot;checkbox__checkmark&quot;&gt;&lt;/span&gt;
+                Water
+              &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;checkbox&quot;&gt; &lt;!-- checkbox --&gt;
+              &lt;label&gt;
+                &lt;input type=&quot;checkbox&quot; name=&quot;starter&quot; value=&quot;bread&quot;&gt;
+                &lt;span class=&quot;checkbox__checkmark&quot;&gt;&lt;/span&gt;
+                Bread
+              &lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;order-confirmation&quot;&gt;
+          &lt;input type=&quot;tel&quot; name=&quot;phone&quot; placeholder=&quot;Your phone&quot;&gt;
+          &lt;input type=&quot;text&quot; name=&quot;address&quot; placeholder=&quot;Your address&quot;&gt;
+          &lt;button type=&quot;submit&quot; class=&quot;btn-secondary&quot;&gt;Book table&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/script&gt;
+</code></pre>
+<h4>settings.js</h4>
+<p>Nasza nowa podstrona rezerwacji na pewno będzie stosunkowo interaktywna. A skoro tak, to przyda się przygotować odpowiednie selektory, ustawienia itd. Na pewno będzie zajmować się również funkcjonalnością zmiany aktualnej strony. Tak, aby dało się łatwo przechodzić z podstrony rezerwacji do podstrony z produktami i na odwrót. Tym samym przydadzą się również selektory do linków z nawigacji czy samych podstron.</p>
+<p>Zacznij od dodania wpisu na temat nowego szablonu.</p>
+<pre><code class="language-js">templateOf: {
+    ...
+    bookingWidget: '#template-booking-widget',
+},
+</code></pre>
+<p>Następnie dodaj selektory do nowych kontenerów</p>
+<pre><code class="language-markup">containerOf: {
+    ...
+    pages: '#pages',
+    booking: '.booking-wrapper',
+  },
+</code></pre>
+<p>Na podstronie rezerwacji pojawią się dwa specjalne widgety. Jeden do wyboru godziny, a drugi daty.  Przygotowuj więc również selektory dla tych elementów. Przy okazji dodaj również selektory do nawigacji czy podstawowych elementów podstrony rezerwacji.</p>
+<pre><code class="language-markup">export const select = {
+    ...
+    widgets: {
+        datePicker: {
+            wrapper: '.date-picker',
+            input: `input[name=&quot;date&quot;]`,
+        },
+        hourPicker: {
+            wrapper: '.hour-picker',
+            input: 'input[type=&quot;range&quot;]',
+            output: '.output',
+        },
+    },
+    booking: {
+        peopleAmount: '.people-amount',
+        hoursAmount: '.hours-amount',
+        tables: '.floor-plan .table',
+    },
+    nav: {
+        links: '.main-nav a',
+    },
+}
+</code></pre>
+<p>Następnie przygotuj nowe nazwy klas w obiekcie <code>classNames</code>:</p>
+<pre><code class="language-js">booking: {
+    loading: 'loading',
+    tableBooked: 'booked',
+},
+nav: {
+    active: 'active',
+},
+pages: {
+    active: 'active',
+}
+</code></pre>
+<p>Na końcu czas zająć się już obiektem <code>settings</code>:</p>
+<pre><code class="language-js">export const settings = {
+    ...
+    hours: {
+        open: 12,
+        close: 24,
+    },
+    datePicker: {
+        maxDaysInFuture: 14,
+    },
+    booking: {
+        tableIdAttribute: 'data-table',
+    },
+    db: {
+        ...
+        url: '//localhost:3131',
+        product: 'product',
+        order: 'order',
+        booking: 'booking',
+        event: 'event',
+        dateStartParamKey: 'date_gte',
+        dateEndParamKey: 'date_lte',
+        notRepeatParam: 'repeat=false',
+        repeatParam: 'repeat_ne=false',
+    },
+  },
+</code></pre>
+<p>...a także <code>templates</code>:</p>
+<pre><code class="language-js">export const templates = {
+    ...
+    bookingWidget: Handlebars.compile(document.querySelector(select.templateOf.bookingWidget).innerHTML),
+};
+</code></pre>
+<h4>utils.js</h4>
+<p>Przydadzą się również nowe funkcje pomocnicze. Dodaj poniższy kod do pliku <code>utils.js</code>:</p>
+<pre><code class="language-js">utils.queryParams = function(params){
+  return Object.keys(params)
+    .map(k =&gt; encodeURIComponent(k) + '=' + encodeURIComponent(params[k]))
+    .join('&amp;');
+};
+utils.numberToHour = function(number){
+  return (Math.floor(number) % 24) + ':' + (number % 1 * 60 + '').padStart(2, '0');
+};
+
+utils.hourToNumber = function(hour){
+  const parts = hour.split(':');
+
+  return parseInt(parts[0]) + parseInt(parts[1])/60;
+};
+
+utils.dateToStr = function(dateObj){
+  return dateObj.toISOString().slice(0, 10);
+};
+
+utils.addDays = function(dateStr, days){
+  const dateObj = new Date(dateStr);
+  dateObj.setDate(dateObj.getDate() + days);
+  return dateObj;
+};
+</code></pre>
+<h4>Nowe style</h4>
+<p>Nowa podstrona oznacza, że przyda się również arkusz SCSS, który będzie ją stylować.  Na pewno zmieni się również nagłówek, a kilka stylów będziemy chcieli zapewne współdzielić między oba podstronami.</p>
+<p>Na starcie dodaj do <code>settings.scss</code> nowe zmienne:</p>
+<pre><code class="language-scss">$color-warning: #f6b93b;
+$color-danger: #e55039;
+$color-success: #78e08f;
+</code></pre>
+<p>Zresztą zmian będzie już łatwiej. Nie musisz przeprowadzać ich ręcznie. Po prostu pobierz poniższe archiwum i zastąp swoje pliki tymi, które Ci dostarczyliśmy.</p>
+<p><a href="https://uploads.kodilla.com/bootcamp/wdp/10/sass.zip" target="_blank">LINK DO PLIKÓW SCSS</a>.</p>
+<h4>Stylelint</h4>
+<p>Na końcu pozbądź się jeszcze z pliku <code>.stylelintrc.json</code> jednej reguły.</p>
+<p>Odnajdź i usuń poniższą linię:</p>
+<pre><code class="language-markup">&quot;scss/at-extend-no-missing-placeholder&quot;: true,
+</code></pre>
+<h4>Zmiany w plikach projektu</h4>
+<p>Jak widzisz, zmieniliśmy plik <code>src/index.html</code>. W nagłówku dodaliśmy <code>.main-nav</code>, a pod nagłówkiem – wrapper <code>#pages</code>. W tym wrapperze znajdują się dwie sekcje podstron, których <code>id</code> odpowiadają linkom w <code>.main-nav</code>. Za chwilę wykorzystamy to powiązanie, aby dodać funkcjonalność przełączania się pomiędzy podstronami. Dzięki temu obie podstrony będą dostępne bez przeładowania strony.</p>
+<p>Pozostałe zmiany to przede wszystkim: style, <code>settings.js</code> oraz <code>utils.js</code>. Uzupełniliśmy je o kod niezbędny do realizacji niniejszego modułu. W miarę jego realizacji zobaczysz, w jaki sposób je wykorzystujemy.</p>
+<p>Dodaliśmy też kolejny obiekt w <code>src/db/app.json</code>, który zawiera informacje o wydarzeniach w naszej pizzerii, przez które niektóre stoliki będą zajęte. Zdecydowaliśmy się przechowywać je osobno od rezerwacji, ponieważ część z nich odbywa się cyklicznie. Będzie nam też wygodniej testować aplikację, kiedy rezerwacje zapisywane za pomocą naszej strony będą w osobnym obiekcie.</p>
+<h3>Dodajemy podstrony</h3>
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/zva26DrmWp4" frameborder='0' allowfullscreen></iframe></div>
+                        </div>
+                    </div>
+                                        <div class="card-block task-card" >
+                        <h3>Zadanie: <span class="task-title">stworzenie prostej klasy</span></h3>
+                        <div class="task-content">
+                            <p>Obsługa podstron już działa, ale nasza podstrona Booking jest cały czas pusta. Za chwilę to zmienimy!</p>
+<p>Wbrew pozorom, nie będzie to aż takie trudne zadanie. Na razie skupimy się bowiem przede wszystkim na tym, by wygenerować tylko kod HTML na podstawie szablonu i uruchomić proste widgety liczbowe, a takie operacje robiliśmy już wiele razy. Chociażby w klasach <code>Cart</code> czy <code>AmountWidget</code>.</p>
+<p>Zanim jednak zabierzesz się do pracy, spójrz, do czego dążymy:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wdp/10/10-09.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wdp/10/10-09.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Jak widzisz, naszym celem jest wygenerowanie dość złożonego widoku. Chcemy mieć input wyboru daty, godziny, planszę wyboru stolika i jeszcze kilka innych dodatkowych pól. Na szczęście odpowiedni szablon jest już gotowy. Twoim zadaniem będzie więc tylko wygenerowanie na jego podstawie kodu HTML i od tego zaczniemy. Dopiero później zadbamy jeszcze o uruchomienie inputów "Hours amount" i "people amount", a pozostałymi polami (np. wyborem godziny) zajmiemy się już w następnym module.</p>
+<h4>Etap 1</h4>
+<p>Ok, bierzmy się do pracy. Zaczniemy od wygenerowania widoku. Stwórz nową klasę o nazwie <code>Booking</code>. Zapisz ją oczywiście w formie nowego pliku w folderze <code>components</code>. Zadbaj też o jej eksport. Jej metodami zajmiemy się za chwilę.</p>
+<p>Następnie przejdź do pliku <code>App.js</code>. Zaimportuj w nim klasę <code>Booking</code> oraz stwórz metodę <code>app.initBooking</code>, która będzie zajmować się inicjacją instancji tej klasy.</p>
+<p>Zadbaj, aby metoda ta:</p>
+<ul>
+<li>znajdowała kontener widgetu do rezerwacji stron, którego selektor mamy zapisany w <code>select.containerOf.booking</code>,</li>
+<li>tworzyła nową instancję klasy <code>Booking</code> i przekazywała do konstruktora kontener, który przed chwilą znaleźliśmy,</li>
+<li>była wywoływana na końcu metody <code>app.init</code>.</li>
+</ul>
+<p>Czyli od tego momentu, JS powinien na starcie aplikacji "z automatu" uruchamiać metodę <code>app.initBooking</code>, która utworzy nową instancję <code>Booking</code>, przekazując jej dostęp do całego kontenera na podstronie <code>/booking</code>. Musimy teraz zadbać, aby ta klasa faktycznie generowała cały widok, na razie bowiem nie robi nic. Jest pusta.</p>
+<p>W samej klasie <code>Booking</code> przygotuj więc konstruktor, który:</p>
+<ul>
+<li>odbiera referencję do kontenera przekazaną w <code>app.initBooking</code>, jako argument (np. o nazwie <code>element</code>),</li>
+<li>wywołuje metodę <code>render</code>, przekazując tę referencję dalej (<code>render</code> musi mieć w końcu dostęp do kontenera),</li>
+<li>wywołuje metodę <code>initWidgets</code> bez argumentów.</li>
+</ul>
+<p>Następnie zajmij się metodą <code>render</code>.</p>
+<p>Jej zadaniem jest:</p>
+<ul>
+<li>generowanie kodu HTML za pomocą szablonu <code>templates.bookingWidget</code>, przy czym nie musimy przekazywać do niego żadnych danych, gdyż ten szablon nie oczekuje na żaden placeholder,</li>
+<li>utworzenie pustego obiektu <code>thisBooking.dom</code>,</li>
+<li>dodanie do tego obiektu właściwości <code>wrapper</code> i przypisanie do niej referencji do kontenera (jest dostępna w argumencie metody),</li>
+<li>zmiana zawartości wrappera (<code>innerHTML</code>) na kod HTML wygenerowany z szablonu.</li>
+</ul>
+<h4>Etap 2</h4>
+<p>Na końcu, czas zająć się naszymi inputami "Hours amount" i "People amount".</p>
+<p>Musimy zacząć od przygotowania dostępu do obu inputów. W metodzie <code>render</code> dodaj więc dwie nowe właściwości: <code>dom.peopleAmount</code> i <code>dom.hoursAmount</code>. Powinny być one referencjami odpowiednio do inputów "People amount" i "Hours amount". Selektory do nich znajdziesz w obiekcie <code>select.booking</code>. Żeby z niego korzystać, koniecznie go najpierw zaimportuj.</p>
+<p>Następnie zajmij się metodą <code>initWidgets</code>. Zanim jednak do niej przejdziesz, zaimportuj do pliku klasę <code>AmountWidget</code>. Potem, już w samej metodzie, zadbaj o utworzenie nowych instancji <code>AmountWidget</code> na obu przygotowanych wcześniej elementach. Możesz wzorować się na metodzie <code>CartPrduct.initAmountWidget</code>. Pamiętaj, że teraz tworzymy dwa widgety, a nie jeden, i nie potrzebujemy jeszcze robić nic w momencie wykrycia zmiany. Nasłuchiwacze mogą więc już istnieć, ale ich funkcje callback nie muszą niczego przeliczać ani uruchamiać. Na dobrą sprawę, funkcje callback mogą być nawet na razie puste.</p>
+<p>W efekcie tych zmian powinniśmy zobaczyć na podstronie Booking formularz z mapą restauracji, wygenerowany na podstawie szablonu, a klikanie guzików z plusem i minusem na inputach "People amount" i "Hours amount" powinno zmieniać wartości dla liczby osób oraz godzin.</p>
+<p>Zauważ, że nasza klasa stosuje dokładnie te same pomysły, które znamy chociażby z klasy <code>Cart</code>. Wszystkie właściwości trzymamy w obiekcie <code>this.dom</code>. Widgety ilości tworzymy w <code>initWidgets</code> itd.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <div class="clearfix">
+                                                                                <a href="https://kodilla.com/pl/bootcamp-task/407/611183" target="_blank" class="btn btn-info-outline">Podgląd zadania</a>
+                            <form target="_blank" class="form-inline project-link-form">
+                                <div class="form-group">
+                                    <input type="text" name="link" class="form-control" value="https://github.com/skwiryt/project-pizzeria/commit/b34737a551e02df0c257bbd1dee2cf8027d03f90">
+                                </div>
+                                <button type="submit" class="btn  btn-primary " >Wyślij link <i class="fa fa-check"></i></button>
+                            </form>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-1987" class="card submodule completed" data-bootcamp-user-submodule-id="611184" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">10.5. <span>Podsumowanie</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <img src="https://uploads.kodilla.com/bootcamp/fer/images/relax.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/relax-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/relax.png 2x" class="img-inline img-right">
+<p>Ufff... To był bardzo pracowity tydzień...</p>
+<p>To jeszcze nie koniec. W kolejnym module zajmiemy się dalszym rozwojem naszej aplikacji. Dokończymy podstronę rezerwacji. Pomyślimy też o dodatkowych funkcjonalnościach.</p>
+<p>Czeka Cię jeszcze więcej praktyki i znacznie więcej debugowania, ale przy tym... rozwoju! W tym module jednak to już wszystko. Czas na zasłużony odpoczynek. Do zobaczenia!</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                            </main>
+        </div>
+    </section>
+</main>
+;
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<script type="text/x-translation" data-translation-name="SentBootcampLinkReviewFormMessage">Wysłano link do zatwierdzenia</script>
+    <div id="alerts">
+    <div class="alert alert-danger" role="alert">
+        <i class="fa fa-exclamation" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                        </ul>
+    </div>
+    <div class="alert alert-success" role="alert">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-warning" role="alert">
+        <i class="fa fa-warning" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-info" role="alert">
+        <i class="fa fa-info" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                    </ul>
+    </div>
+    <div class="container">
+        <div class="alert alert-notify" role="alert">
+            <i class="fa fa-info" aria-hidden="true"></i>
+            <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Zamknij</span>
+            </button>
+            <ul>
+                            </ul>
+        </div>
+    </div>
+</div>
+    <div class="modal fade informator-modal" id="informator" tabindex="-1" role="dialog" aria-labelledby="informatorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="https://kodilla.com/static/img/logo-menu.png?00000" alt="Logo Kodilla" class="brand-logo">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body content-container">
+                <h3>Zam&oacute;w szczeg&oacute;łowy informator</h3>
+                <form class="row js-ajax-form" data-view-class="InformatorForm" action="https://kodilla.com/pl/download-informator" method="post">
+                    <input type="hidden" name="ga-pobieranie-informatora-z-modala" value="wypelnienie">
+                    <input type="hidden" name="tags[0]" value="informator">
+                                        <div class="user-data-container">
+                        <input type="text" class="form-control" name="firstname" placeholder="Imię">
+                        <input type="text" class="form-control" name="surname" placeholder="Nazwisko">
+                    </div>
+                    <div class="user-data-container">
+                        <input type="email" class="form-control" name="email" placeholder="Email" required/>
+                        <input type="tel" class="form-control" name="phone" placeholder="Numer telefonu" pattern="^([\+][0-9]{1,3}([ \.\-])?)?([\(]{1}[0-9]{3}[\)])?([0-9 \.\-]{1,15})$" title="Wpisz poprawny numer telefonu, np. 453 674 897" minlength="9" maxlength="15" data-custom-message="Wpisz poprawny numer telefonu, np. 453 674 897">
+                    </div>
+                    <div class="terms-box">
+                        <label>
+                            <input name="accept_terms" value="true" data-custom-message="Prosimy o zaakceptowanie regulaminu" type="checkbox" class="form-control input-checkbox" required>
+                            <span>Akceptuję <a target="_blank" href="https://kodilla.com/pl/regulamin">regulamin</a>  i nie wnoszę zastrzeżeń</span>
+                        </label>
+                    </div>
+                    <div class="personal-terms-box">
+                        <label>
+                            <input name="accept_marketing" value="true" data-custom-message="Jeśli chcesz otrzymać dostęp do materiał&oacute;w, konieczna jest akceptacja obydwu zg&oacute;d" type="checkbox" class="form-control input-checkbox" required>
+                            <span>Chcę otrzymywać newsletter, informacje o promocjach i produktach dostępnych w Kodilla.
+                                <span class="details-button" data-action="show-details" data-identifier="personal-terms-details-informator">Czytaj więcej</span>
+                                <span class="display-none" data-identifier="personal-terms-details-informator">Wyrażam zgodę na otrzymywanie informacji handlowych od Kodilla na podany przeze mnie adres e-mail. Zgoda jest dobrowolna, jednakże niezbędna do otrzymywania informacji o produktach, promocjach i o tym, co u nas słychać. Administratorem danych jest Codemy S.A. z siedzibą we Wrocławiu, Plac Powstańc&oacute;w Śląskich 13/4. Mam prawo cofnąć zgodę w każdym czasie, jednak wtedy nie będę otrzymywać informacji. Dane mogą być przetwarzane pomimo cofnięcia zgody wyłącznie w takim zakresie i celu, w jakim ich przetwarzanie jest niezbędne do ustalenia, dochodzenia lub obrony roszczeń Administratora w związku z udzieloną zgodą. Mam prawo dostępu do danych, sprostowania, usunięcia, ograniczenia przetwarzania, prawo wniesienia sprzeciwu, skargi do organu nadzorczego i przeniesienia danych. Szczeg&oacute;łowe informacje znajdują się na stronie kodilla.com, zakładka &quot;Polityka Prywatności&quot;.</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="display-none">
+                        <input type="text" name="myName" value="">
+                    </div>
+                    <div class="">
+                        <button type="submit" class="btn btn-primary">
+                            Pobierz Informator
+                            <i data-role="loading-icon" class="fa fa-spinner fa-spin fa-1x fa-fw display-none"></i>
+                        </button>
+                    </div>
+                </form>
+                <a href="https://kodilla.com/pl/informator" id="informator-link" target="_blank" class="display-none"></a>
+            </div>
+            <div class="modal-footer">
+                <p>Pobranie informatora do niczego nie zobowiązuje</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="site-footer">
+                <section class="footer-lower">
+            <nav class="container">
+                <a class="navbar-img" href="https://kodilla.com/pl">
+                    <svg id="kodilla-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 29.553" width="168" height="30">
+                        <defs>
+                            <style>
+                                .footer-logo-fill {
+                                    fill: #fff;
+                                }
+                            </style>
+                        </defs>
+                        <g id="Group_1" data-name="Group 1" transform="translate(23.59)">
+                            <path id="KODILLA_copy_5_1_" class="footer-logo-fill" d="M78.058,0a14.758,14.758,0,1,0,.075,0Zm0,23.739a8.939,8.939,0,0,1-8.944-8.907V14.8c0-4.957,4.584-.708,8.907-.708,4.919,0,9.019-4.211,9.019.708a8.978,8.978,0,0,1-8.981,8.944Z" transform="translate(-63.3)"/>
+                            <ellipse id="eye_copy_4_1_" class="footer-logo-fill" cx="3.876" cy="3.876" rx="3.876" ry="3.876" transform="translate(9.462 13.2) rotate(-28.436)"/>
+                        </g>
+                        <path id="Path_1" data-name="Path 1" class="footer-logo-fill" d="M0,29.819V.9H6.671V13.347L17.255.9h7.491L13.938,13.794,25.491,29.819h-7.6l-8.2-11.665-3.019,3.13v8.5H0Z" transform="translate(0 -0.565)"/>
+                        <path id="Path_2" data-name="Path 2" class="footer-logo-fill" d="M151.4,29.819V.9h10.807a15.515,15.515,0,0,1,6.261,1.155,12.966,12.966,0,0,1,4.509,3.093A12.918,12.918,0,0,1,175.7,9.732a17.245,17.245,0,0,1,.932,5.59,16.821,16.821,0,0,1-1.006,5.963,12.227,12.227,0,0,1-2.907,4.547,13.484,13.484,0,0,1-4.547,2.944,15.964,15.964,0,0,1-5.925,1.043Zm18.41-14.5a11.274,11.274,0,0,0-.522-3.466,7.723,7.723,0,0,0-1.491-2.72,6.616,6.616,0,0,0-2.385-1.752,8.055,8.055,0,0,0-3.205-.6h-4.1v17.18h4.1a7.985,7.985,0,0,0,3.242-.634,6.8,6.8,0,0,0,2.385-1.826,8.286,8.286,0,0,0,1.453-2.72A11.634,11.634,0,0,0,169.81,15.322Z" transform="translate(-94.978 -0.565)"/>
+                        <path id="Path_3" data-name="Path 3" class="footer-logo-fill" d="M228.3,29.819V.9h6.671V29.819Z" transform="translate(-143.219 -0.565)"/>
+                        <path id="Path_4" data-name="Path 4" class="footer-logo-fill" d="M259.9,29.819V.9h6.671V23.968h14.012v5.851Z" transform="translate(-163.043 -0.565)"/>
+                        <path id="Path_5" data-name="Path 5" class="footer-logo-fill" d="M327.371,23.931V.9H320.7V29.819h18.522l2.124-5.851H327.371Z" transform="translate(-201.185 -0.565)"/>
+                        <path id="Path_6" data-name="Path 6" class="footer-logo-fill" d="M388.547.9h6.037L405.13,29.819h-6.857l-2.236-6.484h-9.019l-2.2,6.484H378Zm6.373,17.851L391.528,8.54l-3.466,10.211Z" transform="translate(-237.13 -0.565)"/>
+                    </svg>
+                </a>
+                <ul class="nav">
+                    <li>
+                        <a href="https://kodilla.com/pl/regulamin" rel="nofollow">Regulamin</a>
+                    </li>
+                    <li>
+                        <a href="https://kodilla.com/pl/polityka-prywatnosci" rel="nofollow">Polityka prywatności</a>
+                    </li>
+                    <li class="nav-item">&copy; 2021 Kodilla</li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
+
+<!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN2WWBH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <script src="https://kodilla.com/static/js/libs/jquery-2.1.4.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/js.cookie-2.1.0.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/jquery-dateFormat.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/bootstrap.min.js?00000"></script>
+<script>
+    (function () {
+        $(document).ready(function () {
+            if (window.location.hash === '#informator-modal') {
+                showInformator();
+            }
+        });
+
+        $('[data-action="show-modal"]').click(function() {
+            showInformator();
+        });
+
+        function showInformator() {
+            $('#informator').modal('show');
+        }
+    })();
+</script>
+<script src="https://kodilla.com/build/minified/js/fb-0370c8f03e.js" async></script>
+<script src="https://kodilla.com/build/minified/js/call-us-d1ed4dfa39.js"></script>
+<script>
+    if (document.querySelector('main.editor')) {
+        document.querySelector('body').classList.add('editor');
+    }
+</script>
+
+<script type="text/javascript">
+    (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+    vgo('setAccount', '649095895');
+    vgo('setTrackByDefault', true);
+
+    vgo('process');
+</script>
+
+        <script src="https://kodilla.com/static/js/libs/underscore-min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-relational.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-super.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/handlebars-v4.0.5.min.js?00000"></script>
+<script src="https://kodilla.com/build/minified/js/extends/handlebars-ifCond-139a2339f7.js"></script>
+<script src="https://kodilla.com/build/minified/js/application-0dcfdc1306.js"></script>
+<script src="https://kodilla.com/build/minified/js/main-cf3b73d734.js"></script>
+<script src="https://kodilla.com/build/minified/js/views/settings-5fc44a761b.js"></script>
+<script src="https://kodilla.com/build/minified/js/views/delete-account-da2b3de486.js"></script>
+<script type="text/x-translation" data-translation-name="checkAccountDeleteCalculationMessage">Wynik jest nieprawidłowy</script>
+<script src="https://kodilla.com/build/minified/js/helpers/forms-222ea01b08.js"></script>
+<script src="https://kodilla.com/build/minified/js/helpers/alerts-66650c3acb.js"></script>
+<script>
+    App.Views.InpageAlertManager = Backbone.View.extend({
+        events: {
+            'click [data-alert-type][data-alert-text]': 'showAlert'
+        },
+        showAlert: function(e) {
+            var $el = $(e.currentTarget);
+            App.alertsView['show'+$el.data('alertType')]([App.Translations($el.data('alertText'))]);
+        }
+    });
+</script>
+<script src="https://kodilla.com/build/minified/js/collections-c07e1162e2.js"></script>
+<script src="https://kodilla.com/build/minified/js/models-4e0e4fcffb.js"></script>
+<script src="https://kodilla.com/build/minified/js/views/knowledge-base-61f71273c9.js"></script>
+<script>
+    App.Views.LearningProgram = Backbone.View.extend({
+        events: {
+            'click [data-technology-desc-expander]' : 'expandTechnologyDesc'
+        },
+
+        initialize: function() {
+            this.$allTechnologyDesc = this.$el.find('[data-technology-desc]');
+            this.$allTechnologyExpanderIcons = this.$el.find('[data-technology-expander-icon]');
+        },
+
+        expandTechnologyDesc: function() {
+            this.$allTechnologyDesc.each(function(){
+                var $desc = $(this);
+                $desc.slideToggle('fast');
+            });
+            this.$allTechnologyExpanderIcons.each(function(){
+                var $icon = $(this);
+                $icon.toggleClass("fa-minus");
+            });
+        },
+    });
+</script>
+
+    <script src="https://kodilla.com/static/js/libs/tether.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/prism.min.js?00000"></script>
+
+    <script src="https://kodilla.com/build/minified/js/views/bootcamp-1522c7c010.js"></script>
+    <script src="https://kodilla.com/static/js/libs/jquery.seourl.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/perfect-scrollbar.jquery.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/fancybox/jquery.fancybox.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/moment.timezone.locales.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/bootstrap-datetimepicker.min.js?00000"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("a.img-modal-group").fancybox();
+        });
+    </script>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="call-us-modal">
+    <div class="modal-dialog modal-dialog-callus" role="document">
+        <div class="modal-content call-modal">
+            <div id="call-us-step1">
+                <h2>Um&oacute;w się na rozmowę z doradcą Kodilli</h2>
+                <p>Krok <span>1/2:</span> Podaj numer telefonu</p>
+                <form action="https://kodilla.com/pl/call-center/dates/phone_calls" method="post" id="call-us-form1">
+                    <input type="tel" name="phone" id="call-us-input-phone" class="call-center-input" placeholder="731771787">
+                    <p class="error-message display-none" id="validation-message-phone">Pole Numer Telefonu jest wymagane. Nieprawidłowy format.</p>
+                    <button class="btn btn-success" id="call-us-submit-phone">Zarezerwuj rozmowę</button>
+                </form>
+                <p id="call-us-counter-holder" style="display: none;">Dzisiaj już  <span id="call-us-counter" class="call-counter" data-url="https://kodilla.com/pl/call-center/counter/phone_calls">-</span> <span id="call-us-counter-text" data-one=" osoba zam&oacute;wiła rozmowę z nami." data-few=" osoby zam&oacute;wiły rozmowę z nami." data-more=" os&oacute;b zam&oacute;wiło rozmowę z nami."></span></p>
+                <div class="data-protection">
+                    <p>Twój numer telefonu nie będzie wykorzystywany w celach marketingowych ani przekazany dalej. Tylko oddzwonimy. Dane są przetwarzane zgodnie z <a href="/pl/polityka-prywatnosci">Polityką Prywatności</a>.</p>
+                </div>
+            </div>
+
+            <div id="call-us-step2" style="display: none;">
+                <h2>Wybierz dogodny termin i godzinę na rozmowę z doradcą</h2>
+                <p>Krok <span>2/2:</span>
+                <form action="https://kodilla.com/pl/call-center/step2/phone_calls" method="post" id="call-us-form2">
+                    <div class="select-date">
+                        <select name="date" id="call-us-input-date">
+                        </select>
+                        <select name="time" id="call-us-input-time">
+                        </select>
+                    </div>
+                    <button class="btn btn-success" id="call-us-submit-call">Oddzwońcie do mnie!</button>
+                </form>
+            </div>
+
+            <div id="call-us-step3" style="display: none;">
+                <div  class="thanks">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    <h2>Dziękujemy za zamowienie rozmowy! Do usłyszenia w wybranym terminie!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+                <style type="text/css">
+    .embeddedServiceHelpButton .helpButton .uiButton {
+        background-color: #1EA71C;
+        font-family: "Arial", sans-serif;
+    }
+    .embeddedServiceHelpButton .helpButton .uiButton:focus {
+        outline: 1px solid #1EA71C;
+    }
+</style>
+<script>
+    function openChat(){
+        $('.helpButtonEnabled').trigger('click');
+    }
+</script>
+<script type="text/javascript" src="https://service.force.com/embeddedservice/5.0/esw.min.js"></script>
+
+<script type="text/javascript">
+    var initESW = function(gslbBaseURL) {
+        let firstName = 'Marek Baberowski'.split(" ")[0];
+        let lastName = 'Marek Baberowski'.split(" ")[1];
+        console.log(name);
+        embedded_svc.settings.displayHelpButton = true;
+        embedded_svc.settings.language = '';
+
+        embedded_svc.settings.defaultMinimizedText =  'Skontaktuj się z nami';
+        embedded_svc.settings.disabledMinimizedText = ' ';
+
+        embedded_svc.settings.loadingText = 'Ładowanie';
+        embedded_svc.settings.storageDomain = 'kodilla.com';
+
+        embedded_svc.settings.prepopulatedPrechatFields = {
+            'FirstName': firstName,
+            'LastName': lastName,
+            'Email': 'm.z.baberowski@gmail.com'
+        };
+        embedded_svc.settings.offlineSupportMinimizedText = 'Napisz do nas';
+
+        embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+        embedded_svc.settings.entryFeature = 'LiveAgent';
+
+        embedded_svc.init(
+            'https://kodilla.my.salesforce.com',
+            'https://kodillacommunity.force.com',
+            gslbBaseURL,
+            '00D1i000000VBFH',
+            'Support_Kodilla',
+            {
+                baseLiveAgentContentURL: 'https://c.la1-c2-fra.salesforceliveagent.com/content',
+                deploymentId: '5721i00000009s9',
+                buttonId: '5731i0000000AJN',
+                baseLiveAgentURL: 'https://d.la1-c2-fra.salesforceliveagent.com/chat',
+                eswLiveAgentDevName: 'Support_Kodilla',
+                isOfflineSupportEnabled: true
+            }
+        );
+    };
+
+    if (!window.embedded_svc) {
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://kodilla.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+        s.onload = function() {
+            initESW(null);
+        };
+        document.body.appendChild(s);
+    } else {
+        initESW('https://service.force.com');
+    }
+</script>
+        <div data-role="notifications-wrapper" class="notifications-wrapper"></div>
+</body>
+</html>

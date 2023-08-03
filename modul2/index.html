@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang=pl class="no-js">
+<head>
+    <meta name="ahrefs-site-verification" content="c2d3c04b9f125c5b8c98d89f738d343f69d841f035150344a932150235c5639a">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="csrf-token" content="5mBGJbrUe8ZFDio5NF8qFO6PnRc8UWOQqvcZ9k8b" />
+
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="https://kodilla.com/static/img/icons/apple-touch-icon-60x60.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://kodilla.com/static/img/icons/apple-touch-icon-76x76.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://kodilla.com/static/img/icons/apple-touch-icon-120x120.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://kodilla.com/static/img/icons/apple-touch-icon-152x152.png?00000">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kodilla.com/static/img/icons/favicon-32x32.png?00000">
+<link rel="icon" type="image/png" sizes="96x96" href="https://kodilla.com/static/img/icons/favicon-96x96.png?00000">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kodilla.com/static/img/icons/favicon-16x16.png?00000">
+
+    <link rel="canonical" href="https://kodilla.com/pl/bootcamp-module/407/251/5935" />
+
+    <meta name="robots" content="noindex, follow" />
+    <title>    Moduł: 2. Praktyka CSS i RWD
+</title>
+        <script>document.documentElement.classList.remove("no-js")</script>
+<script src="https://kodilla.com/static/js/libs/yall.min.js?00000"></script>
+<link href="https://kodilla.com/static/css/libs/bootstrap.min.css?00000" rel="stylesheet">
+<link href="https://kodilla.com/static/css/libs/font-awesome.min.css?00000" rel="stylesheet">
+<link href="https://kodilla.com/build/minified/css/main-edf00f49da.css" rel="stylesheet" type="text/css">
+            
+    <link href="https://kodilla.com/static/css/libs/prism.min.css?00000" rel="stylesheet">
+
+    <link href="https://kodilla.com/build/minified/css/bootcamp-8915710aa1.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://kodilla.com/static/css/libs/perfect-scrollbar.css?00000" />
+    <link rel="stylesheet" href="https://kodilla.com/static/css/libs/fancybox/jquery.fancybox.min.css?00000" type="text/css" media="screen" />
+    <link href="https://kodilla.com/static/css/libs/bootstrap-datetimepicker.min.css?00000">
+    <link rel="stylesheet" href="https://uploads.kodilla.com/bootcamp/styles/content.css">
+    <script>
+    document.addEventListener("DOMContentLoaded", yall);
+    window.environment = 'production';
+    window.loggedIn = true;
+    window.domain = 'https://kodilla.com';
+            window.fbAppId = 1449248938627896;
+    window.chatService = 'LiveAgent';
+    window.useMessenger = window.chatService === 'Messenger';
+    window.locale = 'pl';
+    window.lang = 'pl';
+
+    window.serverUTC       = 1608379969000;
+    window.serverOffset    = 60;
+    window.userDate        = new Date();
+    window.userUTC         = userDate.getTime();
+    window.userOffset      = userDate.getTimezoneOffset() * (-1);
+    window.userClockDiff   = userUTC - serverUTC;
+    window.diffRounded     = Math.round( userClockDiff / ( 1000 * 60 * 15 ) );
+    window.isDifferentZone = ( userOffset - serverOffset !== 0 ) ? 1 : 0;
+    window.hasWrongTime    = ( diffRounded !== 0 ) ? 1 : 0;
+    window.dateTooltipText = 'Data i godzina są podane dla Twojej strefy czasowej GMT. <br>W razie wątpliwości napisz: <u>support@kodilla.com</u>.';
+    window.wrongHourNotice = 'Godzina na Twoim urządzeniu r&oacute;żni się od godziny obowiązującej w strefie czasowej wybranej w ustawieniach Twojego urządzenia.';
+
+    window.PAYU_HASH_ALGORITHM = 'SHA-256';
+    window.PAYU_POS_ID = 1429452;
+    window.PAYU_MD5_SECOND_KEY = 'f3627be5fab5a4238c8474936f057908';
+
+    var moment = undefined,
+        momentReady = function( method, method2, count ){
+            var c = ( count ) ? count : 0;
+
+            if      ( isDifferentZone && moment !== undefined ){
+                if      ( method ) { method(); }
+                else    { return false; }
+            }
+            else if ( isDifferentZone && moment === undefined ) {
+                if ( c < 20 ) {
+                    c++;
+                    setTimeout( function() { momentReady( method, method2, c ); }
+                        , 300 );
+                } else {
+                    if      ( method2 === true && method )  { method(); }
+                    else if ( method2 !== true && method2 ) { method2(); }
+                }
+            }
+            else {
+                if      ( method2 === true && method )  { method(); }
+                else if ( method2 !== true && method2 ) { method2(); }
+                else    { return false; }
+            }
+        };
+
+    if ( window.isDifferentZone && moment === undefined ) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = '/static/js/libs/moment.timezone.locales.min.js?v=2.22.2';
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+</script>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+        OneSignal.init({
+            appId: "92552bb5-b477-4ea2-8260-dba65be198d9",
+        });
+    });
+</script>
+<script data-ad-client="ca-pub-9483216428129091" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 389137334769464 );
+        fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KN2WWBH');</script>
+    <!-- End Google Tag Manager -->
+    
+    </head>
+<body class="no-js student ">
+<!-- Facebook Pixel Code -->
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=389137334769464&ev=PageView&noscript=1"/></noscript>
+<!-- End Facebook Pixel Code -->
+<script>
+    document.getElementsByTagName('body')[0].classList.remove('no-js');
+    if ( window.isDifferentZone ) {
+        document.querySelector('body').classList.add('time-conversion-applied');
+    }
+    if ( window.hasWrongTime ) {
+        document.querySelector('body').classList.add('wrong-hour');
+    }
+</script>
+
+    <nav class="navbar-main hidden-sm-down dark navbar">
+    <div class="nav-container">
+        <div class="navbar-header clearfix">
+            <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbarUpper"><i class="fa fa-bars"></i></button>
+        </div>
+        <div class="collapse navbar-toggleable-sm container" id="collapsingNavbarUpper">
+            <ul class="nav navbar-nav navbar-nav-left">
+                                    <li class="nav-item nav-contact">
+    <span>Skontaktuj się z nami:</span>
+    <a href="mailto:support@kodilla.com">
+        <i class="fa fa-envelope-o"></i>
+        support@kodilla.com
+    </a>
+    <span>lub</span>
+    <a href="javascript:fcWidget.open();">
+        <i class="fa fa-comments"></i>
+        porozmawiaj na czacie
+    </a>
+</li>
+                                </ul>
+            <ul class="nav navbar-nav pull-right">
+                                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/informator" class="nav-link" target="_blank">
+        Informator
+    </a>
+                </li>
+                <li class="nav-item hidden-sm-down">
+    <a href="https://kodilla.com/pl/account" class="nav-link">Konto</a>
+</li>
+        <li class="nav-item">
+    <a class="analytics-track nav-link nav-link-accent" data-event="account_logout" href="https://kodilla.com/pl/sign-out">Wyloguj</a>
+</li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-main light navbar">
+    <div class="container clearfix">
+        <a class="navbar-brand"  href="https://kodilla.com/pl">
+            <img src="https://kodilla.com/static/img/kodilla-nav-logo.svg?00000" alt="Kodilla - szkoła programowania">
+        </a>
+        <button class="navbar-toggler pull-right collapsed" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <i class="fa fa-bars navbar-ico-open"></i>
+            <i class="fa fa-times navbar-ico-close"></i>
+        </button>
+        <ul id="navbar-main" class="nav navbar-nav pull-right collapse">
+            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        Szkolenia Bootcamp
+    </a>
+    <ul class="bootcamp-list">
+                    <li class="list-sub list-sub-fe">
+                <img src="https://kodilla.com/static/img/svg/menu_fer.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_fer_logo">
+                <a href="https://kodilla.com/pl/bootcamp/front-end">
+                    <h4 class="bootcamp-name">Front-end: React</h4>
+                    <p>Naucz się tworzyć front-end aplikacji w 4 miesiące</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_wd.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_wd_logo">
+                <a href="https://kodilla.com/pl/bootcamp/webdeveloper?type=wdp">
+                    <h4 class="bootcamp-name">Web Developer</h4>
+                    <p>Naucz&nbsp;się tworzyć aplikacje internetowe od&nbsp;podstaw</p>
+                    <span class="bootcamp-label">FRONT-END i BACK-END</span>
+                </a>
+            </li>
+
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_java.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_java_logo">
+                <a href="https://kodilla.com/pl/bootcamp/java?type=jdp">
+                    <h4 class="bootcamp-name">Java Developer</h4>
+                    <p>Poznaj najpopularniejszy na&nbsp;świecie język programowania od&nbsp;zera</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_python.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_python_logo">
+                <a href="https://kodilla.com/pl/bootcamp/python?type=py">
+                    <h4 class="bootcamp-name">Python Developer</h4>
+                    <p>Zdobądź kompetencje do tworzenia rozwiązań webowych</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_tester.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_tester_logo">
+                <a href="https://kodilla.com/pl/bootcamp/tester-automatyzujacy?type=ta">
+                    <h4 class="bootcamp-name">Tester Automatyzujący</h4>
+                    <p>Poznaj podstawy testowania automatycznego w Javie</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_game.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_mage_logo">
+                <a href="https://kodilla.com/pl/bootcamp/game-dev?type=gd">
+                    <h4 class="bootcamp-name">Mobile Game Developer</h4>
+                    <p>Zdobądź kompetencje do tworzenia gier</p>
+                    <span class="bootcamp-label">nowość</span>
+                </a>
+            </li>
+            </ul>
+</li>
+
+                        <li class="nav-item hidden-sm-down">
+    <a class="nav-link-bold" href="https://kodilla.com/pl/szkolenia-pro" class="nav-link">Szkolenia Pro</a>
+</li>
+            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        Strefa kursanta
+    </a>
+    <ul>
+                    <li><a href="https://kodilla.com/pl/bootcamp-dashboard/407" class="nav-link">Bootcamp WD PLUS 2020-12</a></li>
+                    <li><a class="nav-link" href="https://kodilla.com/pl/kursy">Samodzielne kursy</a></li>
+                    <li><a class="nav-link" href="https://chat.kodilla.com" target="_blank">Komunikator</a></li>
+                    <li><a class="nav-link" href="https://kodilla.com/pl/projects">Moje projekty</a></li>
+    </ul>
+</li>
+                            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        O nas
+    </a>
+    <ul class="about-us">
+        <li><a href="https://kodilla.com/pl/mentorzy" class="nav-link">Mentorzy</a></li>
+        <li><a href="https://kodilla.com/pl/zespol" class="nav-link">Zesp&oacute;ł Kodilli</a></li>
+        <li><a href="https://kodilla.com/pl/o-nas" class="nav-link">O firmie</a></li>
+    </ul>
+</li>
+                                                                    <li class="nav-item hidden-md-up nav-group">
+    <span class="mobile-menu-separator">Szkolenia Bootcamp</span>
+    <ul>
+                    <li class="nav-item list-sub-fe">
+                <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/front-end">Bootcamp Front-end: React
+                </a>
+            </li>
+                <li class="nav-item">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/webdeveloper">Bootcamp Web Developer
+                <span class="bootcamp-label">FRONT-END i BACK-END</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://kodilla.com/pl/bootcamp/java">Bootcamp Java</a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/tester-automatyzuj%C4%85cy">Bootcamp Tester Automatyzujący
+            </a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/python">Python Developer
+            </a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/game-dev?type=gd">Mobile Game Developer
+                <span class="bootcamp-label">nowość</span>
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="nav-item hidden-md-up nav-group">
+    <a class="nav-link-bold" href="https://kodilla.com/pl/szkolenia-pro">Szkolenia Pro</a>
+</li>
+            <li class="nav-item hidden-md-up nav-group">
+            <span class="mobile-menu-separator">Strefa kursanta</span>
+            <ul>
+                <li class="nav-item ">
+                                            <a class="nav-link" href="https://kodilla.com/pl/bootcamp-dashboard/407">
+                            Bootcamp   WD PLUS 2020-12
+                        </a>
+                                    </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://kodilla.com/pl/kursy">Samodzielne kursy</a>
+                </li>
+                                    <li class="nav-item ">
+                        <a class="nav-link" href="https://chat.kodilla.com" target="_blank">Komunikator</a>
+                    </li>
+                                <li class="nav-item">
+                    <a class="nav-link" href="https://kodilla.com/pl/projects">Moje projekty</a>
+                </li>
+            </ul>
+        </li>
+    
+        
+            <li class="nav-item hidden-md-up nav-group">
+            <span class="mobile-menu-separator">O nas</span>
+            <ul>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/mentorzy" class="nav-link">Mentorzy</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/zespol" class="nav-link">Zesp&oacute;ł Kodilli</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/o-nas" class="nav-link">O firmie</a>
+                </li>
+            </ul>
+        </li>
+    
+<li class="nav-item hidden-md-up nav-group">
+    <span class="mobile-menu-separator">Pozostałe</span>
+    <ul>
+                                        
+        <li class="nav-item">
+            <a href="https://kodilla.com/pl/informator" class="nav-link" target="_blank">
+        Informator
+    </a>
+        </li>
+    </ul>
+
+</li>
+
+    <li class="nav-item hidden-md-up">
+        <a class="nav-link" href="https://kodilla.com/pl/account">Konto</a>
+    </li>
+    <li class="nav-item hidden-md-up">
+        <a class="nav-link analytics-track" data-event="account_logout" href="https://kodilla.com/pl/sign-out">Wyloguj</a>
+    </li>
+
+        
+    <li class="nav-item hidden-md-up nav-group">
+        <span class="mobile-menu-separator">Skontaktuj się z nami</span>
+        <ul>
+            <li class="nav-item">
+                <a href="mailto:support@kodilla.com" class="nav-link">
+                    <i class="fa fa-envelope-o"></i>
+                    support@kodilla.com
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:fcWidget.open();" class="nav-link">
+                    <i class="fa fa-comments"></i>
+                    <span>Porozmawiaj na czacie</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+        </ul>
+    </div>
+</nav>
+<main class="bootcamp module page-height-fix" id="bootcamp-module">
+    <div class="aside-toggle hidden-md-up">
+        <button class="navbar-toggler pull-left collapsed" type="button" data-toggle="collapse" data-target="#aside-sticky" aria-expanded="false">
+            <i class="fa fa-bars navbar-ico-open"></i>
+            <i class="fa fa-times navbar-ico-close"></i>
+        </button>
+    </div>
+    <div class="table-of-contents aside-sticky collapsed collapse" id="aside-sticky">
+        <section class="container">
+            <div class="row">
+                <aside class="module-nav col-md-4 col-md-offset-8">
+                    <section class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Spis treści modułu</h4>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item current">
+                                <a href="#submodule-885" class="clearfix">
+                                    <p>2.1. Inspektor</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-886" class="clearfix">
+                                    <p>2.2. Zaawansowane właściwości CSS</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-887" class="clearfix">
+                                    <p>2.3. Zaczynamy projekt</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-888" class="clearfix">
+                                    <p>2.4. Komponent: wielopoziomowe menu</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-889" class="clearfix">
+                                    <p>2.5. Podstawy flexboksa</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-890" class="clearfix">
+                                    <p>2.6. Komponent: animowany przycisk</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-891" class="clearfix">
+                                    <p>2.7. Ćwiczymy flexboksa</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-892" class="clearfix">
+                                    <p>2.8. Tworzymy responsywny layout!</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item ">
+                                <a href="#submodule-893" class="clearfix">
+                                    <p>2.9. Podsumowanie</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                    </ul>
+                        <div class="card-block text-center">
+                                                                                                <a href="https://kodilla.com/pl/bootcamp-dashboard/407">Powr&oacute;t do dashboardu</a>
+                                                                                    </div>
+                    </section>
+                </aside>
+            </div>
+        </section>
+    </div>
+    <section class="container module-content">
+        <div class="row">
+            <main class="col-md-8">
+                <section class="card">
+                    <div class="card-block module-header clearfix ">
+                        <h1 class="card-title">2. Praktyka CSS i RWD</h1>
+                                                <i class="fa fa-bookmark fa-3x" aria-hidden="true"></i>
+                    </div>
+                                        <div class="card-block challenge">
+                        <h3>Wyzwania:</h3>
+                        <ul>
+<li>nauczysz się obsługiwać Inspektora - podstawowe narzędzie frontend developera,</li>
+<li>poznasz zaawansowane selektory oraz pseudoklasy CSS,</li>
+<li>nauczysz się tworzyć strony mobilne.</li>
+</ul>
+<p>Po poprzednim potrafisz już stworzyć prostą stronę – to znakomity początek! W tym tygodniu poznasz kilka nieco bardziej zaawansowanych zagadnień z zakresu HTML i CSS, ale zanim do nich przejdziemy, przyjrzyjmy się niezbędnemu narzędziu każdego developera – Inspektorowi.</p>
+
+                    </div>
+                                    </section>
+                                    
+                <section id="submodule-885" class="card submodule current" data-bootcamp-user-submodule-id="585526" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">2.1. <span>Inspektor</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<p>Czy wiesz, że z poziomu swojej przeglądarki jesteś w stanie podejrzeć kod każdej strony internetowej? A nawet więcej – możesz "w locie" zmodyfikować tymczasowo (do momentu odświeżenia strony) kod i style każdej witryny i zobaczyć efekt na ekranie. W jaki sposób? Używając jednego z podstawowych narzędzi developera, czyli <strong>Inspektora</strong>.</p>
+<p>Umiejętność obsługi Inspektora jest przydatna zwłaszcza wtedy, kiedy strona, nad którą pracujemy, nie działa, jak należy. Poprzez zbadanie kodu w Inspektorze jesteśmy w stanie łatwiej wychwycić błąd, np. sprawdzić, czy nasze style nie nadpisują się nawzajem.</p>
+<p>Aby otworzyć Inspektora, kliknij prawym przyciskiem myszy na dowolnym elemencie strony internetowej i z menu kontekstowego wybierz "Zbadaj element".</p>
+<a href="https://uploads.kodilla.com/bootcamp/wd/02.css/inspector.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wd/02.css/inspector.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Wszystkie popularne przeglądarki posiadają wbudowane narzędzia developerskie:</p>
+<p><strong>Chrome</strong></p>
+<a href="https://uploads.kodilla.com/bootcamp/wd/02.css/inspector-chrome.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wd/02.css/inspector-chrome.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p><strong>Firefox</strong></p>
+<a href="https://uploads.kodilla.com/bootcamp/wd/02.css/inspector-firefox.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wd/02.css/inspector-firefox.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p><strong>Microsoft Edge</strong></p>
+<a href="https://uploads.kodilla.com/bootcamp/wd/02.css/inspector-edge.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wd/02.css/inspector-edge.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p><strong>Uwaga:</strong> w trakcie kursu będziemy omawiać narzędzia developerskie oferowane przez przeglądarkę Chrome, ponieważ naszym zdaniem są najbardziej funkcjonalne i intuicyjne w użyciu.</p>
+<p>Klikając ikonkę z trzema kropkami, możesz między innymi wybrać, z której strony okna przeglądarki widoczny będzie Inspektor.</p>
+<a href="https://uploads.kodilla.com/bootcamp/wd/02.css/dock-inspector.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wd/02.css/dock-inspector.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Możesz badać poszczególne elementy HTML na stronie, klikając je w lewej części okna Inspektora. Wtedy w prawej części okna pojawią się przypisane do nich style.</p>
+<p>Najeżdżając na dany styl i odznaczając checkbox obok niego, możesz zakomentować (wyłączyć) daną właściwość i sprawdzić, co się stanie. Warto zapamiętać, że przekreślona właściwość (jak na obrazku poniżej) oznacza, że dany styl jest nadpisywany przez inną regułę i nie został zastosowany dla tego elementu:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wd/02.css/inspector-styles.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wd/02.css/inspector-styles.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Możesz również dodawać nowe style, pamiętaj jednak, że znikną one, gdy odświeżysz stronę:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wd/02.css/add-styles.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wd/02.css/add-styles.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Zachęcamy do eksperymentowania z Inspektorem i badania interesujących elementów stron, które odwiedzasz – to również dobra metoda, aby poszerzyć swoją wiedzę i nauczyć się nowych sztuczek!</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-read btn-success-outline "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-886" class="card submodule completed" data-bootcamp-user-submodule-id="585527" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">2.2. <span>Zaawansowane właściwości CSS</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>W poprzednim module poznaliśmy podstawy HTML i CSS, jednak był to jedynie wierzchołek góry lodowej. Sam CSS posiada dużo więcej zaawansowanych funkcji, z których część poznamy w niniejszym module. Lwia część pracy frontend developera polega właśnie na tworzeniu odpowiednich stylów, tak aby zapewnić użytkownikom optymalne korzystanie ze strony internetowej. Z tego powodu poznamy CSS bliżej.</p>
+<h3>Elementy blokowe i liniowe</h3>
+<p>Podczas pracy nad projektami w module 1 mieliśmy okazję użyć jednego z generycznych tagów HTML, a mianowicie <code>&lt;div&gt;</code>. Jak już zapewne wiesz, tagi <code>&lt;div&gt;</code> domyślnie zajmują 100% dostępnej szerokości oraz ustawiają się jeden pod drugim.</p>
+<p>Takie elementy nazywamy <strong>blokowymi</strong>.</p>
+<p>Do elementów blokowych należą m.in. <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, nagłówki od <code>&lt;h1&gt;</code> do <code>&lt;h6&gt;</code>,<code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> , <code>&lt;li&gt;</code> oraz tagi HTML5 typu <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> czy <code>&lt;footer&gt;</code>.</p>
+<p>Elementom blokowym możemy nadawać właściwości <code>width</code>, <code>height</code> oraz <code>margin</code> i <code>padding</code>.</p>
+<p>Przeciwieństwem elementów blokowych są elementy <strong>liniowe</strong>, czyli takie, które nie powodują złamania linii – domyślnie ustawiają się one jeden obok drugiego. Przykładami takich elementów są <code>&lt;a&gt;</code> i <code>&lt;span&gt;</code> (kolejny generyczny tag, którego można używać do przeróżnych celów).</p>
+<p>Elementom liniowym nie możemy nadawać wymiarów za pomocą właściwości <code>width</code> i <code>height</code>. Nie zadziała również w ich przypadku <code>margin-top</code> ani <code>margin-bottom</code>. Możemy natomiast użyć marginesów bocznych (<code>margin-left</code> i <code>margin-right</code>) oraz paddingu.</p>
+<p>Powyższe zasady ilustruje ten CodePen:</p>
+<p style="min-height:700px; border: 1px solid #d0e9c6; border-radius: 4px; padding: 20px; text-align: center;" data-height="700" data-theme-id="dark" data-slug-hash="7bbff277736f02c5292de9ec8604ee2a" data-default-tab="html,result" data-user="kodilla" data-embed-version="2" data-editable="true" class="codepen">See <a href="https://codepen.io/kodilla/pen/7bbff277736f02c5292de9ec8604ee2a/">the Pen</a> on <a href="https://codepen.io">CodePen</a>.</p><br>
+<h3>Właściwość <code>display</code></h3>
+<p>Za pomocą CSS możemy łatwo zmienić domyślny sposób wyświetlania każdego elementu CSS. Służy to tego właściwość <code>display</code>. Może ona przyjmować wiele wartości, ale cztery najczęściej używane to:</p>
+<ul>
+<li><code>display: none;</code> - ukrywa element,</li>
+<li><code>display: block;</code> - element zostanie wyświetlony jako element blokowy,</li>
+<li><code>display: inline;</code> - element zostanie wyświetlony jako element liniowy,</li>
+<li><code>display: inline-block;</code> – bardzo ciekawa właściwość, która łączy cechy elementów blokowych i liniowych. Elementom typu <code>inline-block</code> możemy nadawać wymiary za pomocą <code>width</code> i <code>height</code> oraz <code>margin</code> i <code>padding</code>, ale jednocześnie te elementy nie spowodują złamania linii.</li>
+</ul>
+<p>Zwróć uwagę na kod poniżej oraz sposób, w jaki poszczególne elementy pojawiają się na stronie. Nadaliśmy tam poszczególnym divom różne właściwości <code>display</code>, zmieniając w ten sposób ich wymiary oraz rozmieszczenie na stronie (spróbuj pobawić się tym kodem, zmieniając wartości dla <code>display</code>):</p>
+<p style="min-height:500px; border: 1px solid #d0e9c6; border-radius: 4px; padding: 20px; text-align: center;" data-height="500" data-theme-id="dark" data-slug-hash="74f5110a30f37fdf75793e43211bcce7" data-default-tab="result" data-user="kodilla" data-embed-version="2" data-editable="true" class="codepen">See <a href="https://codepen.io/kodilla/pen/74f5110a30f37fdf75793e43211bcce7/">the Pen</a> on <a href="https://codepen.io">CodePen</a>.</p><br>
+<p>W jaki sposób można w praktyce zastosować właściwość <code>display</code>? Przykładowo, możemy zmienić za jej pomocą wyświetlanie elementów listy <code>&lt;ul&gt;</code> z pionowego (<code>block</code>) na poziome (<code>inline-block</code>):</p>
+<p style="min-height:400px; border: 1px solid #d0e9c6; border-radius: 4px; padding: 20px; text-align: center;" data-height="400" data-theme-id="dark" data-slug-hash="8e7cbbc6347a4ebc3d66f16c0a41ac87" data-default-tab="html,result" data-user="kodilla" data-embed-version="2" data-editable="true" class="codepen">See <a href="https://codepen.io/kodilla/pen/8e7cbbc6347a4ebc3d66f16c0a41ac87/">the Pen</a> on <a href="https://codepen.io">CodePen</a>.</p><br>
+<p>Możemy też ostylować linowy element <code>&lt;a&gt;</code> w taki sposób, by wyglądał jak blokowy przycisk:</p>
+<p style="min-height:265px; border: 1px solid #d0e9c6; border-radius: 4px; padding: 20px; text-align: center;" data-height="265" data-theme-id="dark" data-slug-hash="7aa34b25f0a60faecdc10ddbcaa5931a" data-default-tab="html,result" data-user="kodilla" data-embed-version="2" data-editable="true" class="codepen">See <a href="https://codepen.io/kodilla/pen/7aa34b25f0a60faecdc10ddbcaa5931a/">the Pen</a> on <a href="https://codepen.io">CodePen</a>.</p><br>
+<p>Możliwości jest mnóstwo i należy pamiętać o właściwości <code>display</code>, aby nie tworzyć nadmiarowych zagnieżdżeń w HTML (np. nie owijać liniowego elementu w blokowy tylko po to, by wyświetlić go w nowej linii).</p>
+<h3>Złożone selektory CSS</h3>
+<p>Poznaliśmy do tej pory selektory dla tagów, klas oraz identyfikatorów, a także napisaliśmy kilka bardziej złożonych selektorów. W tym submodule usystematyzujemy naszą wiedzę na ten temat.</p>
+<h4>Zagnieżdżone selektory</h4>
+<p>Aby wybrać w CSS elementy danego typu, ale tylko te, które znajdują się wewnątrz innego, określonego elementu, możemy skorzystać z zagnieżdżania selektorów. Wygląda to następująco:</p>
+<pre><code class="language-css">header a {
+    /* Styles for the links inside header */
+}
+</code></pre>
+<p>Dzięki temu możemy określić wygląd tylko tych linków, które znajdują się wewnątrz elementu <code>header</code>. Możemy też korzystać z większej liczby selektorów:</p>
+<pre><code class="language-css">header .main-navigation a {
+    /* Styles for the links inside .main-navigation inside header */
+}
+</code></pre>
+<p>Należy jednak przy tym pamiętać, że zagnieżdżanie selektorów ma swoją cenę w postaci prędkości ładowania strony. Dobrą praktyką jest niezagnieżdżanie zbyt dużej ilości selektorów.</p>
+<p>Podobnie działa selektor wybierający element będący bezpośrednim potomkiem, który tworzymy za pomocą znaku <code>&gt;</code>.</p>
+<pre><code class="language-css">.example &gt; div {
+    /* Properties of divs that are directly inside .example */
+}
+</code></pre>
+<p>W przykładzie powyżej, z użyciem znaku <code>&gt;</code>, wybierzemy tylko te elementy <code>div</code>, które są bezpośrednim potomkiem (bezpośrednio zagnieżdżone) elementu HTML o klasie example. Elementy położone o dalsze poziomy niżej w drzewie dokumentu HTML nie będą objęte działaniem tego stylu.</p>
+<h3>Zagnieżdżone selektory w SCSS</h3>
+<p>Składnia SCSS, której używamy w niniejszym kursie, daje nam możliwość wygodniejszego zapisu zagnieżdżonych selektorów. Pisząc w SCSS, możemy użyć następującej składni:</p>
+<pre><code class="language-css">header {
+    a {
+        /* Styles for the links inside header */
+    }
+}
+</code></pre>
+<p>Ten kod skompiluje się do CSS i zostanie odczytany przez przeglądarkę jako <code>header a</code>.</p>
+<p>Oczywiście możemy używać większej liczby zagnieżdżeń, np.:</p>
+<pre><code class="language-css">header {
+    a {
+        span {
+            /* Styles for spans in the links inside header */
+        }
+    }
+}
+</code></pre>
+<p>Należy jednak unikać przeciążania kodu SCSS zbyt głębokimi zagnieżdżeniami, gdyż style staną się wtedy zbyt nieczytelne i kłopotliwe w utrzymaniu.</p>
+<p>Zagnieżdżając selektory w powyższy sposób, musimy pilnować wcięć w kodzie. Każdy kolejny poziom zagnieżdżenia składa się z jednego tabulatora lub dwóch znaków spacji.</p>
+<h4>Grupowanie selektorów</h4>
+<p>Kolejnym przydatnym skrótem przy pracy z CSS jest grupowanie selektorów. Możemy z niego skorzystać, gdy chcemy ten sam kod CSS przypisać wielu klasom lub elementom. Zamiast wpisywać go każdorazowo do wielu elementów, możemy zebrać powtarzające się właściwości i przypisać je do grupy selektorów. Robimy to, wymieniając je po prostu po przecinku:</p>
+<pre><code class="language-css">h1, h2, h3 {
+    text-align: center;
+    font-weight: bold;
+}
+</code></pre>
+<p>W ten sposób przypisaliśmy za pomocą jednej reguły ten sam styl do trzech typów nagłówków.</p>
+<h3>Pseudoklasy</h3>
+<p>Pseudoklasy pozwalają nam na wpływanie na wygląd elementów dokumentu, gdy znajdzie się on w pewnym stanie. Przez zmianę stylów CSS określonych za pomocą selektora pseudoklasy możemy sprawić, że jej wygląd będzie się zmieniał pod wpływem interakcji z użytkownikiem.
+Jednym z najczęstszych zastosowań pseudoklas jest zmiana wyglądu odnośników (linków), gdy użytkownik najedzie na niego myszką. Efekt taki możemy osiągnąć za pomocą pseudoklasy <code>:hover</code>. W przypadku pseudoklas korzystamy tylko z jednego dwukropka, jak w przykładzie poniżej:</p>
+<pre><code class="language-css">a:hover {
+    color: red;
+}
+</code></pre>
+<p>Taki zapis sprawi, że element <code>&lt;a&gt;</code>, po najechaniu na niego kursorem, zmieni kolor na czerwony.</p>
+<p>Inną popularną pseudoklasą typową dla odnośników jest <code>:visited</code>, dzięki której możemy określić wygląd odnośnika, który został już odwiedzony.</p>
+<pre><code class="language-css">a:visited {
+    color: green;
+}
+</code></pre>
+<p>Wybrany (kliknięty, ale jeszcze nieodwiedzony) link może wyglądać jeszcze inaczej dzięki pseudoklasie <code>:active</code>.</p>
+<pre><code class="language-css">a:active {
+    color: #0000FF;
+}
+</code></pre>
+<p>Pseudoklasa <code>:hover</code> dostępna jest również dla innych elementów niż odnośnik. Przykład poniżej zmienia tło dla pozycji na liście wewnątrz nagłówka po najechaniu na niego myszką.</p>
+<pre><code class="language-css">header li:hover {
+    background-color: #52B3D9;
+}
+</code></pre>
+<p><strong>Pamiętaj:</strong> <code>a:hover</code> musi występować po <code>a:link</code> i <code>a:visited</code> w kolejności definiowania stylów w CSS. Podobnie <code>a:active</code> piszemy po <code>a:hover</code>!</p>
+<h3>N-ty potomek</h3>
+<p>Innym interesującym rodzajem pseudoklas są te umożliwiające nam wybranie elementów będących n-tym w kolejności potomkiem swojego elementu-rodzica. Możemy w ten sposób np. zdefiniować unikalny wygląd dla pierwszego paragrafu danej sekcji lub wybrać tylko interesującą nas pozycję na liście. Możemy do tego wykorzystać następujące pseudoklasy:</p>
+<pre><code class="language-css">p:first-child {
+    /* First paragraph of the parent div */
+}
+li:last-child {
+    /* Last item in an ul or ol list */
+}
+p:nth-child(3) {
+    /* A paragraph which is the n-th child of the parent - in this example it's the third */
+}
+
+p:first-of-type {
+  /* The first element of this type (a paragraph) of the parent div */
+}
+
+p:last-of-type {
+  /* The last element of this type (a paragraph) of the parent div */
+}
+</code></pre>
+<h3>Pseudoklasy i n-ty potomek w SCSS</h3>
+<p>Tutaj również mamy opcję zastosowania wygodniejszej składni SCSS w następującej postaci:</p>
+<pre><code class="language-css">a {
+    &amp;:active {
+        color: #0000FF;
+    }
+}
+li {
+    &amp;:last-child {
+        /* Last item in an ul or ol list */
+    }
+}
+</code></pre>
+<p>Jak widzisz, do nadania styli na pseudoklasy n-tego potomka używamy w SCSS znaku <strong>&</strong>.</p>
+<p>Zerknij na poniższy przykład, aby utrwalić sobie zagnieżdżanie w SCSS:</p>
+<p style="min-height:300px; border: 1px solid #d0e9c6; border-radius: 4px; padding: 20px; text-align: center;" data-height="300" data-theme-id="dark" data-slug-hash="33b8f850914569f2e4ed994c8c9078eb" data-default-tab="html,result" data-user="kodilla" data-embed-version="2" data-editable="true" class="codepen">See <a href="https://codepen.io/kodilla/pen/33b8f850914569f2e4ed994c8c9078eb/">the Pen</a> on <a href="https://codepen.io">CodePen</a>.</p><br>
+<p>Jak widać, taki kod jest dużo bardziej przejrzysty. Ponadto jest on zgodny z zasadą <strong>DRY</strong> (Don't repeat yourself).</p>
+<p>Wystarczy już teorii o (S)CSS. Możesz do niej stale wracać lub posiłkować się innymi źródłami. Przechodzimy do projektu! Od tej pory próbuj pisać zagnieżdżony SCSS, starając się nie przekraczać trzech poziomów zagnieżdżenia.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-887" class="card submodule completed" data-bootcamp-user-submodule-id="585528" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">2.3. <span>Zaczynamy projekt</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Twoim zadaniem w tym module będzie zakodowanie strony agencji kreatywnej. Wiele elementów obecnych w projekcie omawialiśmy już w Module 1, dlatego nie będziemy podawać do nich szczegółowych instrukcji. Szerzej omówimy sobie natomiast nowe zagadnienia: wielopoziomowe menu, animowane przyciski oraz nowoczesny sposób tworzenia układu strony, czyli <strong>flexboksa</strong>.</p>
+<p>Tak jak w poprzedniej części kursu, możesz zakodować stronę w 100% zgodnie z designem, lub dobrać własne treści, czcionki, kolory i zdjęcia.</p>
+<p>Do stworzenia "wypełniaczy" treści, czyli popularnego <em>lorem ipsum</em>, możesz użyć <a href="https://pl.lipsum.com/" target="_blank">generatora</a>.</p>
+<p>Na swojej stronie możesz użyć tych samych <a href="https://uploads.kodilla.com/bootcamp/fer/01.css/module-1-assets.zip" target="_blank">ilustracji</a> co w projekcie lub znaleźć inne fotografie na stronie <a href="https://www.pexels.com/" target="_blank">Pexels</a>.</p>
+<p>Spójrz na projekt:</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/01.css/module-1-template.jpg" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/01.css/module-1-template.jpg" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Zwróć uwagę na to, z ilu sekcji się składa, oraz jakie wspólne komponenty w nich występują (np. te same rodzaje przycisków, nagłówków, układów tekstu). Jak pamiętasz, zgodnie z zasadą DRY (Don't Repeat Yourself), elementy powtarzające się stylujemy tylko raz.</p>
+<p>Zachęcamy do rozrysowania sobie projektu (nawet na papierze) i zaznaczenia elementów, które się powtarzają lub są podobne i dla których należy przewidzieć wspólne style.</p>
+<p>Załączamy również <a href="https://uploads.kodilla.com/bootcamp/fer/01.css/module-1-template-sizes.jpg" target="_blank">ściągawkę z podanymi wymiarami elementów</a>, aby łatwiej było Ci samodzielnie kodować.</p>
+<h3>Tworzymy projekt i style bazowe</h3>
+<p><strong>1.</strong> Zjedź do zadania w submodule 8 ("Wyślij projekt do Mentora") i naciśnij w nim guzik, aby przejść do edytora. Tak jak w poprzednim module, miej otwarty jednocześnie edytor i treść kursu, by łatwo można było przełączać się między jednym a drugim.</p>
+<p><strong>2.</strong> Tak samo, jak w Module 1, stwórz sobie w projekcie plik <code>style.scss</code>.</p>
+<p><strong>3.</strong> W pliku HTML dodaj strukturę bazową (zerknij do poprzedniego modułu, jeżeli jej nie pamiętasz), podepnij Font Awesome i czcionki z Google Fonts. W projekcie użyliśmy czcionek Signika (grubość 700) i Inconsolata (grubość 400), ale jeżeli chcesz, wybierz inne.</p>
+<p><strong>4.</strong> Ze strony <a href="https://flatuicolors.com/" target="_blank">Flat UI Colors</a> wybierz z dowolnej palety trzy kolory, które wykorzystasz na stronie. W projekcie użyliśmy niebieskiego (<code>#0097e6</code>), zielonego (<code>#33d9b2</code>) i czerwonego (<code>#ff5252</code>). Dla tekstu będziemy używać kolorów <code>#ffffff</code> (biały – dla tekstu na barwnym tle) i <code>#2c2c54</code> (granatowy – dla tekstu na jasnym tle). Możesz wykorzystać te same kolory lub wybrać inne, ale zwróć uwagę na odpowiedni kontrast, by tekst był czytelny.</p>
+<p><strong>5.</strong> W pliku <code>.scss</code> utwórz na samej górze sekcję <code>/* Variables */</code> i dodaj w niej zmienne dla czcionek i kolorów. Sugerujemy nadać zmiennym kolorów nazwy <code>color-one</code>, <code>color-two</code>, <code>color-three</code> itp. zamiast np. <code>color-red</code>. W ten sposób Twój kod będzie bardziej uniwersalny.</p>
+<p><strong>6.</strong> W pliku <code>.scss stw&oacute;rz sekcję</code>/* Global */` dla ogólnych stylów. Dodaj do niej znaną Ci już deklarację:</p>
+<pre><code class="language-css">*, *::before, *::after {
+        box-sizing: border-box;
+}
+</code></pre>
+<p><strong>7.</strong> Usuń także margines z <code>&lt;body&gt;</code> i zdefiniuj wielkość czcionki na <code>16px</code>, a interlinię na <code>1.7</code>. Ustaw także <code>font-family</code> odpowiadające czcionce wybranej dla tekstu (w projekcie jest to czcionka Inconsolata) oraz podstawowy kolor czcionki (w projekcie jest to <code>#2c2c54</code>).</p>
+<p><strong>8.</strong> <code>.container</code> w naszym projekcie będzie miał maksymalną szerokość <code>1140px</code> i boczne paddingi o szerokości <code>20px</code>. Będzie też wycentrowany w poziomie. Jeżeli potrzebujesz, wróć do poprzedniego modułu po odpowiednie deklaracje stylów.</p>
+<p><strong>9.</strong> Stwórz również selektor dla wszystkich elementów typu <code>&lt;section&gt;</code> i nadaj im dolny i górny padding o wartości 96px.</p>
+<p>Podstawowe style gotowe! Możemy przejść zatem do zakodowania pierwszego elementu strony.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-888" class="card submodule completed" data-bootcamp-user-submodule-id="585529" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">2.4. <span>Komponent: wielopoziomowe menu</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Na wielu stronach w internecie na pewno zdarzyło Ci się spotkać z nawigacją w postaci wielopoziomowego menu. Zaraz nauczysz się je tworzyć samodzielnie! Tego typu zadanie często pojawia się na rozmowach rekrutacyjnych na stanowiska frontendowe, więc tym bardziej warto przyłożyć się do tego zadania.</p>
+<p>Menu w naszym projekcie wygląda tak:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wd/02.css/wd-02-01.gif" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wd/02.css/wd-02-01.gif" alt="image" style="width: auto; max-width: 50%;"></a>
+<h3>Poziome menu pierwszego poziomu</h3>
+<p>Na początku zbudujmy strukturę HTML menu pierwszego poziomu.</p>
+<p><strong>1.</strong> Wewnątrz taga <code>&lt;body&gt;</code> stwórz element <code>&lt;nav&gt;</code> z klasą <code>.navigation</code>, a wewnątrz niego umieść <code>&lt;div&gt;</code> z klasą <code>.container</code>. Element <code>&lt;nav&gt;</code> to kolejny semantyczny tag, wprowadzony w HTML5 – służy on do zasygnalizowania, że dana lista linków na stronie to nawigacja.</p>
+<p><strong>2.</strong> W tym divie dodaj nieuporządkowaną listę wraz z kilkoma pozycjami (<code>&lt;li&gt;</code>). Każdy znacznik <code>&lt;li&gt;</code> powinien zawierać znacznik <code>&lt;a&gt;</code> (który na razie nigdzie nie będzie prowadził, więc powinien mieć atrybut <code>href</code> równy <code>#</code>). Wprowadź przykładowe teksty do tych elementów listy (takie jak na projekcie lub własne). Listy nieuporządkowane są często wykorzystywane właśnie do tworzenia elementów nawigacyjnych.</p>
+<p>Efekt będzie podobny do poniższego:</p>
+<a href="https://uploads.kodilla.com/bootcamp/wd/02.css/wd-02-02.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/wd/02.css/wd-02-02.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Jak widzisz, nasza nieuporządkowana lista ma kilka domyślnych stylów, które musimy zlikwidować. W kolejnym kroku zatem poprawimy nieco wygląd naszej nawigacji.</p>
+<p><strong>3.</strong> W pliku <code>.scss</code> utwórz sekcję dla stylów nawigacji (<code>/* Navigation */</code>).</p>
+<p><strong>4.</strong> Całej nawigacji nadaj tło – wykorzystaj jeden z wybranych przez siebie kolorów. Dodaj jej dolny i górny padding równy 12px.</p>
+<p><strong>5.</strong> Usuniemy teraz domyślne style listy wypunktowanej. Dla selektora <code>&lt;ul&gt;</code> wewnątrz elementu <code>.navigation</code> musisz wyzerować <code>padding</code> i <code>margin</code> oraz wyłączyć punktory za pomocą właściwości <code>list-style-type: none;</code>. Więcej o tej właściwości i o tym, jakie wartości może przyjmować, przeczytasz na <a href="https://cssreference.io/property/list-style-type/" target="_blank">CSS Reference</a>.</p>
+<p><strong>6.</strong> Teraz chcemy, aby elementy <code>&lt;li&gt;</code> w nawigacji były wyświetlane poziomo. Domyślnie te elementy są blokowe. Czy wiesz, jak sprawić, by stały się elementami typu <code>inline-block</code>? Tak jest: dla elementów listy <code>&lt;li&gt;</code>, znajdujących się wewnątrz elementu <code>.navigation</code>, musimy dodać deklarację <code>display</code> z odpowiednią wartością. Jeżeli nie pamiętasz, jaka to wartość, wróć do rozdziału "Właściwość <code>display</code>".</p>
+<p><strong>7.</strong> Tym samym elementom <code>&lt;li&gt;</code> dodaj przy okazji prawy margines równy 36px oraz pozycję <code>relative</code>. Będzie nam ona potrzebna już niedługo.</p>
+<p><strong>8.</strong> Ostylujmy teraz same linki w naszym menu. Dodaj selektor wybierający elementy <code>&lt;a&gt;</code> wewnątrz <code>.navigation</code>. Nadaj im właściwość <code>text-decoration: none;</code>, który zlikwiduje domyślny kolor podkreślenia, oraz ustaw kolor czcionki.</p>
+<p><strong>9.</strong> Całość wygląda już przyjemnie, jednak nasza nawigacja aż się prosi o to, żeby dodać jakiś efekt na <code>:hover</code> dla naszych linków. Może to być zmiana koloru czcionki (w projekcie na zielony - <code>#33d9b2</code>) lub cokolwiek innego, co podpowie Ci fantazja.</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/01.css/1.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/01.css/1.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<h3>Rozwijane menu drugiego poziomu</h3>
+<p>Teraz możemy dodać menu drugiego poziomu. Będzie się wyświetlać dopiero po najechaniu na link pierwszego rzędu. Zacznijmy od HTML.</p>
+<p><strong>1.</strong> Wewnątrz pierwszego elementu <code>&lt;li&gt;</code>, zaraz za elementem <code>&lt;a&gt;</code>, dodaj element <code>&lt;ul&gt;</code> wraz z kilkoma pozycjami oraz linkami, tak jak poprzednio. Element ten powinien znaleźć się na tym samym poziomie zagnieżdżenia, co <code>&lt;a&gt;</code>.</p>
+<p><strong>2.</strong> Ustawmy elementy naszego menu drugiego poziomu w pionowym rzędzie. W tym celu dodaj selektor <code>.navigation ul ul li</code> i spraw, by był wyświetlany blokowo. Dodaj mu też dolny margines równy 12px.</p>
+<p><strong>3.</strong> Aby ukryć menu niższego poziomu (na razie będzie schowane), stwórz regułę <code>display: none;</code> dla list znajdujących się wewnątrz innych list w panelu nawigacji. Skorzystaj w tym celu ze znanych nam zagnieżdżonych selektorów.</p>
+<h3>Wyświetlamy listę drugiego poziomu</h3>
+<p>Przeanalizujmy strukturę naszego menu. Link drugiego poziomu jest elementem listy pierwszego poziomu. Aby wybrać listy drugiego rzędu, stworzylibyśmy następujący selektor:<code>.navigation li ul { }</code>.</p>
+<p>W ten sposób wybieramy listy <code>&lt;ul&gt;</code> będące wewnątrz elementów listy pierwszego poziomu — tj. znajdujące się wewnątrz taga <code>&lt;li&gt;</code>. Chcemy wyświetlić te listy dopiero w momencie, gdy użytkownik najedzie kursorem na element <code>&lt;li&gt;</code>, zatem nasz selektor powinien wyglądać następująco: <code>.navigation li:hover ul {...}</code>. Do wyświetlenia listy wystarczy wewnątrz takiego selektora dodać właściwość <code>display: block;</code>.</p>
+<p><strong>1.</strong> Stwórz selektor wybierający listy drugiego rzędu po najechaniu myszką na element listy pierwszego rzędu, tak jak w opisie powyżej.</p>
+<p><strong>2.</strong> Dodaj właściwość <code>display: block;</code> wewnątrz utworzonego wyżej selektora i wycentruj w nim tekst. Menu w tym momencie zachowuje się dość dziwnie, ale zaraz to naprawimy.</p>
+<p><strong>3.</strong> Żeby lista drugiego poziomu nie rozpychała nam nawigacji, musimy ją "wyciągnąć z obiegu". Uzyskamy to dzięki dodaniu (tej zagnieżdżonej liście) <code>position: absolute;</code>. Dzięki temu, że elementy <code>&lt;li&gt;</code> w liście pierwszego poziomu są wypozycjonowane relatywnie (<code>relative</code>), elementy listy poziomu drugiego wypozycjonują się względem nich.</p>
+<p><strong>4.</strong> Nadajmy liście drugiego poziomu tło – w projekcie użyliśmy koloru białego.</p>
+<p><strong>5.</strong> Stwórz selektor wybierający linki (<code>&lt;a&gt;</code>) na liście drugiego poziomu i nadaj im kolor czcionki (w projekcie jest to niebieski - <code>#0097e6</code>) oraz efekt hover (w projekcie jest to kolor zielony - <code>#33d9b2</code>).</p>
+<p><strong>6.</strong> Prawie dobrze! Dopracujmy kilka ostatnich detali. Przede wszystkim chcielibyśmy, żeby linki drugiego poziomu zajmowały 100% szerokości swojego rodzica. Zapewni nam to właściwość <code>display: block;</code>. <strong>Uwaga!</strong> Upewnij się, że wyświetlanie blokowe będą miały tylko linki nawigacji drugiego poziomu! W przypadku linków nawigacji pierwszego poziomu nadal chcemy, żeby były liniowo-blokowe. Dodaj również linkom nawigacji drugiego poziomu padding równy <code>0 24px;</code>.</p>
+<p><strong>7.</strong> Aby wycentrować rozwijane menu względem jego rodzica (to znaczy względem linka pierwszego poziomu), dodaj do listy drugiego rzędu właściwości <code>left: 50%;</code> oraz <code>transform: translateX(-50%);</code>. Jak pamiętasz, lista drugiego poziomu jest <code>absolute</code>, a jej rodzic jest <code>relative</code>. Użycie powyższej transformacji wycentruje element <code>absoute</code> w osi X, czyli poziomo. Na końcu dodaj liście drugiego poziomu górny padding równy <code>12px;</code>.</p>
+<p>Voila! Menu pojawiać się będzie po najechaniu kursorem na link pierwszego rzędu.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-889" class="card submodule completed" data-bootcamp-user-submodule-id="585530" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">2.5. <span>Podstawy flexboksa</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Sugestia</h4>
+<p>Przed rozpoczęciem tego modułu (lub po teorii) warto przejść kurs <a href="https://kodilla.com/pl/courses/flexbox" target="_blank">Flexbox</a>, aby przećwiczyć w praktyce podstawowe zagadnienia.</p>
+</div>
+<p>Nawigacja jest na miejscu, pora na kolejne części naszej strony! Do pozycjonowania elementów będziemy w nich wykorzystywać nowoczesną technikę tworzenia layoutów – <strong>flexbox</strong>. Do tej pory używaliśmy do tego właściwości <code>float</code>, ale flexbox jest znacznie bardziej wszechstronny. Zachęcamy do zaprzyjaźnienia się z nim – to kolejna technika, o którą często pojawia się pytanie na rozmowach rekrutacyjnych!</p>
+<p>W tym module omówimy sobie tylko podstawowe założenia flexboksa. Znacznie więcej informacji znajdziesz w źródłach, do których linki zamieścimy na końcu.</p>
+<h3>Czym jest flexbox i kiedy z niego korzystać?</h3>
+<p>Flexbox powstał, aby sprostać wyzwaniom związanym z prawidłowym wyświetlaniem elementów na różnych urządzeniach. Jest on odpowiedzią na wiele bolączek związanych z tworzeniem layoutu.</p>
+<p>Podstawową ideą przyświecającą temu sposobowi tworzenia layoutu jest umożliwienie kontenerowi zmiany wymiarów oraz rozmieszczenia elementów potomnych. Dzięki temu elementy znajdujące się w tym kontenerze zostaną rozciągnięte, by odpowiednio wypełnić dostępne miejsce, bądź zmniejszone, aby nie przekraczać granic kontenera. Takie rozwiązanie pozwala na zapewnienie prawidłowego wyświetlania strony na szerokiej gamie ekranów i przeglądarek.</p>
+<p>Do czego możemy go wykorzystać? Przy jego użyciu możemy stworzyć inteligentny kontener, który w prosty sposób wyrówna treść. Dzięki flexboksowi takie zadania, jak np. wyśrodkowanie elementów w pionie stają się dużo prostsze, tak jak w przykładzie poniżej:</p>
+<p style="min-height:400px; border: 1px solid #d0e9c6; border-radius: 4px; padding: 20px; text-align: center;" data-height="400" data-theme-id="dark" data-slug-hash="541c9554ca5f95c5829cd75a08c235eb" data-default-tab="html,result" data-user="kodilla" data-embed-version="2" data-editable="true" class="codepen">See <a href="https://codepen.io/kodilla/pen/541c9554ca5f95c5829cd75a08c235eb/">the Pen</a> on <a href="https://codepen.io">CodePen</a>.</p><br>
+<p>Możemy również dostosowywać wielkość elementów, aby np. dwa z nich miały określony wymiar, a pozostałe będą zajmować pozostałą szerokość. Jest to oczywiście wykonalne bez użycia fleksa, lecz wielu developerów jest zdania, że stosowanie tego rozwiązania jest dużo prostsze niż budowa layoutu w klasyczny sposób.</p>
+<p>Wypróbujmy więc flexboksa od razu w praktyce i stwórzmy za jego pomocą sekcję Splash w naszym projekcie.</p>
+<h3>Sekcja Splash</h3>
+<p><em>Jaki Splash jest, każdy widzi</em> – tytuł, podtytuł, przycisk, a całość wycentrowana w pionie i w poziomie na kolorowym tle.</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/01.css/10.jpg" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/01.css/10.jpg" alt="image" style="width: auto; max-width: 50%;"></a>
+<p><strong>1.</strong> W pliku HTML, pod nawigacją, stwórz element <code>&lt;header&gt;</code> o klasie <code>splash</code>. W CSS nadaj kolor tła (najlepiej taki, jak tło nawigacji), kolor czcionki, minimalną wysokość (w projekcie jest to <code>500px</code>) oraz, co najważniejsze, <code>display: flex;</code>. To będzie nasz element-rodzic.</p>
+<p><strong>2.</strong> Wewnątrz <code>&lt;header&gt;</code> dodaj <code>&lt;div&gt;</code> o klasie <code>splash-inner</code>. W środku umieść element <code>&lt;h1&gt;</code> z klasą <code>page-title</code> i dowolną treścią, oraz <code>&lt;h2&gt;</code> z klasą <code>page-subtitle</code> - również wpisz w nim dowolną treść. Pod nagłówkiem <code>&lt;h2&gt;</code> umieść link (<code>&lt;a&gt;</code>) z atrybutem <code>href</code> równym <code>#</code> oraz dwiema klasami: <code>btn</code> oraz <code>btn-one</code>. W projekcie jego treść to "see our work", ale możesz wstawić własną.</p>
+<p><strong>3.</strong> W pliku styli nadaj elementowi <code>splash-inner</code> właściwość <code>margin: auto;</code>. I tylko tyle wystarczy, by dzięki flexboksowi perfekcyjnie wycentrować element w obu osiach! W projekcie dodatkowo nadaliśmy temu elementowi <code>max-width: 70%;</code>.</p>
+<p><strong>4.</strong> Następnie ostyluj oba nagłówki zgodnie z własnym uznaniem. W projekcie główny tytuł ma zerowy margines, czcionkę <code>72px</code>, <code>word-spacing</code> równy <code>-24px</code>, wagę <code>700</code> i interlinię - <code>1.2</code>. Podtytuł natomiast ma margines <code>24px 0;</code>, wagę czcionki <code>400</code> i rozmiar <code>16px;</code>.</p>
+<p>Jak widzisz, w projekcie słowo "creatively" jest zapisane inną czcionką, niż reszta tytułu. Jak osiągnąć taki efekt? Przy pomocy znanego Ci już znacznika <code>&lt;span&gt;</code>! Owiń wybrane słowo w tytule w znacznik <code>&lt;span&gt;&lt;/span&gt;</code> i za pomocą selektora <code>.page-title span</code> nadaj mu wybrane style.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-890" class="card submodule completed" data-bootcamp-user-submodule-id="585531" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">2.6. <span>Komponent: animowany przycisk</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Oba nagłówki w sekcji Splash są gotowe, ale czegoś jeszcze brakuje. Musimy ostylować przycisk! Nie róbmy tego jednak w pośpiechu – przyjrzyjmy się na spokojnie projektowi i sprawdźmy, jak sprytnie możemy ostylować wiele elementów za jednym zamachem. Umiejętność pisania oszczędnego, minimalistycznego kodu i inteligentne wykorzystanie klas pomocniczych to wyróżniki dobrego developera – warto więc uczyć się myśleć komponentowo!</p>
+<p>Jak widzisz, w projekcie mamy kilka rodzajów przycisków:</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/01.css/2.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/01.css/2.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Możesz w tym momencie zapytać: czy ten ostatni element na obrazku powyżej również jest przyciskiem, skoro wygląda jak link? Jak najbardziej – większość przycisków, które stworzymy, to właśnie linki (<code>&lt;a&gt;</code>), ostylowane w odpowiedni sposób. Nasze przyciski i linki to różne warianty tego samego elementu. Każdy z nich będzie miał dwie klasy – jedną ogólną, zawierającą style współdzielone z innymi elementami, oraz jedną szczegółową, odpowiedzialną za indywidualne cechy danego przycisku.</p>
+<p>Nasza klasa ogólna to <code>btn</code>. Stwórz dla niej selektor w sekcji globalnych stylów Twojego pliku <code>.scss</code> i nadaj mu:</p>
+<ul>
+<li><code>display: inline-block;</code></li>
+<li>minimalną szerokość (<code>min-width</code>) równą <code>160px</code></li>
+<li><code>margin: 24px auto 0 auto;</code></li>
+<li><code>padding: 16px;</code></li>
+<li><code>border-radius: 5px;</code></li>
+<li><code>font-family</code> takie jak reszta tekstu na Twojej stronie</li>
+<li><code>font-size</code> - w projekcie jest to <code>16px</code></li>
+<li><code>text-align: center;</code></li>
+<li><code>text-decoration: none;</code></li>
+<li><code>cursor: pointer;</code></li>
+</ul>
+<p>Ponadto chcemy, aby domyślny przycisk miał dwupikselową ciągłą ramkę. Dodajmy zatem:</p>
+<ul>
+<li><code>border-width: 2px;</code></li>
+<li><code>border-style: solid;</code></li>
+</ul>
+<p>Prawie dobrze! Jak widzisz w podglądzie, powstał "generyczny", granatowy przycisk. Tak będzie wyglądał każdy button, któremu nadasz tylko klasę ogólną <code>btn</code>. Aby nadać przyciskowi indywidualny charakter, ostylujmy jego klasę szczegółową.</p>
+<p>Pod selektorem <code>.btn</code> dodaj selektor <code>.btn-one</code> i nadaj mu dowolny <code>border-color</code> i <code>color</code> (w projekcie mają one kolor biały).</p>
+<p>Udało się!</p>
+<h3>Animujemy przycisk</h3>
+<p>Nasz button wygląda całkiem nieźle, ale dodajmy mu nieco życia poprzez wprowadzenie animacji po najechaniu na przycisk kursorem myszy:</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/01.css/3.gif" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/01.css/3.gif" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Posłużymy się do tego celu gradientem.</p>
+<h4>Czym jest gradient?</h4>
+<p>Gradienty w CSS pozwalają na stworzenie płynnych przejść pomiędzy kolorami tła. Posiadają one wiele różnorodnych właściwości pozwalających osiągać złożone efekty, jednak w tym ćwiczeniu skorzystamy ze stosunkowo prostych rozwiązań.</p>
+<p>Do zdefiniowania gradientu jak powyżej wystarczy nam następująca deklaracja:</p>
+<p><code>background: linear-gradient(red, blue);</code></p>
+<p>W praktyce potrzebne jest też zastosowanie vendor prefixów, by gradient taki wyświetlił się prawidłowo we wszystkich przeglądarkach, więc nasz kod będzie wyglądał najczęściej następująco:</p>
+<pre><code class="language-css">.grad {
+    background: red; /* for browsers that do not support gradients */
+    background: -webkit-linear-gradient(red, yellow); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(red, yellow); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(red, yellow); /* Firefox 3.6 do 15 */
+    background: linear-gradient(red, yellow); /* standard syntax */
+}
+</code></pre>
+<p>Na potrzeby tego ćwiczenia będziemy korzystać ze standardowej składni, pomijając prefiksy.</p>
+<p>Aby kontrolować kąt, pod jakim przebiega gradient, możemy też podać jego obrót w stopniach, tak jak poniżej:</p>
+<p><code>background: linear-gradient(-45deg, green, yellow);</code></p>
+<p>Możemy też ustalać przezroczyste kolory:</p>
+<p><code>background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);</code></p>
+<p>Aby stworzyć płynne przejście pomiędzy jednym stanem a drugim (np. w przypadku użycia pseudoklasy <code>:hover</code>), skorzystamy z właściwości <code>transition</code>, którą pamiętasz z porzedniego modułu: <code>transition: all 1s;</code>  (możesz oczywiście zmienić czas animacji według własnego uznania).</p>
+<p>W pliku <code>.scss</code> zdefiniuj wartość <code>transition</code> jako zmienną (np. <code>$transition: all 1s;</code>) i nadawaj ją elementom w ten sposób: <code>transition: $transition;</code>.</p>
+<p>Teraz pokolorujemy nasz przycisk i ustawimy tło jako gradient.</p>
+<p>W swoim pliku stylów:</p>
+<p><strong>1.</strong> Do selektora <code>.btn-one</code> dodaj <code>background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%);</code>, zastępując w razie potrzeby wartość <code>#ffffff</code> (biały kolor) swoją własną zmienną lub wybranym kodem koloru.</p>
+<p>Teraz schowamy nasz gradient, a następnie dodamy kod, który sprawi, że po najechaniu kursorem na przycisk gradient wypełni go w całości.</p>
+<p><strong>2.</strong> Do selektora <code>.btn</code> dodaj właściwość <code>background-position: 100% 0;</code> oraz <code>background-size: 300%;</code>.</p>
+<p><strong>3.</strong> Stwórz selektor dla stanu <code>:hover</code> elementu <code>.btn</code> i nadaj mu <code>background-position: 0 100%;</code> oraz biały kolor czcionki.</p>
+<p><strong>4.</strong> W razie potrzeby zmień również kolor czcionki dla stanu <code>:hover</code> elementu <code>.btn-one</code>, aby była widoczna na wybranym tle.</p>
+<p>Aby uruchomić animację, dodaj selektorowi <code>.btn</code> właściwość <code>transition</code> podaną wyżej.</p>
+<p>Gotowe!</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-891" class="card submodule completed" data-bootcamp-user-submodule-id="585532" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">2.7. <span>Ćwiczymy flexboksa</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <h3>Sekcja "Our services"</h3>
+<p>Wypróbuj teraz swoją umiejętność myślenia komponentowego, samodzielnie tworząc kolejną sekcję w projekcie ("Our services"). Znasz wszystkie niezbędne do tego właściwości, więc powinna wystarczyć Ci tylko garść wskazówek:</p>
+<p><strong>1.</strong> Zacznij od HTML tej sekcji: najpierw tag <code>section</code>, w nim <code>.container</code>, tytuł, potem <code>div</code>, który będzie wrapperem (rodzicem) dla trzech ułożonych poziomo "pudełek z treścią", a w nim trzy elementy potomne, czyli właśnie nasze "pudełka".</p>
+<p><strong>2.</strong> "Pudełka" ułożysz poziomo, nadając na ich diva-rodzica właściwości <code>display: flex;</code>, <code>flex-wrap: wrap;</code> oraz <code>justify-content: space-between;</code>, a na samo "pudełko" - <code>flex: 0 0 33.333%;</code>. Pamiętaj, że "pudełka" muszą być bezpośrednimi potomkami diva-rodzica, nie może być między nimi żadnych innych wrapperów.</p>
+<p><strong>3.</strong> Półprzezroczyste liczby w tle każdego "pudełka" wypozycjonujesz, nadając im pozycję <code>absolute</code>, a ich bezpośredniemu rodzicowi pozycję <code>relative</code>. Wtedy możesz manipulować offsetem (czyli wartościami właściwości <code>left</code>, <code>right</code>, <code>top</code>, <code>bottom</code>) liczb.</p>
+<p><strong>4.</strong> W każdym "pudełku", pod jego tytułem, umieść dwa akapity z tekstem, a pierwszemu z nich pogrub czcionkę, używając pseudoklasy <code>:first-of-type</code>.</p>
+<p><strong>5.</strong> Buttony w "pudełkach" mają zachowywać się tak, jak przycisk w sekcji Splash. Nadaj każdemu z nich klasę ogólną <code>btn</code> oraz klasy szczegółowe (<code>btn-two</code>, <code>btn-three</code>, <code>btn-four</code>) i ostyluj je analogicznie do klasy <code>btn-one</code>, zmieniając kolory. <strong>Uwaga:</strong> w projekcie buttony są na tej samej wysokości, bo w każdym "pudełku" tekst ma tę samą długość. Gdy do któregoś z nich dodasz więcej tekstu, button przesunie się w dół. W ramach zadania dodatkowego (po wykonaniu reszty projektu) zastanów się, w jaki sposób można sprawić, by przyciski zawsze były na tej samej wysokości, niezależnie od ilości tekstu.</p>
+<p><strong>6.</strong> Pamiętaj o nazywaniu klas zgodnie z dobrymi praktykami, o których mówiliśmy w poprzednim module.</p>
+<p><strong>7.</strong> Zwracaj uwagę na to, które elementy powtarzają się w designie (np. tytuły) i wydzielaj ich style do klas ogólnych, których będziesz używać wielokrotnie.</p>
+<p>Aby ułatwić sobie pracę, możesz skorzystać ze ściągawki ze zwymiarowanymi elementami:</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/01.css/4.jpg" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/01.css/4.jpg" alt="image" style="width: auto; max-width: 50%;"></a>
+<h3>Sekcja "Our work"</h3>
+<p>Podobnie jak poprzednia sekcja, ta część projektu nie powinna sprawić Ci większych problemów. Kilka wskazówek poniżej:</p>
+<p><strong>1.</strong> Struktura sekcji jest taka sama, jak poprzednio: <code>section</code>, <code>.container</code>, tytuł, wrapper dla "pudełek", a w nim cztery elementy potomne.</p>
+<p><strong>2.</strong> Wrapper pudełek będzie potrzebować właściwości <code>display: flex;</code>, <code>flex-wrap: wrap;</code> oraz <code>justify-content: space-between;</code>. Czy pamiętasz, że już tworzyliśmy dokładnie taki element? Wykorzystaj istniejące style i klasy, aby nie duplikować niepotrzebnie kodu.</p>
+<p><strong>3.</strong> Aby wyświetlić dwa "pudełka" w rzędzie, nadaj im właściwość <code>flex: 0 0 50%;</code>.</p>
+<p><strong>4.</strong> Każde "pudełko" składa się z obrazka i tekstu obok. Czy pamiętasz, że w Module 1 tworzyliśmy bardzo podobny element? Śmiało możesz wrócić do tamtego zadania i skopiować potrzebne style i strukturę. Pamiętaj o właściwości <code>object-fit: cover;</code>! Tym razem zadanie jest łatwiejsze o tyle, że wszystkie obrazki znajdują się po lewej stronie swojego "pudełka".</p>
+<p><strong>5.</strong> Półprzezroczysta kolorowa warstwa nałożona na obrazek (a właściwie na jego bezpośredniego diva-rodzica) to nic innego, jak pseudoelement <code>:after</code> z <code>opacity: 0.3</code>, przesunięty o 20px w prawo i w dół. Uwaga: aby warstwa mogła wychodzić poza obręb obrazka (jak na projekcie), divowi-rodzicowi nie nadawaj <code>overflow: hidden;</code>.</p>
+<p><strong>6.</strong> W opisie każdego "pudełka" wstaw dwa akapity z treścią. Drugiemu z nich pogrub czcionkę, używając pseudoklasy <code>:last-of-type</code>.</p>
+<p><strong>7.</strong> Link "read more" to również przycisk. Przy najechaniu kursorem nie chcemy jednak gradientowego tła, a tylko prostą zmianę koloru czcionki. Nadaj temu elementowi klasę ogólną <code>btn</code> i szczegółową <code>btn-five</code>. W CSS selektorowi <code>btn-five</code> usuń ramkę (<code>border: none;</code>) oraz nadaj <code>margin: 36px 0;</code>, <code>padding: 0;</code>, <code>text-align: left;</code>.</p>
+<p>Ściągawka z wymiarami:</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/01.css/5.jpg" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/01.css/5.jpg" alt="image" style="width: auto; max-width: 50%;"></a>
+<p><strong>Dla chętnych:</strong> spraw, by po najechaniu na obrazek półprzezroczysta warstwa zachowywała się tak, jak na tym gifie: <a href="https://uploads.kodilla.com/bootcamp/fer/01.css/6.gif" target="_blank">link</a>.</p>
+<h3>Sekcja "Contact"</h3>
+<p>Tę sekcję również stworzysz samodzielnie – formularze nie powinny mieć już przed Tobą tajemnic! Przy układaniu layoutu skorzystamy tutaj znowu z flexboksa. Będzie Ci jak zwykle potrzebny wrapper-rodzic, a w nim dwa elementy potomne: formularz (<code>&lt;form&gt;</code>) i <code>&lt;div&gt;</code> z danymi kontaktowymi. Aby formularz zawsze zajmował zawsze dwa razy większą szerokość niż <code>&lt;div&gt;</code>, nadaj formularzowi <code>flex: 2 0 0;</code>, a divowi z danymi - <code>flex: 1 0 0;</code>. W projekcie formularz ma prawy padding o wartości podanej na poniższej ściągawce.</p>
+<p>Przycisk formularza również powinien mieć gradientową animację tła.</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/01.css/7.jpg" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/01.css/7.jpg" alt="image" style="width: auto; max-width: 50%;"></a>
+<h3>Stopka</h3>
+<p>Na pewno wiesz już, w jaki sposób tworzyć okrągłe ikony z kolorowym tłem. Wykorzystaj tę umiejętność, aby zakodować stopkę (<code>&lt;footer&gt;</code>) projektu – linki do mediów społecznościowych:</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/01.css/11.jpg" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/01.css/11.jpg" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Jeżeli chodzi o HTML, będzie Ci potrzebna nieuporządkowana lista (<code>&lt;ul&gt;</code>), w której zawrzesz znaczniki <code>&lt;li&gt;</code>, a w nich <code>&lt;a&gt;</code> oraz <code>&lt;i&gt;</code> z odpowiednią klasą skopiowaną ze strony <a href="https://fontawesome.com/icons" target="_blank">Font Awesome</a>. Przykładowy pojedynczy znacznik <code>&lt;li&gt;</code> powinien wyglądać następująco:</p>
+<p><code>&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fab fa-facebook-f&quot;&gt;&lt;/i&gt;Facebook&lt;/a&gt;&lt;/li&gt;</code></p>
+<p>Po napisaniu HTML, Twój efekt powinien być podobny do poniższego:</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/01.css/12.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/01.css/12.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Teraz Twoim zadaniem będzie jedynie ostylować ikony według projektu. Proste? :) Pamiętaj, żeby tagach <code>&lt;li&gt;</code> pozostawić zapisane słownie nazwy serwisów społecznościowych – jest to dobra praktyka ułatwiająca interpretowanie strony np. czytnikom dla niewidomych. Słowa te możesz ukryć w stylach, nadając na znacznik <code>&lt;li&gt;</code> w tej liście <code>font-size: 0;</code>. Docelową wielkość czcionki, która zdeterminuje rozmiar ikony, nadaj na znacznik <code>&lt;i&gt;</code> wewnątrz tej listy.</p>
+<div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Dla chętnych</h4>
+<p>Spraw, aby po najechaniu kursorem myszy na kolorowe kółko powiększało się ono (wraz z ikoną w środku) do <code>1.2</code> swojej oryginalnej wielkości (animacja ma być płynna). W tym celu <a href="https://css-tricks.com/almanac/properties/t/transform/" target="_blank">poczytaj</a> o transformacji <code>scale</code>.</p>
+</div>
+<p>Zwymiarowany projekt:</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/01.css/13.jpg" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/01.css/13.jpg" alt="image" style="width: auto; max-width: 50%;"></a>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-892" class="card submodule completed" data-bootcamp-user-submodule-id="585533" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">2.8. <span>Tworzymy responsywny layout!</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Czy wiesz, że statystyki wskazują, że w niektórych krajach (np. w USA) przekroczono już punkt, w którym więcej użytkowników przegląda strony na urządzeniach mobilnych niż na komputerach? Z tego powodu jedną z podstawowych umiejętności frontend developera jest dostosowywanie budowanych stron do mniejszych ekranów.</p>
+<p>Istnieją różne możliwości tworzenia mobilnych wersji stron. Niektóre firmy decydują się na udostępnienie osobnego adresu (zwykle zaczynającego się od <strong>m</strong> lub <strong>mobile</strong>), gdzie przekierowywani są użytkownicy odwiedzający stronę na smartfonie. Tworzenie wielu wersji jednej strony (to podejście nazywamy <strong>AWD</strong>, czyli <strong>A</strong>daptive <strong>W</strong>eb <strong>D</strong>esign) sprawia jednak, że trzeba napisać znacznie więcej kodu. Także wszelkie zmiany wyglądu, np. na stronie głównej, wymagają modyfikacji nie w jednym, ale w kilku szablonach.</p>
+<p>Zupełnie odmiennym podejściem w zakresie dostosowywania witryny pod wiele urządzeń jest <strong>RWD</strong>, czyli <strong>R</strong>esponsive <strong>W</strong>eb <strong>D</strong>esign. Opiera się ono na tworzeniu jednego szablonu pod wszystkie urządzenia wraz z dodatkowymi regułami w CSS, które mówią o tym, jak ma wyglądać strona na poszczególnych rozdzielczościach. Np. poniższa strona to jeden szablon HTML/CSS, który dostosowuje się do różnych urządzeń.</p>
+<a href="https://kodilla.com/static/bootcamp/rwd-tnw.png" class="img-modal-group"><img src="https://kodilla.com/static/bootcamp/rwd-tnw.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<h3>Dwie drogi w RWD</h3>
+<p>W tym kursie wykorzystamy RWD do tworzenia wersji mobilnych naszych projektów. W zakresie tworzenia stron responsywnych wyróżnia się dwa podejścia.</p>
+<a href="https://kodilla.com/static/bootcamp/rwd-glass.png" class="img-modal-group"><img src="https://kodilla.com/static/bootcamp/rwd-glass.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<h4>Graceful degradation</h4>
+<p>Czyli przypadek, w którym zaczynamy od wersji strony dla ekranów o dużej rozdzielczości (desktop) i dopiero potem dostosowujemy ją do ekranów mniejszych.</p>
+<h4>Progressive enhancement</h4>
+<p>Znane także jako mobile first. Polega na stworzeniu najpierw wersji dostosowanej do rozdzielczości właściwych urządzeniom mobilnym, a następnie rozbudowywanie jej i przystosowanie do większych ekranów</p>
+<h4>Które podejście wybrać?</h4>
+<p>Nie jest jednak tak, że jedno podejście jest w naturalny sposób lepsze czy gorsze. W praktyce ciągle trwa wśród frontendowców gorąca debata o wyższości jednego sposobu nad drugim. My – po początkowym zachwycie nad mobile first – skłaniamy się bardziej ku temu, aby zaczynać od desktopów, ale ze świadomością, że potem czeka nas mobile.</p>
+<h3>Viewport</h3>
+<p>Przy okazji RWD, należy wspomnieć o viewport. Jest to ta część strony, która jest widoczna w danym momencie na ekranie użytkownika. Im mniejsze urządzenie, tym mniejsza widoczna przestrzeń.</p>
+<p>Aby strona była responsywna, warto najpierw określić odpowiedni rozmiar viewport. Ma to głównie na celu to, aby strona wgrana na urządzenie mobilne nie była wyjściowo powiększona (zoom), ale dostosowana do wielkości urządzenia (100% szerokości ekranu tego urządzenia).</p>
+<p>Najczęściej używa się rzadko modyfikowanego meta-tagu w HTML (w sekcji <code>head</code>) mającego postać:</p>
+<p><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></p>
+<p>Pierwsza część (<code>content=&quot;width=device-width</code>) ustawia szerokość strony tak, aby odpowiadała szerokości urządzenia. Druga (<code>initial-scale=1.0</code>) ustawia początkowy poziom powiększenia (zoom) na urządzeniach mobilnych.</p>
+<p>Dodaj teraz powyższy tag <code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code> do sekcji <code>&lt;head&gt;</code> w swoim projekcie.</p>
+<h3>Media queries</h3>
+<p>W tym module stworzymy podstawową kompatybilność z urządzeniami mobilnymi za pomocą tak zwanych media queries.</p>
+<p>Media queries to instrukcje warunkowe w CSS, które mówią przeglądarce np.: <em>Jeżeli ekran jest węższy niż 768px, rozciągnij dany element na 100% szerokości okna</em>.</p>
+<p>Podstawowe media query budujemy następująco:</p>
+<a href="https://uploads.kodilla.com/staticPages/kodilla-staticPages-11-12-2018-1544536398-2109.png" class="img-modal-group"><img src="https://uploads.kodilla.com/staticPages/kodilla-staticPages-11-12-2018-1544536398-2109.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Z czego składa się media query?</p>
+<ul>
+<li>wyrażenie <span style="color: #2980b9;"><strong>@media</strong></span> – - zawsze rozpoczyna deklarację media query.</li>
+<li>warunki, które muszą zostać spełnione, by reguły zawarte w media query zostały zastosowane. W powyższym przykładzie style będą działać w przedziale od <span style="color: #27ae60;"><strong>768px</strong></span> do <span style="color: #27ae60;"><strong>991px</strong></span> szerokości ekranu.</li>
+<li>podobnie jak w CSS, tworzymy parę nawiasów klamrowych (<span style="color: #2980b9;"><strong>{ }</strong></span>).</li>
+<li>wewnątrz nawiasów tworzymy <span style="color: #e74c3c;"><strong>selektory CSS</strong></span>, których style chcemy zmodyfikować dla danych szerokości ekranu. W powyższym przykładzie zdecydowaliśmy, że wielkość czcionki elementu <code>section-title</code> na ekranach w zdefiniowanym zakresie (czyli 768-991px) ma wynosić 24px. Selektory wewnątrz media queries umieszczamy tak, jak zwykle w CSS - jeden pod drugim.</li>
+</ul>
+<p>W media queries można używać jednego lub więcej warunków (np. tylko <code>min-width</code>, tylko <code>max-width</code> lub obu).</p>
+<h3>Dostosowujemy stronę do mobile</h3>
+<p>Wszystkie style, które dotychczas napisaliśmy, tworzone były z myślą o dużych ekranach. Dostosujemy teraz stronę do mniejszych rozdzielczości: telefonów i tabletów. Przyjmiemy, że style dla telefonów będą obejmować ekrany do 767px szerokości, a dla tabletów – od 768px do 991px.</p>
+<p>Zacznijmy od stylów dla telefonów. W edytorze kliknij link Publikacja > Udostępnij, skopiuj adres swojej strony i wklej go tutaj: <a href="http://responsiv.eu/" target="_blank">http://responsiv.eu/</a>, by obejrzeć swoje dzieło na różnych urządzeniach.</p>
+<p>Również manipulując szerokością okna podglądu w edytorze lub szerokością okna przeglądarki (mając otwartą w niej pełną wersję swojej strony) możesz zasymulować wyświetlanie strony na różnych rozdzielczościach.</p>
+<p>Jak widzisz, flexbox robi całkiem dobrą robotę, jeżeli chodzi o wygląd projektu na małych ekranach, niemniej jednak jest kilka rzeczy, które musimy skorygować.</p>
+<p><strong>1.</strong> W pliku <code>.scss</code>, na samym dole, stwórz nową sekcję <code>/* Media */</code>. Tam będziemy trzymać wszystkie style mobilne.</p>
+<p><strong>2.</strong> Dodaj następujące media query:</p>
+<pre><code class="language-css">@media (max-width: 767px) {
+
+}
+</code></pre>
+<p>Teraz wewnątrz tego media query (między jego nawiasami klamrowymi) umieścimy style poprawiające wygląd naszej strony na najmniejszych wyświetlaczach.</p>
+<h4>Ułożenie elementów w kolumnach</h4>
+<p>Po pierwsze, chcielibyśmy, aby wszystkie elementy, które na dużych ekranach wyświetlają się w rzędzie – czyli "pudełka" w sekcjach "Our service", "Our work" oraz "Contact" – wyświetlały się na smartfonach w kolumnie, czyli jedno pod drugim. Jest to standardowy sposób rozmieszczania tego typu elementów na małych ekranach.</p>
+<p>Jak to zrobić? Czy pamiętasz wrapper naszych "pudełek", któremu nadaliśmy właściwości <code>display: flex;</code>, <code>flex-wrap: wrap;</code> oraz <code>justify-content: space-between;</code>? Upewnij się, że stosujesz ten wrapper we wszystkich wymienionych wyżej sekcjach. Wewnątrz media query utwórz selektor dla tego wrappera i nadaj mu właściwość <code>flex-direction: column;</code>. I już. Oto potęga flexboksa!</p>
+<h4>Poprawiamy obrazki</h4>
+<p>Obecnie obrazki w sekcji "Our work" są dość duże, więc na małych ekranach treść sekcji nie mieści się w viewport. Ponadto obok obrazka jest tekst, który też musi być czytelny. Co by z tym zrobić? Powiedzmy, że na telefonach chcemy wyświetlać "pudełka" w tej sekcji w następujący sposób:</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/01.css/8.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/01.css/8.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Posłuż się Inspektorem, aby odpowiedniemu elementowi w kodzie nadać <code>max-width: 100%;</code> oraz <code>height: 150px;</code>. Jeżeli ten element ma w Twoim kodzie pozycję <code>absolute</code>, zmień ją w media query na <code>relative</code>.</p>
+<p>Jak widzisz, zgodnie z tym, co powiedzieliśmy sobie wyżej, do media queries dodajemy tylko te style, które chcemy zmodyfikować na danej szerokości ekranu.</p>
+<h4>Dodajemy odstępy</h4>
+<p>Przejdźmy do sekcji "Contact". Tutaj "pudełka" są już ułożone w kolumnie, ale efekt będzie lepszy, jeżeli "odkleją" się od siebie. Dodaj zatem w media query górny margines divowi z danymi kontaktowymi (Inspektor jest Twoim przyjacielem!).</p>
+<p>Sprawdź też, czy poprawek marginesów nie wymagają "pudełka" w innych sekcjach.</p>
+<h3>Ostatnie poprawki</h3>
+<p>Przyjrzyj się jeszcze raz krytycznym okiem swojej stronie na mniejszych ekranach. Co jeszcze można poprawić? Może zmniejszyć odstępy między linkami w nawigacji, jeżeli nie mieszczą się w jednej linii? Może zmniejszyć padding selektora <code>section</code>, aby strona była bardziej kompaktowa? Może zmniejszyć czcionkę nagłówków, aby więcej treści mieściło się na ekranie? Korzystaj z Inspektora, aby wypróbowywać różne style i sprawdzać, które selektory musisz zmodyfikować w media queries.</p>
+<p>Przykładowa wersja projektu na smartfonie: <a href="https://uploads.kodilla.com/bootcamp/fer/01.css/9.jpg" target="_blank">pobierz</a></p>
+<p>Obejrzyj również swoją stronę na symulacji tabletów na stronie <a href="http://responsiv.eu/" target="_blank">http://responsiv.eu/</a>. Jeżeli uważasz, że wymaga ona poprawek, stwórz nowe media query:</p>
+<pre><code class="language-css">@media (min-width: 768px) and (max-width: 991px) {
+
+}
+</code></pre>
+<p>i wpisz w nim potrzebne style.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block task-card" >
+                        <h3>Zadanie: <span class="task-title">Wyślij projekt do sprawdzenia</span></h3>
+                        <div class="task-content">
+                            <p>Kiedy Twój projekt będzie gotowy do wysłania, kliknij <em>Wyślij do sprawdzenia</em>, aby przekazać go Mentorowi.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <div class="clearfix">
+                                                                                <a href="https://kodilla.com/pl/bootcamp-task/407/585533" target="_blank" class="btn btn-info-outline">Podgląd zadania</a>
+                            <a href="https://kodilla.com/pl/project/180479" target="_blank" class="btn  btn-primary ">Przejdź do projektu <i class="fa fa-check"></i></a>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-893" class="card submodule " data-bootcamp-user-submodule-id="585534" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">2.9. <span>Podsumowanie</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Ten moduł uporządkował i rozwinął Twoją wiedzę na temat zaawansowanych selektorów CSS oraz nowoczesnego sposobu tworzenia layoutów. Ponadto potrafisz już tworzyć proste strony responsywne oraz podstawowe animacje CSS.</p>
+<p>Poniżej zamieszczamy linki do ciekawych materiałów, które przydadzą Ci się do samodzielnej nauki.</p>
+<p><strong>Flexbox</strong></p>
+<ul>
+<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">A Complete Guide to Flexbox</a> – świetne, ilustrowane kompedium wiedzy o flexboksie z licznymi przykładami. Niezbędnik każdego developera!</li>
+<li><a href="http://the-echoplex.net/flexyboxes/" target="_blank">Flexyboxes</a> – wizualny generator layoutów flexboksowych.</li>
+</ul>
+<p><strong>Animacje</strong></p>
+<ul>
+<li><a href="https://css-tricks.com/almanac/properties/t/transform/" target="_blank">CSS Almanac: Transform</a> – omówienie podstawowych trasformacji CSS-owych,</li>
+<li><a href="https://tympanus.net/Development/HoverEffectIdeas/" target="_blank">Hover Effect Ideas</a> – ciekawa kolekcja efektów hover, które możesz wykorzystywać w swoich projektach.</li>
+</ul>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-read btn-success-outline "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                            </main>
+        </div>
+    </section>
+</main>
+;
+<script type="text/x-translation" data-translation-name="SentBootcampLinkReviewFormMessage">Wysłano link do zatwierdzenia</script>
+    <div id="alerts">
+    <div class="alert alert-danger" role="alert">
+        <i class="fa fa-exclamation" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                        </ul>
+    </div>
+    <div class="alert alert-success" role="alert">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-warning" role="alert">
+        <i class="fa fa-warning" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-info" role="alert">
+        <i class="fa fa-info" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                    </ul>
+    </div>
+    <div class="container">
+        <div class="alert alert-notify" role="alert">
+            <i class="fa fa-info" aria-hidden="true"></i>
+            <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Zamknij</span>
+            </button>
+            <ul>
+                            </ul>
+        </div>
+    </div>
+</div>
+    <div class="modal fade informator-modal" id="informator" tabindex="-1" role="dialog" aria-labelledby="informatorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="https://kodilla.com/static/img/logo-menu.png?00000" alt="Logo Kodilla" class="brand-logo">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body content-container">
+                <h3>Zam&oacute;w szczeg&oacute;łowy informator</h3>
+                <form class="row js-ajax-form" data-view-class="InformatorForm" action="https://kodilla.com/pl/download-informator" method="post">
+                    <input type="hidden" name="ga-pobieranie-informatora-z-modala" value="wypelnienie">
+                    <input type="hidden" name="tags[0]" value="informator">
+                                        <div class="user-data-container">
+                        <input type="text" class="form-control" name="firstname" placeholder="Imię">
+                        <input type="text" class="form-control" name="surname" placeholder="Nazwisko">
+                    </div>
+                    <div class="user-data-container">
+                        <input type="email" class="form-control" name="email" placeholder="Email" required/>
+                        <input type="tel" class="form-control" name="phone" placeholder="Numer telefonu" pattern="^([\+][0-9]{1,3}([ \.\-])?)?([\(]{1}[0-9]{3}[\)])?([0-9 \.\-]{1,15})$" title="Wpisz poprawny numer telefonu, np. 453 674 897" minlength="9" maxlength="15" data-custom-message="Wpisz poprawny numer telefonu, np. 453 674 897">
+                    </div>
+                    <div class="terms-box">
+                        <label>
+                            <input name="accept_terms" value="true" data-custom-message="Prosimy o zaakceptowanie regulaminu" type="checkbox" class="form-control input-checkbox" required>
+                            <span>Akceptuję <a target="_blank" href="https://kodilla.com/pl/regulamin">regulamin</a>  i nie wnoszę zastrzeżeń</span>
+                        </label>
+                    </div>
+                    <div class="personal-terms-box">
+                        <label>
+                            <input name="accept_marketing" value="true" data-custom-message="Jeśli chcesz otrzymać dostęp do materiał&oacute;w, konieczna jest akceptacja obydwu zg&oacute;d" type="checkbox" class="form-control input-checkbox" required>
+                            <span>Chcę otrzymywać newsletter, informacje o promocjach i produktach dostępnych w Kodilla.
+                                <span class="details-button" data-action="show-details" data-identifier="personal-terms-details-informator">Czytaj więcej</span>
+                                <span class="display-none" data-identifier="personal-terms-details-informator">Wyrażam zgodę na otrzymywanie informacji handlowych od Kodilla na podany przeze mnie adres e-mail. Zgoda jest dobrowolna, jednakże niezbędna do otrzymywania informacji o produktach, promocjach i o tym, co u nas słychać. Administratorem danych jest Codemy S.A. z siedzibą we Wrocławiu, Plac Powstańc&oacute;w Śląskich 13/4. Mam prawo cofnąć zgodę w każdym czasie, jednak wtedy nie będę otrzymywać informacji. Dane mogą być przetwarzane pomimo cofnięcia zgody wyłącznie w takim zakresie i celu, w jakim ich przetwarzanie jest niezbędne do ustalenia, dochodzenia lub obrony roszczeń Administratora w związku z udzieloną zgodą. Mam prawo dostępu do danych, sprostowania, usunięcia, ograniczenia przetwarzania, prawo wniesienia sprzeciwu, skargi do organu nadzorczego i przeniesienia danych. Szczeg&oacute;łowe informacje znajdują się na stronie kodilla.com, zakładka &quot;Polityka Prywatności&quot;.</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="display-none">
+                        <input type="text" name="myName" value="">
+                    </div>
+                    <div class="">
+                        <button type="submit" class="btn btn-primary">
+                            Pobierz Informator
+                            <i data-role="loading-icon" class="fa fa-spinner fa-spin fa-1x fa-fw display-none"></i>
+                        </button>
+                    </div>
+                </form>
+                <a href="https://kodilla.com/pl/informator" id="informator-link" target="_blank" class="display-none"></a>
+            </div>
+            <div class="modal-footer">
+                <p>Pobranie informatora do niczego nie zobowiązuje</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="site-footer">
+                <section class="footer-lower">
+            <nav class="container">
+                <a class="navbar-img" href="https://kodilla.com/pl">
+                    <svg id="kodilla-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 29.553" width="168" height="30">
+                        <defs>
+                            <style>
+                                .footer-logo-fill {
+                                    fill: #fff;
+                                }
+                            </style>
+                        </defs>
+                        <g id="Group_1" data-name="Group 1" transform="translate(23.59)">
+                            <path id="KODILLA_copy_5_1_" class="footer-logo-fill" d="M78.058,0a14.758,14.758,0,1,0,.075,0Zm0,23.739a8.939,8.939,0,0,1-8.944-8.907V14.8c0-4.957,4.584-.708,8.907-.708,4.919,0,9.019-4.211,9.019.708a8.978,8.978,0,0,1-8.981,8.944Z" transform="translate(-63.3)"/>
+                            <ellipse id="eye_copy_4_1_" class="footer-logo-fill" cx="3.876" cy="3.876" rx="3.876" ry="3.876" transform="translate(9.462 13.2) rotate(-28.436)"/>
+                        </g>
+                        <path id="Path_1" data-name="Path 1" class="footer-logo-fill" d="M0,29.819V.9H6.671V13.347L17.255.9h7.491L13.938,13.794,25.491,29.819h-7.6l-8.2-11.665-3.019,3.13v8.5H0Z" transform="translate(0 -0.565)"/>
+                        <path id="Path_2" data-name="Path 2" class="footer-logo-fill" d="M151.4,29.819V.9h10.807a15.515,15.515,0,0,1,6.261,1.155,12.966,12.966,0,0,1,4.509,3.093A12.918,12.918,0,0,1,175.7,9.732a17.245,17.245,0,0,1,.932,5.59,16.821,16.821,0,0,1-1.006,5.963,12.227,12.227,0,0,1-2.907,4.547,13.484,13.484,0,0,1-4.547,2.944,15.964,15.964,0,0,1-5.925,1.043Zm18.41-14.5a11.274,11.274,0,0,0-.522-3.466,7.723,7.723,0,0,0-1.491-2.72,6.616,6.616,0,0,0-2.385-1.752,8.055,8.055,0,0,0-3.205-.6h-4.1v17.18h4.1a7.985,7.985,0,0,0,3.242-.634,6.8,6.8,0,0,0,2.385-1.826,8.286,8.286,0,0,0,1.453-2.72A11.634,11.634,0,0,0,169.81,15.322Z" transform="translate(-94.978 -0.565)"/>
+                        <path id="Path_3" data-name="Path 3" class="footer-logo-fill" d="M228.3,29.819V.9h6.671V29.819Z" transform="translate(-143.219 -0.565)"/>
+                        <path id="Path_4" data-name="Path 4" class="footer-logo-fill" d="M259.9,29.819V.9h6.671V23.968h14.012v5.851Z" transform="translate(-163.043 -0.565)"/>
+                        <path id="Path_5" data-name="Path 5" class="footer-logo-fill" d="M327.371,23.931V.9H320.7V29.819h18.522l2.124-5.851H327.371Z" transform="translate(-201.185 -0.565)"/>
+                        <path id="Path_6" data-name="Path 6" class="footer-logo-fill" d="M388.547.9h6.037L405.13,29.819h-6.857l-2.236-6.484h-9.019l-2.2,6.484H378Zm6.373,17.851L391.528,8.54l-3.466,10.211Z" transform="translate(-237.13 -0.565)"/>
+                    </svg>
+                </a>
+                <ul class="nav">
+                    <li>
+                        <a href="https://kodilla.com/pl/regulamin" rel="nofollow">Regulamin</a>
+                    </li>
+                    <li>
+                        <a href="https://kodilla.com/pl/polityka-prywatnosci" rel="nofollow">Polityka prywatności</a>
+                    </li>
+                    <li class="nav-item">&copy; 2020 Kodilla</li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
+
+<!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN2WWBH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <script src="https://kodilla.com/static/js/libs/jquery-2.1.4.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/js.cookie-2.1.0.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/jquery-dateFormat.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/bootstrap.min.js?00000"></script>
+<script>
+    (function () {
+        $(document).ready(function () {
+            if (window.location.hash === '#informator-modal') {
+                showInformator();
+            }
+        });
+
+        $('[data-action="show-modal"]').click(function() {
+            showInformator();
+        });
+
+        function showInformator() {
+            $('#informator').modal('show');
+        }
+    })();
+</script>
+<script src="https://kodilla.com/build/minified/js/fb-0370c8f03e.js" async></script>
+<script src="https://kodilla.com/build/minified/js/call-us-72a84920dc.js"></script>
+<script>
+    if (document.querySelector('main.editor')) {
+        document.querySelector('body').classList.add('editor');
+    }
+</script>
+
+<script type="text/javascript">
+    (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+    vgo('setAccount', '649095895');
+    vgo('setTrackByDefault', true);
+
+    vgo('process');
+</script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(46516626, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true,
+            defer: true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/46516626" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+        <script src="https://kodilla.com/static/js/libs/underscore-min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-relational.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-super.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/handlebars-v4.0.5.min.js?00000"></script>
+<script src="https://kodilla.com/build/minified/js/extends/handlebars-ifCond-139a2339f7.js"></script>
+<script src="https://kodilla.com/build/minified/js/application-8dc127f99b.js"></script>
+<script src="https://kodilla.com/build/minified/js/main-cf3b73d734.js"></script>
+<script src="https://kodilla.com/build/minified/js/views/settings-5fc44a761b.js"></script>
+<script src="https://kodilla.com/build/minified/js/views/delete-account-da2b3de486.js"></script>
+<script type="text/x-translation" data-translation-name="checkAccountDeleteCalculationMessage">Wynik jest nieprawidłowy</script>
+<script src="https://kodilla.com/build/minified/js/helpers/forms-222ea01b08.js"></script>
+<script src="https://kodilla.com/build/minified/js/helpers/alerts-66650c3acb.js"></script>
+<script>
+    App.Views.InpageAlertManager = Backbone.View.extend({
+        events: {
+            'click [data-alert-type][data-alert-text]': 'showAlert'
+        },
+        showAlert: function(e) {
+            var $el = $(e.currentTarget);
+            App.alertsView['show'+$el.data('alertType')]([App.Translations($el.data('alertText'))]);
+        }
+    });
+</script>
+<script src="https://kodilla.com/build/minified/js/collections-c07e1162e2.js"></script>
+<script src="https://kodilla.com/build/minified/js/models-4e0e4fcffb.js"></script>
+<script src="https://kodilla.com/build/minified/js/views/knowledge-base-61f71273c9.js"></script>
+<script>
+    App.Views.LearningProgram = Backbone.View.extend({
+        events: {
+            'click [data-technology-desc-expander]' : 'expandTechnologyDesc'
+        },
+
+        initialize: function() {
+            this.$allTechnologyDesc = this.$el.find('[data-technology-desc]');
+            this.$allTechnologyExpanderIcons = this.$el.find('[data-technology-expander-icon]');
+        },
+
+        expandTechnologyDesc: function() {
+            this.$allTechnologyDesc.each(function(){
+                var $desc = $(this);
+                $desc.slideToggle('fast');
+            });
+            this.$allTechnologyExpanderIcons.each(function(){
+                var $icon = $(this);
+                $icon.toggleClass("fa-minus");
+            });
+        },
+    });
+</script>
+
+    <script src="https://kodilla.com/static/js/libs/tether.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/prism.min.js?00000"></script>
+
+    <script src="https://kodilla.com/build/minified/js/views/bootcamp-1522c7c010.js"></script>
+    <script src="https://kodilla.com/static/js/libs/jquery.seourl.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/perfect-scrollbar.jquery.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/fancybox/jquery.fancybox.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/moment.timezone.locales.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/bootstrap-datetimepicker.min.js?00000"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("a.img-modal-group").fancybox();
+        });
+    </script>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="call-us-modal">
+    <div class="modal-dialog modal-dialog-callus" role="document">
+        <div class="modal-content call-modal">
+            <div id="call-us-step1">
+                <h2>Um&oacute;w się na rozmowę z doradcą Kodilli</h2>
+                <p>Krok <span>1/2:</span> Podaj numer telefonu</p>
+                <form action="https://kodilla.com/pl/call-center/dates/phone_calls" method="post" id="call-us-form1">
+                    <input type="tel" name="phone" id="call-us-input-phone" class="call-center-input" placeholder="731771787">
+                    <p class="error-message display-none" id="validation-message-phone">Pole Numer Telefonu jest wymagane. Nieprawidłowy format.</p>
+                    <button class="btn btn-success" id="call-us-submit-phone">Zarezerwuj rozmowę</button>
+                </form>
+                <p id="call-us-counter-holder" style="display: none;">Dzisiaj już  <span id="call-us-counter" class="call-counter" data-url="https://kodilla.com/pl/call-center/counter/phone_calls">-</span> <span id="call-us-counter-text" data-one=" osoba zam&oacute;wiła rozmowę z nami." data-few=" osoby zam&oacute;wiły rozmowę z nami." data-more=" os&oacute;b zam&oacute;wiło rozmowę z nami."></span></p>
+                <div class="data-protection">
+                    <p>Twój numer telefonu nie będzie wykorzystywany w celach marketingowych ani przekazany dalej. Tylko oddzwonimy. Dane są przetwarzane zgodnie z <a href="/pl/polityka-prywatnosci">Polityką Prywatności</a>.</p>
+                </div>
+            </div>
+
+            <div id="call-us-step2" style="display: none;">
+                <h2>Wybierz dogodny termin i godzinę na rozmowę z doradcą</h2>
+                <p>Krok <span>2/2:</span>
+                <form action="https://kodilla.com/pl/call-center/step2/phone_calls" method="post" id="call-us-form2">
+                    <div class="select-date">
+                        <select name="date" id="call-us-input-date">
+                        </select>
+                        <select name="time" id="call-us-input-time">
+                        </select>
+                    </div>
+                    <button class="btn btn-success" id="call-us-submit-call">Oddzwońcie do mnie!</button>
+                </form>
+            </div>
+
+            <div id="call-us-step3" style="display: none;">
+                <div  class="thanks">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    <h2>Dziękujemy za zamowienie rozmowy! Do usłyszenia w wybranym terminie!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+                <style type="text/css">
+    .embeddedServiceHelpButton .helpButton .uiButton {
+        background-color: #1EA71C;
+        font-family: "Arial", sans-serif;
+    }
+    .embeddedServiceHelpButton .helpButton .uiButton:focus {
+        outline: 1px solid #1EA71C;
+    }
+</style>
+<script>
+    function openChat(){
+        $('.helpButtonEnabled').trigger('click');
+    }
+</script>
+<script type="text/javascript" src="https://service.force.com/embeddedservice/5.0/esw.min.js"></script>
+
+<script type="text/javascript">
+    var initESW = function(gslbBaseURL) {
+        let firstName = 'Marek Baberowski'.split(" ")[0];
+        let lastName = 'Marek Baberowski'.split(" ")[1];
+        console.log(name);
+        embedded_svc.settings.displayHelpButton = true;
+        embedded_svc.settings.language = '';
+
+        embedded_svc.settings.defaultMinimizedText =  'Skontaktuj się z nami';
+        embedded_svc.settings.disabledMinimizedText = ' ';
+
+        embedded_svc.settings.loadingText = 'Ładowanie';
+        embedded_svc.settings.storageDomain = 'kodilla.com';
+
+        embedded_svc.settings.prepopulatedPrechatFields = {
+            'FirstName': firstName,
+            'LastName': lastName,
+            'Email': 'm.z.baberowski@gmail.com'
+        };
+        embedded_svc.settings.offlineSupportMinimizedText = 'Napisz do nas';
+
+        embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+        embedded_svc.settings.entryFeature = 'LiveAgent';
+
+        embedded_svc.init(
+            'https://kodilla.my.salesforce.com',
+            'https://kodillacommunity.force.com',
+            gslbBaseURL,
+            '00D1i000000VBFH',
+            'Support_Kodilla',
+            {
+                baseLiveAgentContentURL: 'https://c.la1-c2-fra.salesforceliveagent.com/content',
+                deploymentId: '5721i00000009s9',
+                buttonId: '5731i0000000AJN',
+                baseLiveAgentURL: 'https://d.la1-c2-fra.salesforceliveagent.com/chat',
+                eswLiveAgentDevName: 'Support_Kodilla',
+                isOfflineSupportEnabled: true
+            }
+        );
+    };
+
+    if (!window.embedded_svc) {
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://kodilla.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+        s.onload = function() {
+            initESW(null);
+        };
+        document.body.appendChild(s);
+    } else {
+        initESW('https://service.force.com');
+    }
+</script>
+        <div data-role="notifications-wrapper" class="notifications-wrapper"></div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+const sources = [
+  "https://kodilla.com/static/img/icons/apple-touch-icon-60x60.png?00000",
+  "https://kodilla.com/static/img/icons/apple-touch-icon-76x76.png?00000",
+  "https://kodilla.com/static/img/icons/apple-touch-icon-120x120.png?00000",
+  "https://kodilla.com/static/img/icons/apple-touch-icon-152x152.png?00000",
+  "https://kodilla.com/static/img/icons/favicon-32x32.png?00000",
+  "https://kodilla.com/static/img/icons/favicon-96x96.png?00000",
+  "https://kodilla.com/static/img/icons/favicon-16x16.png?00000",
+  "https://kodilla.com/pl/bootcamp-module/407/506/5935",
+  "https://kodilla.com/static/css/libs/bootstrap.min.css?00000",
+  "https://kodilla.com/static/css/libs/font-awesome.min.css?00000",
+  "https://kodilla.com/build/minified/css/main-b3cf79332c.css",
+  "https://kodilla.com/static/css/libs/prism.min.css?00000",
+  "https://kodilla.com/build/minified/css/bootcamp-6d0888d826.css",
+  "https://kodilla.com/static/css/libs/perfect-scrollbar.css?00000",
+  "https://kodilla.com/static/css/libs/fancybox/jquery.fancybox.min.css?00000",
+  "https://kodilla.com/static/css/libs/bootstrap-datetimepicker.min.css?00000",
+  "https://uploads.kodilla.com/bootcamp/styles/content.css",
+  "https://service.force.com/embeddedservice/5.0/esw.min.css"
+];

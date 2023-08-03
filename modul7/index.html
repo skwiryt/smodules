@@ -1,0 +1,2301 @@
+<!DOCTYPE html>
+<html lang=pl class="no-js">
+<head>
+    <meta name="ahrefs-site-verification" content="c2d3c04b9f125c5b8c98d89f738d343f69d841f035150344a932150235c5639a">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="csrf-token" content="FGlA4RkObUo18UXAEnOqvfNMqmQValvEVBDjQsbF" />
+
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="https://kodilla.com/static/img/icons/apple-touch-icon-60x60.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://kodilla.com/static/img/icons/apple-touch-icon-76x76.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://kodilla.com/static/img/icons/apple-touch-icon-120x120.png?00000">
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://kodilla.com/static/img/icons/apple-touch-icon-152x152.png?00000">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kodilla.com/static/img/icons/favicon-32x32.png?00000">
+<link rel="icon" type="image/png" sizes="96x96" href="https://kodilla.com/static/img/icons/favicon-96x96.png?00000">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kodilla.com/static/img/icons/favicon-16x16.png?00000">
+
+    <link rel="canonical" href="https://kodilla.com/pl/bootcamp-module/407/256/5935" />
+
+    <meta name="robots" content="noindex, follow" />
+    <title>    Moduł: 7. Struktury danych - tablice i obiekty
+</title>
+        <script>document.documentElement.classList.remove("no-js")</script>
+<script src="https://kodilla.com/static/js/libs/yall.min.js?00000"></script>
+<link href="https://kodilla.com/static/css/libs/bootstrap.min.css?00000" rel="stylesheet">
+<link href="https://kodilla.com/static/css/libs/font-awesome.min.css?00000" rel="stylesheet">
+<link href="https://kodilla.com/build/minified/css/main-b3cf79332c.css" rel="stylesheet" type="text/css">
+            
+    <link href="https://kodilla.com/static/css/libs/prism.min.css?00000" rel="stylesheet">
+
+    <link href="https://kodilla.com/build/minified/css/bootcamp-6d0888d826.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://kodilla.com/static/css/libs/perfect-scrollbar.css?00000" />
+    <link rel="stylesheet" href="https://kodilla.com/static/css/libs/fancybox/jquery.fancybox.min.css?00000" type="text/css" media="screen" />
+    <link href="https://kodilla.com/static/css/libs/bootstrap-datetimepicker.min.css?00000">
+    <link rel="stylesheet" href="https://uploads.kodilla.com/bootcamp/styles/content.css">
+    <script>
+    document.addEventListener("DOMContentLoaded", yall);
+    window.environment = 'production';
+    window.loggedIn = true;
+    window.domain = 'https://kodilla.com';
+            window.fbAppId = 1449248938627896;
+    window.chatService = 'LiveAgent';
+    window.useMessenger = window.chatService === 'Messenger';
+    window.locale = 'pl';
+    window.lang = 'pl';
+
+    window.serverUTC       = 1625590373000;
+    window.serverOffset    = 120;
+    window.userDate        = new Date();
+    window.userUTC         = userDate.getTime();
+    window.userOffset      = userDate.getTimezoneOffset() * (-1);
+    window.userClockDiff   = userUTC - serverUTC;
+    window.diffRounded     = Math.round( userClockDiff / ( 1000 * 60 * 15 ) );
+    window.isDifferentZone = ( userOffset - serverOffset !== 0 ) ? 1 : 0;
+    window.hasWrongTime    = ( diffRounded !== 0 ) ? 1 : 0;
+    window.dateTooltipText = 'Data i godzina są podane dla Twojej strefy czasowej GMT. <br>W razie wątpliwości napisz: <u>support@kodilla.com</u>.';
+    window.wrongHourNotice = 'Godzina na Twoim urządzeniu r&oacute;żni się od godziny obowiązującej w strefie czasowej wybranej w ustawieniach Twojego urządzenia.';
+
+    window.PAYU_HASH_ALGORITHM = 'SHA-256';
+    window.PAYU_POS_ID = 1429452;
+    window.PAYU_MD5_SECOND_KEY = 'f3627be5fab5a4238c8474936f057908';
+
+    var moment = undefined,
+        momentReady = function( method, method2, count ){
+            var c = ( count ) ? count : 0;
+
+            if      ( isDifferentZone && moment !== undefined ){
+                if      ( method ) { method(); }
+                else    { return false; }
+            }
+            else if ( isDifferentZone && moment === undefined ) {
+                if ( c < 20 ) {
+                    c++;
+                    setTimeout( function() { momentReady( method, method2, c ); }
+                        , 300 );
+                } else {
+                    if      ( method2 === true && method )  { method(); }
+                    else if ( method2 !== true && method2 ) { method2(); }
+                }
+            }
+            else {
+                if      ( method2 === true && method )  { method(); }
+                else if ( method2 !== true && method2 ) { method2(); }
+                else    { return false; }
+            }
+        };
+
+    if ( window.isDifferentZone && moment === undefined ) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = '/static/js/libs/moment.timezone.locales.min.js?v=2.22.2';
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+</script>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+        OneSignal.init({
+            appId: "92552bb5-b477-4ea2-8260-dba65be198d9",
+        });
+    });
+</script>
+<script data-ad-client="ca-pub-9483216428129091" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2404285,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 389137334769464 );
+        fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KN2WWBH');</script>
+    <!-- End Google Tag Manager -->
+    
+    </head>
+<body class="no-js student ">
+<!-- Facebook Pixel Code -->
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=389137334769464&ev=PageView&noscript=1"/></noscript>
+<!-- End Facebook Pixel Code -->
+<script>
+    document.getElementsByTagName('body')[0].classList.remove('no-js');
+    if ( window.isDifferentZone ) {
+        document.querySelector('body').classList.add('time-conversion-applied');
+    }
+    if ( window.hasWrongTime ) {
+        document.querySelector('body').classList.add('wrong-hour');
+    }
+</script>
+
+    <nav class="navbar-main hidden-sm-down dark navbar">
+    <div class="nav-container">
+        <div class="navbar-header clearfix">
+            <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbarUpper"><i class="fa fa-bars"></i></button>
+        </div>
+        <div class="collapse navbar-toggleable-sm container" id="collapsingNavbarUpper">
+            <ul class="nav navbar-nav navbar-nav-left">
+                                    <li class="nav-item nav-contact">
+    <span>Skontaktuj się z nami:</span>
+    <a href="mailto:support@kodilla.com">
+        <i class="fa fa-envelope-o"></i>
+        support@kodilla.com
+    </a>
+    <span>lub</span>
+    <a href="javascript:openChat();">
+        <i class="fa fa-comments"></i>
+        porozmawiaj na czacie
+    </a>
+</li>
+                                </ul>
+            <ul class="nav navbar-nav pull-right">
+                                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/informator" class="nav-link" target="_blank">
+        Informator
+    </a>
+                </li>
+                <li class="nav-item hidden-sm-down">
+    <a href="https://kodilla.com/pl/account" class="nav-link">Konto</a>
+</li>
+        <li class="nav-item">
+    <a class="analytics-track nav-link nav-link-accent" data-event="account_logout" href="https://kodilla.com/pl/sign-out">Wyloguj</a>
+</li>
+                            </ul>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-main light navbar">
+    <div class="container clearfix">
+        <a class="navbar-brand"  href="https://kodilla.com/pl">
+            <img src="https://kodilla.com/static/img/kodilla-nav-logo.svg?00000" alt="Kodilla - szkoła programowania">
+        </a>
+        <span class="contact-us-button-container"></span>
+        <button class="navbar-toggler pull-right collapsed" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <i class="fa fa-bars navbar-ico-open"></i>
+            <i class="fa fa-times navbar-ico-close"></i>
+        </button>
+        <ul id="navbar-main" class="nav navbar-nav pull-right collapse">
+            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        Szkolenia Bootcamp
+    </a>
+    <ul class="bootcamp-list">
+                    <li class="list-sub list-sub-fe">
+                <img src="https://kodilla.com/static/img/svg/menu_fer.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_fer_logo">
+                <a href="https://kodilla.com/pl/bootcamp/front-end">
+                    <h4 class="bootcamp-name">Front-end: React</h4>
+                    <p>Naucz się tworzyć front-end aplikacji w 4 miesiące</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_wd.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_wd_logo">
+                <a href="https://kodilla.com/pl/bootcamp/webdeveloper?type=wdp">
+                    <h4 class="bootcamp-name">Web Developer</h4>
+                    <p>Naucz&nbsp;się tworzyć aplikacje internetowe od&nbsp;podstaw</p>
+                    <span class="bootcamp-label">FRONT-END i BACK-END</span>
+                </a>
+            </li>
+
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_java.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_java_logo">
+                <a href="https://kodilla.com/pl/bootcamp/java?type=jdp">
+                    <h4 class="bootcamp-name">Java Developer</h4>
+                    <p>Poznaj najpopularniejszy na&nbsp;świecie język programowania od&nbsp;zera</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_python.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_python_logo">
+                <a href="https://kodilla.com/pl/bootcamp/python">
+                    <h4 class="bootcamp-name">Python Developer</h4>
+                    <p>Zdobądź kompetencje do tworzenia rozwiązań webowych</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_tester.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_tester_logo">
+                <a href="https://kodilla.com/pl/bootcamp/tester-automatyzujacy">
+                    <h4 class="bootcamp-name">Tester Automatyzujący</h4>
+                    <p>Poznaj podstawy testowania automatycznego w Javie</p>
+                </a>
+            </li>
+            <li class="list-sub">
+                <img src="https://kodilla.com/static/img/svg/menu_game.svg?00000" class="menu-svg" width="32px" height="32px" title="menu_mage_logo">
+                <a href="https://kodilla.com/pl/bootcamp/game-dev">
+                    <h4 class="bootcamp-name">Mobile Game Developer</h4>
+                    <p>Zdobądź kompetencje do tworzenia gier</p>
+                    <span class="bootcamp-label">nowość</span>
+                </a>
+            </li>
+            </ul>
+</li>
+
+                        <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        Szkolenia Pro
+    </a>
+    <ul>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/mikroserwisy" class="nav-link">Mikroserwisy w Javie</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/spring-hibernate" class="nav-link">Spring i Hibernate</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/wielowatkowosc" class="nav-link">Wielowątkowość w Javie</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/django" class="nav-link">Aplikacje webowe z Django</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/wizualizacja-danych" class="nav-link">Analiza danych w Pythonie</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/machine-learning" class="nav-link">Podstawy Machine Learning</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/bigdata-pyspark" class="nav-link">Big Data z PySpark</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/automatyzacja-testow" class="nav-link">Automatyzacja test&oacute;w</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/vanilla-js" class="nav-link">Advanced Vanilla JS</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/typescript" class="nav-link">TypeScript - kurs praktyczny</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/vue3" class="nav-link">Vue3 - kompletny przewodnik</a></li>
+        <li><a href="https://kodilla.com/pl/szkolenia-pro/zaawansowany-backend" class="nav-link">Backend zaawansowany</a></li>
+    </ul>
+</li>
+            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        Strefa kursanta
+    </a>
+    <ul>
+                    <li><a href="https://kodilla.com/pl/bootcamp-dashboard/407" class="nav-link">Bootcamp WD PLUS 2020-12</a></li>
+                    <li><a class="nav-link" href="https://kodilla.com/pl/kursy">Samodzielne kursy</a></li>
+                    <li><a class="nav-link" href="https://chat.kodilla.com" target="_blank">Komunikator</a></li>
+                    <li><a class="nav-link" href="https://kodilla.com/pl/projects">Moje projekty</a></li>
+    </ul>
+</li>
+                            <li class="nav-item hidden-sm-down">
+    <a class="dropdown-toggle nav-link">
+        O nas
+    </a>
+    <ul class="about-us">
+        <li><a href="https://kodilla.com/pl/mentorzy" class="nav-link">Mentorzy</a></li>
+        <li><a href="https://kodilla.com/pl/zespol" class="nav-link">Zesp&oacute;ł Kodilli</a></li>
+        <li><a href="https://kodilla.com/pl/o-nas" class="nav-link">O firmie</a></li>
+    </ul>
+</li>
+                                                                    <li class="nav-item hidden-md-up nav-group">
+    <span class="mobile-menu-separator">Szkolenia Bootcamp</span>
+    <ul>
+                    <li class="nav-item list-sub-fe">
+                <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/front-end">Bootcamp Front-end: React
+                </a>
+            </li>
+                <li class="nav-item">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/webdeveloper">Bootcamp Web Developer
+                <span class="bootcamp-label">FRONT-END i BACK-END</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://kodilla.com/pl/bootcamp/java">Bootcamp Java</a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/tester-automatyzuj%C4%85cy">Bootcamp Tester Automatyzujący
+            </a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/python">Python Developer
+            </a>
+        </li>
+        <li class="nav-item list-sub-fe">
+            <a class="nav-link nav-link-with-label" href="https://kodilla.com/pl/bootcamp/game-dev">Mobile Game Developer
+                <span class="bootcamp-label">nowość</span>
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="nav-item hidden-md-up nav-group">
+    <a class="nav-link-bold" href="https://kodilla.com/pl/szkolenia-pro">Szkolenia Pro</a>
+</li>
+            <li class="nav-item hidden-md-up nav-group">
+            <span class="mobile-menu-separator">Strefa kursanta</span>
+            <ul>
+                <li class="nav-item ">
+                                            <a class="nav-link" href="https://kodilla.com/pl/bootcamp-dashboard/407">
+                            Bootcamp   WD PLUS 2020-12
+                        </a>
+                                    </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://kodilla.com/pl/kursy">Samodzielne kursy</a>
+                </li>
+                                    <li class="nav-item ">
+                        <a class="nav-link" href="https://chat.kodilla.com" target="_blank">Komunikator</a>
+                    </li>
+                                <li class="nav-item">
+                    <a class="nav-link" href="https://kodilla.com/pl/projects">Moje projekty</a>
+                </li>
+            </ul>
+        </li>
+    
+        
+            <li class="nav-item hidden-md-up nav-group">
+            <span class="mobile-menu-separator">O nas</span>
+            <ul>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/mentorzy" class="nav-link">Mentorzy</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/zespol" class="nav-link">Zesp&oacute;ł Kodilli</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://kodilla.com/pl/o-nas" class="nav-link">O firmie</a>
+                </li>
+            </ul>
+        </li>
+    
+<li class="nav-item hidden-md-up nav-group">
+    <span class="mobile-menu-separator">Pozostałe</span>
+    <ul>
+                                        
+        <li class="nav-item">
+            <a href="https://kodilla.com/pl/informator" class="nav-link" target="_blank">
+        Informator
+    </a>
+        </li>
+    </ul>
+
+</li>
+
+    <li class="nav-item hidden-md-up">
+        <a class="nav-link" href="https://kodilla.com/pl/account">Konto</a>
+    </li>
+    <li class="nav-item hidden-md-up">
+        <a class="nav-link analytics-track" data-event="account_logout" href="https://kodilla.com/pl/sign-out">Wyloguj</a>
+    </li>
+
+        
+    <li class="nav-item hidden-md-up nav-group">
+        <span class="mobile-menu-separator">Skontaktuj się z nami</span>
+        <ul>
+            <li class="nav-item">
+                <a href="mailto:support@kodilla.com" class="nav-link">
+                    <i class="fa fa-envelope-o"></i>
+                    support@kodilla.com
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:openChat();" class="nav-link">
+                    <i class="fa fa-comments"></i>
+                    <span>Porozmawiaj na czacie</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+        </ul>
+    </div>
+</nav>
+<main class="bootcamp module page-height-fix" id="bootcamp-module">
+    <div class="aside-toggle hidden-md-up">
+        <button class="navbar-toggler pull-left collapsed" type="button" data-toggle="collapse" data-target="#aside-sticky" aria-expanded="false">
+            <i class="fa fa-bars navbar-ico-open"></i>
+            <i class="fa fa-times navbar-ico-close"></i>
+        </button>
+    </div>
+    <div class="table-of-contents aside-sticky collapsed collapse" id="aside-sticky">
+        <section class="container">
+            <div class="row">
+                <aside class="module-nav col-md-4 col-md-offset-8">
+                    <section class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Spis treści modułu</h4>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-981" class="clearfix">
+                                    <p>7.1. Dbamy o jakość kodu</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-982" class="clearfix">
+                                    <p>7.2. Dodajemy tagi do artykułu</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-983" class="clearfix">
+                                    <p>7.3. Wyświetlamy chmurę tag&oacute;w</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-984" class="clearfix">
+                                    <p>7.4. Szablony Handlebars</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-985" class="clearfix">
+                                    <p>7.5. Podsumowanie</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                        <li class="list-group-item completed">
+                                <a href="#submodule-986" class="clearfix">
+                                    <p>7.6. Quiz powt&oacute;rkowy</p>
+                                    <i class="fa fa-check-circle-o"></i>
+                                    <i class="fa fa-play-circle-o"></i>
+                                    <i class="fa fa-send-o"></i>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </a>
+                            </li>
+                                                    </ul>
+                        <div class="card-block text-center">
+                                                                                                <a href="https://kodilla.com/pl/bootcamp-dashboard/407">Powr&oacute;t do dashboardu</a>
+                                                                                    </div>
+                    </section>
+                </aside>
+            </div>
+        </section>
+    </div>
+    <section class="container module-content">
+        <div class="row">
+            <main class="col-md-8">
+                <section class="card">
+                    <div class="card-block module-header clearfix  completed ">
+                        <h1 class="card-title">7. Struktury danych - tablice i obiekty</h1>
+                                                <i class="fa fa-bookmark fa-3x" aria-hidden="true"></i>
+                    </div>
+                                        <div class="card-block challenge">
+                        <h3>Wyzwania:</h3>
+                        <ul>
+<li>zainstalujesz i skonfigurujesz narzędzie sprawdzające poprawność kodu JS,</li>
+<li>dowiesz się, czym są tablice i obiekty,</li>
+<li>nauczysz się korzystać z szablonów HTML,</li>
+<li>dokończysz swoją aplikację bloga.</li>
+</ul>
+<h3>Wstęp</h3>
+<p>W poprzednim module pojawiło się sporo nowych informacji. W tym tygodniu będziemy korzystać z nich do dokończenia naszego bloga. Rozszerzymy też nieco naszą znajomość JS – nie będzie aż tylu nowości, a nowa wiedza będzie mocno związana z tym, czego do tej pory się nauczyliśmy.</p>
+<p>Zaczniemy jednak od skupienia się przez chwilę na <strong>jakości naszego kodu JS</strong>.</p>
+
+                    </div>
+                                    </section>
+                                    
+                <section id="submodule-981" class="card submodule completed" data-bootcamp-user-submodule-id="601079" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">7.1. <span>Dbamy o jakość kodu</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>W poprzednich modułach poruszaliśmy już to, jak istotne jest dbanie o jakość naszego kodu. Mówimy tu zarówno o poprawności kodu JS, jak i stosowaniu <a href="https://poradnik-js.kodilla.com/good-practices" target="_blank">dobrych praktyk i właściwego formatowania kodu</a>. Dlatego właśnie, zanim przejdziemy do dalszych prac, skonfigurujemy w naszym środowisku projektu "pomocnika". Dzięki niemu będzie nam łatwiej pilnować poprawności kodu JS.</p>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/gems.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/gems-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/gems.png 2x" class="img-inline img-right">
+<p>Dlaczego przywiązujemy do tego tak dużą wagę? Czy chodzi tylko o to, żeby podążać za modą? Absolutnie nie! Kiedy rozpoczniesz swoją pierwszą pracę jako Junior Web Developer, najpewniej dołączysz do zespołu pracującego nad jakimś projektem. Są spore szanse, że w każdym projekcie spotkasz się z podobną konfiguracją zasad formatowania kodu.</p>
+<p>Jest to bardzo często stosowane rozwiązanie, aby wszyscy developerzy pracujący nad projektem stosowali te same zasady. Inaczej ryzykowalibyśmy bałaganem w kodzie. Co gorsza, jeśli jeden z developerów skonfigurował sobie edytor tak, aby np. poprawiał "błędne" wcięcia (czyli inne, niż ten developer używa), to jego commity będą zawierać modyfikacje sporych części edytowanych plików. Wynika to z faktu, że dla Gita zmiana wcięcia np. z 4 na 2 spacje jest zmianą całej linii kodu. Będzie to prowadzić to konfliktów w repozytorium i długich godzin spędzonych na posprzątaniu tego bałaganu.</p>
+<p>Dlatego zależy nam, żeby od początku wyrobił się w Tobie nawyk trzymania się wyznaczonych zasad formatowania kodu. Dzięki temu unikniesz w przyszłości przykrych niespodzianek.</p>
+<h3>Konfiguracja ESLint</h3>
+<p>W tej chwili najbardziej nam zależy na jakości kodu JS. Jeżeli nie masz jeszcze zainstalowanego narzędzia <strong>ESLint</strong>, zrób to teraz wedle poniższej instrukcji.</p>
+<p>Opcjonalnie, możesz zainstalować również pozostałe narzędzia, które znajdziesz na pozostałych zakładkach poniżej. Pamiętaj jednak, aby nie tracić w tej chwili zbyt dużo czasu na poprawianie kodu SCSS lub HTML, kosztem dalszej nauki JS-a.</p>
+<ul class="nav nav-tabs">
+	<li class="nav-item"><a href="#config-eslint" class="nav-link active show" data-toggle="tab">ESLint</a></li>
+	<li class="nav-item"><a href="#config-editorconfig" class="nav-link" data-toggle="tab">EditorConfig</a></li>
+	<li class="nav-item"><a href="#config-stylelint" class="nav-link" data-toggle="tab">StyleLint</a></li>
+</ul>
+<div class="tab-content">
+<div id="config-eslint" class="tab-pane card fade active show"><div class="card-block">
+<h4>ESLint</h4>
+<p>To narzędzie służy do sprawdzania poprawności składni oraz formatowania kodu JS. W naszym task runnerze będzie automatycznie uruchamiane przy każdym wykonaniu komend: <code>npm run build</code>, <code>npm run watch</code>, oraz <code>npm run test</code>.</p>
+<p>Pamiętaj, aby codziennie wyłączać <code>npm run watch</code> i włączać ponownie następnego dnia. Dzięki temu będziesz regularnie sprawdzać poprawność składni i formatowania.</p>
+<p>W konfiguracji zawartej w pliku <code>.eslintrc.json</code>, który za chwilę stworzymy, znajdzie się tylko kilka podstawowych zasad:</p>
+<ul>
+<li>poprawne formatowanie, zgodne z tym ustawionym w EditorConfig (wcięcia, zakończenia linii),</li>
+<li>używamy pojedynczych cudzysłowów,</li>
+<li>stawiamy średniki na końcu każdej linii (poza wyjątkami).</li>
+</ul>
+<h5>Zmiany w task runnerze</h5>
+<p>Aby używać ESLinta, potrzebujemy wprowadzić jeszcze parę zmian w naszym task runnerze. Otwórz plik <code>package.json</code> i pod taskiem <code>test:html</code> dodaj następującą linię:</p>
+<pre><code class="language-plaintext">        &quot;test:js&quot;: &quot;eslint js/&quot;,
+</code></pre>
+<p>Upewnij się też, że Twój task <code>test</code> wygląda następująco:</p>
+<pre><code class="language-plaintext">        &quot;test&quot;: &quot;npm-run-all test:*&quot;,
+</code></pre>
+<p>Natomiast task <code>watch</code> powinien teraz wyglądać tak:</p>
+<pre><code class="language-plaintext">        &quot;watch&quot;: &quot;npm-run-all build:* build-dev -p watch:*&quot;,
+</code></pre>
+<h5>Instalacja</h5>
+<p>Zainstaluj pakiet <code>eslint</code> za pomocą komendy:</p>
+<pre><code class="language-plaintext">npm install --save-dev eslint
+</code></pre>
+<div class="bc-note alert-warning">
+<h4 class="alert-heading text-center">Tworzenie plików z kropką</h4>
+<p>Za chwilę będziemy potrzebowali stworzyć plik, którego nazwa ma zaczynać się od kropki. Jak już wcześniej wspominaliśmy, może to być nieco problematyczne – szczególnie dla użytkowników Windowsa.</p>
+<p>Przypominamy, że najprostszą metodą będzie skorzystanie z terminala (pod Windowsem – z GitBasha). Komenda <code>touch .somefile</code> stworzy nam plik o nazwie <code>.somefile</code>.</p>
+<p>Plik ten może być domyślnie ukryty w Twojej przeglądarce plików – sprawdź jej ustawienia, aby wyświetlić ukryte pliki.</p>
+</div>
+<p>W katalogu swojego projektu stwórz nowy plik <code>.eslintrc.json</code> i wklej poniższą zawartość:</p>
+<pre><code class="language-json">{
+    &quot;env&quot;: {
+        &quot;browser&quot;: true,
+        &quot;es6&quot;: true
+    },
+    &quot;extends&quot;: &quot;eslint:recommended&quot;,
+    &quot;parserOptions&quot;: {
+        &quot;ecmaVersion&quot;: 2015
+    },
+    &quot;rules&quot;: {
+        &quot;indent&quot;: [
+            &quot;error&quot;,
+            2
+        ],
+        &quot;linebreak-style&quot;: [
+            &quot;off&quot;
+        ],
+        &quot;quotes&quot;: [
+            &quot;error&quot;,
+            &quot;single&quot;,
+            {&quot;allowTemplateLiterals&quot;: true}
+        ],
+        &quot;semi&quot;: [
+            &quot;error&quot;,
+            &quot;always&quot;
+        ],
+        &quot;no-console&quot;: [
+            &quot;off&quot;
+        ]
+    }
+}
+</code></pre>
+<h5>Uruchomienie ESLinta</h5>
+<p>Spróbuj uruchomić teraz <code>npm run test:js</code> i zobacz, jakie błędy znalazł ESLint w Twoim kodzie. Postaraj się usunąć wszystkie z nich.</p>
+<p>Pamiętaj, że w naszej konfiguracji ESLint będzie sprawdzał wszystkie pliki w katalogu <code>js</code>. Jeśli podłączasz jakiekolwiek biblioteki lub pluginy, umieść je w katalogu <code>vendor</code>.</p>
+<div class="bc-note alert-warning">
+<h4 class="alert-heading text-center">Task <code>build</code> może wyświetlać błędy!</h4>
+<p>Jeśli ESLint znajdzie jakiekolwiek problemy w Twoim kodzie, to spowoduje błąd, który zatrzyma uruchomionego taska. ESLint jest uruchamiany przez task <code>test:js</code>, który jest wykonywany przez task <code>test</code>. Z kolei ten task jest wykonywany przez <code>build</code>, więc jeśli wykonasz <code>npm run build</code>, to NPM wyświetli błędy (linie w terminalu zaczynające się od <code>npm ERR!</code>).</p>
+<p>Jest to zupełnie normalne zachowanie, ponieważ rolą ESLinta jest uniemożliwić dalsze wykonywanie taska, w ramach którego zostało uruchomione sprawdzenie kodu.</p>
+<p>Właśnie dlatego w tasku <code>watch</code> zmieniliśmy <code>build</code> na <code>build:*</code> – gdybyśmy nie wprowadzili tej zmiany, nie dałoby się uruchomić taska <code>watch</code>, dopóki nie zostałyby rozwiązane wszystkie problemy wskazane przez ESLinta.</p>
+</div>
+<div class="bc-note alert-info">
+<h4 class="alert-heading text-center">Dla ambitnych</h4>
+<p>Jeśli masz ochotę nieco usprawnić sobie pracę, możesz zastosować jedno z dwóch rozwiązań:</p>
+<p><strong>Opcja 1.</strong> – w swoim edytorze kodu zainstalować plugin do obsługi ESLinta. Dzięki temu bezpośrednio w edytorze będą wyświetlały się błędy znalezione przez ESLinta. Ułatwi Ci to usuwanie błędów na bieżąco, w trakcie pisania kodu. Takie pluginy istnieją dla większości popularnych edytorów, wystarczy że wyszukasz nazwę edytora z dopiskiem "ESLint".</p>
+<p><strong>Opcja 2.</strong> – a może wolisz widzieć błędy w terminalu, ale chcesz, aby automatycznie wyświetlały się po każdym zapisaniu pliku JS? Możesz to osiągnąć instalując pakiet <code>eslint-watch</code> i używając go z flagami <code>--watch --changed --clear</code> (sprawdź w <a href="https://www.npmjs.com/package/eslint-watch" target="_blank">dokumentacji</a>, co robią te flagi). Pamiętaj jednak, aby nie zastępować taska <code>test:js</code> – zamiast tego stwórz nowego taska <code>watch:eslint</code>.</p>
+<p>Oba rozwiązania pozwolą Ci na bieżąco rozwiązywać problemy pojawiające się w Twoim kodzie JS.</p>
+</div>
+</div></div> <!-- /.tab-pane -->
+<div id="config-editorconfig" class="tab-pane card fade"><div class="card-block">
+<h4>EditorConfig</h4>
+<p>Dzięki plikowi <code>.editorconfig</code>, który za chwilę stworzymy, Twój edytor kodu może automatycznie stosować spójne formatowanie kodu we wszystkich plikach. W tym pliku zapisanych jest kilka zasad, takich jak:</p>
+<ul>
+<li>stosowanie wcięć (<em>indentacji</em>) w postaci 2 spacji,</li>
+<li>kodowanie pliku <em>utf-8</em> i unixowe zakończenia linii,</li>
+<li>usuwanie spacji na końcu linii,</li>
+<li>dodawanie pustej linii na końcu pliku.</li>
+</ul>
+<p>W najpopularniejszych edytorach kodu, takich jak <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>, <a href="https://www.sublimetext.com/" target="_blank">Sublime Text</a>, <a href="https://www.jetbrains.com/phpstorm/" target="_blank">PhpStorm</a>/<a href="https://www.jetbrains.com/webstorm/" target="_blank">WebStorm</a> czy <a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a>, do korzystania z EditorConfig będzie potrzebne zainstalowanie wtyczki. Linki do instrukcji instalacji wtyczek znajdziesz <a href="https://editorconfig.org/#download" target="_blank">na stronie EditorConfig</a>.</p>
+<p>Jak poznać, że EditorConfig działa? Przejdź na koniec dowolnego pliku w swoim projekcie. Jeśli na końcu pliku są jakieś puste linie, usuń je. Na końcu ostatniej linii pliku dodaj kilka spacji. Następnie zapisz plik – jeśli wszystko działa poprawnie, spacje na końcu linii zostały usunięte, a na końcu pliku została dodana pusta linia.</p>
+<p>Dzięki temu rozwiązaniu nie musisz pamiętać o poprawnym ustawieniu swojego edytora.</p>
+<h5>Instalacja</h5>
+<p>W katalogu swojego projektu stwórz nowy plik <code>.editorconfig</code> i wklej poniższą zawartość:</p>
+<pre><code class="language-plaintext">root = true
+
+[*]
+end_of_line = lf
+charset = utf-8
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+insert_final_newline = true
+core.autocrlf = true
+
+</code></pre>
+</div></div> <!-- /.tab-pane -->
+<div id="config-stylelint" class="tab-pane card fade"><div class="card-block">
+<h4>StyleLint</h4>
+<p>To bardzo podobne narzędzie do ESLinta – jednak zamiast JS, będzie sprawdzać nasze style, a konkretniej pliki w katalogu <code>sass</code>.</p>
+<p>Konfiguracja <code>.stylelintrc.json</code>, którą za chwilę zapiszemy, zawiera m.in. następujące zasady:</p>
+<ul>
+<li>poprawne formatowanie, zgodne z tym ustawionym w EditorConfig (wcięcia, zakończenia linii),</li>
+<li>wymagana spacja po dwukropku,</li>
+<li>wymagana nowa linia po średniku,</li>
+<li>nie więcej niż dwie puste linie bezpośrednio po sobie,</li>
+<li>maksymalne zagnieżdżenie 4 poziomów (nie licząc pseudoklas),</li>
+<li>nie używamy znaku <code>&amp;</code> bez potrzeby,</li>
+<li>nie definiujemy wielokrotnie tej samej zmiennej.</li>
+</ul>
+<h5>Zmiany w task runnerze</h5>
+<p>Aby używać ESLinta, potrzebujemy wprowadzić jeszcze parę zmian w naszym task runnerze. Otwórz plik <code>package.json</code> i pod taskiem <code>test:js</code> (dodanym przy konfiguracji ESLinta) dodaj następującą linię:</p>
+<pre><code class="language-plaintext">        &quot;test:scss&quot;: &quot;stylelint sass/&quot;,
+</code></pre>
+<h5>Instalacja</h5>
+<p>Zainstaluj pakiety <code>stylelint</code> i <code>stylelint-scss</code> za pomocą komendy:</p>
+<pre><code class="language-plaintext">npm install --save-dev stylelint stylelint-scss
+</code></pre>
+<p>W katalogu swojego projektu stwórz nowy plik <code>.stylelintrc.json</code> i wklej poniższą zawartość:</p>
+<pre><code class="language-json">{
+  &quot;plugins&quot;: [
+    &quot;stylelint-scss&quot;
+  ],
+  &quot;rules&quot;: {
+    &quot;block-no-empty&quot;: true,
+    &quot;color-no-invalid-hex&quot;: true,
+    &quot;comment-empty-line-before&quot;: null,
+    &quot;declaration-colon-space-after&quot;: &quot;always&quot;,
+    &quot;declaration-block-semicolon-newline-after&quot;: &quot;always&quot;,
+    &quot;declaration-block-trailing-semicolon&quot;: &quot;always&quot;,
+    &quot;indentation&quot;: 2,
+    &quot;max-empty-lines&quot;: 2,
+    &quot;max-nesting-depth&quot;: [3, {
+      &quot;ignore&quot;: [&quot;pseudo-classes&quot;]
+    }],
+    &quot;rule-empty-line-before&quot;: [ &quot;always&quot;, {
+      &quot;except&quot;: [&quot;first-nested&quot;],
+      &quot;ignore&quot;: [&quot;after-comment&quot;]
+    } ],
+    &quot;unit-whitelist&quot;: null,
+    &quot;scss/at-extend-no-missing-placeholder&quot;: true,
+    &quot;scss/selector-no-redundant-nesting-selector&quot;: true,
+    &quot;scss/no-duplicate-dollar-variables&quot;: true
+  }
+}
+
+</code></pre>
+<h5>Uruchomienie StyleLinta</h5>
+<p>Uruchom teraz <code>npm run test:scss</code>, aby sprawdzić, czy Twój kod spełnia te zasady. Jeśli pojawią się jakieś błędy, napraw je w swoich plikach.</p>
+<p>Podobnie jak przy ESLint, sprawdzane będą tylko pliki w katalogu <code>sass</code>. Jeśli używasz jakichś bibliotek, umieszczaj ich pliki <em>.css</em> w katalogu <code>vendor</code>.</p>
+</div></div> <!-- /.tab-pane -->
+</div> <!-- /.tab-content -->
+<hr>
+<h4>Zapisz commit!</h4>
+<p>Zanim przejdziemy dalej, zapisz commit. Wszystkie nowo stworzone pliki powinny być umieszczone w repozytorium. Dzięki temu wszyscy uczestnicy projektu (np. Mentor, lub Ty na innym komputerze) będą mieli taką samą konfigurację.</p>
+<h3>Rozpoczynanie nowego projektu</h3>
+<p>Od teraz, rozpoczynając nowy projekt, będziesz kopiować do niego już nie tylko plik <code>package.json</code>, ale też plik <code>.eslintrc.json</code>. Jeśli w swoim projekcie użyjesz również opcjonalnych narzędzi, kopiuj również pliki <code>.editorconfig</code>, oraz <code>.stylelintrc.json</code>.</p>
+<p>Najlepiej stwórz sobie teraz projekt o nazwie <code>project-template</code> i skopiuj do niego te pliki. Dzięki temu będziesz je mieć zawsze pod ręką. Co więcej, w razie potrzeby dostosowania task runnera do konkretnego projektu, bez obaw zmodyfikujesz te pliki w danym projekcie, nie martwiąc się o to, że te same zmiany skopiujesz do innych projektów.</p>
+<p>Teraz kiedy uzbroiliśmy się w narzędzia do pomocy w pisaniu poprawnego kodu, możemy kontynuować pracę nad naszym blogiem.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-982" class="card submodule completed" data-bootcamp-user-submodule-id="601080" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">7.2. <span>Dodajemy tagi do artykułu</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <img src="https://uploads.kodilla.com/bootcamp/fer/images/tag.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/tag-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/tag.png 2x" class="img-inline img-left">
+<p>W poprzednim module udało nam się stworzyć skrypt, który wyświetla właściwy artykuł po kliknięciu linka w lewej kolumnie. Następnie rozszerzyliśmy skrypt o generowanie listy tych linków.</p>
+<p>Kolejnym krokiem jest <strong>dodanie tagów</strong> do każdego z artykułów. Przejdziemy przez to zadanie wspólnie – za to samodzielnie będziesz wykonywać analogiczne operacje dla autorów postów.</p>
+<h3>Przypisanie tagów do artykułów</h3>
+<p>Kiedy zerkniesz na nasz design, przypomnisz sobie, że tagi dla każdego artykułu mają postać listy słów kluczowych, z których każde jest linkiem:</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/06.jsobjects/fer-06-02.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/06.jsobjects/fer-06-02.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Obecnie tagi wpisane są na sztywno w HTML pod każdym postem jako lista nieuporządkowana. Jak się domyślasz, to bardzo nieefektywna praktyka. Chcemy, aby lista była generowania automatycznie przez JavaScript. Zaraz to zrobimy!</p>
+<p>Zaczniemy od tego, że do każdego artykułu dodamy jego tagi bezpośrednio w znaczniku <code>&lt;article&gt;</code>. Do zapisania ich użyjemy customowego atrybutu <code>data-tags</code> (customowe atrybuty możemy tworzyć sami w zależności od naszych potrzeb).</p>
+<p>Obecnie każdy artykuł rozpoczyna się znacznikiem:</p>
+<pre><code class="language-html">&lt;article class=&quot;post active&quot; id=&quot;article-1&quot;&gt;
+</code></pre>
+<p>Tagi dodamy do niego w ten sposób:</p>
+<pre><code class="language-html">&lt;article class=&quot;post active&quot; id=&quot;article-1&quot; data-tags=&quot;cat cactus scissors&quot;&gt;
+</code></pre>
+<p>Jak widzisz, założyliśmy, że pierwszy artykuł mówi o rzeczach, które mogą przebijać balony. ;)</p>
+<p>Dodaj teraz tagi do wszystkich artykułów. Pamiętaj, żeby nie były identyczne dla każdego artykułu. Niektóre mogą powtarzać się w większości z nich, inne niech występują rzadziej, a jeszcze inne – tylko raz.</p>
+<h3>Przygotowanie do pisania skryptu</h3>
+<p>Teraz naszym zadaniem będzie wyświetlenie tagów na końcu każdego artykułu. Sprawimy, że obecna, wpisana na sztywno struktura:</p>
+<pre><code class="language-html">&lt;div class=&quot;post-tags&quot;&gt;
+  &lt;p&gt;&lt;strong&gt;Tags:&lt;/strong&gt;&lt;/p&gt;
+  &lt;ul class=&quot;list list-horizontal&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#tag-design&quot;&gt;design&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#tag-tutorials&quot;&gt;tutorials&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<p>będzie generowana dynamicznie za pomocą JS.</p>
+<h4>Szablon skryptu</h4>
+<p>Naszą funkcję nazwiemy <code>generateTags</code>. Na końcu pliku <code>js/script.js</code> dodaj następujący kod:</p>
+<pre><code class="language-js">function generateTags(){
+  /* find all articles */
+
+  /* START LOOP: for every article: */
+
+    /* find tags wrapper */
+
+    /* make html variable with empty string */
+
+    /* get tags from data-tags attribute */
+
+    /* split tags into array */
+
+    /* START LOOP: for each tag */
+
+      /* generate HTML of the link */
+
+      /* add generated code to html variable */
+
+    /* END LOOP: for each tag */
+
+    /* insert HTML of all the links into the tags wrapper */
+
+  /* END LOOP: for every article: */
+}
+
+generateTags();
+</code></pre>
+<p>Wewnątrz funkcji <code>generateTags</code> umieściliśmy od razu algorytm skryptu, który mamy napisać.</p>
+<p>Przeczytaj algorytm i upewnij się, że dobrze rozumiesz każdy kolejny krok. Zwróć też uwagę na wyrażenia  <code>START LOOP</code> i <code>END LOOP</code>, które podpowiadają Ci, gdzie zaczynają się i kończą poszczególne pętle. Wkrótce przekonasz się, jakie to ważne!</p>
+<h4>Uzupełnienie opcji</h4>
+<p>Znajdź w swoim kodzie miejsce, w którym zdefiniowaliśmy ustawienia:</p>
+<pre><code class="language-js">const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles';
+</code></pre>
+<p>Dodaj kolejną stałą o nazwie <code>optArticleTagsSelector</code> i wartości <code>'.post-tags .list'</code>. Zerknij do kodu HTML: ten selektor wybierze nam listę <code>&lt;ul&gt;</code>, w której będą zawarte tagi poszczególnych artykułów.</p>
+<h4>Usunięcie przykładowych linków</h4>
+<p>Nie zapomnij w kodzie HTML usunąć linki znajdujące się na końcu każdego artykułu. Chcemy, aby pozostała pusta lista, czyli:</p>
+<pre><code class="language-html">&lt;div class=&quot;post-tags&quot;&gt;
+  &lt;p&gt;&lt;strong&gt;Tags:&lt;/strong&gt;&lt;/p&gt;
+  &lt;ul class=&quot;list list-horizontal&quot;&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<h3>Spróbuj samodzielnie!</h3>
+<p>Większość operacji w tym skrypcie nie powinna już być dla Ciebie czarną magią. Spróbuj samodzielnie napisać ten skrypt!</p>
+<p>Jedyną nową wiedzą, jakiej potrzebujesz, jest <strong>rozbicie tekstu</strong> zawierającego wiele tagów na kolekcję (a właściwie – <strong>tablicę</strong>, czyli <em>array</em>). Użyjemy do tego funkcji <code>.split(' ')</code>. Użyj <code>console.log</code>, aby zobaczyć, jak ona działa, kiedy zastosujesz ją na tekście zawierającym spacje. Otrzymaną tablicę możesz wykorzystywać tak samo, jak kolekcję elementów znalezionych za pomocą <code>querySelecotrAll</code>, czyli użyć jej w pętli <code>for-of</code>.</p>
+<p>Pamiętaj, aby <strong>testować swój kod po każdym kroku</strong>. Używaj do tego <code>console.log</code>, aby rozumieć, co się zmienia w Twoim kodzie, i czy nowe linie kodu działają zgodnie z założeniem.</p>
+<p>Jeżeli któryś krok algorytmu sprawi Ci problem, poniżej zamieszczamy opis wraz z wyjaśnieniami.</p>
+<h3>Generujemy linki tagów w artykułach</h3>
+<p>W tym rozdziale krok po kroku wytłumaczymy, w jaki sposób wygenerować linki z tagami w każdym artykule.</p>
+<h4>Znajdujemy artykuły i ich tagi</h4>
+<p><strong>1.</strong> Zaczynamy od znalezienia wszystkich artykułów. To już dobrze znasz – zajrzyj do funkcji <code>generateTitleLinks</code> w swoim kodzie. Zastosuj taką samą stałą <code>articles</code>.</p>
+<p><strong>2.</strong> Następnie tworzymy pętlę <code>for-of</code>, w której pojedynczym elementem będzie zmienna <code>article</code> – znów, tak samo jak w <code>generateTitleLinks</code>.</p>
+<p><strong>3.</strong> Kolejny krok to znalezienie wrappera tagów, w którym mają znaleźć się linki. W bardzo podobny sposób w funkcji <code>generateTitleLinks</code> zapisaliśmy stałą <code>titleList</code> – zmieni się tylko selektor na dodany przed chwilą <code>optArticleTagsSelector</code> oraz miejsce wyszukiwania z <code>document</code> na <code>article</code>. Chcemy bowiem znaleźć wrapper tagów w każdym artykule!</p>
+<p><strong>4.</strong> Zanim przejdziemy dalej, potrzebujemy jeszcze stworzyć zmienną (nie stałą!) o nazwie <code>html</code> i wartości pustego tekstu, czyli <code>''</code>. Podobnie jak w funkcji <code>generateTitleLinks</code>, będziemy do niej dodawać kolejne fragmenty kodu HTML.</p>
+<p><strong>5.</strong> Wreszcie, potrzebujemy odczytać tagi z atrybutu <code>data-tags</code> naszego artykułu. Spójrz, w jaki sposób w funkcji <code>titleClickHandler</code> zapisaliśmy stałą <code>articleSelector</code>. Tu będzie bardzo podobnie – zmieni się tylko obiekt (artykuł zamiast klikniętego elementu) oraz nazwa atrybutu. Zapiszmy zawartość atrybutu do stałej <code>articleTags</code>.</p>
+<h4>Dzielimy tekst na tablicę wyrazów</h4>
+<p>Wreszcie coś nowego! ;) Wykonawszy poprzednie kroki, dotarliśmy w naszym kodzie do tego komentarza:</p>
+<p><code>/* split tags into array */</code></p>
+<p>W zmiennej <code>articleTags</code> – jak zapewne już sprawdzasz za pomocą <code>console.log</code> – powinien znajdować się tekst, np. <code>'cat cactus scissors'</code>. Będziemy chcieli jednak wykonać jakieś operacje dla każdego z nich, więc potrzebujemy je podzielić na osobne "rzeczy".</p>
+<p>Do tego posłuży nam funkcja <code>.split(' ')</code>, która podzieli ten tekst. Użyje ona podanego argumentu, czyli spacji, jako znaku, który jest granicą pomiędzy poszczególnymi "rzeczami" (w naszym przypadku – między poszczególnymi tagami). Pod powyższym komentarzem dodaj linię kodu:</p>
+<pre><code class="language-js">const articleTagsArray = articleTags.split(' ');
+</code></pre>
+<p>Ale chwila, skoro mamy 3 tagi, to jak mamy zapisać je do jednej stałej? Jak się pewnie domyślasz, z odpowiedzią na to pytanie już się spotkaliśmy. Pamiętasz zapewne funkcję <code>querySelectorAll</code>, która pozwalała nam na znalezienie wielu elementów pasujących do selektora. Użyliśmy jej już nawet w funkcji <code>generateTags</code> – spójrz na stałą <code>articles</code> na początku tej funkcji. Ta stała jest kolekcją wielu elementów, po których przechodzimy (iterujemy) za pomocą pętli.</p>
+<p>Tutaj sytuacja będzie bardzo podobna, zmienia się tylko nazwa – zamiast kolekcji elementów, mamy do czynienia z <strong>tablicą</strong>. Po użyciu <code>console.log</code> na stałej <code>articleTagsArray</code> możesz od razu zorientować się, że mówimy o tablicy – wynik w konsoli będzie zamknięty w <strong>nawiasy kwadratowe</strong> <code>[ ]</code>. Zapamiętaj to – te nawiasy niedługo znowu się pojawią. ;)</p>
+<div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Metafora — tablica</h4>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/array.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/array-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/array.png 2x" class="img-inline img-left">
+<p>Jak zapewne pamiętasz, porównywaliśmy zmienną do pudełka z etykietą.</p>
+<p>Tablicę możemy sobie w takim razie wytłumaczyć, jako bardzo długie pudełko, w którym znajdują się kolejno ułożone mniejsze pudełka.</p>
+<p>Możemy łatwo sprawdzić, ile mamy małych pudełek, ale nie mają one etykiet. Jak więc zatem wskazać pudełko, które nas interesuje? Musimy tylko wiedzieć, na którym miejscu w szeregu znajduje się to pudełko. Pozycję danego pudełka (pierwsze, drugie, czwarte...) nazywamy <strong>indeksem</strong>.</p>
+<p>Zamiast wskazywać konkretne pudełko, możemy też wykonać jakieś operacje dla każdego z mniejszych pudełek. Tak właśnie będzie działać pętla!</p>
+</div>
+<p>Teraz możemy zastosować pętlę <code>for-of</code> dokładnie tak samo, jak dla artykułów, czyli:</p>
+<pre><code class="language-js">/*split tags into array */
+const articleTagsArray = articleTags.split(' ');
+
+/* for each tag */
+for(let tag of articleTagsArray){
+  /* generate HTML of the link */
+
+  /* add generated code to HTML variable */
+}
+</code></pre>
+<p>Spróbuj pisać kod samodzielnie, a nie tylko kopiować i wklejać. Zależy nam na tym, aby przyzwyczaić Cię do samodzielnego pisania. W ten sposób dużo więcej zrozumiesz i znacznie szybciej będziesz robić postępy w nauce!</p>
+<p>Wewnątrz pętli, zmienna <code>tag</code> będzie treścią pojedynczego tagu. Użyj <code>console.log</code>, aby wyświetlić każdy z tagów osobno. Zauważ, że spacje, które znajdowały się pomiędzy tagami, zostały usunięte. Zajęła się tym funkcja <code>split</code>.</p>
+<h4>Generowanie linków w artykule</h4>
+<p>Jak pamiętasz, chcemy osiągnąć taką strukturę:</p>
+<pre><code class="language-html">&lt;div class=&quot;post-tags&quot;&gt;
+  &lt;p&gt;&lt;strong&gt;Tags:&lt;/strong&gt;&lt;/p&gt;
+  &lt;ul class=&quot;list list-horizontal&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#tag-design&quot;&gt;design&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#tag-tutorials&quot;&gt;tutorials&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Dla każdego tagu chcemy wygenerować link, którego atrybut <code>href</code> będzie miał prefix <code>#tag-</code>. Czyli np. dla tagu <code>cat</code> będzie to link:</p>
+<pre><code class="language-html">&lt;li&gt;&lt;a href=&quot;#tag-cat&quot;&gt;cat&lt;/a&gt;&lt;/li&gt;
+</code></pre>
+<p>W bardzo podobny sposób generowaliśmy linki w funkcji <code>generateTitleLinks</code>, więc zapewne sobie poradzisz. Pamiętaj, aby (podobnie jak w tamtej funkcji), dodać wygenerowany kod HTML linka do zmiennej <code>html</code>.</p>
+<p>Ostatnim krokiem, który wykonujemy <strong>już po zamknięciu pętli</strong> iterującej po tagach, będzie dodanie linków do wrappera tagów. Ponownie będziemy wzorować się na funkcji <code>generateTitleLinks</code>.</p>
+<h3>Dodajemy akcję po kliknięciu w tag</h3>
+<p>Mamy już nasze linki do tagów – teraz czas na obsłużenie kliknięcia w tag. W tym celu dodaj na końcu pliku następujący szablon:</p>
+<pre><code class="language-js">function tagClickHandler(event){
+  /* prevent default action for this event */
+
+  /* make new constant named &quot;clickedElement&quot; and give it the value of &quot;this&quot; */
+
+  /* make a new constant &quot;href&quot; and read the attribute &quot;href&quot; of the clicked element */
+
+  /* make a new constant &quot;tag&quot; and extract tag from the &quot;href&quot; constant */
+
+  /* find all tag links with class active */
+
+  /* START LOOP: for each active tag link */
+
+    /* remove class active */
+
+  /* END LOOP: for each active tag link */
+
+  /* find all tag links with &quot;href&quot; attribute equal to the &quot;href&quot; constant */
+
+  /* START LOOP: for each found tag link */
+
+    /* add class active */
+
+  /* END LOOP: for each found tag link */
+
+  /* execute function &quot;generateTitleLinks&quot; with article selector as argument */
+}
+
+function addClickListenersToTags(){
+  /* find all links to tags */
+
+  /* START LOOP: for each link */
+
+    /* add tagClickHandler as event listener for that link */
+
+  /* END LOOP: for each link */
+}
+
+addClickListenersToTags();
+
+</code></pre>
+<p>Tym razem nie będziemy już tłumaczyć wszystkich kroków – bez problemu poradzisz sobie z napisaniem tego skryptu, wzorując się na funkcji <code>titleClickHandler</code> i innych fragmentach kodu. Skupimy się za to na tych elementach, które mogą sprawić Ci problemy.</p>
+<h4>Znajdowanie linków do tagów</h4>
+<p>Możesz zastanawiać się, w jaki sposób mamy znaleźć wszystkie aktywne linki do tagów, albo wszystkie linki do tego samego tagu. Nie przejmuj się, znasz już sposób na to! Posłużymy się funkcją <code>querySelectorAll</code>!</p>
+<p>Jako selektor możemy wykorzystać tzw. <strong>selektor atrybutu</strong>. Aby znaleźć wszystkie aktywne linki do tagów, użyjemy selektora <code>'a.active[href^=&quot;#tag-&quot;]'</code>. Ta część zamknięta w nawiasach kwadratowych to właśnie selektor atrybutu. W tym wypadku użyliśmy łącznika <code>^=</code>, który oznacza "atrybut <code>href</code> zaczynający się od <code>&quot;#tag-&quot;</code>". Dzięki temu nie potrzebujemy dodawać klasy do naszych linków!</p>
+<p>Podobnie, dla wszystkich linków do tego samego tagu, możemy użyć selektora:</p>
+<pre><code class="language-js">'a[href=&quot;' + href + '&quot;]'
+</code></pre>
+<p>Tym razem w środku naszego selektora wstawiliśmy stałą <code>href</code> (pomiędzy znakami <code>+</code>). Dzięki temu znajdziemy wszystkie linki, które mają taki sam atrybut <code>href</code>, jak kliknięty link.</p>
+<p>Dlaczego stosujemy takie kombinacje? Czemu nie wykorzystamy tego, że wszystkie linki do tagów są we wrapperze tagów? Wybiegamy tutaj nieco naprzód – chcemy, aby te selektory uchwyciły wszystkie linki do tagów, również te, które w kolejnym submodule wygenerujemy w prawej kolumnie.</p>
+<p>Co więcej, chcemy żeby wszystkie linki do tego samego tagu stały się aktywne – nie tylko ten kliknięty.</p>
+<h4>Wydobycie fragmentu tekstu</h4>
+<p>Zatrzymaj się, kiedy dotrzesz do tego komentarza:</p>
+<pre><code class="language-js">/* make a new constant &quot;tag&quot; and extract tag from the &quot;href&quot; constant */
+</code></pre>
+<p>Stała <code>href</code> będzie zawierać wartość atrybutu <code>href</code> z linka, który stworzyliśmy wcześniej w funkcji <code>generateTags</code>. Ta wartość to może być np. <code>'#tag-cat'</code>. Stworzyliśmy ten <code>href</code>, łącząc prefiks <code>'#tag-'</code> i zmienną <code>tag</code>. Teraz chcemy wykonać operację odwrotną, czyli na podstawie <code>'#tag-cat'</code> uzyskać samo słowo <code>'cat'</code>.</p>
+<p>Jest wiele sposobów, w jakie możemy osiągnąć ten cel, więc nie zdziw się, jeśli szukając w internecie znajdziesz inne rozwiązania. My posłużymy się funkcją <code>replace</code>, która pozwoli nam zamienić tekst <code>'#tag-</code>' na pusty ciąg znaków. Ta linia kodu będzie wyglądała tak:</p>
+<pre><code class="language-js">const tag = href.replace('#tag-', '');
+</code></pre>
+<p>Jak widzisz, funkcja <code>replace</code> otrzymuje dwa argumenty – szukaną frazę oraz ciąg znaków, którym ma ją zastąpić.</p>
+<h4>Wywołanie funkcji <code>generateTitleLinks</code></h4>
+<p>Na samym końcu funkcji <code>tagClickHandler</code> wywołamy funkcję <code>generateTitleLinks</code>. Tym razem jednak, do jej wywołania dodamy atrybut, który będzie <strong>selektorem atrybutów artykułu</strong>. Za chwilę przerobimy tę funkcję tak, aby umożliwiała nam znalezienie artykułów tylko z podanym tagiem. Zobaczmy najpierw, jak będzie wyglądać to wywołanie funkcji:</p>
+<pre><code class="language-js">generateTitleLinks('[data-tags~=&quot;' + tag + '&quot;]');
+</code></pre>
+<p>Ten selektor – a właściwie fragment selektora – za chwilę będzie użyty w funkcji <code>generateTitleLinks</code> do przefiltrowania artykułów. Użyliśmy w nim łącznika <code>~=</code>, który możemy odczytać jako "znajdź elementy, które mają atrybut <code>data-tags</code>, który ma w sobie słowo 'tag'".</p>
+<p>Ten selektor działa podobnie do znajdowania elementu po klasie – nieważne, czy element ma jedną klasę, czy ma ich wiele, ale jeśli jedną z jego klas jest ta, której szukamy, to ten element pasuje do selektora.</p>
+<p>Podobnie w tym przypadku, selektor <code>[data-tags~=&quot;cat&quot;]</code> znajdzie zarówno element o atrybucie <code>data-tags=&quot;cat&quot;</code>, jak i <code>data-tags=&quot;cactus cat scissors&quot;</code>.</p>
+<h3>Zmiana funkcji <code>generateTitleLinks</code></h3>
+<p>Możesz sobie pomyśleć, że teraz to dopiero nas czeka przeprawa! Do tej pory generowaliśmy listę wszystkich linków, a teraz do tego dochodzi jeszcze jakieś filtrowanie!</p>
+<p>Owszem, to może brzmieć jak bardzo wymagające zadanie, ale pozytywnie się zaskoczysz!</p>
+<p>Zajrzyj do funkcji <code>generateTitleLinks</code> i znajdź linię, w której definiujemy stałą <code>articles</code>.</p>
+<pre><code class="language-js">const articles = document.querySelectorAll(optArticleSelector);
+</code></pre>
+<p>Do tej pory wyszukiwaliśmy wszystkie artykuły za pomocą selektora <code>optArticleSelector</code>, czyli <code>'.post'</code>. Teraz wystarczy, że nieco zmodyfikujemy selektor, aby znaleźć tylko te artykuły, które będą posiadać poszukiwany tag.</p>
+<h4>Domyślna wartość argumentu</h4>
+<p>Zacznijmy jednak od nazwania atrybutu – zmień pierwszą linię definicji funkcji <code>generateTitleLinks</code> na:</p>
+<pre><code class="language-js">function generateTitleLinks(customSelector = ''){
+</code></pre>
+<p>Do tej pory nie spotkaliśmy się ze znakiem <code>=</code> w deklaracji argumentów funkcji! Wiesz jednak, że ten znak oznacza przypisanie wartości. W przypadku argumentu będzie to przypisanie domyślnej wartości.</p>
+<p>Zobacz, jak działa ten przykład – możesz go wkleić bezpośrednio do konsoli w narzędziach developerskich.</p>
+<pre><code class="language-js">function multiplyNumbers(numA, numB = 2){
+  return numA * numB;
+}
+
+console.log('multiplyNumbers(5, 3) =', multiplyNumbers(5, 3)); // multiplyNumbers(5, 3) = 15
+console.log('multiplyNumbers(5) =', multiplyNumbers(5)); // multiplyNumbers(5) = 10
+</code></pre>
+<p>W tym przykładzie argument <code>numB</code> przyjmuje wartość <code>2</code>, jeśli nie został podany przy wywołaniu funkcji. Podobnie w naszym przypadku, jeśli nie podano argumentu, to <code>customSelector</code> będzie miał wartość <code>''</code>, czyli pustego ciągu znaków.</p>
+<h4>Wykorzystanie selektora</h4>
+<p>Funkcja <code>generateTitleLinks</code> ma już argument <code>customSelector</code>, który domyślnie jest pustym ciągiem znaków. Teraz wystarczy zmienić wspomnianą wcześniej linię kodu na:</p>
+<pre><code class="language-js">const articles = document.querySelectorAll(optArticleSelector + customSelector);
+</code></pre>
+<p>W ten sposób uzyskamy np. selektor <code>.post[data-tags~=&quot;cat&quot;]</code>, jeśli funkcja została wywołana z argumentem <code>'[data-tags~=&quot;cat&quot;]'</code>. Jeżeli natomiast nie podano żadnego argumentu, to wyszukamy elementy pasujące do selektora <code>.post</code>, czyli wszystkie artykuły.</p>
+<h4>Analiza filtrowania</h4>
+<p>Przestudiuj, co się zmieniło w funkcji <code>generateTitleLinks</code>. Użyj <code>console.log</code> do sprawdzenia, jaką wartość ma atrybut <code>customSelector</code>, i jaką wartość mają złączone teksty <code>optArticleSelector</code> i <code>customSelector</code>. Dzięki temu lepiej zrozumiesz, dlaczego wystarczyła nam zmiana dwóch linii, aby ta funkcja wyświetlała przefiltrowaną listę linków do artykułów.</p>
+<p>Pamiętaj, aby <strong>jak najczęściej</strong> używać <code>console.log</code> podczas pisania JS – zwłaszcza wtedy, gdy uczysz się nowych rzeczy, oraz gdy coś nie działa. Dzięki temu nie musisz zgadywać, co dzieje się w kodzie – odpowiedź masz podaną na tacy!</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block task-card" >
+                        <h3>Zadanie: <span class="task-title">Dodanie autora</span></h3>
+                        <div class="task-content">
+                            <img src="https://uploads.kodilla.com/bootcamp/fer/images/ink.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/ink-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/ink.png 2x" class="img-inline img-right">
+<p>W tym submodule, dla każdego artykułu:</p>
+<ul>
+<li>dodaliśmy tagi w atrybucie <code>data-tags</code>,</li>
+<li>wyświetliliśmy te tagi jako linki na końcu artykułu,</li>
+<li>powiązaliśmy kliknięcie w te linki z wygenerowaniem przefiltrowanej listy artykułów w lewej kolumnie.</li>
+</ul>
+<p>Oprócz poprawnego wykonania poleceń z tego submodułu Twoim zadaniem jest wykonanie tego samego dla <strong>autorów artykułów</strong>, czyli:</p>
+<ul>
+<li>w każdym artykule dodaj autora w atrybucie <code>data-author</code> (usuń autora z wrappera <code>.post-author</code>),</li>
+<li>wyświetl autora jako link we wrapperze <code>post-author</code>, pod tytułem artykułu,</li>
+<li>powiąż kliknięcie w link do autora z wygenerowaniem przefiltrowanej listy artykułów.</li>
+</ul>
+<p>Dla uproszczenia niech każdy autor ma tylko imię i nazwisko – bez kropek, myślników czy drugich imion.</p>
+<h4>Wskazówki</h4>
+<ol>
+<li>Potrzebujesz napisać funkcję <code>generateAuthors</code>, wzorując się na <code>generateTags</code>,</li>
+<li>Funkcja <code>generateAuthors</code> będzie prostsza niż <code>generateTags</code>, ponieważ jest tylko jeden autor artykułu – nie musisz dzielić tego pola funkcją <code>split</code>, ani wykonywać pętli podobnej do tej iterującej po tagach. Dla każdego artykułu będzie tylko jeden link do autora.</li>
+<li>Napisz też funkcje <code>addClickListenersToAuthors</code> i <code>authorClickHandler</code>, wzorując się na <code>addClickListenersToTags</code> i <code>tagClickHandler</code>.</li>
+<li>Nie musisz w żaden sposób zmieniać funkcji <code>generateTitleLinks</code> – wystarczy, że w funkcji <code>authorClickHandler</code> wywołasz ją z odpowiednim argumentem. Pamiętaj, że w tym wypadku w selektorze atrybutu użyjesz łącznika <code>=</code> zamiast <code>~=</code>.</li>
+<li>Nie zapomnij dodać nowej stałej ustawień – <code>optArticleAuthorSelector</code>.</li>
+<li>Usuń przykładową zawartość listy autorów z kodu HTML – nie będzie nam już potrzebna.</li>
+</ol>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <div class="clearfix">
+                                                                                <a href="https://kodilla.com/pl/bootcamp-task/407/601080" target="_blank" class="btn btn-info-outline">Podgląd zadania</a>
+                            <form target="_blank" class="form-inline project-link-form">
+                                <div class="form-group">
+                                    <input type="text" name="link" class="form-control" value="https://github.com/skwiryt/javascript-blog/commit/b7d060bda2df8e44afad061e84456f476a35bda9">
+                                </div>
+                                <button type="submit" class="btn  btn-primary " >Wyślij link <i class="fa fa-check"></i></button>
+                            </form>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-983" class="card submodule completed" data-bootcamp-user-submodule-id="601081" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">7.3. <span>Wyświetlamy chmurę tag&oacute;w</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>W tym submodule zajmiemy się <strong>wygenerowaniem listy tagów w prawej kolumnie</strong>.</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/06.jsobjects/fer-06-03.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/06.jsobjects/fer-06-03.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<p>Każdy tag będzie linkiem, który – podobnie jak w każdym artykule – będzie filtrował listę tytułów w lewej kolumnie. To jeszcze nie będzie chmura tagów – na razie interesuje nas tylko lista unikalnych tagów, w postaci linków. Twój efekt może różnić się od tego na powyższym obrazku, w zależności od tagów dodanych do Twoich artykułów.</p>
+<p>Przed chwilą dla każdego z artykułów wygenerowaliśmy linki z tagami tego artykułu. Czy nie moglibyśmy przy okazji takich samych linków dodać do prawej kolumny?</p>
+<p>Problem leży w tym, że jeśli dwa artykuły mają ten sam tag, to dodalibyśmy go dwukrotnie. Dlatego musimy zastosować inne podejście.</p>
+<h3>Parę słów o tablicach</h3>
+<p>Zanim przejdziemy do rozwiązania tego problemu, musimy nieco lepiej zapoznać się z <strong>tablicami</strong>. Przypomnimy, że spotkaliśmy się z nimi przy okazji użycia funkcji <code>split</code>. Stąd wiesz już, że <strong>tablica jest kolekcją wartości</strong>, i możemy po niej iterować za pomocą pętli <code>for-of</code>.</p>
+<p>Za chwilę zaczniemy używać tablic w inny sposób niż dotychczas. Przeczytaj w <a href="https://poradnik-js.kodilla.com/arrays" target="_blank">naszym poradniku JS</a> cały rozdział dotyczący tablic.</p>
+<p>Jeśli chcesz, możesz stworzyć nowy <a href="https://codepen.io/pen/" target="_blank">CodePen</a> i wklejać do niego przykłady z poradnika – to pomoże Ci lepiej zrozumieć tablice, z których za chwilę będziemy korzystać.</p>
+<p>Pamiętaj, że informacji z poradnika nie musisz uczyć się na pamięć – możesz mieć go cały czas pod ręką. Oczywiście, poradnik zawiera tylko podstawowe możliwości wykorzystania tablic – ale te informacje w zupełności wystarczą nam do zrealizowania tego etapu projektu.</p>
+<h3>Wyświetlenie listy tagów</h3>
+<p>Najpierw dodajmy nową stałą ustawień – <code>optTagsListSelector</code> z wartością <code>.tags.list</code>. Ten selektor pozwoli nam na odnalezienie listy tagów w prawej kolumnie.</p>
+<p>Do stworzenia naszej tablicy unikalnych tagów wykorzystamy funkcję <code>generateTags</code>. W poniższym szablonie oznaczyliśmy nowe pozycje algorytmu jako <code>[NEW]</code>. Pozostałe fragmenty funkcji pozostawiamy nieuzupełnione – były elementem poprzedniego submodułu.</p>
+<pre><code class="language-js">function generateTags(){
+  /* [NEW] create a new variable allTags with an empty array */
+  let allTags = [];
+
+  /* find all articles */
+
+  /* START LOOP: for every article: */
+
+    /* find tags wrapper */
+
+    /* make html variable with empty string */
+
+    /* get tags from data-tags attribute */
+
+    /* split tags into array */
+
+    /* START LOOP: for each tag */
+
+      /* generate HTML of the link */
+
+      /* add generated code to html variable */
+
+      /* [NEW] check if this link is NOT already in allTags */
+      if(allTags.indexOf(linkHTML) == -1){
+        /* [NEW] add generated code to allTags array */
+        allTags.push(linkHTML);
+      }
+
+    /* END LOOP: for each tag */
+
+    /* insert HTML of all the links into the tags wrapper */
+
+  /* END LOOP: for every article: */
+
+  /* [NEW] find list of tags in right column */
+  const tagList = document.querySelector('.tags');
+
+  /* [NEW] add html from allTags to tagList */
+  tagList.innerHTML = allTags.join(' ');
+}
+</code></pre>
+<p>Zastanówmy się, co się tutaj dzieje:</p>
+<p><strong>1.</strong> Dla każdego artykułu znajdujemy jego tagi (kod pod komentarzem <code>/* get tags from data-tags attribute */</code>).</p>
+<p><strong>2.</strong> Dla każdego z tych tagów jest generowany kod HTML linka (kod pod komentarzem <code>/* generate HTML of the link */</code>).</p>
+<p><strong>3.</strong> Sprawdzamy, czy dokładnie taki link mamy już w tablicy <code>allTags</code> (kod pod komentarzem <code>/* [NEW] check if this link is NOT already in allTags */</code>).</p>
+<p><strong>4.</strong> Jeśli go nie mamy, dodajemy go do tej tablicy (kod pod komentarzem <code>/* [NEW] add generated code to allTags array */</code>).</p>
+<p><strong>5.</strong> Na końcu funkcji znajdujemy listę tagów (kod pod komentarzem <code>/* [NEW] find list of tags in right column */</code>) i dodajemy do niej wszystkie linki znajdujące się w tablicy <code>allTagsLinks</code>, łącząc je ze sobą za pomocą spacji (kod pod komentarzem <code>/* [NEW] add html from allTags to tagList */</code>). Pamiętaj, że te fragmenty muszą znajdować się <strong>poza pętlą!</strong></p>
+<p>Podsumowując, tablica <code>allTags</code> służy nam tutaj tylko za katalog, który informuje nas, czy dany tag już widzieliśmy, czy jeszcze nie. Jednocześnie jest zbiorem linków (a konkretniej – tekstów, które zawierają kod HTML linków), które później wstawiamy do listy tagów w prawej kolumnie.</p>
+<p>Oczywiście, to samo zadanie można zrealizować na mnóstwo innych sposobów, a to jest tylko jeden z nich. Jest to jednak zupełnie dobre rozwiązanie, skoro pozwoliło nam na wygenerowanie listy unikatowych tagów (i linków do nich).</p>
+<h4>Usunięcie listy tagów z prawej kolumny</h4>
+<p>Nie zapomnij usunąć z kodu HTML przykładowych linków do tagów. Nie będą nam już potrzebne, ponieważ generujemy tę listę za pomocą funkcji <code>generateTags</code>.</p>
+<h3>Liczba wystąpień tagu</h3>
+<p>W celu wyświetlenia chmury tagów będziemy potrzebowali znać <strong>liczbę wystąpień danego tagu</strong>. Będzie nam też potrzebna największa i najmniejsza liczba wystąpień. Jednak nie wszystko naraz – zaczniemy od wyświetlenia listy wystąpień w każdym z linków w prawej kolumnie. Oznacza to, że będą się one różnić od tagów na końcu artykułu – będziemy musieli osobno je wygenerować.</p>
+<p>Zanim je wygenerujemy, musimy jakoś dla każdego tagu zapisać liczbę jego wystąpień. W tym wypadku tablica nie będzie bardzo przydatna, ponieważ dla każdego tagu potrzebujemy przechowywać dwie, powiązane ze sobą informacje – jaki to tag oraz ile razy wystąpił. Do tego celu o wiele bardziej przydadzą nam się <strong>obiekty</strong>!</p>
+<h3>Poznajemy obiekty</h3>
+<p>Obiekty są <strong>strukturą danych</strong>, podobnie jak tablice (ang. <em>arrays</em>). Mają jednak kilka kluczowych różnic, dzięki którym będą dla nas przydatne w innych sytuacjach.</p>
+<div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Metafora — obiekt</h4>
+<img src="https://uploads.kodilla.com/bootcamp/kodilla-bootcamp-01-05-2018-1525180717-4275.png" class="img-inline img-right">
+<p>Podobnie jak tablicę, obiekt porównamy do pudełka, w którym jest wiele małych pudełek.</p>
+<p>W przeciwieństwie do tablicy, w obiekcie te małe pudełka nie są ułożone w jakiejś kolejności – zamiast tego, każde pudełko ma swoją etykietę.</p>
+<p>Aby wybrać któreś małe pudełko, zamiast mówić "biorę pierwsze pudełko", powiemy "biorę pudełko z etykietą: zabawki dla kota".</p>
+</div>
+<p>Główną różnicą pomiędzy tablicami (<em>arrays</em>) a obiektami jest sposób przechowywania danych. W tablicy każda wartość miała swój indeks, czyli kolejny numer. W obiekcie każda wartość będzie miała <strong>klucz</strong>, czyli swoją "nazwę".</p>
+<p>Wszystkie niezbędne informacje o obiektach, które będą Ci potrzebne do realizacji tego projektu, znajdziesz w <a href="https://poradnik-js.kodilla.com/objects" target="_blank">naszym poradniku JS</a>, gdzie umieściliśmy cały rozdział dotyczący tablic.</p>
+<p>Jeśli masz ochotę, załóż nowy <a href="https://codepen.io/pen/" target="_blank">CodePen</a> (lub wykorzystaj CodePen założony do nauki tablic) i wklej do niego przykłady z poradnika.</p>
+<h3>Budujemy obiekt liczący tagi</h3>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/calculator.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/calculator-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/calculator.png 2x" class="img-inline img-right">
+<p>Chcemy zliczać wystąpienia każdego tagu. Do tej pory korzystaliśmy z tablicy <code>allTags</code>, w której wartościami były unikalne linki do tagów.</p>
+<p>Ta tablica, po wyświetleniu za pomocą <code>console.log</code>, mogła wyglądać np. tak:</p>
+<pre><code class="language-js">['&lt;li&gt;&lt;a href=&quot;#tag-code&quot;&gt;code&lt;/a&gt;&lt;/li&gt;', '&lt;li&gt;&lt;a href=&quot;#tag-news&quot;&gt;news&lt;/a&gt;&lt;/li&gt;']
+</code></pre>
+<p>Do zliczania wystąpień tagów wykorzystamy obiekt – chcemy, aby wyglądał np. tak:</p>
+<pre><code class="language-js">{
+  cat: 3,
+  cactus: 1,
+  scissors: 2
+}
+</code></pre>
+<p>Użyliśmy tutaj wieloliniowego formatu zapisu obiektu (czyli z Enterem pomiędzy każdą parą klucz-wartość). Dzięki temu łatwiej będzie nam zrozumieć, co znajduje się w obiekcie. W kodzie JS również możemy używać tego zapisu przy tworzeniu obiektów.</p>
+<p>Możemy zaczynać wprowadzanie zmian. Pamiętaj, że dopóki nie skończymy następnych podrozdziałów, nasz kod nie będzie działał poprawnie.</p>
+<h4>Zmieniamy tablicę na obiekt</h4>
+<p>Zacznij od znalezienia tego fragmentu kodu:</p>
+<pre><code class="language-js">  /* [NEW] create a new variable allTags with an empty array */
+  let allTags = [];
+</code></pre>
+<p>Zamiast tablicy chcemy wykorzystać obiekt, więc musimy zmienić ten fragment na:</p>
+<pre><code class="language-js">  /* [NEW] create a new variable allTags with an empty object */
+  let allTags = {};
+
+</code></pre>
+<p>Zauważ, że zmieniamy też komentarz, aby odpowiadał temu, co mamy w kodzie.</p>
+<h4>Dodawanie nowych tagów do obiektu</h4>
+<p>Kolejny fragment, który musimy znaleźć, to:</p>
+<pre><code class="language-js">      /* [NEW] check if this link is NOT already in allTags */
+      if(allTags.indexOf(linkHTML) == -1){
+        /* [NEW] add generated code to array allTags */
+        allTags.push(linkHTML);
+      }
+</code></pre>
+<p>Musimy go zmienić, ponieważ teraz korzystamy z obiektu, w którym chcemy zliczać wystąpienia tagów. Zacznijmy od obsłużenia sytuacji, w której w obiekcie <code>allTags</code> nie mamy jeszcze danego tagu. Wtedy licznik wystąpień tego tagu ustawiamy na <code>1</code>.</p>
+<pre><code class="language-js">/* [NEW] check if this link is NOT already in allTags */
+if(!allTags[tag]) {
+/* [NEW] add tag to allTags object */
+  allTags[tag] = 1;
+}
+</code></pre>
+<p>Zwróć uwagę, że w warunku użyliśmy <strong>wykrzyknika</strong> (<code>!</code>), czyli zastosowaliśmy <strong>negację</strong>. Dlatego warunek czytamy jako "jeśli <code>allTags</code> NIE MA klucza <code>tag</code>". Więcej o negacjach warunków dowiesz się z <a href="https://poradnik-js.kodilla.com/operators" target="_blank">naszego poradnika JS</a>.</p>
+<h4>Zliczanie wystąpień tagu</h4>
+<p>Jeśli natomiast ten tag już znajduje się w <code>allTags</code>, zwiększymy licznik wystąpień o <code>1</code>. Dopiszemy więc blok <em>else</em>:</p>
+<pre><code class="language-js">/* [NEW] check if this link is NOT already in allTags */
+if(!allTags[tag]) {
+  /* [NEW] add tag to allTags object */
+  allTags[tag] = 1;
+} else {
+  allTags[tag]++;
+}
+</code></pre>
+<p>W tym bloku użyliśmy operatora <strong>inkrementacji</strong> – znaki <code>++</code> zwiększają liczbę o <code>1</code>. Więcej informacji znajdziesz w <a href="https://poradnik-js.kodilla.com/operators" target="_blank">naszym poradniku JS</a>.</p>
+<p>Teraz zamknij ostatnią linię kodu w komentarz, aby przestała działać, i dodaj <code>console.log</code>, aby sprawdzić, co znajduje się w obiekcie <code>allTags</code>:</p>
+<pre><code class="language-js">/* [NEW] add HTML from allTags to tagList */
+// tagList.innerHTML = allTags.join(' ');
+console.log(allTags);
+</code></pre>
+<p>Taki sposób na chwilowe wyłączenie – czy <em>zakomentowanie</em> – fragmentu kodu, jest bardzo często używane przez programistów. Dzięki temu nie musisz kasować linii kodu, która aktualnie nie działa, ale za chwilę będzie Ci potrzebna.</p>
+<p>Sprawdź w konsoli, jak wygląda zawartość obiektu <code>allTags</code>. Powinna przypominać strukturę, którą przed chwilą pokazaliśmy, czyli:</p>
+<pre><code class="language-js">{
+  cat: 3,
+  cactus: 1,
+  scissors: 2
+}
+</code></pre>
+<h3>Generowanie linków do listy tagów</h3>
+<p>Pozostaje nam wygenerować kod HTML linków do umieszczenia na liście tagów w prawej kolumnie. Przy każdym tagu chcemy wyświetlić w nawiasach liczbę jego wystąpień. W tym celu zamień ten fragment kodu:</p>
+<pre><code class="language-js">    /* [NEW] add html from allTags to tagList */
+    // tagList.innerHTML = allTags.join(' ');
+    console.log(allTags);
+</code></pre>
+<p>na następujący:</p>
+<pre><code class="language-js">/* [NEW] create variable for all links HTML code */
+let allTagsHTML = '';
+
+/* [NEW] START LOOP: for each tag in allTags: */
+for(let tag in allTags){
+  /* [NEW] generate code of a link and add it to allTagsHTML */
+  allTagsHTML += tag + ' (' + allTags[tag] + ') ';
+}
+/* [NEW] END LOOP: for each tag in allTags: */
+
+/*[NEW] add HTML from allTagsHTML to tagList */
+tagList.innerHTML = allTagsHTML;
+</code></pre>
+<p>Zwróć uwagę, że używamy tutaj operatora <code>+=</code> do doklejania kolejnego linka do zmiennej <code>allTagsHTML</code>. Możesz poczytać o nim więcej w <a href="https://poradnik-js.kodilla.com/operators" target="_blank">naszym poradniku JS</a>.</p>
+<p>Jak widzisz, zamiast linka generujemy tylko nazwę tagu oraz liczbę jego wystąpień. Popraw ten fragment kodu tak, aby był generowany poprawny kod HTML linka.</p>
+<h3>Podsumowanie dotychczasowych zmian</h3>
+<p>Po tej zmianie wszystko powinno działać poprawnie. Lista linków do tagów w prawej kolumnie powinna się znów generować, tym razem jednak z informacją o liczbie wystąpień.</p>
+<p>Zostało nam już niewiele pracy – musimy już tylko zróżnicować rozmiary tagów. Na końcu nieco zmienimy style, aby linki do tagów nie wyświetlały się jeden pod drugim, tylko inline'owo.</p>
+<h3>Zamiana listy tagów w chmurę</h3>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/balloons.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/balloons-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/balloons.png 2x" class="img-inline img-right">
+<p>Cały czas trzymamy się jednej z dobrych praktyk, która mówi, aby nie zmieniać wyglądu strony bezpośrednio za pomocą kodu JS. Podobnie i tym razem, nie będziemy zmieniać rozmiarów czcionek, tylko nadawać klasy – załóżmy, że będzie ich 5, i będą wpływać na rozmiar czcionki. Pierwszą nazwiemy je <code>tag-size-1</code>, a ostatnią – <code>tag-size-5</code>.</p>
+<h4>Znalezienie skrajnych liczb wystąpień</h4>
+<p>Załóżmy, że w momencie generowania linka do tagu <code>cactus</code> wiemy, że występuje on w 7 artykułach. Czy to dużo, czy mało? Aby to ustalić, musimy wiedzieć w ilu artykułach pojawia się najrzadszy z tagów, a w ilu – najbardziej popularny.</p>
+<p>W tym celu znajdź ten fragment kodu:</p>
+<pre><code class="language-js">    /* [NEW] create variable for all links HTML code */
+    let allTagsHTML = '';
+</code></pre>
+<p>przed tym fragmentem dodamy następujące linie kodu:</p>
+<pre><code class="language-js">const tagsParams = calculateTagsParams(allTags);
+console.log('tagsParams:', tagsParams)
+</code></pre>
+<p>Jeszcze nie mamy takiej funkcji, więc przed funkcją <code>generateTags</code> dodaj jej deklarację. Funkcja ta będzie przyjmować jeden argument, który nazwiemy <code>tags</code>. Jej zadaniem będzie znalezienie najmniejszej i największej liczby wystąpień. Te dwie liczby mają zostać zwrócone w postaci obiektu, który będzie zawierał dwa klucze: <code>max</code> i <code>min</code>.</p>
+<p>Zanim przejdziemy dalej, krótkie wyjaśnienie – określenie "params" jest skrótem od <em>parameters</em>, czyli parametrów. To jedno z dość często używanych słów w JS, podobnie jak "opts" dla <em>options</em> czy "elem" dla <em>elements</em>.</p>
+<h4>Spróbuj samodzielnie</h4>
+<p>Najpierw spróbuj przemyśleć algorytm działania tej funkcji. Wiesz, że argumentem będzie <code>allTags</code>, którego kluczami są tagi, a wartościami – liczby wystąpienia tagu.</p>
+<p>Rezultatem zwracanym przez funkcję ma być obiekt, który może wyglądać np. tak:</p>
+<pre><code class="language-js">{
+  min: 2,
+  max: 7
+}
+</code></pre>
+<p>Podpowiemy, że będzie potrzebna pętla iterująca przez wszystkie tagi w obiekcie podanym jako argument funkcji. Czy domyślasz się, jakie operacje będziemy wykonywać dla każdego tagu?</p>
+<p>Aby nie psuć Ci okazji do samodzielnej pracy – która jest najlepszą formą nauki – ukryliśmy rozwiązanie tego problemu pod poniższym guzikiem. Kliknij go, kiedy zechcesz poznać rozwiązanie.</p>
+<p>Wcześniej jednak podpowiemy, że do rozwiązania tego problemu przydadzą Ci się dwie funkcje z biblioteki <code>Math</code> – przykłady znajdziesz w <a href="https://poradnik-js.kodilla.com/operators" target="_blank">naszym poradniku JS</a>. ;)</p>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-8UW7CANqX-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż opis rozwiązania</a>
+    <a href="#collapse-8UW7CANqX-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj opis rozwiązania</a>
+  </span>
+</p>
+<div id="collapse-8UW7CANqX-toggle" class="collapse">
+<h4>Dokończenie funkcji <code>calculateTagsParams</code></h4>
+<p>Funkcję <code>calculateTagsParams</code> zaczniemy od zdefiniowania stałej <code>params</code>, której wartością będzie obiekt zawierający dwa klucze – <code>max</code> z wartością <code>0</code> i <code>min</code> z wartością <code>999999</code>. Założymy, że nasz skrypt obsłuży maksymalnie milion artykułów z takim samym tagiem – to raczej bezpieczne założenie. ;)</p>
+<div class="bc-note alert-success">
+<h4 class="alert-heading text-center">Wyjaśnienia dla zainteresowanych</h4>
+<p>Ustawiamy takie początkowe wartości <code>max</code> i <code>min</code>, aby wykluczyć szansę na to, że wpłyną one na finalne wartości tych parametrów.</p>
+<p>Łatwiej jest zrozumieć <code>max</code> niż <code>min</code> – ustawiamy <code>max</code> na <code>0</code>, żeby potem podnosić tę wartość od największej liczby wystąpień tagu.</p>
+<p>A co z <code>min</code>? Załóżmy przez chwilę, że ustawiliśmy <code>min</code> początkową wartość <code>1</code>, ale najmniej popularny tag występuje w pięciu artykułach. Na końcu działania skryptu <code>min</code> dalej miałoby wartość <code>1</code>, a nie <code>5</code>. Wynika to z faktu, że zmieniamy wartość <code>min</code> tylko i wyłącznie, kiedy liczba wystąpień danego tagu jest mniejsza od <code>min</code>. Dlatego chcemy, aby początkowa wartość <code>min</code> była bardzo duża – z założenia większa niż docelowa wartość.</p>
+</div>
+<p>To właśnie ten obiekt – <code>params</code> – funkcja będzie zwracać na końcu. Możesz od razu dodać <code>return params;</code> na końcu funkcji.</p>
+<p>Pomiędzy tymi liniami wykorzystamy pętlę <code>for-in</code>, która będzie iterować przez cały obiekt, przekazany do funkcji jako argument. Jeśli argument funkcji <code>calculateTagsParams</code> nazwaliśmy <code>tags</code>, to pętla będzie wyglądać następująco:</p>
+<pre><code class="language-js">  for(let tag in tags){
+    console.log(tag + ' is used ' + tags[tag] + ' times');
+  }
+</code></pre>
+<p>Wewnątrz tej pętli musimy ustawić wartości dla <code>params.max</code> – będzie to <code>tags[tag]</code>, ale tylko jeśli ta liczba jest większa niż dotychczasowa wartość <code>params.max</code>.</p>
+<p>Jest kilka sposobów, aby to osiągnąć. Przedstawiamy je na poniższych zakładkach. Wybór rozwiązania nie jest oczywisty i zależy w dużej mierze od przyjętej konwencji. Różnica w wydajności pomiędzy tymi metodami jest mała, ale <em>short if</em> może działać o 5-10% wolniej. Przy jednorazowym jego zastosowaniu nie stanowi to jednak istotnej różnicy.</p>
+<ul class="nav nav-tabs">
+	<li class="nav-item"><a href="#max-number-standard-if" class="nav-link active show" data-toggle="tab">Standardowy if</a></li>
+	<li class="nav-item"><a href="#max-number-short-if" class="nav-link" data-toggle="tab">Short if</a></li>
+	<li class="nav-item"><a href="#max-number-math-max" class="nav-link" data-toggle="tab">Math.max</a></li>
+</ul>
+<div class="tab-content">
+<div id="max-number-standard-if" class="tab-pane card fade active show"><div class="card-block">
+<h5>Standardowy if</h5>
+<p>Najprostszym sposobem będzie standardowy blok <em>if</em>:</p>
+<pre><code class="language-js">    if(tags[tag] &gt; params.max){
+      params.max = tags[tag];
+    }
+</code></pre>
+</div></div> <!-- /.tab-pane -->
+<div id="max-number-short-if" class="tab-pane card fade"><div class="card-block">
+<h5>Short if</h5>
+<p>Krótszą formą może być wykorzystanie <em>short ifa</em>, który opisaliśmy w <a href="https://poradnik-js.kodilla.com/operators" target="_blank">naszym poradniku JS</a>. Jeśli warunek będzie fałszywy, po prostu przypisze do <code>params.max</code> dotychczasową wartość <code>params.max</code>, czyli nic się nie zmieni.</p>
+<pre><code class="language-js">    params.max = tags[tag] &gt; params.max ? tags[tag] : params.max;
+</code></pre>
+</div></div> <!-- /.tab-pane -->
+<div id="max-number-math-max" class="tab-pane card fade"><div class="card-block">
+<h5>Math.max</h5>
+<p>Kolejnym rozwiązaniem może być wykorzystanie funkcji <code>Math.max</code>, która zwraca największą z podanych liczb.</p>
+<pre><code class="language-js">    params.max = Math.max(tags[tag], params.max);
+</code></pre>
+</div></div> <!-- /.tab-pane -->
+</div> <!-- /.tab-content -->
+<hr>
+<p>W analogiczny sposób znajdziesz najmniejszą liczbę wystąpień – wystarczy, że zamiast <code>param.max</code> użyjesz <code>param.min</code>. W zależności od wybranego rozwiązania, zmień też <code>&gt;</code> na <code>&lt;</code> lub <code>Math.max</code> na <code>Math.min</code>.</p>
+<p>Jeśli wszystko poszło dobrze, funkcja <code>calculateTagsParams</code> jest gotowa i powinna zwracać największą i najmniejszą liczbę wystąpień tego samego tagu.</p>
+</div>
+<h5>Oczekiwany efekt</h5>
+<p>Po dokończeniu funkcji <code>calculateTagsParams</code> w konsoli powinniśmy zobaczyć taką linię:</p>
+<pre><code class="language-plaintext">tagsParams: {max: 10, min: 2}
+</code></pre>
+<p>U Ciebie te liczby będą się zapewne różnić od tego przykładu, ale dzięki temu widzisz, że nasza funkcja z powodzeniem znalazła największą i najmniejszą liczbę wystąpień tagów. Za chwilę użyjemy tych liczb, aby dla każdego tagu wybrać jedną z klas decydujących o rozmiarze jego czcionki.</p>
+<hr>
+<h4>Wybranie klasy dla tagu</h4>
+<p>Ostatnim krokiem będzie wybranie jednej z 5 klas. Chcielibyśmy jednak, żeby nasz skrypt był w miarę elastyczny i pozwalał na łatwą zmianę liczby klas wpływających na rozmiar tagu w chmurze, jak również na nazwy tych klas.</p>
+<p>Znajdź miejsce w kodzie, w którym zapisujesz ustawienia, czyli stałe, których nazwa zaczyna się od <code>opt</code>. Dodaj kolejne stałe:</p>
+<ul>
+<li><code>optCloudClassCount</code> o wartości <code>5</code>,</li>
+<li><code>optCloudClassPrefix</code> o wartości <code>tag-size-</code>.</li>
+</ul>
+<p>Następnie, przed deklaracją funkcji <code>generateTags</code> dodaj deklarację nowej funkcji – <code>calculateTagClass</code>, która będzie przyjmować dwa argumenty. Nazwijmy je <code>count</code> i <code>params</code>. Za chwilę zajmiemy się jej napisaniem, ale najpierw zastosujmy ją przy generowaniu linków.</p>
+<p>Znajdź teraz fragment kodu odpowiedzialny za generowanie kodu HTML linka dodawanego do chmury tagów. Ta linia kodu powinna zaczynać się od <code>allTagsHTML +=</code>.</p>
+<p>W generowanym kodzie HTML linka dodaj atrybut <code>class=&quot;&quot;</code>. Jako wartość tego atrybutu wstaw wartość zwracaną przez funkcję <code>calculateTagClass</code>, której przekażemy dwa argumenty – liczbę wyświetleń tagu oraz stałą <code>tagsParams</code>.</p>
+<p>Jeśli nie masz pewności, jak to zrobić, zacznij od wpisania w nowej linii:</p>
+<pre><code class="language-js">const tagLinkHTML = calculateTagClass(allTags[tag], tagsParams);
+console.log('tagLinkHTML:', tagLinkHTML);
+</code></pre>
+<p>Następnie, do wartości <code>tagLinkHTML</code> "doklejaj" kolejne fragmenty tekstu, będącego kodem HTML, np:</p>
+<pre><code class="language-js">const tagLinkHTML = '&lt;li&gt;' + calculateTagClass(allTags[tag], tagsParam) + '&lt;/li&gt;';
+console.log('tagLinkHTML:', tagLinkHTML);
+</code></pre>
+<p>W ten sposób możesz, krok po kroku, zbudować cały kod HTML linka, który należy wstawić zamiast kodu generowanego do tej pory. Innymi słowy, następnie znajdziesz linię zaczynająca się od <code>allTagsHTML +=</code> i zmienisz ją na:</p>
+<pre><code class="language-js">allTagsHTML += tagLinkHTML;
+</code></pre>
+<p>Na razie możesz nadal przy każdym linku wyświetlać liczbę wyświetleń – przyda nam się przy sprawdzaniu, czy rzeczywiście najczęściej występujące tagi mają największy rozmiar czcionki.</p>
+<h4>Spróbuj samodzielnie</h4>
+<p>Działanie tej funkcji nie będzie wymagało żadnej nowej wiedzy, więc spróbuj samodzielnie napisać algorytm działania tej funkcji. Poświęć na to nie więcej niż 10-15 minut.</p>
+<p>Jeśli uda Ci się napisać algorytm, poświęć kolejne 30 minut na próbę samodzielnego stworzenia kodu tej funkcji.</p>
+<p>Czasy, które tutaj podaliśmy, są oczywiście tylko wskazówką. To rozwiązanie wymaga trochę matematycznego myślenia, więc nie chcemy, żeby zbyt dużo czasu zeszło Ci na przypominanie sobie lekcji matmy ze szkoły. ;)</p>
+<p class="text-center">
+  <span class="collapse-toggles">
+    <a href="#collapse-dUCRa-RxDj-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Pokaż opis rozwiązania</a>
+    <a href="#collapse-dUCRa-RxDj-toggle" class="btn btn-primary collapsed" data-toggle="collapse">Ukryj opis rozwiązania</a>
+  </span>
+</p>
+<div id="collapse-dUCRa-RxDj-toggle" class="collapse">
+<h4>Dokończenie funkcji <code>calculateTagClass</code></h4>
+<p>Algorytm działania tej funkcji będzie wymagał odrobiny matematyki. Chcemy dowiedzieć się, która z 5 klas będzie odpowiednia dla danego tagu. Będzie to pierwsza z klas, jeśli liczba wystąpień danego tagu będzie w dolnych 20% zakresu pomiędzy najmniejszą, a największą liczbą wystąpień.</p>
+<h5>Tworzenie algorytmu</h5>
+<p>Weźmy na przykład tag, który ma <code>6</code> wystąpień. Załóżmy, że <code>params</code> wygląda tak:</p>
+<pre><code class="language-js">{
+  min: 2,
+  max: 10
+}
+</code></pre>
+<p>Skoro najmniejsza liczba wystąpień to <code>2</code>, to interesuje nas tylko to, o ile więcej wyświetleń ma dany tag. Wynika to z faktu, że interesuje nas tylko, gdzie nasza liczba wystąpień leży pomiędzy minimum a maksimum. Dlatego "znormalizujemy" liczby, czyli sprawimy by odpowiadały na pytanie "jak daleko mam do najmniejszej liczby?".</p>
+<p>W naszym przykładzie tag ma o <code>4</code> wystąpienia więcej od najmniejszej liczby, a maksimum – <code>8</code>.</p>
+<p>Kiedy podzielimy <code>4</code> przez <code>8</code> uzyskamy wynik <code>0.5</code> czyli <code>50%</code>. To oznacza, że nasza liczba wystąpień jest dokładnie pośrodku pomiędzy najmniejszą a największą. Z tego wynika, że ten tag będzie miał średni rozmiar – spośród pięciu możliwych klas wybierzemy <code>tag-size-3</code>.</p>
+<p>Jak z <code>0.5</code> uzyskaliśmy <code>3</code> w nazwie klasy? Wystarczy, że skorzystamy z tego samego algorytmu, jaki wykorzystaliśmy przy losowaniu liczby całkowitej. To było dwa moduły temu, więc przypomnimy:</p>
+<ul>
+<li>mnożymy nasz ułamek przez szerokość zakresu liczb, które chcemy otrzymać,</li>
+<li>dodajemy najmniejszą liczbę z zakresu.</li>
+</ul>
+<p>W naszym przypadku zakresem są liczby od <code>1</code> do <code>5</code> – a konkretniej do liczby zapisanej w <code>optCloudClassCount</code>. Najmniejszą liczbą jest <code>1</code>, a szerokość w tym przypadku jest równa największej liczbie – <code>5</code>. Wynik zaokrąglamy w dół. Czyli <code>0.5 * 5 + 1</code> daje wynik <code>3.5</code>, który po zaokrągleniu w dół da <code>3</code>.</p>
+<h5>Sprawdzenie i poprawa algorytmu</h5>
+<p>Zanim przejdziemy do zapisania kodu JS, warto sprawdzić, czy znaleźliśmy poprawny algorytm. Sprawdza się on dla liczby wystąpień równej <code>6</code>, ale sprawdźmy nasze rozumowanie dla skrajnych liczb. Wiemy, że minimalna liczba wystąpień to <code>2</code>, czyli o <code>0</code> więcej od minimum. Wtedy podzielimy <code>0</code> przez <code>8</code> i uzyskamy <code>0</code>. Podstawiając do powyższego wzoru, <code>0 * 5 + 1</code> daje wynik <code>1</code>. Wszystko się zgadza!</p>
+<p>A jak zachowa się nasz algorytm dla maksymalnej liczby wystąpień? Znormalizowana liczba będzie – podobnie jak maksimum – o <code>8</code> większa od minimum. Czyli podzielimy <code>8</code> przez <code>8</code> i uzyskamy <code>1</code>. Podstawiając do wzoru, <code>1 * 5 + 1</code> da wynik <code>6</code>. To niedobrze – największą z liczb miało być <code>5</code>!</p>
+<p>Błąd wynika z tego, że użyliśmy algorytmu opartego o <code>Math.random</code>, który nigdy nie przyjmie wartości <code>1</code> – a w naszym wypadku możemy mieć wartość <code>1</code>. Dlatego musimy zmniejszyć zakres liczb o <code>1</code>, czyli zamiast <code>1 * 5 + 1</code> będziemy używać <code>1 * 4 + 1</code>, które daje wynik <code>5</code>. Po podstawieniu innych wartości zobaczymy, że dla liczby wystąpień równej <code>2</code> (minimalna) nadal otrzymamy <code>1</code>, a dla początkowego przykładu z <code>6</code> wynikiem będzie <code>3</code>.</p>
+<p>Uwzględnimy tę zmianę algorytmu, pisząc nasz kod.</p>
+<h5>Zapisanie algorytmu jako kod JS</h5>
+<p>Spróbujmy teraz zapisać każde z powyższych obliczeń za pomocą kodu JS. Zaczęliśmy od odjęcia <code>2</code> od <code>6</code>, czyli:</p>
+<pre><code class="language-js">const normalizedCount = count - params.min;
+</code></pre>
+<p>Następnie zmniejszyliśmy <code>10</code> – również o <code>2</code>:</p>
+<pre><code class="language-js">const normalizedMax = params.max - params.min;
+</code></pre>
+<p>W kolejnym kroku podzieliliśmy te dwie liczby – <code>4</code> i <code>8</code>:</p>
+<pre><code class="language-js">const percentage = normalizedCount / normalizedMax;
+</code></pre>
+<p>I wreszcie, zastosowaliśmy algorytm znany z losowania liczby całkowitej:</p>
+<pre><code class="language-js">const classNumber = Math.floor( percentage * (optCloudClassCount - 1) + 1 );
+</code></pre>
+<p>Zauważ, że te każdą z tych stałych omówiliśmy wcześniej. W tym podejściu rozbiliśmy nasz problem na kolejne kroki, i każdy z nich zapisaliśmy jako kod JS.</p>
+<h5>Inne podejście do zapisania algorytmu w postaci kodu JS</h5>
+<p>Nie jest to jednak jedyne możliwe podejście – możemy też zacząć od ostatniego obliczenia, które napisaliśmy, wykorzystując przykładowe liczby. Następnie za każdą z nich możemy podstawić to, w jaki sposób ją osiągnęliśmy. W ten sposób, krok po kroku, dojdziemy do finalnej wersji tego równania.</p>
+<p>W poniższym przykładzie wielokrotnie wpisujemy tę samą linię kodu. Za każdym razem zmieniamy w niej jedną rzecz, aby zbliżyć się do finalnej wersji tej ewoluującej linii kodu.</p>
+<pre><code class="language-js">classNumber = Math.floor( 0.5 * 5 + 1 );
+
+classNumber = Math.floor( 0.5 * optCloudClassCount + 1 );
+
+classNumber = Math.floor( ( 4 / 8 ) * optCloudClassCount + 1 );
+
+classNumber = Math.floor( ( (6 - 2) / (10 - 2) ) * optCloudClassCount + 1 );
+
+classNumber = Math.floor( ( (count - 2) / (10 - 2) ) * optCloudClassCount + 1 );
+
+classNumber = Math.floor( ( (count - 2) / (params.max - 2) ) * optCloudClassCount + 1 );
+
+classNumber = Math.floor( ( (count - params.min) / (params.max - 2) ) * optCloudClassCount + 1 );
+
+classNumber = Math.floor( ( (count - params.min) / (params.max - params.min) ) * optCloudClassCount + 1 );
+</code></pre>
+<p>Oczywiście, otrzymaliśmy ten sam wynik, co w przypadku poprzedniego sposobu. Jest tylko inaczej zapisany – zamiast rozbicia na poszczególne stałe, zapisaliśmy wszystko w jednej linii.</p>
+<p>Możesz pomyśleć, że mogliśmy podejść do tego problemu inaczej – np. podając Ci gotowe rozwiązanie. Mogliśmy też użyć ilustracji czy metafor, aby uprościć Ci zrozumienie problemu. Zależało nam jednak na tym, aby pokazać Ci sposób – a nawet dwa – w jaki developer doszedłby do tego rozwiązania.</p>
+<p>Niezależnie od tego, który sposób wybierzesz, ważne aby udało Ci się rozłożyć dany problem na poszczególne kroki, następnie każdy krok zapisać jako kod JS, który w rezultacie wykona algorytm skryptu.</p>
+<p>Tak czy inaczej, ten problem już jest za nami. Wystarczy dodać linię, która zwróci z funkcji stałą <code>optCloudClassPrefix</code> i dołączoną do niej stałą <code>classNumber</code>.</p>
+</div>
+<hr>
+<h3>Oczekiwany efekt</h3>
+<p>Jeśli wszystko poszło poprawnie, sprawdzając listę tagów za pomocą inspektora, zobaczysz różne klasy <code>tag-size-X</code> przy różnych tagach w prawej kolumnie:</p>
+<a href="https://uploads.kodilla.com/bootcamp/fer/06.jsobjects/fer-06-15.png" class="img-modal-group"><img src="https://uploads.kodilla.com/bootcamp/fer/06.jsobjects/fer-06-15.png" alt="image" style="width: auto; max-width: 50%;"></a>
+<h3>Dopracowanie chmury tagów</h3>
+<p>Pozostałe kroki wykonaj samodzielnie:</p>
+<ul>
+<li>zdecyduj, ile chcesz mieć różnych rozmiarów tagów,</li>
+<li>w SCSS zapisz deklaracje rozmiarów czcionek dla klas <code>tag-size-X</code> (możesz wykorzystać wartości procentowe),</li>
+<li>jeśli chcesz, klasom <code>tag-size-X</code> możesz też przypisać różne kolory,</li>
+<li>zmodyfikuj listę tagów tak, aby tagi były wyświetlane inline'owo,</li>
+<li>usuń liczby wyświetleń z kodu generującego kod HTML linków.</li>
+</ul>
+<p>To wszystko! W efekcie na Twojej stronie powinna pojawić się ciekawa chmura tagów, w której najpopularniejsze tagi będą wyświetlone największą czcionką.</p>
+<p>Te wszystkie zmiany nie powinny były mieć wpływu na działanie klikania w tag. Sprawdź, czy lista jest nadal tak samo filtrowana.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block task-card" >
+                        <h3>Zadanie: <span class="task-title">Lista autorów</span></h3>
+                        <div class="task-content">
+                            <p>W tym submodule, dla każdego artykułu:</p>
+<ul>
+<li>wygenerowaliśmy listę tagów w prawej kolumnie,</li>
+<li>policzyliśmy ile razy występuje każdy z tagów,</li>
+<li>nadaliśmy linkom klasy w zależności od liczby wystąpień danego tagu.</li>
+</ul>
+<p>Oprócz poprawnego wykonania poleceń z tego submodułu Twoim zadaniem jest wykonanie analogicznej funkcjonalności dla autorów artykułów, czyli:</p>
+<ul>
+<li>wygeneruj listę autorów (w postaci linków) w prawej kolumnie,</li>
+<li>do każdego linka dodaj liczbę artykułów danego autora.</li>
+</ul>
+<h4>Wskazówki</h4>
+<ol>
+<li>Zmodyfikuj funkcję <code>generateAuthors</code>, wzorując się zmianach w funkcji <code>generateTags</code>,</li>
+<li>Pamiętaj, że jest tylko jeden autor artykułu, więc funkcja <code>generateAuthors</code> ma o jedną pętlę mniej.</li>
+<li>Nie zapomnij dodać nowej stałej ustawień – <code>optAuthorsListSelector</code>.</li>
+</ol>
+<h4>Dla ambitnych</h4>
+<p>Teraz kiedy znasz już obiekty, możemy Ci powiedzieć, że bardzo często wykorzystuje się je do przechowywania ustawień – czyli tych wartości wykorzystywanych w skrypcie, które możesz chcieć w przyszłości łatwo zmienić.</p>
+<p>Dzięki stosowaniu takich ustawień będzie Ci dużo łatwiej dostosować skrypt, jeśli zdecydujesz się na zmianę struktury HTML albo nazewnictwa klas decydujących o rozmiarach tagów w ich chmurze.</p>
+<p>Znajdź fragment kodu, w którym deklarujesz stałe o nazwach zaczynających się od <code>opt</code>. Zacznij od przeniesienia ich na samą górę pliku. Dzięki temu łatwo będzie je znaleźć.</p>
+<p>Następnie stwórz stałą o nazwie <code>opt</code> i umieść w niej pusty obiekt. Do tego obiektu przenosić poszczególne stałe ustawień. Np. dla takich stałych:</p>
+<pre><code class="language-js">const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles';
+</code></pre>
+<p>obiekt ustawień może wyglądać następująco:</p>
+<pre><code class="language-js">const opts = {
+  articleSelector: '.post',
+  titleSelector: '.post-title',
+  titleListSelector: '.titles'
+};
+</code></pre>
+<p>Po tej zmianie wystarczy, że w swoim edytorze kodu znajdziesz opcję "znajdź i zamień" i wykorzystasz ją do zmiany wszystkich fraz <code>optArticleSelector</code> na <code>opt.articleSelector</code>. Podobną operację możesz wykonać dla pozostałych ustawień.</p>
+<p>Możesz powiedzieć, że ta zmiana jest kosmetyczna – i faktycznie tak jest. Pomoże nam to jednak usystematyzować nazewnictwo naszych ustawień. Jednak ten krok to dopiero początek.</p>
+<p>Nowością, o której wcześniej nie mówiliśmy, jest możliwość umieszczania obiektów w obiektach! To oznacza, że Twoje ustawienia mogą wyglądać np. tak:</p>
+<pre><code class="language-js">const opts = {
+  tagSizes: {
+    count: 5,
+    classPrefix: 'tag-size-',
+  },
+};
+
+const select = {
+  all: {
+    articles: '.post',
+    linksTo: {
+      tags: 'a[href^=&quot;#tag-&quot;]',
+      authors: 'a[href^=&quot;#author-&quot;]',
+    },
+  },
+  article: {
+    tags: '.post-tags .list',
+    author: '.post-author',
+  },
+  listOf: {
+    titles: '.titles',
+    tags: '.tags.list',
+    authors: '.authors.list',
+  },
+};
+</code></pre>
+<p>Zwróć uwagę, że w powyższym przykładzie użyliśmy "za dużo" przecinków. W kodzie JS nie jest to błąd, a coraz częściej spotykana praktyka. Wynika to z faktu, że stawiając przecinek po każdym elemencie, możesz dowolnie zmieniać ich kolejność i zawsze dodać kolejny element. W efekcie nie musisz pilnować czy na pewno przecinki są po każdym elemencie, poza ostatnim.</p>
+<p>Dzięki takiemu "drzewu" ustawień łatwiej będzie Ci zapamiętać, że:</p>
+<ul>
+<li>selektor do wszystkich linków do tagów znajdziesz w <code>select.all.linksTo.tags</code>,</li>
+<li>selektor listy tagów – w <code>select.listOf.tags</code>,</li>
+<li>liczbę klas regulujących rozmiary czcionek w chmurze tagów – w <code>opts.tagSizes.count</code>.</li>
+</ul>
+<p>Ta zmiana pozwoli Ci lepiej rozumieć swój kod JS, kiedy będziesz czytać go za godzinę, dzień czy miesiąc. A jeśli przyjdzie potrzeba zmiany tych ustawień, również łatwiej będzie Ci się w nich odnaleźć.</p>
+<p>Jeśli chcesz, możesz dostosować ustawienia swojego skryptu wedle tych wskazówek. Możesz również stworzyć nowe ustawienia, np. na klasę nadawaną aktywnym artykułom czy linkom.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <div class="clearfix">
+                                                                                <a href="https://kodilla.com/pl/bootcamp-task/407/601081" target="_blank" class="btn btn-info-outline">Podgląd zadania</a>
+                            <form target="_blank" class="form-inline project-link-form">
+                                <div class="form-group">
+                                    <input type="text" name="link" class="form-control" value="https://github.com/skwiryt/javascript-blog/commit/94df484c76fc24f07498d8e33ceb5cf278b04003">
+                                </div>
+                                <button type="submit" class="btn  btn-primary " >Wyślij link <i class="fa fa-check"></i></button>
+                            </form>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-984" class="card submodule completed" data-bootcamp-user-submodule-id="601082" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">7.4. <span>Szablony Handlebars</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Do tej pory, kiedy potrzebowaliśmy za pomocą JS-a dodać nowy element lub tekst na stronie, wpisywaliśmy go w kodzie JS. Nie jest to jednak dobra praktyka. Dlatego nauczymy się wykorzystywać <strong>szablony HTML</strong>.</p>
+<h3>Po co nam szablony HTML?</h3>
+<p>Najłatwiej będzie odpowiedzieć na pytanie, zaczynając od tematu stylów strony. Wspominaliśmy już o tym, że nie chcemy zmieniać wyglądu strony bezpośrednio w kodzie JS. Dlatego nasze skrypty zawsze posługują się klasami, zamiast np. nadawać styl <code>display</code> czy <code>font-size</code>.</p>
+<p>Wynika to z prostej zasady – do kontrolowania wyglądu strony służy kod CSS, który generujemy za pomocą SCSS-a. Jeśli w przyszłości ktoś (może nawet my sami) będzie chciał zmienić wygląd np. aktywnego linka, to będzie szukał tego koloru w kodzie SCSS lub ew. CSS, a nie w kodzie JS.</p>
+<p>Co więcej, dzięki takiemu podziałowi możemy wykorzystywać nasze skrypty również na innych stronach. Z tego samego względu zapisujemy też ustawienia na początku pliku JS.</p>
+<p>Ta niezależność kodu JS i możliwość ponownego wykorzystania go jest – jak do tej pory – niweczona przez fragmenty kodu HTML, znajdujące się w naszym kodzie JS. Całe szczęście, nie mieliśmy potrzeby w JS-ie wpisywać żadnych słów wyświetlanych na stronie, ale prędzej czy później spotkalibyśmy się i z tym przypadkiem. Wtedy nawet inna wersja językowa strony wymagałaby nowej wersji kodu JS.</p>
+<p>Rozwiązaniem tych problemów jest właśnie wykorzystanie szablonów HTML.</p>
+<h3>Implementacja Handlebars</h3>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/mustache.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/mustache-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/mustache.png 2x" class="img-inline img-left">
+<p>Jest wiele pluginów umożliwiających wykorzystanie szablonów kodu HTML. Jednym z prostszych i bardziej niezawodnych jest <strong><a href="https://handlebarsjs.com/" target="_blank">Handlebars</a></strong>, z którego za chwilę skorzystamy. Jest on oparty o bardzo popularny <a href="https://github.com/janl/mustache.js" target="_blank">Mustache.js</a>, ale oferuje od niego nieco więcej funkcjonalności.</p>
+<p>Jak możesz zobaczyć na stronie tego pluginu, najprostszym przykładem szablonu jest:</p>
+<pre><code class="language-html">&lt;script id=&quot;entry-template&quot; type=&quot;text/x-handlebars-template&quot;&gt;
+  &lt;div class=&quot;entry&quot;&gt;
+    &lt;h1&gt;{{title}}&lt;/h1&gt;
+    &lt;div class=&quot;body&quot;&gt;
+      {{body}}
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/script&gt;
+</code></pre>
+<p>W pierwszej chwili może Cię zdziwić zastosowanie tagu <code>&lt;script&gt;</code>, co sugerowałoby, że znajduje się w nim kod JS. Musisz jednak wiedzieć, że przeglądarka interpretuje zawartość tagu <code>&lt;script&gt;</code> jako kod JS, tylko jeśli nie podano atrybutu <code>type</code>, lub jego wartość to <code>text/javascript</code>. Właśnie dlatego w tym przypadku podajemy atrybut <code>type=&quot;text/x-handlebars-template&quot;</code>, aby przeglądarka nie interpretowała zawartości tego tagu.</p>
+<p>Dzięki takiemu podejściu możemy w kodzie HTML umieścić ten szablon i nie zostanie on wyświetlony na stronie, ale będziemy mieli do niego dostęp w naszym skrypcie. Wykorzystamy do tego <code>id</code> tagu <code>&lt;script&gt;</code>.</p>
+<p>W zawartości tego tagu została wpisana nazwa zmiennej <code>title</code>, zamknięta w podwójnym nawiasie klamrowym <code>{{ }}</code> (po polsku takie nawiasy czasem zwane są "wąsami"). Jak za chwilę zobaczysz, cały fragment <code>{{ title }}</code> zostanie podmieniony na wartość, którą podamy w momencie <em>parsowania</em> szablonu, czyli podstawiania do niego wartości.</p>
+<p>Przykłady zawarte w dokumentacji pluginu często korzystają z pluginu jQuery, dlatego sami omówimy sobie implementację szablonów Handlebars.</p>
+<h4>Podłączenie biblioteki</h4>
+<p>Stwórz nowy <a href="https://codepen.io/pen/" target="_blank">CodePen</a>, który wykorzystamy do nauki używania <strong>szablonów Handlebars</strong>.</p>
+<p>Najpierw musimy podłączyć plik JS z biblioteką Handlebars. W tym celu do kodu HTML w CodePenie wstaw:</p>
+<pre><code class="language-html">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h4>Dodanie szablonu</h4>
+<p>Następnie kodu HTML dodaj następujący szablon:</p>
+<pre><code class="language-html">&lt;script id=&quot;template-hello&quot; type=&quot;text/x-handlebars-template&quot;&gt;
+  &lt;p&gt;Hello {{ firstName }} {{ lastName }}!&lt;/p&gt;
+&lt;/script&gt;
+</code></pre>
+<h4>Wykorzystanie szablonu</h4>
+<p>Teraz czas na kod JS – użyj tego kodu, który za chwilę wytłumaczymy. Spróbuj przeczytać ten kod i zrozumieć (a częściowo domyślić się) co robi każda linia kodu.</p>
+<pre><code class="language-js">const tplHelloSource = document.querySelector('#template-hello').innerHTML;
+const tplHello = Handlebars.compile(tplHelloSource)
+const dataHello = {firstName: 'John', lastName: 'Smith'};
+let generatedHTML = tplHello(dataHello);
+
+const targetElement = document.body;
+targetElement.insertAdjacentHTML('beforeend', generatedHTML);
+
+console.log('tplHello:');
+console.log(tplHelloSource);
+console.log('=========');
+
+console.log('dataHello:');
+console.log(dataHello);
+console.log('=========');
+
+console.log('generatedHTML:');
+console.log(generatedHTML);
+console.log('=========');
+</code></pre>
+<p>Omówmy kolejne kroki zastosowania naszego pierwszego szablonu:</p>
+<ul>
+<li>wartością <code>tplHelloSource</code> jest zawartość elementu o id <code>template-hello</code>, czyli naszego szablonu,</li>
+<li>w następnej linii za pomocą <code>Handlebars.compile</code> tworzymy funkcję <code>tplHello</code>, która posłuży nam do wykorzystywania tego szablonu,</li>
+<li>zmienna <code>dataHello</code> to obiekt, który zawiera teksty do wyświetlenia,</li>
+<li>w zmiennej <code>generatedHTML</code> znajdzie się szablon, w którym fragmenty w podwójnych nawiasach klamrowych zostały zamienione na wartości z obiektu <code>dataHello</code>,</li>
+<li>kolejne dwie linie kodu znajdują pierwszy artykuł, i wstawiają na początku artykułu wygenerowany kod HTML.</li>
+</ul>
+<p>Jedyna nowość to obiekt <code>Handlebars</code>, który zawiera funkcję (czyli <em>metodę</em>) <code>compile</code>. Wywołujemy ją, podając dwa argumenty – szablon <code>tplHello</code> oraz dane <code>dataHello</code>.</p>
+<p>Oczywiście, ten sam szablon możemy wykorzystać wielokrotnie z różnymi zestawami danych, np. dodając:</p>
+<pre><code class="language-js">const dataHello2 = {firstName: 'Maria', lastName: 'Jones'};
+generatedHTML = tplHello(dataHello2);
+targetElement.insertAdjacentHTML('beforeend', generatedHTML);
+</code></pre>
+<h3>Pętle w szablonach Handlebars.js</h3>
+<p>Znasz już podstawy używania szablonów. Co jednak gdybyśmy chcieli wygenerować całą listę, włącznie z <code>&lt;ul&gt;</code>? Bazując na dotychczasowych informacjach, musielibyśmy stworzyć dwa szablony – jeden dla listy <code>&lt;ul&gt;</code>, oraz drugi dla pojedynczego elementu <code>&lt;li&gt;</code>.</p>
+<p>Autorzy tej biblioteki przewidzieli taką sytuację. Dzięki temu możemy zawrzeć pętlę bezpośrednio w szablonie!</p>
+<p>Dodaj do kodu HTML taki szablon:</p>
+<pre><code class="language-html">&lt;script id=&quot;template-product-list&quot; type=&quot;text/x-handlebars-template&quot;&gt;
+  &lt;h3&gt;{{ title }}&lt;/h3&gt;
+  &lt;ul&gt;
+    {{#each products}}
+    &lt;li id=&quot;{{ @key }}&quot;&gt;Buy {{ name }} for {{ price }}!&lt;/li&gt;
+    {{/each}}
+  &lt;/ul&gt;
+&lt;/script&gt;
+</code></pre>
+<p>W tym szablonie tagi <code>{{#each products}}</code> i <code>{{/each}}</code> wyznaczają początek i koniec pętli, która będzie iterować po tablicy zawartej w kluczu <code>products</code>. Jako <code>id</code> każdego <code>&lt;li&gt;</code> użyliśmy klucza każdego produktu. Lepiej zrozumiesz to, analizując kod JS, który wykorzystuje ten szablon. Możesz dodać go na końcu kodu JS w swoim CodePenie.</p>
+<pre><code class="language-js">const tplProductListSource = document.querySelector('#template-product-list').innerHTML;
+const tplProductList = Handlebars.compile(tplProductListSource);
+
+const productListData = {
+  title: 'Great offers!',
+  products: {
+    'product-football': {
+      name: 'Football',
+      price: '$10'
+    },
+    'product-volleyball': {
+      name: 'Volleyball',
+      price: '$8'
+    },
+    'product-basketball': {
+      name: 'Basketball',
+      price: '$12'
+    }
+  }
+};
+
+generatedHTML = tplProductList(productListData);
+targetElement.insertAdjacentHTML('beforeend', generatedHTML);
+</code></pre>
+<p>Jak widzisz, <code>productListData</code> jest obiektem. Zawiera w sobie klucz <code>products</code>, który zawiera obiekt. Elementami tego obiektu są obiekty. Każdy z nich zawiera klucze <code>name</code> i <code>price</code>, które wykorzystaliśmy w naszym szablonie. Klucze produktów, np. <code>'product-football'</code>, są przez nas używane jako <code>id</code> każdego <code>&lt;li&gt;</code> za pomocą wyrażenia <code>{{ @key }}</code>.</p>
+<p>Dodaj ten przykład do swojego CodePena i zmieniaj w nim wartości w obiekcie <code>productListData</code>, aby lepiej zrozumieć, jak te zmiany przekładają się na wygenerowany kod HTML.</p>
+<p>Chwila, czy nie mówiliśmy przed chwilą, że nie chcemy mieć w kodzie JS żadnych słów wyświetlanych na stronie? Trafna uwaga! W praktyce są dwa zastosowania, przydatne w zależności od sytuacji:</p>
+<ol>
+<li>obiekt <code>productListData</code> mógł być pobrany przez kod JS z serwera – ten przypadek będziemy niedługo przerabiać, ucząc się o AJAX i API,</li>
+<li>obiekt <code>productListData</code> może też znajdować się w kodzie HTML.</li>
+</ol>
+<p>Dla ćwiczenia, w swoim CodePenie usuń ten obiekt z kodu JS i umieść go w kodzie HTML pomiędzy nowymi tagami <code>&lt;script&gt;&lt;/script&gt;</code>. Dzięki temu wszystkie teksty znajdą się w kodzie HTML, a nasz skrypt będzie miał do nich dostęp, aby wygenerować odpowiedni fragment kodu do wstawienia na stronie.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block task-card" >
+                        <h3>Zadanie: <span class="task-title">Wykorzystanie szablonów w projekcie</span></h3>
+                        <div class="task-content">
+                            <p>Czas użyć szablonów HTML w naszym blogu!</p>
+<p>Skrypt, który do tej pory napisaliśmy, generuje fragmenty kodu HTML w pięciu miejscach:</p>
+<ol>
+<li>dla linka do artykułu, umieszczanego w lewej kolumnie,</li>
+<li>dla linka do tagu, umieszczanego na końcu każdego artykułu,</li>
+<li>dla linka do autora, umieszczanego pod tytułem każdego artykułu,</li>
+<li>dla linka do tagu, umieszczanego w chmurze tagów w prawej kolumnie,</li>
+<li>dla linka do autora, umieszczanego na liście w prawej kolumnie.</li>
+</ol>
+<p>Dla pozycji 1-3 zastosuj szablony pojedynczego linka, czyli wedle przykładu wykorzystującego <code>tplHello</code>.</p>
+<p>Dla pozycji 4-5 zastosuj szablony zawierające pętlę. Aby je wykorzystać, w swoim kodzie musisz odnaleźć miejsca, w których generujesz kod tych linków. Zamiast generować kod, stwórz obiekt i wypełniaj go danymi w takiej strukturze, jakiej będzie wymagał szablon.</p>
+<div class="bc-note alert-danger">
+<h4 class="alert-heading text-center">Handlebars a ESLint</h4>
+<p>ESLint domyślnie zakłada, że elementy, które znajdują się poza danym plikiem, nie mogą być w nim użyte, dopóki ich nie zaimportujemy (np. przy użyciu instrukcji <code>import</code>). Nie bierze jednak pod uwagę, że dodając do pliku HTML kilka plików JS przy użyciu tagu <code>&lt;script&gt;</code>, mogą one korzystać nawzajem ze swojej zawartości i wtedy wcale nie musimy niczego importować. Na przykład, gdy dodamy do <code>index.html</code> informację o <code>a.js</code> i <code>b.js</code>, w tym drugim pliku będziemy mogli korzystać z pierwszego bez żadnych problemów.</p>
+<p>Tym samym może dojść do sytuacji, w której Twój kod działa poprawnie, a jednak ESLint wyrzuca błąd mówiący, że Handlebars są niezdefiniowane. Możemy jednak łatwo to naprawić. Wystarczy poinformować ESLint, że jest to coś globalnego i powinien zakładać, że każdy plik JS ma do niego dostęp. Możesz to zrobić, dodając do pliku <code>eslintrc.json</code> regułę:</p>
+<pre><code class="language-markup">&quot;globals&quot;: {
+  &quot;Handlebars&quot;: false
+}
+</code></pre>
+</div>
+<h4>Jak zastosować Handlebars w projekcie?</h4>
+<p>Zaczynamy od dodania skryptu Handlebars. W kodzie HTML znajdź tę linię kodu:</p>
+<pre><code class="language-html">&lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>I nad nią umieść tę linię:</p>
+<pre><code class="language-html">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>Ten skrypt dodajemy tylko raz, niezależnie od tego ilu szablonów będziemy używać.</p>
+<p>Teraz przed tą linią wstaw swój pierwszy szablon:</p>
+<pre><code class="language-html">&lt;script id=&quot;template-article-link&quot; type=&quot;text/x-handlebars-template&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#{{ id }}&quot;&gt;&lt;span&gt;{{ title }}&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/script&gt;
+</code></pre>
+<p>Następnie na początku swojego pliku JS wstaw ten kod:</p>
+<pre><code class="language-js">const templates = {
+  articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML)
+}
+</code></pre>
+<p>Dodając później kolejne szablony, będziesz rozbudowywać obiekt <code>templates</code>, aby wszystkie mieć zebrane w jednym miejscu. Wystarczy, że skopiujesz tę linię i zmienisz klucz <code>articleLink</code> i selektor <code>#template-article-link</code>.</p>
+<p>Kolejnym krokiem jest wykorzystanie szablonu – zacznij od znalezienia tej linii kodu:</p>
+<pre><code class="language-js">const linkHTML = '&lt;li&gt;&lt;a href=&quot;#' + articleId + '&quot;&gt;&lt;span&gt;' + articleTitle + '&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;';
+</code></pre>
+<p>Zamień ją na następującą:</p>
+<pre><code class="language-js">const linkHTMLData = {id: articleId, title: articleTitle};
+const linkHTML = templates.articleLink(linkHTMLData);
+</code></pre>
+<p>W ten sposób wykonaliśmy pkt. 1 tego zadania. Punkty 2 i 3 wykonaj, powtarzając te same kroki.</p>
+<p>Dla punktów 4 i 5 będzie odrobinę trudniej. Omówmy sobie pokrótce wykonanie pkt. 4.</p>
+<p><strong>1.</strong> Zacznij od dodania pustego szablonu w kodzie HTML oraz w obiekcie <code>templates</code>. Założymy, że ten szablon będzie miał klucz <code>tagCloudLink</code>, czyli będziemy go używać jako <code>templates.tagCloudLink</code>.</p>
+<p><strong>2.</strong> Najpierw znajdujesz <code>let allTagsHTML = '';</code> – to zmienna, w której przechowujemy kod HTML wszystkich linków do tagów. Nie będzie już nam potrzebna, a zamiast niej chcemy mieć:</p>
+<pre><code class="language-js">const allTagsData = {tags: []};
+</code></pre>
+<p><strong>3.</strong> Następnie znajdujemy linię <code>allTagsHTML += tagLinkHTML;</code>. Ta linia doklejała kod kolejnego linka do <code>allTagsHTML</code>. Zamiast tego, chcemy do tablicy <code>allTagsData.tags</code> dodawać kolejny obiekt, np.:</p>
+<pre><code class="language-js">allTagsData.tags.push({
+  tag: tag,
+  count: allTags[tag],
+  className: calculateTagClass(allTags[tag], tagsParams)
+});
+</code></pre>
+<p><strong>4.</strong> Teraz znajdujemy linię <code>tagList.innerHTML = allTagsHTML;</code> – nie mamy już <code>allTagsHTML</code>, więc zamieniamy tę linię na:</p>
+<pre><code class="language-js">tagList.innerHTML = templates.tagCloudLink(allTagsData);
+</code></pre>
+<p>To jest też dobre miejsce, aby za pomocą <code>console.log</code> sprawdzić, jak wygląda zawartość <code>allTagsData</code>.</p>
+<p><strong>5.</strong> Wszystko powinno działać, ale do tej pory nasz szablon był pusty. Zacznij od wstawienia w nim jakiegoś tekstu, aby sprawdzić, czy ten tekst wyświetli się tylko raz na stronie. Jeśli tak, wszystko działa poprawnie. Teraz w naszym szablonie potrzebujemy zrobić pętlę. Zacznij od takiego szablonu:</p>
+<pre><code class="language-html">&lt;script id=&quot;template-tag-cloud-link&quot; type=&quot;text/x-handlebars-template&quot;&gt;
+  {{#each tags}}
+  &lt;li&gt;{{ tag }}&lt;/li&gt;
+  {{/each}}
+&lt;/script&gt;
+</code></pre>
+<p>Na stronie, w prawej kolumnie, powinna pojawić się lista tagów. Nie są one jednak jeszcze linkami, i nie mają klas odpowiedzialnych za rozmiar tagu. Aby sobie z tym poradzić, użyj właściwości <code>count</code> i <code>className</code> w swoim szablonie.</p>
+<h4>Dokończenie zadania</h4>
+<p>Reszta rozwiązania będzie bardzo podobna do powyższych kroków. Nie bój się eksperymentować i używać <code>console.log</code> do sprawdzania, czy jesteś na dobrym tropie.</p>
+<p>Dzięki tym zmianom cały kod HTML znajdzie się pliku HTML, a nasz kod JS będzie korzystał z szablonów. To bardzo przydatna umiejętność, którą będziemy wykorzystywać w kolejnych modułach.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <div class="clearfix">
+                                                                                <a href="https://kodilla.com/pl/bootcamp-task/407/601082" target="_blank" class="btn btn-info-outline">Podgląd zadania</a>
+                            <form target="_blank" class="form-inline project-link-form">
+                                <div class="form-group">
+                                    <input type="text" name="link" class="form-control" value="https://github.com/skwiryt/javascript-blog/commit/68c61540eaebc081dc2264cf8b66c75ecc700869">
+                                </div>
+                                <button type="submit" class="btn  btn-primary " >Wyślij link <i class="fa fa-check"></i></button>
+                            </form>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-985" class="card submodule completed" data-bootcamp-user-submodule-id="601083" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">7.5. <span>Podsumowanie</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>W tym module poznaliśmy tablice i obiekty oraz nauczyliśmy się z nich korzystać. Dzięki nim mogliśmy wygenerować listę tagów i autorów oraz wyświetlić liczby artykułów przypisanych do nich. W przypadku tagów wykorzystaliśmy te informacje do stworzenia chmury, która wizualnie pokazuje, które tagi są najbardziej popularne.</p>
+<p>Ten moduł, wraz z poprzednim, mogły być dla Ciebie ciężkie. Nie zdziwilibyśmy się, gdyby teraz pękała Ci głowa od tych wszystkich zmiennych, pętli i szablonów. A zaczęło się tak fajnie od układania kodu z klocków...</p>
+<p>Nie przejmuj się! Pierwsze zetknięcie z JS-em może przyprawiać o zawrót głowy! W trzy tygodnie udało nam się przerobić olbrzymi zakres materiału! Zamiast uczyć się o różnych typach danych i wkuwać przydatne nazwy funkcji, skupiliśmy się na podejściu praktycznym.</p>
+<img src="https://uploads.kodilla.com/bootcamp/fer/images/travel.png" srcset="https://uploads.kodilla.com/bootcamp/fer/images/travel-sm.png 1x, https://uploads.kodilla.com/bootcamp/fer/images/travel.png 2x" class="img-inline img-left">
+<p>Dzięki temu udało nam się napisać całkiem niezłą aplikację – bo nasz blog nie jest zwykłą stroną, ale tzw. <strong><a href="https://en.wikipedia.org/wiki/Single-page_application" target="_blank">single page application</a></strong> (SPA), która działa płynnie, bez przeładowania strony. Co więcej, nasze zastosowanie skryptów pozwoliło na uniknięcie <strong>redundancji</strong>, czyli niepotrzebnych powtórzeń. Każda informacja – np. tytuł artykułu czy jego autor – znajduje się w kodzie tylko raz. Wszystkie kolejne wystąpienia, np. w lewej i prawej kolumnie, są generowane na podstawie danych źródłowych.</p>
+<p>Może zastanawiać Cię, czy dobrą praktyką jest umieszczanie wszystkich postów w kodzie HTML. Oczywiście, przy większej ilości postów, nie będzie to dobre rozwiązanie. Dlatego w następnym module poznamy zagadnienia AJAX i API. Dzięki nim dane – takie jak posty – będą pobierane z serwera tylko wtedy, kiedy będą potrzebne.</p>
+<p>Pomyśl teraz przez chwilę jak działają serwisy takie jak GMail, Facebook, Twitter, czy Instagram. Są one o wiele bardziej skomplikowane, ale w swojej naturze są podobne do naszego bloga – również działają bez przeładowania strony. Następny moduł pozwoli nam również komunikować się z serwerem, co otworzy przed nami kolejne funkcjonalności znane z tych najpopularniejszych serwisów.</p>
+
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                                    
+                <section id="submodule-986" class="card submodule completed" data-bootcamp-user-submodule-id="601084" >
+                <!-- klasy dla section: completed current comments -->
+                    <div class="card-block submodule-header clearfix">
+                        <i class="fa fa-check-circle-o fa-2x"></i>
+                        <i class="fa fa-play-circle-o fa-2x"></i>
+                        <i class="fa fa-exclamation-circle fa-2x"></i>
+                        <i class="fa fa-send-o fa-2x"></i>
+                        <h2 class="bootcamp-submodule-name">7.6. <span>Quiz powt&oacute;rkowy</span></h2>
+                                            </div>
+                    <div class="card-block">
+                        <div class="submodule-content">
+                            <p>Na koniec tego modułu przygotowaliśmy dla Ciebie quiz powtórkowy. Pomoże Ci on powtórzyć wiedzę z poprzednich modułów.</p>
+<p>Odpowiedzi tego quizu nie są nigdzie zapisywane, więc są tylko do Twojej wiadomości. Ten quiz ma Ci posłużyć jako pomoc w nauce – dlatego pod każdym pytaniem znajdziesz guzik, który sprawdzi poprawność Twoich odpowiedzi oraz poda Ci wyjaśnienie zagadnienia poruszanego w tym pytaniu.</p>
+
+        <div class='kodilla-quiz'>
+      
+        <article class='question' data-type='multiple-choice'>
+      
+        <header>
+          <p><em>1.</em> Zaznacz prawidłowe zdania dotyczące <strong>tablic</strong>:</p>
+
+        </header>
+        <ol type='a' class='answers' data-correct='0,3,4,6,7,8,9,10'>
+          <li><label><input type='checkbox'> w tablicy przechowujemy wartości, które mają określoną kolejność i kolejne numery porządkowe (indeksy)</label></li>
+<li><label><input type='checkbox'> w tablicy przechowujemy pary klucz-wartość</label></li>
+<li><label><input type='checkbox'> w tablicy nie możemy łatwo sprawdzić ilości elementów</label></li>
+<li><label><input type='checkbox'> w tablicy możemy sprawdzić ilość elementów za pomocą właściwości <code>length</code></label></li>
+<li><label><input type='checkbox'> pustą tablicę możemy stworzyć za pomocą nawiasów kwadratowych <code>[]</code></label></li>
+<li><label><input type='checkbox'> pustą tablicę możemy stworzyć za pomocą nawiasów klamrowych <code>{}</code></label></li>
+<li><label><input type='checkbox'> wartościami w tablicy mogą być teksty</label></li>
+<li><label><input type='checkbox'> wartościami w tablicy mogą być liczby</label></li>
+<li><label><input type='checkbox'> wartościami w tablicy mogą być funkcje</label></li>
+<li><label><input type='checkbox'> wartościami w tablicy mogą być obiekty</label></li>
+<li><label><input type='checkbox'> wartościami w tablicy mogą być tablice</label></li>
+        </ol>
+        <div class="buttons text-center">
+          <button class="button-ok btn btn-primary">Sprawdź odpowiedź</button>
+        </div>
+      
+      
+        <div class='explanation'>
+          <div class="bc-note alert-success">
+            <h4 class="alert-heading text-center">Wyjaśnienie</h4>
+      <p>Tablica:</p>
+<ul>
+<li>jest zbiorem wartości ułożonych w jakiejś kolejności,</li>
+<li>ma indeksy, czyli kolejne numery porządkowe swoich wartości,</li>
+<li>posiada właściwość <code>length</code>,</li>
+<li>może być stworzona za pomocą nawiasów kwadratowych <code>[]</code>,</li>
+<li>może zawierać dowolne typy wartości, w tym tablice i obiekty.</li>
+</ul>
+
+          </div>
+        </div>
+      
+        </article>
+      
+        <article class='question' data-type='multiple-choice'>
+      
+        <header>
+          <p><em>2.</em>  Zaznacz prawidłowe zdania dotyczące <strong>obiektów</strong>:</p>
+
+        </header>
+        <ol type='a' class='answers' data-correct='1,2,5,6,7,8,9,10'>
+          <li><label><input type='checkbox'> w obiekcie przechowujemy wartości, które mają określoną kolejność i kolejne numery porządkowe (indeksy)</label></li>
+<li><label><input type='checkbox'> w obiekcie przechowujemy pary klucz-wartość</label></li>
+<li><label><input type='checkbox'> w obiekcie nie możemy łatwo sprawdzić ilości elementów</label></li>
+<li><label><input type='checkbox'> w obiekcie możemy sprawdzić ilość elementów za pomocą właściwości <code>length</code></label></li>
+<li><label><input type='checkbox'> pusty obiekt możemy stworzyć za pomocą nawiasów kwadratowych <code>[]</code></label></li>
+<li><label><input type='checkbox'> pusty obiekt możemy stworzyć za pomocą nawiasów klamrowych <code>{}</code></label></li>
+<li><label><input type='checkbox'> wartościami w obiekcie mogą być teksty</label></li>
+<li><label><input type='checkbox'> wartościami w obiekcie mogą być liczby</label></li>
+<li><label><input type='checkbox'> wartościami w obiekcie mogą być funkcje</label></li>
+<li><label><input type='checkbox'> wartościami w obiekcie mogą być obiekty</label></li>
+<li><label><input type='checkbox'> wartościami w obiekcie mogą być tablice</label></li>
+        </ol>
+        <div class="buttons text-center">
+          <button class="button-ok btn btn-primary">Sprawdź odpowiedź</button>
+        </div>
+      
+      
+        <div class='explanation'>
+          <div class="bc-note alert-success">
+            <h4 class="alert-heading text-center">Wyjaśnienie</h4>
+      <p>Obiekt:</p>
+<ul>
+<li>jest zbiorem par klucz-wartości,</li>
+<li>nie posiada indeksów,</li>
+<li>nie posiada właściwości <code>length</code>,</li>
+<li>może być stworzony za pomocą nawiasów klamrowych <code>{}</code>,</li>
+<li>może zawierać dowolne typy wartości, w tym tablice i obiekty.</li>
+</ul>
+
+          </div>
+        </div>
+      
+        </article>
+      
+        <article class='question' data-type='multiple-choice'>
+      
+        <header>
+          <p><em>3.</em>  Zaznacz prawidłowe zdania dotyczące <strong>pętli</strong>:</p>
+
+        </header>
+        <ol type='a' class='answers' data-correct='0,1,2,3,4'>
+          <li><label><input type='checkbox'> pętla umożliwia wielokrotne wykonanie bloku kodu</label></li>
+<li><label><input type='checkbox'> pętla może być wykonana np. dla liczb od <code>0</code> do <code>10</code></label></li>
+<li><label><input type='checkbox'> pętla może być wykonana np. dla wszystkich znalezionych linków</label></li>
+<li><label><input type='checkbox'> pętla może być wykonana dla wszystkich wartości w tablicy</label></li>
+<li><label><input type='checkbox'> pętla może być wykonana dla wszystkich kluczy obiektu</label></li>
+        </ol>
+        <div class="buttons text-center">
+          <button class="button-ok btn btn-primary">Sprawdź odpowiedź</button>
+        </div>
+      
+      
+        <div class='explanation'>
+          <div class="bc-note alert-success">
+            <h4 class="alert-heading text-center">Wyjaśnienie</h4>
+      <p>W przypadku pętli najważniejsze jest zrozumienie, czym jest i do czego można je wykorzystać. Szczegóły składni zawsze można znaleźć w internecie w momencie, gdy będziemy potrzebować pętli.</p>
+
+          </div>
+        </div>
+      
+        </article>
+      
+        </div>
+        
+<style>
+  .kodilla-quiz .question {
+    margin-bottom: 1.5em;
+  }
+  .kodilla-quiz .explanation {
+    display: none;
+  }
+  .kodilla-quiz li>label {
+    display: inline-block;
+    padding-top: 1px;
+    vertical-align: top;
+  }
+</style>
+<script>
+  if(typeof initQuizzes == 'undefined'){
+    function initQuizzes(){
+      var types = {
+        'multiple-choice': initMultipleChoice,
+      };
+
+      var questions = document.querySelectorAll('.kodilla-quiz .question');
+
+      for(var i=0; i<questions.length; i++){
+        var question = questions[i];
+        var initFunc = types[question.dataset.type];
+
+        if(typeof(initFunc) != 'undefined' && !question.classList.contains('initiated')){
+          question.classList.add('initiated');
+          initFunc(question);
+        }
+      }
+    }
+
+    function initMultipleChoice(question){
+      var answers = question.querySelector('.answers');
+      var inputs = answers.querySelectorAll('input');
+      var buttons = question.querySelector('.buttons');
+      var buttonOK = buttons.querySelector('.button-ok');
+      var explanation = question.querySelector('.explanation');
+      var correct = question.querySelector('[data-correct]').dataset.correct.split(',');
+
+      buttonOK.addEventListener('click', function(e){
+        e.preventDefault();
+
+        var inputsChecked = answers.querySelectorAll('input:checked');
+        if(inputsChecked.length == 0){
+          alert('Wybierz co najmniej jedna odpowiedź');
+          return;
+        }
+
+        correct.forEach(function(index){
+          inputs[index].parentNode.parentNode.classList.add('text-success', 'text-bold');
+        });
+
+        for (var i = 0; i < inputs.length; i++) {
+          var input = inputs[i];
+          var li = input.parentNode.parentNode;
+          input.setAttribute('disabled', true);
+          
+          if(input.checked){
+            li.classList.add('text-bold');
+            
+            if(!li.classList.contains('text-success')){
+              li.classList.add('text-danger');
+            }
+          }
+
+        }
+        
+        if(explanation) explanation.style.display = 'block';
+        buttons.setAttribute('hidden', true);
+      });
+    }
+  }
+  initQuizzes();
+</script>
+
+      
+                        </div>
+                    </div>
+                                        <div class="card-block submodule-footer clearfix  completed ">
+                                                <small>Jeśli masz wątpliwości do powyższego materiału, to - zanim zatwierdzisz - zapytaj na czacie :)</small>
+                                                <div class="clearfix">
+                                                                                <button class="btn  btn-primary "><i class="fa fa-check"></i><span>Zapoznałe(a)m się!</span></button>
+                                                                                                    </div>
+                    </div>
+                </section>
+                            </main>
+        </div>
+    </section>
+</main>
+;
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<script type="text/x-translation" data-translation-name="SentBootcampLinkReviewFormMessage">Wysłano link do zatwierdzenia</script>
+    <div id="alerts">
+    <div class="alert alert-danger" role="alert">
+        <i class="fa fa-exclamation" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                        </ul>
+    </div>
+    <div class="alert alert-success" role="alert">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-warning" role="alert">
+        <i class="fa fa-warning" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-info" role="alert">
+        <i class="fa fa-info" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                    </ul>
+    </div>
+    <div class="container">
+        <div class="alert alert-notify" role="alert">
+            <i class="fa fa-info" aria-hidden="true"></i>
+            <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Zamknij</span>
+            </button>
+            <ul>
+                            </ul>
+        </div>
+    </div>
+</div>
+    <div class="modal fade informator-modal" id="informator" tabindex="-1" role="dialog" aria-labelledby="informatorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="https://kodilla.com/static/img/logo-menu.png?00000" alt="Logo Kodilla" class="brand-logo">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body content-container">
+                <h3>Zam&oacute;w szczeg&oacute;łowy informator</h3>
+                <form class="row js-ajax-form" data-view-class="InformatorForm" action="https://kodilla.com/pl/download-informator" method="post">
+                    <input type="hidden" name="ga-pobieranie-informatora-z-modala" value="wypelnienie">
+                    <input type="hidden" name="tags[0]" value="informator">
+                                        <div class="user-data-container">
+                        <input type="text" class="form-control" name="firstname" placeholder="Imię">
+                        <input type="text" class="form-control" name="surname" placeholder="Nazwisko">
+                    </div>
+                    <div class="user-data-container">
+                        <input type="email" class="form-control" name="email" placeholder="Email" required/>
+                        <input type="tel" class="form-control" name="phone" placeholder="Numer telefonu" pattern="^([\+][0-9]{1,3}([ \.\-])?)?([\(]{1}[0-9]{3}[\)])?([0-9 \.\-]{1,15})$" title="Wpisz poprawny numer telefonu, np. 453 674 897" minlength="9" maxlength="15" data-custom-message="Wpisz poprawny numer telefonu, np. 453 674 897">
+                    </div>
+                    <div class="terms-box">
+                        <label>
+                            <input name="accept_terms" value="true" data-custom-message="Prosimy o zaakceptowanie regulaminu" type="checkbox" class="form-control input-checkbox" required>
+                            <span>Akceptuję <a target="_blank" href="https://kodilla.com/pl/regulamin">regulamin</a>  i nie wnoszę zastrzeżeń</span>
+                        </label>
+                    </div>
+                    <div class="personal-terms-box">
+                        <label>
+                            <input name="accept_marketing" value="true" data-custom-message="Jeśli chcesz otrzymać dostęp do materiał&oacute;w, konieczna jest akceptacja obydwu zg&oacute;d" type="checkbox" class="form-control input-checkbox" required>
+                            <span>Chcę otrzymywać newsletter, informacje o promocjach i produktach dostępnych w Kodilla.
+                                <span class="details-button" data-action="show-details" data-identifier="personal-terms-details-informator">Czytaj więcej</span>
+                                <span class="display-none" data-identifier="personal-terms-details-informator">Wyrażam zgodę na otrzymywanie informacji handlowych od Kodilla na podany przeze mnie adres e-mail. Zgoda jest dobrowolna, jednakże niezbędna do otrzymywania informacji o produktach, promocjach i o tym, co u nas słychać. Administratorem danych jest Codemy S.A. z siedzibą we Wrocławiu, Plac Powstańc&oacute;w Śląskich 13/4. Mam prawo cofnąć zgodę w każdym czasie, jednak wtedy nie będę otrzymywać informacji. Dane mogą być przetwarzane pomimo cofnięcia zgody wyłącznie w takim zakresie i celu, w jakim ich przetwarzanie jest niezbędne do ustalenia, dochodzenia lub obrony roszczeń Administratora w związku z udzieloną zgodą. Mam prawo dostępu do danych, sprostowania, usunięcia, ograniczenia przetwarzania, prawo wniesienia sprzeciwu, skargi do organu nadzorczego i przeniesienia danych. Szczeg&oacute;łowe informacje znajdują się na stronie kodilla.com, zakładka &quot;Polityka Prywatności&quot;.</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="display-none">
+                        <input type="text" name="myName" value="">
+                    </div>
+                    <div class="">
+                        <button type="submit" class="btn btn-primary">
+                            Pobierz Informator
+                            <i data-role="loading-icon" class="fa fa-spinner fa-spin fa-1x fa-fw display-none"></i>
+                        </button>
+                    </div>
+                </form>
+                <a href="https://kodilla.com/pl/informator" id="informator-link" target="_blank" class="display-none"></a>
+            </div>
+            <div class="modal-footer">
+                <p>Pobranie informatora do niczego nie zobowiązuje</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="site-footer">
+                <section class="footer-lower">
+            <nav class="container">
+                <a class="navbar-img" href="https://kodilla.com/pl">
+                    <svg id="kodilla-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 29.553" width="168" height="30">
+                        <defs>
+                            <style>
+                                .footer-logo-fill {
+                                    fill: #fff;
+                                }
+                            </style>
+                        </defs>
+                        <g id="Group_1" data-name="Group 1" transform="translate(23.59)">
+                            <path id="KODILLA_copy_5_1_" class="footer-logo-fill" d="M78.058,0a14.758,14.758,0,1,0,.075,0Zm0,23.739a8.939,8.939,0,0,1-8.944-8.907V14.8c0-4.957,4.584-.708,8.907-.708,4.919,0,9.019-4.211,9.019.708a8.978,8.978,0,0,1-8.981,8.944Z" transform="translate(-63.3)"/>
+                            <ellipse id="eye_copy_4_1_" class="footer-logo-fill" cx="3.876" cy="3.876" rx="3.876" ry="3.876" transform="translate(9.462 13.2) rotate(-28.436)"/>
+                        </g>
+                        <path id="Path_1" data-name="Path 1" class="footer-logo-fill" d="M0,29.819V.9H6.671V13.347L17.255.9h7.491L13.938,13.794,25.491,29.819h-7.6l-8.2-11.665-3.019,3.13v8.5H0Z" transform="translate(0 -0.565)"/>
+                        <path id="Path_2" data-name="Path 2" class="footer-logo-fill" d="M151.4,29.819V.9h10.807a15.515,15.515,0,0,1,6.261,1.155,12.966,12.966,0,0,1,4.509,3.093A12.918,12.918,0,0,1,175.7,9.732a17.245,17.245,0,0,1,.932,5.59,16.821,16.821,0,0,1-1.006,5.963,12.227,12.227,0,0,1-2.907,4.547,13.484,13.484,0,0,1-4.547,2.944,15.964,15.964,0,0,1-5.925,1.043Zm18.41-14.5a11.274,11.274,0,0,0-.522-3.466,7.723,7.723,0,0,0-1.491-2.72,6.616,6.616,0,0,0-2.385-1.752,8.055,8.055,0,0,0-3.205-.6h-4.1v17.18h4.1a7.985,7.985,0,0,0,3.242-.634,6.8,6.8,0,0,0,2.385-1.826,8.286,8.286,0,0,0,1.453-2.72A11.634,11.634,0,0,0,169.81,15.322Z" transform="translate(-94.978 -0.565)"/>
+                        <path id="Path_3" data-name="Path 3" class="footer-logo-fill" d="M228.3,29.819V.9h6.671V29.819Z" transform="translate(-143.219 -0.565)"/>
+                        <path id="Path_4" data-name="Path 4" class="footer-logo-fill" d="M259.9,29.819V.9h6.671V23.968h14.012v5.851Z" transform="translate(-163.043 -0.565)"/>
+                        <path id="Path_5" data-name="Path 5" class="footer-logo-fill" d="M327.371,23.931V.9H320.7V29.819h18.522l2.124-5.851H327.371Z" transform="translate(-201.185 -0.565)"/>
+                        <path id="Path_6" data-name="Path 6" class="footer-logo-fill" d="M388.547.9h6.037L405.13,29.819h-6.857l-2.236-6.484h-9.019l-2.2,6.484H378Zm6.373,17.851L391.528,8.54l-3.466,10.211Z" transform="translate(-237.13 -0.565)"/>
+                    </svg>
+                </a>
+                <ul class="nav">
+                    <li>
+                        <a href="https://kodilla.com/pl/regulamin" rel="nofollow">Regulamin</a>
+                    </li>
+                    <li>
+                        <a href="https://kodilla.com/pl/polityka-prywatnosci" rel="nofollow">Polityka prywatności</a>
+                    </li>
+                    <li class="nav-item">&copy; 2021 Kodilla</li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
+
+<!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN2WWBH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <script src="https://kodilla.com/static/js/libs/jquery-2.1.4.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/js.cookie-2.1.0.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/jquery-dateFormat.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/bootstrap.min.js?00000"></script>
+<script>
+    (function () {
+        $(document).ready(function () {
+            if (window.location.hash === '#informator-modal') {
+                showInformator();
+            }
+        });
+
+        $('[data-action="show-modal"]').click(function() {
+            showInformator();
+        });
+
+        function showInformator() {
+            $('#informator').modal('show');
+        }
+    })();
+</script>
+<script src="https://kodilla.com/build/minified/js/fb-0370c8f03e.js" async></script>
+<script src="https://kodilla.com/build/minified/js/call-us-d1ed4dfa39.js"></script>
+<script>
+    if (document.querySelector('main.editor')) {
+        document.querySelector('body').classList.add('editor');
+    }
+</script>
+
+<script type="text/javascript">
+    (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+    vgo('setAccount', '649095895');
+    vgo('setTrackByDefault', true);
+
+    vgo('process');
+</script>
+
+        <script src="https://kodilla.com/static/js/libs/underscore-min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-relational.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-super.min.js?00000"></script>
+<script src="https://kodilla.com/static/js/libs/handlebars-v4.0.5.min.js?00000"></script>
+<script src="https://kodilla.com/build/minified/js/extends/handlebars-ifCond-139a2339f7.js"></script>
+<script src="https://kodilla.com/build/minified/js/application-0dcfdc1306.js"></script>
+<script src="https://kodilla.com/build/minified/js/main-cf3b73d734.js"></script>
+<script src="https://kodilla.com/build/minified/js/views/settings-5fc44a761b.js"></script>
+<script src="https://kodilla.com/build/minified/js/views/delete-account-da2b3de486.js"></script>
+<script type="text/x-translation" data-translation-name="checkAccountDeleteCalculationMessage">Wynik jest nieprawidłowy</script>
+<script src="https://kodilla.com/build/minified/js/helpers/forms-222ea01b08.js"></script>
+<script src="https://kodilla.com/build/minified/js/helpers/alerts-66650c3acb.js"></script>
+<script>
+    App.Views.InpageAlertManager = Backbone.View.extend({
+        events: {
+            'click [data-alert-type][data-alert-text]': 'showAlert'
+        },
+        showAlert: function(e) {
+            var $el = $(e.currentTarget);
+            App.alertsView['show'+$el.data('alertType')]([App.Translations($el.data('alertText'))]);
+        }
+    });
+</script>
+<script src="https://kodilla.com/build/minified/js/collections-c07e1162e2.js"></script>
+<script src="https://kodilla.com/build/minified/js/models-4e0e4fcffb.js"></script>
+<script src="https://kodilla.com/build/minified/js/views/knowledge-base-61f71273c9.js"></script>
+<script>
+    App.Views.LearningProgram = Backbone.View.extend({
+        events: {
+            'click [data-technology-desc-expander]' : 'expandTechnologyDesc'
+        },
+
+        initialize: function() {
+            this.$allTechnologyDesc = this.$el.find('[data-technology-desc]');
+            this.$allTechnologyExpanderIcons = this.$el.find('[data-technology-expander-icon]');
+        },
+
+        expandTechnologyDesc: function() {
+            this.$allTechnologyDesc.each(function(){
+                var $desc = $(this);
+                $desc.slideToggle('fast');
+            });
+            this.$allTechnologyExpanderIcons.each(function(){
+                var $icon = $(this);
+                $icon.toggleClass("fa-minus");
+            });
+        },
+    });
+</script>
+
+    <script src="https://kodilla.com/static/js/libs/tether.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/prism.min.js?00000"></script>
+
+    <script src="https://kodilla.com/build/minified/js/views/bootcamp-1522c7c010.js"></script>
+    <script src="https://kodilla.com/static/js/libs/jquery.seourl.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/perfect-scrollbar.jquery.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/fancybox/jquery.fancybox.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/moment.timezone.locales.min.js?00000"></script>
+    <script src="https://kodilla.com/static/js/libs/bootstrap-datetimepicker.min.js?00000"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("a.img-modal-group").fancybox();
+        });
+    </script>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="call-us-modal">
+    <div class="modal-dialog modal-dialog-callus" role="document">
+        <div class="modal-content call-modal">
+            <div id="call-us-step1">
+                <h2>Um&oacute;w się na rozmowę z doradcą Kodilli</h2>
+                <p>Krok <span>1/2:</span> Podaj numer telefonu</p>
+                <form action="https://kodilla.com/pl/call-center/dates/phone_calls" method="post" id="call-us-form1">
+                    <input type="tel" name="phone" id="call-us-input-phone" class="call-center-input" placeholder="731771787">
+                    <p class="error-message display-none" id="validation-message-phone">Pole Numer Telefonu jest wymagane. Nieprawidłowy format.</p>
+                    <button class="btn btn-success" id="call-us-submit-phone">Zarezerwuj rozmowę</button>
+                </form>
+                <p id="call-us-counter-holder" style="display: none;">Dzisiaj już  <span id="call-us-counter" class="call-counter" data-url="https://kodilla.com/pl/call-center/counter/phone_calls">-</span> <span id="call-us-counter-text" data-one=" osoba zam&oacute;wiła rozmowę z nami." data-few=" osoby zam&oacute;wiły rozmowę z nami." data-more=" os&oacute;b zam&oacute;wiło rozmowę z nami."></span></p>
+                <div class="data-protection">
+                    <p>Twój numer telefonu nie będzie wykorzystywany w celach marketingowych ani przekazany dalej. Tylko oddzwonimy. Dane są przetwarzane zgodnie z <a href="/pl/polityka-prywatnosci">Polityką Prywatności</a>.</p>
+                </div>
+            </div>
+
+            <div id="call-us-step2" style="display: none;">
+                <h2>Wybierz dogodny termin i godzinę na rozmowę z doradcą</h2>
+                <p>Krok <span>2/2:</span>
+                <form action="https://kodilla.com/pl/call-center/step2/phone_calls" method="post" id="call-us-form2">
+                    <div class="select-date">
+                        <select name="date" id="call-us-input-date">
+                        </select>
+                        <select name="time" id="call-us-input-time">
+                        </select>
+                    </div>
+                    <button class="btn btn-success" id="call-us-submit-call">Oddzwońcie do mnie!</button>
+                </form>
+            </div>
+
+            <div id="call-us-step3" style="display: none;">
+                <div  class="thanks">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    <h2>Dziękujemy za zamowienie rozmowy! Do usłyszenia w wybranym terminie!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+                <style type="text/css">
+    .embeddedServiceHelpButton .helpButton .uiButton {
+        background-color: #1EA71C;
+        font-family: "Arial", sans-serif;
+    }
+    .embeddedServiceHelpButton .helpButton .uiButton:focus {
+        outline: 1px solid #1EA71C;
+    }
+</style>
+<script>
+    function openChat(){
+        $('.helpButtonEnabled').trigger('click');
+    }
+</script>
+<script type="text/javascript" src="https://service.force.com/embeddedservice/5.0/esw.min.js"></script>
+
+<script type="text/javascript">
+    var initESW = function(gslbBaseURL) {
+        let firstName = 'Marek Baberowski'.split(" ")[0];
+        let lastName = 'Marek Baberowski'.split(" ")[1];
+        console.log(name);
+        embedded_svc.settings.displayHelpButton = true;
+        embedded_svc.settings.language = '';
+
+        embedded_svc.settings.defaultMinimizedText =  'Skontaktuj się z nami';
+        embedded_svc.settings.disabledMinimizedText = ' ';
+
+        embedded_svc.settings.loadingText = 'Ładowanie';
+        embedded_svc.settings.storageDomain = 'kodilla.com';
+
+        embedded_svc.settings.prepopulatedPrechatFields = {
+            'FirstName': firstName,
+            'LastName': lastName,
+            'Email': 'm.z.baberowski@gmail.com'
+        };
+        embedded_svc.settings.offlineSupportMinimizedText = 'Napisz do nas';
+
+        embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+        embedded_svc.settings.entryFeature = 'LiveAgent';
+
+        embedded_svc.init(
+            'https://kodilla.my.salesforce.com',
+            'https://kodillacommunity.force.com',
+            gslbBaseURL,
+            '00D1i000000VBFH',
+            'Support_Kodilla',
+            {
+                baseLiveAgentContentURL: 'https://c.la1-c2-fra.salesforceliveagent.com/content',
+                deploymentId: '5721i00000009s9',
+                buttonId: '5731i0000000AJN',
+                baseLiveAgentURL: 'https://d.la1-c2-fra.salesforceliveagent.com/chat',
+                eswLiveAgentDevName: 'Support_Kodilla',
+                isOfflineSupportEnabled: true
+            }
+        );
+    };
+
+    if (!window.embedded_svc) {
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://kodilla.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+        s.onload = function() {
+            initESW(null);
+        };
+        document.body.appendChild(s);
+    } else {
+        initESW('https://service.force.com');
+    }
+</script>
+        <div data-role="notifications-wrapper" class="notifications-wrapper"></div>
+</body>
+</html>
